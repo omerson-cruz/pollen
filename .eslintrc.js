@@ -7,7 +7,9 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint',
   },
-  rules: {},
+  rules: {
+    'no-underscore-dangle': 'off',
+  },
   overrides: [
     {
       files: ['*.test.js'],

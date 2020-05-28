@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TwoColumnMultiSelect renders correctly 1`] = `
+<div
+  class="two-column-multi-select"
+>
+  <div
+    class="two-column-multi-select__unselected-items"
+  >
+    <div
+      class="two-column-multi-select__column-header"
+    >
+      Options
+    </div>
+     
+    <ul
+      class="two-column-multi-select__item-list"
+    >
+      <!---->
+       
+      <li>
+        <multiselectitem-stub
+          icon="folderOutline"
+          label="Option 1"
+          name="test"
+          value="Option 1"
+        />
+      </li>
+      <li>
+        <multiselectitem-stub
+          label="Option 2"
+          name="test"
+          value="foo"
+        />
+      </li>
+      <li>
+        <multiselectitem-stub
+          label="Option 3"
+          name="test"
+          value="bar"
+        />
+      </li>
+    </ul>
+  </div>
+   
+  <div
+    class="two-column-multi-select__selected-items"
+  >
+    <div
+      class="two-column-multi-select__column-header"
+    >
+      Selected
+    </div>
+     
+    <ul
+      class="two-column-multi-select__item-list"
+    />
+  </div>
+</div>
+`;

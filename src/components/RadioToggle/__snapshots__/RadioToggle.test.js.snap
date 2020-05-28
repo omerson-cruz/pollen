@@ -5,11 +5,11 @@ exports[`RadioToggle renders correctly 1`] = `
   class="radio-toggle"
 >
   <label
-    class="radio-toggle-option"
+    class="radio-toggle__container"
     for="test-0"
   >
     <input
-      class="radio-toggle-input"
+      class="radio-toggle__input"
       id="test-0"
       name="test"
       type="radio"
@@ -17,17 +17,17 @@ exports[`RadioToggle renders correctly 1`] = `
     />
      
     <span
-      class="radio-toggle-label"
+      class="radio-toggle__label"
     >
       Option 1
     </span>
   </label>
   <label
-    class="radio-toggle-option active"
+    class="radio-toggle__container active"
     for="test-1"
   >
     <input
-      class="radio-toggle-input"
+      class="radio-toggle__input"
       id="test-1"
       name="test"
       type="radio"
@@ -35,17 +35,17 @@ exports[`RadioToggle renders correctly 1`] = `
     />
      
     <span
-      class="radio-toggle-label"
+      class="radio-toggle__label"
     >
       Option 2
     </span>
   </label>
   <label
-    class="radio-toggle-option"
+    class="radio-toggle__container"
     for="test-2"
   >
     <input
-      class="radio-toggle-input"
+      class="radio-toggle__input"
       id="test-2"
       name="test"
       type="radio"
@@ -53,7 +53,7 @@ exports[`RadioToggle renders correctly 1`] = `
     />
      
     <span
-      class="radio-toggle-label"
+      class="radio-toggle__label"
     >
       Option 3
     </span>

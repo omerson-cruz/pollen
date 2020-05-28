@@ -10,23 +10,23 @@
       :ref="item.value"
       :for="`${name}-${i}`"
       :class="{ active: value === item.value }"
-      class="radio-toggle-option"
+      class="radio-toggle__container"
     >
       <input
         :id="`${name}-${i}`"
         :value="item.value"
         :name="name"
         type="radio"
-        class="radio-toggle-input"
+        class="radio-toggle__input"
         @blur="isFocused = false"
         @focus="isFocused = true"
         @input="handleInput"
       />
-      <span class="radio-toggle-label">{{ item.label }}</span>
+      <span class="radio-toggle__label">{{ item.label }}</span>
     </label>
     <div
       v-if="refsMounted && value"
-      class="radio-toggle-indicator"
+      class="radio-toggle__indicator"
       :style="bgStyle"
     />
   </div>
@@ -118,7 +118,7 @@ export default {
     rounded-full;
 }
 
-.radio-toggle-option {
+.radio-toggle__container {
   @apply cursor-pointer
     duration-100
     ease-linear
@@ -136,7 +136,7 @@ export default {
     z-10;
 }
 
-.radio-toggle-option.active {
+.radio-toggle__container.active {
   @apply text-white;
 }
 
@@ -144,11 +144,11 @@ export default {
   @apply shadow-outline;
 }
 
-.radio-toggle-input {
+.radio-toggle__input {
   @apply sr-only;
 }
 
-.radio-toggle-indicator {
+.radio-toggle__indicator {
   @apply absolute 
     bg-purple 
     duration-100
