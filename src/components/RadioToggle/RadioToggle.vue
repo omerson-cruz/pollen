@@ -110,7 +110,7 @@ export default {
 .radio-toggle {
   @apply bg-gray-100
     border 
-    border-grey-300
+    border-grey-200
     border-solid
     inline-flex
     p-1 
