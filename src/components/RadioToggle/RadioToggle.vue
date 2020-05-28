@@ -99,9 +99,6 @@ export default {
   },
 
   methods: {
-    handleMouseup() {
-      document.activeElement.blur();
-    },
     handleInput(e) {
       this.$emit('input', e.target.value);
     },
