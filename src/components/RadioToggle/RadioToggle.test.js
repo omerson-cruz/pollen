@@ -14,6 +14,17 @@ const options = [
 ];
 
 describe('RadioToggle', () => {
+  test('renders correctly', () => {
+    const wrapper = mount(RadioToggle, {
+      propsData: {
+        options,
+        value: 'foo',
+        name: 'test',
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
   test('highlights the correct label', () => {
     const wrapper = mount(RadioToggle, {
       propsData: {

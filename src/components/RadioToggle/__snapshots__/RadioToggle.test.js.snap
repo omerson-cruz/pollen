@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioToggle renders correctly 1`] = `
+<div
+  class="radio-toggle"
+>
+  <label
+    class="radio-toggle-option"
+    for="test-0"
+  >
+    <input
+      class="radio-toggle-input"
+      id="test-0"
+      name="test"
+      type="radio"
+      value="Option 1"
+    />
+     
+    <span
+      class="radio-toggle-label"
+    >
+      Option 1
+    </span>
+  </label>
+  <label
+    class="radio-toggle-option active"
+    for="test-1"
+  >
+    <input
+      class="radio-toggle-input"
+      id="test-1"
+      name="test"
+      type="radio"
+      value="foo"
+    />
+     
+    <span
+      class="radio-toggle-label"
+    >
+      Option 2
+    </span>
+  </label>
+  <label
+    class="radio-toggle-option"
+    for="test-2"
+  >
+    <input
+      class="radio-toggle-input"
+      id="test-2"
+      name="test"
+      type="radio"
+      value="bar"
+    />
+     
+    <span
+      class="radio-toggle-label"
+    >
+      Option 3
+    </span>
+  </label>
+   
+  <!---->
+</div>
+`;
