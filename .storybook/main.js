@@ -1,3 +1,5 @@
+import '../src/assets/tailwind.css';
+
 module.exports = {
   stories: ['../src/**/*.stories.js'],
   addons: [
