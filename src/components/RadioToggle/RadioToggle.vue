@@ -22,7 +22,7 @@
         @focus="isFocused = true"
         @input="handleInput"
       />
-      <span class="radio-toggle__label">{{ item.label }}</span>
+      <span class="radio-toggle__label" v-html="item.label" />
     </label>
     <div
       v-if="refsMounted && value"
