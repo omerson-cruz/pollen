@@ -1,4 +1,5 @@
 import RadioToggle from './RadioToggle.vue';
+import '../../assets/tailwind.css';
 
 export default {
   title: 'RadioToggle',
