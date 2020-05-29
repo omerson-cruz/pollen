@@ -1,5 +1,3 @@
-import RadioToggle from '@/components/RadioToggle/RadioToggle.vue';
+/* eslint-disable import/prefer-default-export */
 
-export default {
-  RadioToggle,
-};
+export { default as RadioToggle } from '@/components/RadioToggle/RadioToggle.vue';
