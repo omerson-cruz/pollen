@@ -1,7 +1,8 @@
 {
-  "name": "pollen",
+  "name": "@bambeehr/pollen",
   "version": "0.1.0",
   "main": "./dist/pollen.common.js",
+  "repository": "git://github.com/BambeeHR/pollen.git",
   "scripts": {
     "dev": "npm run storybook & npm run test:watch && fg",
     "prebuild": "rimraf dist",

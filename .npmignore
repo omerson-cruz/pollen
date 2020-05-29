@@ -1,8 +1,15 @@
 .babelrc
 .editorconfig
+.eslintignore
 .eslintrc.js
+.gitignore
 .jest-test-results.json
+.prettierrc
+.stylelintrc
+babel.config.js
 jest.config.js
+/__mocks
+/.github
 /.storybook
 /.vscode
 /src
