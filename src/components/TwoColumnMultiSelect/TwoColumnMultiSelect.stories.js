@@ -1,6 +1,5 @@
 import BaseIcon from '../BaseIcon/BaseIcon.vue';
 import TwoColumnMultiSelect from './TwoColumnMultiSelect.vue';
-import '../../assets/tailwind.css';
 
 export default {
   title: 'TwoColumnMultiSelect',

@@ -1,5 +1,4 @@
 import BaseIcon, { Icons } from './BaseIcon.vue';
-import '../../assets/tailwind.css';
 
 export default {
   title: 'BaseIcon',
