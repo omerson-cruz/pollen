@@ -1,7 +1,6 @@
 {
   "name": "pollen",
   "version": "0.1.0",
-  "private": true,
   "main": "./dist/pollen.common.js",
   "scripts": {
     "dev": "npm run storybook & npm run test:watch && fg",
