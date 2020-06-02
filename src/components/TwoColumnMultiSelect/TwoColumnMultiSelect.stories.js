@@ -13,7 +13,7 @@ export const Default = () => ({
     return {
       options: [
         {
-          icon: 'folderOutline',
+          icon: 'folder',
           label: 'Option 1',
           value: 'Option 1',
         },

@@ -1,5 +1,5 @@
 import theme from './theme';
-import './assets/tailwind.css';
+import '../assets/tailwind.css';
 
 export default {
   title: 'Tailwind Theme',
@@ -7,7 +7,6 @@ export default {
 
 // Flatten color object.
 const colors = Object.entries(theme.colors).reduce((obj, [key, value]) => {
-  if (key === 'grey') return obj; // ignore grey alias of gray
   const newObj = { ...obj };
   if (typeof value === 'string') {
     newObj[key] = value;
@@ -40,7 +39,8 @@ export const Colors = () => ({
           }"
         />
         <div style="{fontSize: '12px'}">
-          <b>{{ key }}</b> {{ value}}
+          <b>{{ key }}</b>
+          <div>{{ value.toLowerCase() }}</div>
         </div>
       </div>
     </div>

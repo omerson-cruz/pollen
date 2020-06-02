@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "dev": "npm run storybook & npm run test:watch && fg",
+    "dev": "npm run storybook",
     "prebuild": "rimraf dist",
     "build": "vue-cli-service build --target lib --name pollen src/main.js",
     "prepare": "npm run build",
@@ -23,11 +23,13 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/pro-light-svg-icons": "^5.13.0",
     "@fortawesome/pro-regular-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "core-js": "^3.6.5",
     "lodash": "^4.17.15",
     "shortid": "^2.2.15",
+    "tailwindcss": "^1.4.6",
     "vue": "^2.6.11"
   },
   "devDependencies": {

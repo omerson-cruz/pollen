@@ -16,15 +16,20 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
-  faTimes as close,
   faFolder as folder,
-  faPlus as plus,
   faSearch as search,
 } from '@fortawesome/pro-regular-svg-icons';
+
+import {
+  faClipboardCheck as clipboardCheck,
+  faPlus as plus,
+  faTimes as close,
+} from '@fortawesome/pro-light-svg-icons';
 
 import getAttributes from '../../util/getAttributes';
 
 const IconComponents = Object.freeze({
+  clipboardCheck,
   close,
   folder,
   search,

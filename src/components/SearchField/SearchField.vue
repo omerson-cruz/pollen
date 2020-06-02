@@ -45,8 +45,8 @@ export default {
   @apply absolute 
     left-0 
     ml-4
-    text-gray-400
-    text-2xl
+    text-gray-3
+    text-23
     top-1/2
     transform
     -translate-y-1/2;
@@ -57,7 +57,7 @@ export default {
 }
 
 .search-field__input {
-  @apply bg-gray-200
+  @apply bg-gray-6
     block
     pl-12
     pr-4
@@ -66,6 +66,6 @@ export default {
 }
 
 .search-field__input::placeholder {
-  @apply text-gray-300;
+  @apply text-gray-3;
 }
 </style>

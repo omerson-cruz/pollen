@@ -70,7 +70,7 @@ export default {
     pr-12 
     py-4
     relative
-    text-sm;
+    type-body-text;
 }
 
 .multi-select-item.focused {
@@ -81,19 +81,11 @@ export default {
   @apply sr-only;
 }
 
-.multi-select-item .base-icon {
-  @apply text-2xl;
-}
-
 .multi-select-item .multi-select-item__pre-icon {
-  @apply mr-4;
-}
-
-.multi-select-item >>> .material-design-icon__svg {
-  @apply bottom-0;
+  @apply mr-4 text-19 text-primary;
 }
 
 .multi-select-item .multi-select-item__post-icon {
-  @apply absolute mr-6 right-0;
+  @apply absolute text-gray-3 mr-6 right-0 text-12;
 }
 </style>

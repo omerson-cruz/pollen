@@ -108,9 +108,9 @@ export default {
 
 <style scoped>
 .radio-toggle {
-  @apply bg-gray-100
+  @apply bg-gray-7
     border 
-    border-grey-200
+    border-gray-5
     border-solid
     inline-flex
     p-1 
@@ -122,17 +122,14 @@ export default {
   @apply cursor-pointer
     duration-100
     ease-linear
-    font-bold 
     px-5 
     py-1
     relative 
     rounded-full
     select-none
     text-center 
-    text-2xs 
-    tracking-wide 
     transition-all
-    uppercase 
+    type-overline-small
     z-10;
 }
 
@@ -150,7 +147,7 @@ export default {
 
 .radio-toggle__indicator {
   @apply absolute 
-    bg-purple 
+    bg-primary 
     duration-100
     ease-in
     rounded-full 

@@ -105,7 +105,7 @@ export default {
 <style scoped>
 .two-column-multi-select {
   @apply border
-    border-gray-200
+    border-gray-5
     flex;
 }
 
@@ -116,7 +116,7 @@ export default {
 
 .two-column-multi-select__unselected-items {
   @apply border-r 
-    border-gray-200;
+    border-gray-5;
 }
 
 .two-column-multi-select__item-list {
@@ -125,10 +125,11 @@ export default {
 
 .two-column-multi-select__column-header {
   @apply border-b 
-    border-gray-200 
-    font-bold
+    border-gray-5 
+    font-semibold
     px-6 
-    py-3;
+    py-3
+    type-body-small;
 }
 
 .two-column-multi-select .search-field {

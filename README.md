@@ -23,7 +23,7 @@ source ~/.profile
 npm i
 ```
 
-### Run Storybook and jest for development
+### Run Storybook with hot reloading
 
 ```
 npm run dev
