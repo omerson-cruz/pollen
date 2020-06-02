@@ -1,6 +1,6 @@
 <template>
   <label class="search-field" :class="{ rounded }">
-    <BaseIcon class="search-field__icon" icon="magnify" />
+    <BaseIcon class="search-field__icon" icon="search" />
     <span class="search-field__label">{{ placeholder }}</span>
     <input
       :value="value"
@@ -44,11 +44,12 @@ export default {
 .search-field__icon {
   @apply absolute 
     left-0 
-    ml-4 
-    mt-2
-    top-0
+    ml-4
     text-gray-400
-    text-2xl;
+    text-2xl
+    top-1/2
+    transform
+    -translate-y-1/2;
 }
 
 .search-field__label {

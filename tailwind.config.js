@@ -1,6 +1,6 @@
 const theme = require('./src/theme');
 
-const { colors, fontFamily, fontSize } = theme;
+const { colors, fontFamily, fontSize, inset } = theme;
 
 module.exports = {
   purge: false,
@@ -9,6 +9,7 @@ module.exports = {
     fontFamily,
     extend: {
       fontSize,
+      inset,
     },
   },
   variants: {},

@@ -26,4 +26,7 @@ module.exports = {
   fontSize: {
     '2xs': '0.625rem', // 10px
   },
+  inset: {
+    '1/2': '50%',
+  },
 };

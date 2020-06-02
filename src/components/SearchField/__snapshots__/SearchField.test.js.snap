@@ -6,7 +6,7 @@ exports[`SearchField renders correctly 1`] = `
 >
   <baseicon-stub
     class="search-field__icon"
-    icon="magnify"
+    icon="search"
   />
    
   <span

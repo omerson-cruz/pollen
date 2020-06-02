@@ -1,7 +1,8 @@
 <template functional>
   <component
-    :is="$options.getComponent(props.icon)"
+    :is="$options.FontAwesomeIcon"
     :class="[data.class, data.staticClass]"
+    :icon="$options.getIcon(props.icon)"
     class="base-icon"
     v-bind="$options.getAttributes({ data, parent })"
     v-on="listeners"
@@ -11,19 +12,27 @@
 <script>
 import camelCase from 'lodash/camelCase';
 import snakeCase from 'lodash/snakeCase';
-import getAttributes from '../../util/getAttributes';
-import 'vue-material-design-icons/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
-const close = () => import('vue-material-design-icons/Close');
-const folder = () => import('vue-material-design-icons/FolderOutline');
-const magnify = () => import('vue-material-design-icons/Magnify');
-const plus = () => import('vue-material-design-icons/Plus');
+import {
+  faTimes as close,
+  faFolder as folder,
+  faPlus as plus,
+  faSearch as search,
+} from '@fortawesome/pro-regular-svg-icons';
+
+import getAttributes from '../../util/getAttributes';
 
 const IconComponents = Object.freeze({
   close,
   folder,
-  magnify,
+  search,
   plus,
+});
+
+Object.values(IconComponents).forEach((icon) => {
+  library.add(icon);
 });
 
 export const Icons = Object.freeze(
@@ -37,6 +46,7 @@ export const Icons = Object.freeze(
 );
 
 export default {
+  functional: true,
   props: {
     icon: {
       type: String,
@@ -44,9 +54,8 @@ export default {
       validator: (value) => camelCase(value) in IconComponents,
     },
   },
+  FontAwesomeIcon,
   getAttributes,
-  getComponent: (icon) => IconComponents[camelCase(icon)] || null,
+  getIcon: (icon) => IconComponents[camelCase(icon)] || null,
 };
 </script>
-
-<style lang="scss" scoped></style>
