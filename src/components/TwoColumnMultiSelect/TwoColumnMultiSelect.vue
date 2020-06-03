@@ -115,7 +115,7 @@ export default {
 }
 
 .two-column-multi-select__unselected-items {
-  @apply border-r 
+  @apply border-r
     border-gray-5;
 }
 
@@ -124,12 +124,12 @@ export default {
 }
 
 .two-column-multi-select__column-header {
-  @apply border-b 
-    border-gray-5 
+  @apply border-b
+    border-gray-5
+    font-body-small
     font-semibold
-    px-6 
-    py-3
-    type-body-small;
+    px-6
+    py-3;
 }
 
 .two-column-multi-select .search-field {

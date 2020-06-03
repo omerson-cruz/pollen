@@ -122,6 +122,7 @@ export default {
   @apply cursor-pointer
     duration-100
     ease-linear
+    font-overline-small
     px-5 
     py-1
     relative 
@@ -129,7 +130,6 @@ export default {
     select-none
     text-center 
     transition-all
-    type-overline-small
     z-10;
 }
 

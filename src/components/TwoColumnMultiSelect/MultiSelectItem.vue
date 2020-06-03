@@ -63,14 +63,14 @@ export default {
 
 <style scoped>
 .multi-select-item {
-  @apply cursor-pointer 
-    flex 
+  @apply cursor-pointer
+    flex
+    font-body-text
     items-center
     pl-6
-    pr-12 
+    pr-12
     py-4
-    relative
-    type-body-text;
+    relative;
 }
 
 .multi-select-item.focused {

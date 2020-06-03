@@ -1,11 +1,3 @@
-const fontWeight = {
-  light: '300',
-  normal: '400',
-  medium: '500',
-  semibold: '600',
-  bold: '700',
-};
-
 const pixelFonts = [10, 12, 13, 14, 16, 17, 18, 19, 23, 28, 33, 40];
 
 const fontSize = pixelFonts.reduce(
@@ -81,7 +73,12 @@ module.exports = {
     sans: "'proxima-soft', 'system-ui', sans-serif",
   },
   fontSize,
-  fontWeight,
+  fontWeight: {
+    normal: '400',
+    medium: '500',
+    semibold: '600',
+    bold: '700',
+  },
   inset: {
     '1/2': '50%',
   },
