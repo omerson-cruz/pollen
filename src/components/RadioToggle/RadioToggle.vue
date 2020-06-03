@@ -130,6 +130,7 @@ export default {
     select-none
     text-center 
     transition-all
+    whitespace-no-wrap
     z-10;
 }
 

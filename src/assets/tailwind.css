@@ -1,4 +1,5 @@
-@tailwind base;
+/* Disabling this so it's clear what reste styles need to be inlined. */
+/* @tailwind base; */
 
 @tailwind components;
 

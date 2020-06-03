@@ -21,7 +21,7 @@ export const Gallery = () => ({
         <TypeOverline tag="h1">{{ variant }}</TypeOverline>
         <TypeOverline 
           :variant="variant"
-          tag="p"
+          tag="div"
         >
           The quick brown fox jumps over the lazy dog.
         </TypeOverline>

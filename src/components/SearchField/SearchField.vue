@@ -62,7 +62,9 @@ export default {
     pl-12
     pr-4
     py-3
-    w-full;
+    w-full
+    /* For legacy */
+    border-0;
 }
 
 .search-field__input::placeholder {

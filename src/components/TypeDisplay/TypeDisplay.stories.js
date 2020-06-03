@@ -26,7 +26,7 @@ export const Gallery = () => ({
           :key="variant + '-' + weight"
           :variant="variant"
           :weight="weight"
-          tag="p"
+          tag="div"
         >
           The quick brown fox jumps over the lazy dog.
         </TypeDisplay>

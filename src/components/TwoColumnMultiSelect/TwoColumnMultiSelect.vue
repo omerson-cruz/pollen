@@ -106,7 +106,9 @@ export default {
 .two-column-multi-select {
   @apply border
     border-gray-5
-    flex;
+    flex
+    /* For legacy */
+    border-solid;
 }
 
 .two-column-multi-select__unselected-items,
@@ -116,11 +118,20 @@ export default {
 
 .two-column-multi-select__unselected-items {
   @apply border-r
-    border-gray-5;
+    border-gray-5
+    /* For legacy */
+    border-b-0
+    border-l-0
+    border-t-0
+    border-solid;
 }
 
 .two-column-multi-select__item-list {
-  @apply flex-grow;
+  @apply flex-grow
+    /* For legacy */
+    list-none
+    m-0
+    p-0;
 }
 
 .two-column-multi-select__column-header {
@@ -129,7 +140,12 @@ export default {
     font-body-small
     font-semibold
     px-6
-    py-3;
+    py-3
+    /* For legacy */
+    border-l-0
+    border-r-0
+    border-t-0
+    border-solid;
 }
 
 .two-column-multi-select .search-field {
