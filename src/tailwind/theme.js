@@ -70,7 +70,7 @@ module.exports = {
     youtube: '#FF0000',
   },
   fontFamily: {
-    sans: "'proxima-soft', 'system-ui', sans-serif",
+    sans: "'proxima-nova', 'proxima-soft', 'system-ui', sans-serif",
   },
   fontSize,
   fontWeight: {
