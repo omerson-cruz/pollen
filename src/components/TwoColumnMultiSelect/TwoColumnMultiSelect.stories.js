@@ -60,6 +60,38 @@ export const WithFilter = () => ({
   `,
 });
 
+export const WithPrefilledFilter = () => ({
+  components: { TwoColumnMultiSelect },
+  data() {
+    return {
+      options: [
+        {
+          label: 'Option 1',
+          value: 'Option 1',
+        },
+        {
+          label: 'Option 2',
+          value: 'foo',
+        },
+        {
+          label: 'Option 3',
+          value: 'bar',
+        },
+      ],
+      value: [],
+      filter: '1',
+    };
+  },
+  template: `
+    <TwoColumnMultiSelect 
+      v-model="value" 
+      :options="options" 
+      :initialFilter="filter" 
+      filterable 
+    />
+  `,
+});
+
 export const WithHeaderAsProps = () => ({
   components: { TwoColumnMultiSelect },
   data() {

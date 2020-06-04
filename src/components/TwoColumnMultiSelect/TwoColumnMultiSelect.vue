@@ -57,6 +57,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    initialFilter: {
+      type: String,
+      default: '',
+    },
     selectedHeader: {
       type: String,
       default: 'Selected',
@@ -68,7 +72,7 @@ export default {
   },
   data() {
     return {
-      filter: '',
+      filter: this.initialFilter,
     };
   },
   computed: {
