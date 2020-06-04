@@ -6,7 +6,7 @@
       </div>
       <ul class="two-column-multi-select__item-list">
         <li v-if="filterable">
-          <SearchField v-model.trim="fitler" />
+          <SearchField v-model.trim="filter" />
         </li>
         <li v-for="item in unselectedOptions" :key="item.value">
           <MultiSelectItem v-bind="item" :name="name" @input="handleInput" />
