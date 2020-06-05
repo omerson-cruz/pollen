@@ -3,9 +3,6 @@
   "version": "0.1.0-beta.3",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "dev": "npm run storybook",
     "prebuild": "rimraf dist",
