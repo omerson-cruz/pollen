@@ -12,6 +12,7 @@
       :class="{ active: value === item.value }"
       class="radio-toggle__container"
     >
+      <!-- We're using a @click listener here because @input breaks on Edge. -->
       <input
         :id="`${name}-${i}`"
         :value="item.value"
@@ -20,7 +21,7 @@
         class="radio-toggle__input"
         @blur="isFocused = false"
         @focus="isFocused = true"
-        @input="handleInput"
+        @click="handleInput"
       />
       <span class="radio-toggle__label" v-html="item.label" />
     </label>

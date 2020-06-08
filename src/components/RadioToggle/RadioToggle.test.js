@@ -43,9 +43,9 @@ describe('RadioToggle', () => {
     });
     const inputs = wrapper.findAll('input');
     expect(inputs.length).toBe(3);
-    await inputs.at(1).trigger('input');
-    await inputs.at(0).trigger('input');
-    await inputs.at(2).trigger('input');
+    await inputs.at(1).trigger('click');
+    await inputs.at(0).trigger('click');
+    await inputs.at(2).trigger('click');
     expect(wrapper.emitted().input).toEqual([['foo'], ['Option 1'], ['bar']]);
   });
 });

@@ -5,6 +5,7 @@
     @mouseover="isHovering = true"
     @mouseleave="isHovering = false"
   >
+    <!-- We're using a @click listener here because @input breaks on Edge. -->
     <input
       type="checkbox"
       :value="value"
@@ -13,7 +14,7 @@
       :name="name"
       @blur="isFocused = false"
       @focus="isFocused = true"
-      @input="$emit('input', $event)"
+      @click="$emit('input', $event)"
     />
     <BaseIcon v-if="icon" :icon="icon" class="multi-select-item__pre-icon" />
     <span class="multi-select-item__label">{{ label }}</span>
