@@ -4,7 +4,7 @@
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
   "scripts": {
-    "dev": "source ~/.profile && npm run storybook",
+    "dev": "npm run storybook",
     "prebuild": "rimraf dist",
     "build": "vue-cli-service build --target lib --name pollen src/main.js",
     "prepare": "npm run build",

@@ -26,12 +26,15 @@ import {
   faTimes as close,
 } from '@fortawesome/pro-light-svg-icons';
 
+import { faLock as lock } from '@fortawesome/free-solid-svg-icons';
+
 import getAttributes from '../../util/getAttributes';
 
 const IconComponents = Object.freeze({
   clipboardCheck,
   close,
   folder,
+  lock,
   search,
   plus,
 });
@@ -51,7 +54,6 @@ export const Icons = Object.freeze(
 );
 
 export default {
-  functional: true,
   props: {
     icon: {
       type: String,
