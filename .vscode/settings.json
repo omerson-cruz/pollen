@@ -1,0 +1,29 @@
+{
+  "css.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.validate": ["javascript", "javascriptreact", "html", "vue"],
+  "files.autoSave": "off",
+  "stylelint.enable": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#CD6F56",
+    "activityBar.activeBackground": "#E68A71",
+    "activityBar.activeBorder": "#9A132D",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#9A132D",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#CD6F56",
+    "titleBar.inactiveBackground": "#E68A71",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#CD6F56",
+    "statusBarItem.hoverBackground": "#E68A71",
+    "statusBar.foreground": "#e7e7e7"
+  }
+}
