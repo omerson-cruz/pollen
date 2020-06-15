@@ -1,8 +1,10 @@
 import capitalize from 'lodash/capitalize';
 import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import BaseButton from './BaseButton.vue';
 import Button from '../../constants/Button';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
+import { Icons } from '../BaseIcon/BaseIcon.vue';
 import '../../assets/tailwind.css';
 
 const { Sizes, Variants } = Button;
@@ -77,3 +79,45 @@ export const WithPostIcon = () => ({
     <BaseButton postIcon="lock">Button</BaseButton>
   `,
 });
+
+export const WithKnobs = () => {
+  const iconOptions = ['', ...Object.values(Icons)];
+  return {
+    components: { BaseButton },
+    props: {
+      text: {
+        default: text('Text', 'Submit'),
+      },
+      preIcon: {
+        default: select('Pre-Icon', iconOptions),
+      },
+      postIcon: {
+        default: select('Post-Icon', iconOptions),
+      },
+      variant: {
+        default: select('Variant', Object.values(Variants), Variants.PRIMARY),
+      },
+      size: {
+        default: select('Size', Object.values(Sizes), Sizes.MEDIUM),
+      },
+      block: {
+        default: boolean('Block', false),
+      },
+      flat: {
+        default: boolean('Flat', false),
+      },
+    },
+    template: `
+      <BaseButton
+        :pre-icon="preIcon"
+        :post-icon="postIcon"
+        :variant="variant"
+        :size="size"
+        :block="block"
+        :flat="flat"
+      >
+        {{ text }}
+      </BaseButton>
+    `,
+  };
+};
