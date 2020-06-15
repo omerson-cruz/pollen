@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import IconButton from './IconButton.vue';
 import { Icons } from '../BaseIcon/BaseIcon.vue';
 
-const testIcon = Object.values(Icons)[0];
+const testIcon = Icons.LOCK;
 
 describe('IconButton', () => {
   test('renders correctly', () => {
