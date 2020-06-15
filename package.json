@@ -1,10 +1,10 @@
 {
   "name": "@bambeehr/pollen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
   "scripts": {
-    "dev": "source ~/.profile && npm run storybook",
+    "dev": "npm run storybook",
     "prebuild": "rimraf dist",
     "build": "vue-cli-service build --target lib --name pollen src/main.js",
     "prepare": "npm run build",

@@ -49,6 +49,7 @@ module.exports = {
       '7': '#FAFAFA',
     },
     white: '#fff',
+    transparent: 'transparent',
 
     // Semantic accents
     error: '#B0223E',

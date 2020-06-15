@@ -15,9 +15,9 @@ export const Gallery = () => ({
   },
   template: `
     <div class="flex flex-wrap">
-      <div v-for="icon in icons" :key="icon" :style="{ margin: '12px', textAlign: 'center' }">
+      <div v-for="icon in icons" :key="icon" :style="{ display: 'flex', margin: '12px', textAlign: 'center' }">
         <BaseIcon :icon="icon" />
-        <div :style="{ fontSize: '12px' }">{{ icon }}</div>
+        <div :style="{ fontSize: '12px', marginLeft: '8px' }">{{ icon }}</div>
       </div>
     </div>
   `,
