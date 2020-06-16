@@ -9,6 +9,21 @@ const fontSize = pixelFonts.reduce(
 );
 
 module.exports = {
+  boxShadow: {
+    '1': '0px 1px 2px rgba(0, 0, 0, 0.12)',
+    '2': '0px 1px 2px rgba(0, 0, 0, 0.07), 0px 2px 4px rgba(0, 0, 0, 0.07)',
+    '3':
+      '0px 1px 2px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 8px rgba(0, 0, 0, 0.06)',
+    '4':
+      '0px 1px 2px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 8px 16px rgba(0, 0, 0, 0.05)',
+    '5':
+      '0px 1px 2px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.04), 0px 16px 32px rgba(0, 0, 0, 0.04)',
+    '6':
+      '0px 1px 2px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.04), 0px 16px 32px rgba(0, 0, 0, 0.04), 0px 32px 64px rgba(0, 0, 0, 0.04)',
+    inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+    outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+    none: 'none',
+  },
   colors: {
     // Base
     primary: '#481d72',
