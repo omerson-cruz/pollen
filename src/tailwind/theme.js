@@ -76,6 +76,21 @@ module.exports = {
     info: '#0988B0',
     'info-light': '#EFF9FC',
 
+    // Extended palette
+    geyser: '#CDE0DF',
+    tuberose: '#F7F2DC',
+    gingerrr: '#FFAA00',
+    rose: '#E25959',
+    tangerine: '#BF4228',
+    maroon: '#680021',
+    puce: '#7E245C',
+    inevitable: '#481D72',
+    virginia: '#002855',
+    mosaic: '#006880',
+    eastern: '#1991A9',
+    caribbean: '#16A7A7',
+    evergreen: '#004851',
+
     // Third-party brand colors
     intercom: '#276EFA',
     facebook: '#3B5998',
