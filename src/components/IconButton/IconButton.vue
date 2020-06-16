@@ -117,7 +117,7 @@ export default {
 /* Theme variations */
 /** Regular buttons  */
 .icon-button__regular {
-  @apply border-2;
+  @apply border-2 shadow-2;
 }
 
 /*** Regular primary buttons */

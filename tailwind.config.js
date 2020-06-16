@@ -2,6 +2,7 @@ const theme = require('./src/tailwind/theme');
 const typographyPlugin = require('./src/tailwind/plugins/typography');
 
 const {
+  boxShadow,
   colors,
   fontFamily,
   fontSize,
@@ -14,6 +15,7 @@ const {
 module.exports = {
   purge: false,
   theme: {
+    boxShadow,
     colors,
     fontFamily,
     fontSize,
