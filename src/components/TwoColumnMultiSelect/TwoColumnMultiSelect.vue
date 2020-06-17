@@ -132,6 +132,7 @@ export default {
 
 .two-column-multi-select__item-list {
   @apply flex-grow
+    overflow-auto
     /* For legacy */
     list-none
     m-0
