@@ -38,6 +38,7 @@ export const Gallery = () => ({
           <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
             <BaseButton :variant="variant" :size="size" @click="handleClick(variant, size)">{{ capitalize(size) }}</BaseButton>
           </div>
+          <TypeOverline tag="h2" class="mb-2 mt-4">{{ variant }} - Block</TypeOverline>
           <div v-for= "size in sizes" :key="'block-' + variant + '-' + size" class="mb-2">
             <BaseButton :variant="variant" :size="size" block @click="handleClick(variant, size)">{{ capitalize(size) }}</BaseButton>
           </div>

@@ -53,12 +53,14 @@ export const Icons = Object.freeze(
   )
 );
 
+export const isValidIcon = (value) => camelCase(value) in IconComponents;
+
 export default {
   props: {
     icon: {
       type: String,
       required: true,
-      validator: (value) => camelCase(value) in IconComponents,
+      validator: isValidIcon,
     },
   },
   FontAwesomeIcon,

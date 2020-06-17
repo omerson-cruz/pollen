@@ -1,5 +1,5 @@
 <script>
-import BaseIcon, { Icons } from '../BaseIcon/BaseIcon.vue';
+import BaseIcon, { isValidIcon } from '../BaseIcon/BaseIcon.vue';
 import Button from '../../constants/Button';
 import getAttributes from '../../util/getAttributes';
 
@@ -20,12 +20,12 @@ export default {
     preIcon: {
       type: String,
       default: null,
-      validator: (value) => !value || Object.values(Icons).includes(value),
+      validator: (value) => !value || isValidIcon(value),
     },
     postIcon: {
       type: String,
       default: null,
-      validator: (value) => !value || Object.values(Icons).includes(value),
+      validator: (value) => !value || isValidIcon(value),
     },
     size: {
       type: String,
