@@ -25,6 +25,18 @@ export const Default = () => ({
           label: 'Option 3',
           value: 'bar',
         },
+        {
+          label: 'Test',
+          value: 'test',
+        },
+        {
+          label: 'Something',
+          value: 'Something',
+        },
+        {
+          label: 'Hello',
+          value: 'Worl',
+        },
       ],
       value: [],
     };
