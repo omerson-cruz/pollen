@@ -157,8 +157,7 @@ export default {
 }
 
 .base-button__giant {
-  @apply text-18;
-  height: 3.5rem;
+  @apply h-14 text-18;
 }
 
 .base-button__giant .base-button--inner {

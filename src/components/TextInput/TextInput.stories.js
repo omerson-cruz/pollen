@@ -33,15 +33,21 @@ export const Gallery = () => ({
     <div>
       <TypeOverline tag="h1" variant="large">Regular Inputs</TypeOverline>
       <div class="flex flex-wrap -mx-8 -mt-8">
-        <div v-for="variant in variants" :key="variant" class="m-8 w-56">
+        <div
+          v-for="variant in variants"
+          :key="variant"
+          :class="['w-56', (variant === 'ghost-inverted' ? 'm-4 p-4 bg-gray-0 text-white' : 'm-8')]"
+        >
           <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
+            <TypeOverline tag="h2" class="mb-2">Empty</TypeOverline>
             <TextInput
               :variant="variant"
               :size="size"
               :placeholder="capitalize(size)"
               @input="handleInput"
             />
+            <TypeOverline tag="h2" class="mb-2">Filled</TypeOverline>
             <TextInput
               :variant="variant"
               :size="size"
@@ -49,6 +55,7 @@ export const Gallery = () => ({
               :value="capitalize(size)"
               @input="handleInput"
             />
+            <TypeOverline tag="h2" class="mb-2">Invalid</TypeOverline>
             <TextInput
               :variant="variant"
               :size="size"
@@ -56,6 +63,7 @@ export const Gallery = () => ({
               invalid
               @input="handleInput"
             />            
+            <TypeOverline tag="h2" class="mb-2">Disabled</TypeOverline>
             <TextInput
               :variant="variant"
               :size="size"
@@ -63,6 +71,7 @@ export const Gallery = () => ({
               disabled
               @input="handleInput"
             />
+            <TypeOverline tag="h2" class="mb-2">Disabled, Filled</TypeOverline>
             <TextInput
               :variant="variant"
               :size="size"
@@ -92,6 +101,9 @@ export const WithKnobs = () => {
       label: {
         default: text('Label', 'First name'),
       },
+      placeholder: {
+        default: text('Placeholder', 'Joe Smith'),
+      },
       error: {
         default: text('Error', ''),
       },
@@ -112,17 +124,20 @@ export const WithKnobs = () => {
       },
     },
     template: `
-      <TextInput
-        :label="label"
-        :variant="variant"
-        :size="size"
-        :error="error"
-        :pre-icon="preIcon"
-        :post-icon="postIcon"
-        :prefix="prefix"
-        :invalid="invalid"
-        :show-reset="showReset"
-      />
+      <div class="p-4" :class="variant === 'ghost-inverted' && 'bg-gray-0'">
+        <TextInput
+          :label="label"
+          :placeholder="placeholder"
+          :variant="variant"
+          :size="size"
+          :error="error"
+          :pre-icon="preIcon"
+          :post-icon="postIcon"
+          :prefix="prefix"
+          :invalid="invalid"
+          :show-reset="showReset"
+        />
+      </div>
     `,
   };
 };
