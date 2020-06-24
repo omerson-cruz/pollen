@@ -6,7 +6,12 @@
       </div>
       <ul class="two-column-multi-select__item-list">
         <li v-if="filterable">
-          <SearchField v-model.trim="filter" />
+          <TextInput
+            v-model.trim="filter"
+            class="search-field"
+            pre-icon="search"
+            show-reset
+          />
         </li>
         <li v-for="item in unselectedOptions" :key="item.value">
           <MultiSelectItem v-bind="item" :name="name" @input="handleInput" />
@@ -34,10 +39,10 @@
 <script>
 import shortid from 'shortid';
 import MultiSelectItem from './MultiSelectItem.vue';
-import SearchField from '../SearchField/SearchField.vue';
+import TextInput from '../TextInput/TextInput.vue';
 
 export default {
-  components: { MultiSelectItem, SearchField },
+  components: { MultiSelectItem, TextInput },
   props: {
     // Options are an array of objects with a label, value, and icon property.
     // All are strings. Icon is optional.
@@ -154,6 +159,6 @@ export default {
 }
 
 .two-column-multi-select .search-field {
-  @apply rounded-none;
+  @apply m-2;
 }
 </style>

@@ -105,26 +105,26 @@ export const WithKnobs = () => {
         default: text('Placeholder', 'Joe Smith'),
       },
       error: {
-        default: text('Error', ''),
+        default: text('Error', 'Something went wrong'),
       },
       preIcon: {
-        default: select('Pre-Icon', iconOptions),
+        default: select('Pre-Icon', iconOptions, Icons.SEARCH),
       },
       postIcon: {
-        default: select('Post-Icon', iconOptions),
+        default: select('Post-Icon', iconOptions, Icons.LOCK),
       },
       prefix: {
-        default: text('Prefix', ''),
+        default: text('Prefix', '$'),
       },
       invalid: {
         default: boolean('Invalid', false),
       },
       showReset: {
-        default: boolean('Show Reset', false),
+        default: boolean('Show Reset', true),
       },
     },
     template: `
-      <div class="p-4" :class="variant === 'ghost-inverted' && 'bg-gray-0'">
+      <div class="p-8" :class="variant === 'ghost-inverted' && 'bg-gray-0'">
         <TextInput
           :label="label"
           :placeholder="placeholder"
