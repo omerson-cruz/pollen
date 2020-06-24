@@ -66,8 +66,6 @@ const { Sizes, Variants } = Form;
 export default {
   Button,
   Icons,
-  Sizes,
-  Variants,
   components: {
     BaseIcon,
     FormField,
@@ -222,15 +220,15 @@ export default {
 }
 
 .text-input__dense >>> .field-container {
-  @apply h-8;
+  @apply h-8 px-3;
 }
 
 .text-input__normal >>> .field-container {
-  @apply h-10;
+  @apply h-10 px-4;
 }
 
 .text-input__large >>> .field-container {
-  @apply h-14;
+  @apply h-14 px-4;
 }
 
 .text-input__raised.text-input__invalid .text-input--field,

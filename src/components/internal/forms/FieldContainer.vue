@@ -45,19 +45,19 @@ export default {
 
 <style scoped>
 .field-container {
-  @apply flex 
+  @apply border
+    border-transparent
+    flex 
     items-center 
     relative
     /* For legacy */
-    box-border;
+    box-border
+    border-solid;
 }
 
 .field-container__standard {
   @apply bg-white
-    border
-    border-gray-4
-    /* For legacy */
-    border-solid;
+    border-gray-4;
 }
 
 .field-container__raised {
@@ -74,15 +74,15 @@ export default {
 }
 
 .field-container__dense {
-  @apply font-body-text rounded px-3;
+  @apply font-body-text rounded;
 }
 
 .field-container__normal {
-  @apply font-body-text rounded-md px-4;
+  @apply font-body-text rounded-md;
 }
 
 .field-container__large {
-  @apply font-body-medium rounded-md px-4;
+  @apply font-body-medium rounded-md;
 }
 
 .field-container__disabled.field-container__standard,
