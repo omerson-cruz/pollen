@@ -23,6 +23,7 @@
       name="month"
       class="date-input--select date-input--field"
       :class="{ 'date-input--field__empty': !month }"
+      aria-label="Month"
       @input="handleInput"
     >
       <option value="">MM</option>
@@ -35,6 +36,7 @@
       name="day"
       class="date-input--select date-input--field"
       :class="{ 'date-input--field__empty': !day }"
+      aria-label="Day"
       @input="handleInput"
     >
       <option value="">DD</option>
@@ -50,6 +52,7 @@
       name="year"
       placeholder="YYYY"
       pattern="[0-9]*"
+      aria-label="Year"
       @input="handleInput"
     />
   </FormField>
