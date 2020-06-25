@@ -45,6 +45,13 @@ export const Gallery = () => ({
               :size="size"
               @input="handleInput"
             />
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Placeholder</TypeOverline>
+            <DateInput
+              :variant="variant"
+              :size="size"
+              placeholder="Date of birth"
+              @input="handleInput"
+            />
             <TypeOverline tag="h3" class="mb-2">{{ size }}, Filled</TypeOverline>
             <DateInput
               :variant="variant"
@@ -58,11 +65,27 @@ export const Gallery = () => ({
               :size="size"
               invalid
               @input="handleInput"
-            />            
+            />
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Placeholder, Invalid</TypeOverline>
+            <DateInput
+              :variant="variant"
+              :size="size"
+              placeholder="Date of birth"
+              invalid
+              @input="handleInput"
+            />
             <TypeOverline tag="h3" class="mb-2">{{ size }}, Disabled</TypeOverline>
             <DateInput
               :variant="variant"
               :size="size"
+              disabled
+              @input="handleInput"
+            />
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Disabled, Placeholder</TypeOverline>
+            <DateInput
+              :variant="variant"
+              :size="size"
+              placeholder="Date of birth"
               disabled
               @input="handleInput"
             />
@@ -92,10 +115,10 @@ export const WithKnobs = () => {
         default: select('Size', Object.values(Sizes), Sizes.NORMAL),
       },
       label: {
-        default: text('Label', 'First name'),
+        default: text('Label', 'Date of birth'),
       },
       placeholder: {
-        default: text('Placeholder', 'Joe Smith'),
+        default: text('Placeholder', 'Date of birth'),
       },
       value: {
         default: text('Value', '07/07/2007'),
@@ -116,6 +139,7 @@ export const WithKnobs = () => {
           :error="error"
           :invalid="invalid"
           :value="value"
+          :placeholder="placeholder"
         />
       </div>
     `,

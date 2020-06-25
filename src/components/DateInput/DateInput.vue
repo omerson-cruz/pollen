@@ -1,6 +1,6 @@
 <template>
   <FormField
-    :id="`${id}-month`"
+    :id="`${id}-${isPlaceholderVisible ? 'placholder' : 'month'}`"
     :variant="variant"
     :size="size"
     :label="label"
@@ -17,47 +17,68 @@
       },
     ]"
   >
-    <select
-      :id="`${id}-month`"
-      :value="month"
-      name="month"
-      class="date-input--select date-input--field"
-      :class="{ 'date-input--field__empty': !month }"
-      aria-label="Month"
-      :required="required"
-      @input="handleInput"
-    >
-      <option value="">MM</option>
-      <option v-for="mm in availableMonths" :key="mm">{{ mm }}</option>
-    </select>
-    <span class="date-input--divider">/</span>
-    <select
-      :id="`${id}-day`"
-      :value="day"
-      name="day"
-      class="date-input--select date-input--field"
-      :class="{ 'date-input--field__empty': !day }"
-      aria-label="Day"
-      :required="required"
-      @input="handleInput"
-    >
-      <option value="">DD</option>
-      <option v-for="dd in availableDays" :key="dd">{{ dd }}</option>
-    </select>
-    <span class="date-input--divider">/</span>
     <input
-      :id="`${id}-year`"
-      ref="year"
-      class="date-input--text date-input--field"
-      type="text"
-      :value="year"
-      name="year"
-      placeholder="YYYY"
-      pattern="[0-9]*"
-      aria-label="Year"
-      :required="required"
-      @input="handleInput"
+      v-if="isPlaceholderVisible"
+      :id="`${id}-placeholder`"
+      :placeholder="placeholder"
+      :disabled="disabled"
+      class="date-input--placeholder date-input--field"
+      value=""
+      readonly
+      @focus="handlePlaceholderFocus"
     />
+    <template v-else>
+      <input
+        :id="`${id}-month`"
+        ref="month"
+        :value="month"
+        :required="required"
+        :disabled="disabled"
+        class="date-input--short date-input--field"
+        type="text"
+        name="month"
+        placeholder="MM"
+        pattern="[0-9]*"
+        aria-label="Month"
+        @input="handleInput"
+        @focus="hasFocus = true"
+        @blur="handleBlur"
+      />
+      <span class="date-input--divider">/</span>
+      <input
+        :id="`${id}-day`"
+        ref="day"
+        :value="day"
+        :required="required"
+        :disabled="disabled"
+        class="date-input--short date-input--field"
+        type="text"
+        name="day"
+        placeholder="DD"
+        pattern="[0-9]*"
+        aria-label="Day"
+        @input="handleInput"
+        @focus="hasFocus = true"
+        @blur="handleBlur"
+      />
+      <span class="date-input--divider">/</span>
+      <input
+        :id="`${id}-year`"
+        ref="year"
+        :disabled="disabled"
+        class="date-input--long date-input--field"
+        type="text"
+        :value="year"
+        name="year"
+        placeholder="YYYY"
+        pattern="[0-9]*"
+        aria-label="Year"
+        :required="required"
+        @focus="hasFocus = true"
+        @blur="handleBlur"
+        @input="handleInput"
+      />
+    </template>
   </FormField>
 </template>
 
@@ -69,17 +90,24 @@ import FormField from '../internal/forms/FormField.vue';
 
 const { Sizes, Variants } = Form;
 
+const Fields = Object.freeze({
+  MONTH: 'month',
+  DAY: 'day',
+  YEAR: 'year',
+});
+
 const toTwoDigits = (num) => (`${num}`.length === 1 ? `0${num}` : `${num}`);
+
 const getNumberSeries = (limit) =>
   Array.from(Array(limit), (_, i) => toTwoDigits(i + 1));
+
 const getDaysInMonth = (month, year) => {
   switch (month) {
     case '02':
       // If a year is defined and it's not a leap year, return 28 days
-      if (year && parseInt(year, 10) % 4) {
-        return getNumberSeries(28);
-      }
-      return getNumberSeries(29);
+      return year && parseInt(year, 10) % 4
+        ? getNumberSeries(28)
+        : getNumberSeries(29);
     case '04':
     case '06':
     case '09':
@@ -90,14 +118,15 @@ const getDaysInMonth = (month, year) => {
   }
 };
 
-const sanitizeYear = (value) =>
-  value
+const sanitizeInput = (field, value) => {
+  const characterLimit = field === Fields.YEAR ? 4 : 2;
+  const finalValue = value
     .split('')
     .filter((char) => isFinite(parseInt(char, 10)))
-    .slice(0, 4)
+    .slice(0, characterLimit)
     .join('');
-
-const MONTHS = Object.freeze(getNumberSeries(12));
+  return finalValue;
+};
 
 export default {
   components: {
@@ -143,29 +172,37 @@ export default {
       type: Boolean,
       default: false,
     },
+    placeholder: {
+      type: String,
+      default: null,
+    },
   },
   data() {
     return {
+      hasFocus: false,
       month: '',
       day: '',
       year: '',
     };
   },
   computed: {
-    availableMonths() {
-      return MONTHS;
-    },
-    availableDays() {
-      return getDaysInMonth(this.month, this.year);
+    isPlaceholderVisible() {
+      return (
+        !!this.placeholder &&
+        !this.hasFocus &&
+        !this.month &&
+        !this.day &&
+        !this.year
+      );
     },
   },
   watch: {
     value: {
       handler(newVal) {
-        const [m, d, y] = newVal.split('/');
-        this.month = isFinite(parseInt(m, 10)) ? m : '';
-        this.day = isFinite(parseInt(d, 10)) ? d : '';
-        this.year = y ? sanitizeYear(y) : '';
+        const [m = '', d = '', y = ''] = newVal.split('/');
+        this.month = sanitizeInput(Fields.MONTH, m);
+        this.day = sanitizeInput(Fields.DAY, d);
+        this.year = sanitizeInput(Fields.YEAR, y);
       },
       immediate: true,
     },
@@ -177,17 +214,50 @@ export default {
     },
   },
   methods: {
-    handleInput(e) {
-      const { value, name } = e.target;
-      if (name === 'year') {
-        // Ensure we only set numeric strings for year.
-        const newValue = sanitizeYear(value);
-        this.year = newValue;
-        this.$refs.year.value = newValue;
-      } else {
-        this[name] = value;
+    handleBlur(e) {
+      // Format entered value
+      const { name, value } = e.target;
+      if (value) {
+        const newValue = toTwoDigits(value);
+        e.target.value = newValue;
+        this[name] = newValue;
       }
+
+      // Check if this component still has focus. setTimeout is necessary
+      // because immediately on blur, focus is set to the body element before
+      // focus is moved to the next element.
+      setTimeout(() => {
+        const activeEl = document.activeElement;
+        this.hasFocus = Object.values(this.$refs).includes(activeEl);
+      }, 0);
+    },
+    handleInput(e) {
+      const { name, value } = e.target;
+      let newValue = sanitizeInput(name, value);
+
+      if (
+        (name === Fields.MONTH && parseInt(newValue, 10) > 12) ||
+        (name === Fields.DAY &&
+          !getDaysInMonth(this.month, this.year).includes(
+            toTwoDigits(newValue)
+          ))
+      ) {
+        newValue = newValue.charAt(0);
+      }
+      this[name] = newValue;
+      this.$refs[name].value = newValue;
       this.$emit('input', [this.month, this.day, this.year].join('/'));
+      if (name === Fields.MONTH && newValue.length >= 2) {
+        this.$refs.day.focus();
+      }
+      if (name === Fields.DAY && newValue.length >= 2) {
+        this.$refs.year.focus();
+      }
+    },
+    async handlePlaceholderFocus() {
+      this.hasFocus = true;
+      await this.$nextTick();
+      this.$refs.month.focus();
     },
     validateDay(month, year) {
       if (!this.day) {
@@ -208,11 +278,16 @@ export default {
   font-size: 1em;
 }
 
-.date-input--select {
-  @apply flex-grow text-right;
+.date-input--placeholder {
+  @apply absolute inset-0 px-3 z-10;
 }
 
-.date-input--text {
+.date-input--short {
+  @apply flex-grow;
+  width: 1.5em;
+}
+
+.date-input--long {
   @apply w-full;
   flex-grow: 2;
 }
