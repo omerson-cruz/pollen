@@ -44,39 +44,39 @@ export default {
   },
   inheritAttrs: false,
   props: {
-    variant: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    error: {
       type: String,
-      default: Variants.STANDARD,
-      validator: (value) => Object.values(Variants).includes(value),
+      default: null,
+    },
+    id: {
+      type: String,
+      default: shortid.generate,
+    },
+    invalid: {
+      type: Boolean,
+      default: false,
+    },
+    label: {
+      type: String,
+      default: null,
     },
     size: {
       type: String,
       default: Sizes.NORMAL,
       validator: (value) => Object.values(Sizes).includes(value),
     },
-    label: {
-      type: String,
-      default: null,
-    },
-    error: {
-      type: String,
-      default: null,
-    },
-    invalid: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
     value: {
       type: String,
       default: '',
     },
-    id: {
+    variant: {
       type: String,
-      default: shortid.generate,
+      default: Variants.STANDARD,
+      validator: (value) => Object.values(Variants).includes(value),
     },
   },
   methods: {

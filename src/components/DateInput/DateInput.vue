@@ -134,47 +134,47 @@ export default {
   },
   inheritAttrs: false,
   props: {
-    variant: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    error: {
       type: String,
-      default: Variants.STANDARD,
-      validator: (value) => Object.values(Variants).includes(value),
+      default: null,
+    },
+    id: {
+      type: String,
+      default: shortid.generate,
+    },
+    invalid: {
+      type: Boolean,
+      default: false,
+    },
+    label: {
+      type: String,
+      default: null,
+    },
+    placeholder: {
+      type: String,
+      default: null,
+    },
+    required: {
+      type: Boolean,
+      default: false,
     },
     size: {
       type: String,
       default: Sizes.NORMAL,
       validator: (value) => Object.values(Sizes).includes(value),
     },
-    label: {
+    variant: {
       type: String,
-      default: null,
-    },
-    error: {
-      type: String,
-      default: null,
-    },
-    invalid: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
+      default: Variants.STANDARD,
+      validator: (value) => Object.values(Variants).includes(value),
     },
     value: {
       type: String,
       default: '',
-    },
-    id: {
-      type: String,
-      default: shortid.generate,
-    },
-    required: {
-      type: Boolean,
-      default: false,
-    },
-    placeholder: {
-      type: String,
-      default: null,
     },
   },
   data() {

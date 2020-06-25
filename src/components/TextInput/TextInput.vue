@@ -73,30 +73,32 @@ export default {
   },
   inheritAttrs: false,
   props: {
-    variant: {
-      type: String,
-      default: Variants.STANDARD,
-      validator: (value) => Object.values(Variants).includes(value),
-    },
-    size: {
-      type: String,
-      default: Sizes.NORMAL,
-      validator: (value) => Object.values(Sizes).includes(value),
-    },
-    label: {
-      type: String,
-      default: null,
+    disabled: {
+      type: Boolean,
+      default: false,
     },
     error: {
       type: String,
       default: null,
     },
-    preIcon: {
+    id: {
+      type: String,
+      default: shortid.generate,
+    },
+    invalid: {
+      type: Boolean,
+      default: false,
+    },
+    label: {
+      type: String,
+      default: null,
+    },
+    postIcon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
     },
-    postIcon: {
+    preIcon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
@@ -105,25 +107,23 @@ export default {
       type: String,
       default: null,
     },
-    invalid: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
     showReset: {
       type: Boolean,
       default: false,
+    },
+    size: {
+      type: String,
+      default: Sizes.NORMAL,
+      validator: (value) => Object.values(Sizes).includes(value),
     },
     value: {
       type: String,
       default: '',
     },
-    id: {
+    variant: {
       type: String,
-      default: shortid.generate,
+      default: Variants.STANDARD,
+      validator: (value) => Object.values(Variants).includes(value),
     },
   },
   methods: {

@@ -24,31 +24,31 @@ export default {
     FieldError,
   },
   props: {
-    variant: {
-      type: String,
-      required: true,
-    },
-    size: {
-      type: String,
-      required: true,
-    },
-    label: {
-      type: String,
-      default: null,
+    disabled: {
+      type: Boolean,
+      default: false,
     },
     error: {
       type: String,
       default: null,
     },
+    id: {
+      type: String,
+      required: true,
+    },
     invalid: {
       type: Boolean,
       default: false,
     },
-    disabled: {
-      type: Boolean,
-      default: false,
+    label: {
+      type: String,
+      default: null,
     },
-    id: {
+    size: {
+      type: String,
+      required: true,
+    },
+    variant: {
       type: String,
       required: true,
     },
