@@ -97,6 +97,14 @@ const Fields = Object.freeze({
 });
 
 const toTwoDigits = (num) => (`${num}`.length === 1 ? `0${num}` : `${num}`);
+const toFullYear = (num) => {
+  let newValue = `${num}`;
+  while (newValue.length < 4) {
+    const char = newValue.length === 3 ? '2' : '0';
+    newValue = char + newValue;
+  }
+  return newValue;
+};
 
 const getNumberSeries = (limit) =>
   Array.from(Array(limit), (_, i) => toTwoDigits(i + 1));
@@ -221,15 +229,8 @@ export default {
       // Format entered value
       const { name, value } = e.target;
       if (value) {
-        let newValue = value;
-        if (name === Fields.YEAR) {
-          while (newValue.length < 4) {
-            const char = newValue.length === 3 ? '2' : '0';
-            newValue = char + newValue;
-          }
-        } else {
-          newValue = toTwoDigits(value);
-        }
+        const newValue =
+          name === Fields.YEAR ? toFullYear(value) : toTwoDigits(value);
         if (value === newValue) return;
         e.target.value = newValue;
         this[name] = newValue;
