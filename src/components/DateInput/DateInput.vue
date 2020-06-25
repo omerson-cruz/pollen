@@ -1,6 +1,6 @@
 <template>
   <FormField
-    :id="`${id}-${isPlaceholderVisible ? 'placholder' : 'month'}`"
+    :id="`${id}-${isPlaceholderVisible ? 'placeholder' : 'month'}`"
     :variant="variant"
     :size="size"
     :label="label"

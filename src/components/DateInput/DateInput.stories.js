@@ -23,10 +23,7 @@ export const Gallery = () => ({
   },
   methods: {
     capitalize,
-    handleInput(e) {
-      console.log(e);
-      action(e); // TODO(jon.jandoc): This is not working.
-    },
+    handleInput: action('input'),
   },
   template: `
     <div>
@@ -130,6 +127,9 @@ export const WithKnobs = () => {
         default: boolean('Invalid', false),
       },
     },
+    methods: {
+      handleInput: action('input'),
+    },
     template: `
       <div class="p-8" :class="variant === 'ghost-inverted' && 'bg-gray-0'">
         <DateInput
@@ -140,6 +140,7 @@ export const WithKnobs = () => {
           :invalid="invalid"
           :value="value"
           :placeholder="placeholder"
+          @input="handleInput"
         />
       </div>
     `,
