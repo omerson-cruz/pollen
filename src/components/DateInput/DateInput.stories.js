@@ -37,36 +37,36 @@ export const Gallery = () => ({
           :key="variant"
           :class="['w-56', (variant === 'ghost-inverted' ? 'm-4 p-4 bg-gray-0 text-white' : 'm-8')]"
         >
-          <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
+          <TypeOverline tag="h2" class="mb-2" variant="large">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
-            <TypeOverline tag="h2" class="mb-2">Empty</TypeOverline>
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Empty</TypeOverline>
             <DateInput
               :variant="variant"
               :size="size"
               @input="handleInput"
             />
-            <TypeOverline tag="h2" class="mb-2">Filled</TypeOverline>
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Filled</TypeOverline>
             <DateInput
               :variant="variant"
               :size="size"
               value="07/07/2007"
               @input="handleInput"
             />
-            <TypeOverline tag="h2" class="mb-2">Invalid</TypeOverline>
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Invalid</TypeOverline>
             <DateInput
               :variant="variant"
               :size="size"
               invalid
               @input="handleInput"
             />            
-            <TypeOverline tag="h2" class="mb-2">Disabled</TypeOverline>
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Disabled</TypeOverline>
             <DateInput
               :variant="variant"
               :size="size"
               disabled
               @input="handleInput"
             />
-            <TypeOverline tag="h2" class="mb-2">Disabled, Filled</TypeOverline>
+            <TypeOverline tag="h3" class="mb-2">{{ size }}, Disabled, Filled</TypeOverline>
             <DateInput
               :variant="variant"
               :size="size"

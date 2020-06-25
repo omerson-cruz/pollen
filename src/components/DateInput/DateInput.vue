@@ -24,6 +24,7 @@
       class="date-input--select date-input--field"
       :class="{ 'date-input--field__empty': !month }"
       aria-label="Month"
+      :required="required"
       @input="handleInput"
     >
       <option value="">MM</option>
@@ -37,6 +38,7 @@
       class="date-input--select date-input--field"
       :class="{ 'date-input--field__empty': !day }"
       aria-label="Day"
+      :required="required"
       @input="handleInput"
     >
       <option value="">DD</option>
@@ -53,6 +55,7 @@
       placeholder="YYYY"
       pattern="[0-9]*"
       aria-label="Year"
+      :required="required"
       @input="handleInput"
     />
   </FormField>
@@ -135,6 +138,10 @@ export default {
     id: {
       type: String,
       default: shortid.generate,
+    },
+    required: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

@@ -5,6 +5,7 @@ import Typography from '@/constants/Typography';
 
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
 export { default as BaseIcon } from '@/components/BaseIcon/BaseIcon.vue';
+export { default as DateInput } from '@/components/DateInput/DateInput.vue';
 export { default as IconButton } from '@/components/IconButton/IconButton.vue';
 export { default as RadioToggle } from '@/components/RadioToggle/RadioToggle.vue';
 export { default as TextInput } from '@/components/TextInput/TextInput.vue';
