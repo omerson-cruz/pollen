@@ -214,13 +214,26 @@ export default {
     },
   },
   methods: {
+    emitValue() {
+      this.$emit('input', [this.month, this.day, this.year].join('/'));
+    },
     handleBlur(e) {
       // Format entered value
       const { name, value } = e.target;
       if (value) {
-        const newValue = toTwoDigits(value);
+        let newValue = value;
+        if (name === Fields.YEAR) {
+          while (newValue.length < 4) {
+            const char = newValue.length === 3 ? '2' : '0';
+            newValue = char + newValue;
+          }
+        } else {
+          newValue = toTwoDigits(value);
+        }
+        if (value === newValue) return;
         e.target.value = newValue;
         this[name] = newValue;
+        this.emitValue();
       }
 
       // Check if this component still has focus. setTimeout is necessary
@@ -244,9 +257,11 @@ export default {
       ) {
         newValue = newValue.charAt(0);
       }
+
       this[name] = newValue;
       this.$refs[name].value = newValue;
-      this.$emit('input', [this.month, this.day, this.year].join('/'));
+      this.emitValue();
+
       if (name === Fields.MONTH && newValue.length >= 2) {
         this.$refs.day.focus();
       }
