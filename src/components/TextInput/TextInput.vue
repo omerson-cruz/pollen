@@ -48,6 +48,7 @@
       :icon="$options.Icons.CLOSE"
       title="Clear"
       flat
+      :disabled="disabled"
       @click.prevent="handleReset"
     />
   </FormField>

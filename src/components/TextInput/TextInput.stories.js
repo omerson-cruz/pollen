@@ -116,6 +116,9 @@ export const WithKnobs = () => {
       invalid: {
         default: boolean('Invalid', false),
       },
+      disabled: {
+        default: boolean('Disabled', false),
+      },
       showReset: {
         default: boolean('Show Reset', true),
       },
@@ -135,6 +138,7 @@ export const WithKnobs = () => {
           :post-icon="postIcon"
           :prefix="prefix"
           :invalid="invalid"
+          :disabled="disabled"
           :show-reset="showReset"
           @input="handleInput"
         />
