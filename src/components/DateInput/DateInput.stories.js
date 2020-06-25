@@ -7,7 +7,7 @@ import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import '../../assets/tailwind.css';
 
 export default {
-  title: 'DateInput',
+  title: 'Inputs/DateInput',
   component: DateInput,
 };
 

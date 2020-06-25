@@ -287,6 +287,10 @@ export default {
   width: 1.5em;
 }
 
+.date-input--short::placeholder {
+  @apply text-center;
+}
+
 .date-input--long {
   @apply w-full;
   flex-grow: 2;

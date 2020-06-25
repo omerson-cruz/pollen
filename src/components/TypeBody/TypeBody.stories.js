@@ -5,7 +5,7 @@ import TypeOverline from '../TypeOverline/TypeOverline.vue';
 const { Body, Weights } = Typography;
 
 export default {
-  title: 'TypeBody',
+  title: 'Typography/TypeBody',
   component: TypeBody,
 };
 

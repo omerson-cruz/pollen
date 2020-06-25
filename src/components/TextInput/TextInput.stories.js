@@ -8,7 +8,7 @@ import { Icons } from '../BaseIcon/BaseIcon.vue';
 import '../../assets/tailwind.css';
 
 export default {
-  title: 'TextInput',
+  title: 'Inputs/TextInput',
   component: TextInput,
 };
 
