@@ -97,6 +97,9 @@ export const WithKnobs = () => {
       placeholder: {
         default: text('Placeholder', 'Joe Smith'),
       },
+      value: {
+        default: text('Value', '07/07/2007'),
+      },
       error: {
         default: text('Error', 'Something went wrong'),
       },
@@ -112,6 +115,7 @@ export const WithKnobs = () => {
           :size="size"
           :error="error"
           :invalid="invalid"
+          :value="value"
         />
       </div>
     `,
