@@ -85,6 +85,11 @@ export default {
   @apply font-body-medium rounded-md;
 }
 
+.field-container__disabled,
+.field-container__disabled >>> [disabled] {
+  @apply cursor-not-allowed;
+}
+
 .field-container__disabled.field-container__standard,
 .field-container__disabled.field-container__raised {
   @apply bg-gray-7;
