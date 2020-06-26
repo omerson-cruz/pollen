@@ -167,7 +167,11 @@ export default {
 /* Theme variations */
 /** Regular buttons  */
 .base-button__regular {
-  @apply border-2 shadow-2;
+  @apply border-2;
+}
+
+.base-button__regular:not(.base-button__inverted) {
+  @apply shadow-2;
 }
 
 /*** Regular primary buttons */
