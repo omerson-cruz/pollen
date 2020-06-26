@@ -7,6 +7,7 @@
     :error="error"
     :invalid="invalid"
     :disabled="disabled"
+    :focused="hasFocus"
     class="text-input"
     :class="[
       `text-input__${variant}`,
@@ -33,6 +34,8 @@
       :aria-describedby="error ? '${id}-error' : false"
       :disabled="disabled"
       @input="handleInput"
+      @focus="hasFocus = true"
+      @blur="hasFocus = false"
     />
     <BaseIcon
       v-if="postIcon"
@@ -127,6 +130,11 @@ export default {
       default: Variants.STANDARD,
       validator: (value) => Object.values(Variants).includes(value),
     },
+  },
+  data() {
+    return {
+      hasFocus: false,
+    };
   },
   methods: {
     handleInput(e) {

@@ -7,6 +7,7 @@
       {
         'field-container__disabled': props.disabled,
         'field-container__invalid': props.invalid,
+        'field-container__focused': props.focused,
       },
     ]"
   >
@@ -22,6 +23,10 @@ const { Sizes, Variants } = Form;
 export default {
   props: {
     disabled: {
+      type: Boolean,
+      default: false,
+    },
+    focused: {
       type: Boolean,
       default: false,
     },
@@ -60,17 +65,44 @@ export default {
     border-gray-4;
 }
 
-.field-container__raised {
+.field-container__standard:hover:not(.field-container__disabled) {
+  @apply border-gray-3;
+}
+
+.field-container__standard.field-container__focused,
+.field-container__standard.field-container__focused:hover:not(.field-container__disabled) {
+  @apply border-primary;
+}
+
+.field-container__raised,
+.field-container__raised.field-container__focused,
+.field-container__raised.field-container__focused:hover:not(.field-container__disabled) {
   @apply bg-white
     shadow-2;
 }
 
-.field-container__ghost {
+.field-container__raised:hover:not(.field-container__disabled) {
+  @apply shadow-3;
+}
+
+.field-container__ghost,
+.field-container__ghost.field-container__focused,
+.field-container__ghost.field-container__focused:hover:not(.field-container__disabled) {
   background: rgba(0, 0, 0, 0.04);
 }
 
-.field-container__ghost-inverted {
+.field-container__ghost:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.field-container__ghost-inverted,
+.field-container__ghost-inverted.field-container__focused,
+.field-container__ghost-inverted.field-container__focused:hover:not(.field-container__disabled) {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.field-container__ghost-inverted:hover:not(.field-container__disabled) {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .field-container__dense {
