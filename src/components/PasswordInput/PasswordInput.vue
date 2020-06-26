@@ -173,7 +173,9 @@ export default {
 </script>
 
 <style scoped>
-.password-input--toggle.icon-button {
+.password-input .password-input--toggle.icon-button,
+.password-input .password-input--toggle.icon-button:hover,
+.password-input .password-input--toggle.icon-button:active {
   @apply flex-shrink-0 -mr-1 text-gray-4;
 }
 
