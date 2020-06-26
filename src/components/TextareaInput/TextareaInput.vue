@@ -4,6 +4,7 @@
     :variant="variant"
     :size="size"
     :label="label"
+    :focused="hasFocus"
     :error="error"
     :invalid="invalid"
     :disabled="disabled"
