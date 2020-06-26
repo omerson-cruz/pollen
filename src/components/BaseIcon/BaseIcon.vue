@@ -1,7 +1,11 @@
 <template functional>
   <component
-    :is="$options.FontAwesomeIcon"
-    :class="[data.class, data.staticClass]"
+    :is="$options.getComponent(props.icon)"
+    :class="[
+      data.class,
+      data.staticClass,
+      { 'base-icon__custom': $options.isCustomIcon(props.icon) },
+    ]"
     :icon="$options.getIcon(props.icon)"
     class="base-icon"
     v-bind="$options.getAttributes({ data, parent })"
@@ -22,25 +26,29 @@ import {
 
 import {
   faClipboardCheck as clipboardCheck,
-  faEye as eye,
-  faEyeSlash as eyeSlash,
   faPlus as plus,
   faTimes as close,
 } from '@fortawesome/pro-light-svg-icons';
 
 import { faLock as lock } from '@fortawesome/free-solid-svg-icons';
 
+import eyeClosed from '../../assets/icons/eye-closed.svg';
+import eyeOpen from '../../assets/icons/eye-open.svg';
+
 import getAttributes from '../../util/getAttributes';
 
 const IconComponents = Object.freeze({
   clipboardCheck,
   close,
-  eye,
-  eyeSlash,
   folder,
   lock,
   search,
   plus,
+});
+
+const CustomIcons = Object.freeze({
+  eyeClosed,
+  eyeOpen,
 });
 
 Object.values(IconComponents).forEach((icon) => {
@@ -48,7 +56,7 @@ Object.values(IconComponents).forEach((icon) => {
 });
 
 export const Icons = Object.freeze(
-  Object.keys(IconComponents).reduce(
+  [...Object.keys(IconComponents), ...Object.keys(CustomIcons)].reduce(
     (obj, val) => ({
       ...obj,
       [snakeCase(val).toUpperCase()]: val,
@@ -57,7 +65,13 @@ export const Icons = Object.freeze(
   )
 );
 
-export const isValidIcon = (value) => camelCase(value) in IconComponents;
+export const isValidIcon = (value) =>
+  Object.values(Icons).includes(camelCase(value));
+
+const isCustomIcon = (iconName) => Object.keys(CustomIcons).includes(iconName);
+
+const getComponent = (iconName) =>
+  isCustomIcon(iconName) ? CustomIcons[iconName] : FontAwesomeIcon;
 
 export default {
   props: {
@@ -67,8 +81,16 @@ export default {
       validator: isValidIcon,
     },
   },
-  FontAwesomeIcon,
   getAttributes,
+  getComponent,
   getIcon: (icon) => IconComponents[camelCase(icon)] || null,
+  isCustomIcon,
 };
 </script>
+
+<style>
+.base-icon__custom {
+  height: 1em;
+  width: 1em;
+}
+</style>

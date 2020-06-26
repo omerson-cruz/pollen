@@ -105,7 +105,7 @@ export default {
         .join(' ');
     },
     passwordIcon() {
-      return this.isShowingPassword ? Icons.EYE : Icons.EYE_SLASH;
+      return this.isShowingPassword ? Icons.EYE_OPEN : Icons.EYE_CLOSED;
     },
     passwordScore() {
       const rawScore = scorePassword(this.value);
