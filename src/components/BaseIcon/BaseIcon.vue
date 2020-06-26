@@ -22,6 +22,8 @@ import {
 
 import {
   faClipboardCheck as clipboardCheck,
+  faEye as eye,
+  faEyeSlash as eyeSlash,
   faPlus as plus,
   faTimes as close,
 } from '@fortawesome/pro-light-svg-icons';
@@ -33,6 +35,8 @@ import getAttributes from '../../util/getAttributes';
 const IconComponents = Object.freeze({
   clipboardCheck,
   close,
+  eye,
+  eyeSlash,
   folder,
   lock,
   search,

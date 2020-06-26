@@ -51,6 +51,7 @@
       :disabled="disabled"
       @click.prevent="handleReset"
     />
+    <slot />
   </FormField>
 </template>
 
@@ -145,7 +146,7 @@ export default {
 }
 
 .text-input--field {
-  @apply appearance-none bg-transparent border-0 flex-grow;
+  @apply appearance-none bg-transparent border-0 flex-grow w-full;
   font-size: 1em;
 }
 
