@@ -37,7 +37,7 @@ import eyeOpen from '../../assets/icons/eye-open.svg';
 
 import getAttributes from '../../util/getAttributes';
 
-const IconComponents = Object.freeze({
+const FAIcons = Object.freeze({
   clipboardCheck,
   close,
   folder,
@@ -46,17 +46,17 @@ const IconComponents = Object.freeze({
   plus,
 });
 
+Object.values(FAIcons).forEach((icon) => {
+  library.add(icon);
+});
+
 const CustomIcons = Object.freeze({
   eyeClosed,
   eyeOpen,
 });
 
-Object.values(IconComponents).forEach((icon) => {
-  library.add(icon);
-});
-
 export const Icons = Object.freeze(
-  [...Object.keys(IconComponents), ...Object.keys(CustomIcons)].reduce(
+  [...Object.keys(FAIcons), ...Object.keys(CustomIcons)].reduce(
     (obj, val) => ({
       ...obj,
       [snakeCase(val).toUpperCase()]: val,
@@ -83,7 +83,7 @@ export default {
   },
   getAttributes,
   getComponent,
-  getIcon: (icon) => IconComponents[camelCase(icon)] || null,
+  getIcon: (icon) => FAIcons[camelCase(icon)] || null,
   isCustomIcon,
 };
 </script>
