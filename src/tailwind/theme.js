@@ -69,6 +69,7 @@ module.exports = {
     // Semantic accents
     error: '#B0223E',
     'error-light': '#FDF2F4',
+    'error-light-ghost': '#FF6C89',
     warning: '#EE8A2E',
     'warning-light': '#FFFDF2',
     success: '#00AB82',
@@ -132,5 +133,8 @@ module.exports = {
     '80': '.8',
     '90': '.9',
     '100': '1',
+  },
+  spacing: {
+    '14': '3.5rem',
   },
 };

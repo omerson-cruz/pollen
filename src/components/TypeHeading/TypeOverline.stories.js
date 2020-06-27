@@ -5,7 +5,7 @@ import TypeOverline from '../TypeOverline/TypeOverline.vue';
 const { Heading, Weights } = Typography;
 
 export default {
-  title: 'TypeHeading',
+  title: 'Typography/TypeHeading',
   component: TypeHeading,
 };
 

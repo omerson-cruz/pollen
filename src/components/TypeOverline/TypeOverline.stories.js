@@ -4,7 +4,7 @@ import TypeOverline from './TypeOverline.vue';
 const { Overline } = Typography;
 
 export default {
-  title: 'TypeOverline',
+  title: 'Typography/TypeOverline',
   component: TypeOverline,
 };
 

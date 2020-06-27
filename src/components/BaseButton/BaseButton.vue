@@ -1,5 +1,5 @@
 <script>
-import BaseIcon, { Icons } from '../BaseIcon/BaseIcon.vue';
+import BaseIcon, { isValidIcon } from '../BaseIcon/BaseIcon.vue';
 import Button from '../../constants/Button';
 import getAttributes from '../../util/getAttributes';
 
@@ -20,12 +20,12 @@ export default {
     preIcon: {
       type: String,
       default: null,
-      validator: (value) => !value || Object.values(Icons).includes(value),
+      validator: (value) => !value || isValidIcon(value),
     },
     postIcon: {
       type: String,
       default: null,
-      validator: (value) => !value || Object.values(Icons).includes(value),
+      validator: (value) => !value || isValidIcon(value),
     },
     size: {
       type: String,
@@ -157,8 +157,7 @@ export default {
 }
 
 .base-button__giant {
-  @apply text-18;
-  height: 3.5rem;
+  @apply h-14 text-18;
 }
 
 .base-button__giant .base-button--inner {
@@ -168,7 +167,11 @@ export default {
 /* Theme variations */
 /** Regular buttons  */
 .base-button__regular {
-  @apply border-2 shadow-2;
+  @apply border-2;
+}
+
+.base-button__regular:not(.base-button__inverted) {
+  @apply shadow-2;
 }
 
 /*** Regular primary buttons */

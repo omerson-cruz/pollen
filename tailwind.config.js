@@ -1,29 +1,15 @@
 const theme = require('./src/tailwind/theme');
 const typographyPlugin = require('./src/tailwind/plugins/typography');
 
-const {
-  boxShadow,
-  colors,
-  fontFamily,
-  fontSize,
-  fontWeight,
-  inset,
-  letterSpacing,
-  opacity,
-} = theme;
+const { inset, spacing, ...rest } = theme;
 
 module.exports = {
   purge: false,
   theme: {
-    boxShadow,
-    colors,
-    fontFamily,
-    fontSize,
-    fontWeight,
-    letterSpacing,
-    opacity,
+    ...rest,
     extend: {
       inset,
+      spacing,
     },
   },
   variants: {},

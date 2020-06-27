@@ -109,9 +109,8 @@ export default {
 }
 
 .icon-button__giant {
+  @apply h-14 w-14;
   font-size: 1.5rem;
-  height: 3.5rem;
-  width: 3.5rem;
 }
 
 /* Theme variations */

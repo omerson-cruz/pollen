@@ -24,10 +24,7 @@ export const Gallery = () => ({
   },
   methods: {
     capitalize,
-    handleClick(variant, size) {
-      console.log(`clicked: ${variant} - ${size}`);
-      action(`clicked: ${variant} - ${size}`); // TODO(jon.jandoc): This is not working.
-    },
+    handleClick: action('click'),
   },
   template: `
     <div>
@@ -36,7 +33,7 @@ export const Gallery = () => ({
         <div v-for="variant in variants" :key="variant" class="m-8 w-56">
         <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
-            <IconButton :variant="variant" :size="size" icon="lock" @click="handleClick(variant, size)" />
+            <IconButton :variant="variant" :size="size" icon="lock" @click="handleClick" />
           </div>
           <div class="mb-2">
             <IconButton :variant="variant" icon="lock" disabled />
@@ -52,7 +49,7 @@ export const Gallery = () => ({
         >
           <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'flat-regular-' + variant + '-' + size" class="mb-2">
-            <IconButton :variant="variant" :size="size" icon="lock" flat @click="handleClick(variant, size)" />
+            <IconButton :variant="variant" :size="size" icon="lock" flat @click="handleClick" />
           </div>
           <div>
             <IconButton :variant="variant" icon="lock" flat disabled />

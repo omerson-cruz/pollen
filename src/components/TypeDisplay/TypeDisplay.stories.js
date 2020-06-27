@@ -5,7 +5,7 @@ import TypeOverline from '../TypeOverline/TypeOverline.vue';
 const { Display, Weights } = Typography;
 
 export default {
-  title: 'TypeDisplay',
+  title: 'Typography/TypeDisplay',
   component: TypeDisplay,
 };
 
