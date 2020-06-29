@@ -41,41 +41,64 @@ import FormField from '../internal/forms/FormField.vue';
 
 const { Sizes, Variants } = Form;
 
+/**
+ * A styled `textarea` component for entering multiple lines of text. Attributes
+ * not explicitly enumerated as prop (like `required`) will be transparently
+ * passed through to the `textarea` element.
+ */
 export default {
   components: {
     FormField,
   },
   inheritAttrs: false,
   props: {
+    /** If the field is disabled. */
     disabled: {
       type: Boolean,
       default: false,
     },
+    /** Any messages to display as errors on the field. */
     error: {
       type: String,
       default: null,
     },
+    /** A unique element ID. By default, one is randomly generated. */
     id: {
       type: String,
       default: shortid.generate,
     },
+    /**
+     * If true, this field will display in an error state. NOTE: a field is in
+     * an error state if `invalid` is `true` and/or `error` is truthy.
+     */
     invalid: {
       type: Boolean,
       default: false,
     },
+    /**
+     * A label to display above the field.
+     */
     label: {
       type: String,
       default: null,
     },
+    /**
+     * One of `dense`, `regular`, and `large`.
+     */
     size: {
       type: String,
       default: Sizes.NORMAL,
       validator: (value) => Object.values(Sizes).includes(value),
     },
+    /** Value of the input. Compatible with `v-model`. */
     value: {
       type: String,
       default: '',
     },
+    /**
+     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
+     * `ghost-inverted` is only to be used on dark backgrounds.
+     */
     variant: {
       type: String,
       default: Variants.STANDARD,

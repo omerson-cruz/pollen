@@ -9,6 +9,9 @@ import '../../assets/tailwind.css';
 export default {
   title: 'Inputs/DateInput',
   component: DateInput,
+  parameters: {
+    componentSubtitle: 'Input that makes it easy to type and validate dates',
+  },
 };
 
 const { Sizes, Variants } = Form;
@@ -117,9 +120,6 @@ export const WithKnobs = () => {
       placeholder: {
         default: text('Placeholder', 'Date of birth'),
       },
-      value: {
-        default: text('Value', '07/07/2007'),
-      },
       error: {
         default: text('Error', 'Something went wrong'),
       },
@@ -127,18 +127,24 @@ export const WithKnobs = () => {
         default: boolean('Invalid', false),
       },
     },
+    data() {
+      return {
+        value: text('Value', '07/07/2007'),
+      };
+    },
     methods: {
       handleInput: action('input'),
     },
     template: `
       <div class="p-8" :class="variant === 'ghost-inverted' && 'bg-gray-0'">
+        <p class="font-heading-title mb-4">v-model: {{ value }}</p>
         <DateInput
           :label="label"
           :variant="variant"
           :size="size"
           :error="error"
           :invalid="invalid"
-          :value="value"
+          v-model="value"
           :placeholder="placeholder"
           @input="handleInput"
         />

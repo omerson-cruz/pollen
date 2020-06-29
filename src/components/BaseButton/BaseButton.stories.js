@@ -12,6 +12,9 @@ const { Sizes, Variants } = Button;
 export default {
   title: 'BaseButton',
   component: BaseButton,
+  parameters: {
+    componentSubtitle: 'Basic button component.',
+  },
 };
 
 export const Gallery = () => ({

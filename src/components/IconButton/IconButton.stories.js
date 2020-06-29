@@ -8,14 +8,23 @@ import { Icons } from '../BaseIcon/BaseIcon.vue';
 import '../../assets/tailwind.css';
 
 const { Sizes, Variants } = Button;
+const iconOptions = Object.values(Icons);
 
 export default {
   title: 'IconButton',
   component: IconButton,
+  parameters: {
+    componentSubtitle: 'A clickable icon',
+  },
 };
 
 export const Gallery = () => ({
   components: { IconButton, TypeOverline },
+  props: {
+    icon: {
+      default: select('Icon', iconOptions, Icons.LOCK),
+    },
+  },
   data() {
     return {
       sizes: Sizes,
@@ -33,10 +42,10 @@ export const Gallery = () => ({
         <div v-for="variant in variants" :key="variant" class="m-8 w-56">
         <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
-            <IconButton :variant="variant" :size="size" icon="lock" @click="handleClick" />
+            <IconButton :variant="variant" :size="size" :icon="icon" @click="handleClick" />
           </div>
           <div class="mb-2">
-            <IconButton :variant="variant" icon="lock" disabled />
+            <IconButton :variant="variant" :icon="icon" disabled />
           </div>
         </div>
       </div>
@@ -49,10 +58,10 @@ export const Gallery = () => ({
         >
           <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'flat-regular-' + variant + '-' + size" class="mb-2">
-            <IconButton :variant="variant" :size="size" icon="lock" flat @click="handleClick" />
+            <IconButton :variant="variant" :size="size" :icon="icon" flat @click="handleClick" />
           </div>
           <div>
-            <IconButton :variant="variant" icon="lock" flat disabled />
+            <IconButton :variant="variant" :icon="icon" flat disabled />
           </div>
         </div>      
       </div>
@@ -61,7 +70,6 @@ export const Gallery = () => ({
 });
 
 export const WithKnobs = () => {
-  const iconOptions = Object.values(Icons);
   return {
     components: { IconButton },
     props: {

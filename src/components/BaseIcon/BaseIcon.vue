@@ -73,8 +73,15 @@ const isCustomIcon = (iconName) => Object.keys(CustomIcons).includes(iconName);
 const getComponent = (iconName) =>
   isCustomIcon(iconName) ? CustomIcons[iconName] : FontAwesomeIcon;
 
+/**
+ * An SVG icon component pulling from Bambee's predefined icon set. Icons are
+ * designed to be styled according to the contextual size and font color, e.g.
+ * if you want a red, 40px icon, make sure it or its containing element is
+ * styled with `color: red; font-size: 40px;`.
+ */
 export default {
   props: {
+    // The name of the icon to use.
     icon: {
       type: String,
       required: true,

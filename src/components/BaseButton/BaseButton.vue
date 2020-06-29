@@ -5,40 +5,63 @@ import getAttributes from '../../util/getAttributes';
 
 const { Sizes, Variants } = Button;
 
+/**
+ * `BaseButton` is the general purpose "button". While this will visually look
+ * like a button, the underlying tag can be defined via a prop. This is
+ * available in four named color variations, in four sizes, displaying
+ * optionally as `flat`, and `block`. Icons can be prepended or appended with
+ * props.
+ */
 export default {
   functional: true,
   components: { BaseIcon },
   props: {
+    /** If true, component will display as a full-width flex. */
     block: {
       type: Boolean,
       default: false,
     },
+    /**
+     * If true, component will display with a transparent background color,
+     * but will still retain size-appropriate padding and focus border.
+     */
     flat: {
       type: Boolean,
       default: false,
     },
+    /** The name of an icon (see BaseIcon) to prepend to the component. */
     preIcon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
     },
+    /** The name of an icon (see BaseIcon) to append to the component. */
     postIcon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
     },
+    /** One of `small`, `medium`, `large`, or `giant`. */
     size: {
       type: String,
-      default: Sizes.MEDIUM,
+      default: Button.Sizes.MEDIUM, // Explicitly calling out enum path for docs
       validator: (value) => Object.values(Sizes).includes(value),
     },
+    /**
+     * The html tag to use for this component. `button`, `nuxt-link`, and `a`
+     * are the most common uses.
+     */
     tag: {
       type: String,
       default: 'button',
     },
+    /**
+     * The color theme. Can be one of `primary`, `secondary`, `tertiary`, and
+     * `inverted`.
+     */
     variant: {
       type: String,
-      default: Variants.PRIMARY,
+      default: Button.Variants.PRIMARY, // Explicitly calling out enum path for docs
       validator: (value) => Object.values(Variants).includes(value),
     },
   },

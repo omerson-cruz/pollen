@@ -9,6 +9,9 @@ import '../../assets/tailwind.css';
 export default {
   title: 'Inputs/TextareaInput',
   component: TextareaInput,
+  parameters: {
+    componentSubtitle: 'Multi-line text input',
+  },
 };
 
 const { Sizes, Variants } = Form;

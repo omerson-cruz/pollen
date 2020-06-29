@@ -4,6 +4,9 @@ import '../../assets/tailwind.css';
 export default {
   title: 'BaseIcon',
   component: BaseIcon,
+  parameters: {
+    componentSubtitle: 'Inlined svg icons',
+  },
 };
 
 export const Gallery = () => ({
