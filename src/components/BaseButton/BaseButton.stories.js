@@ -119,3 +119,12 @@ export const WithKnobs = () => {
     `,
   };
 };
+
+/* eslint-disable no-param-reassign */
+[Gallery, WithPreIcon, WithPostIcon, WithKnobs].forEach((item) => {
+  item.story = {
+    parameters: {
+      jest: ['BaseButton.test.js'],
+    },
+  };
+});

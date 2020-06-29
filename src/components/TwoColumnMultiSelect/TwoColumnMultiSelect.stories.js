@@ -169,3 +169,18 @@ export const WithHeadersAsSlots = () => ({
     </TwoColumnMultiSelect />
   `,
 });
+
+/* eslint-disable no-param-reassign */
+[
+  Default,
+  WithFilter,
+  WithPrefilledFilter,
+  WithHeaderAsProps,
+  WithHeadersAsSlots,
+].forEach((item) => {
+  item.story = {
+    parameters: {
+      jest: ['TwoColumnMultiSelect.test.js'],
+    },
+  };
+});

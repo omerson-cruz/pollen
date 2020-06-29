@@ -92,3 +92,12 @@ export const WithKnobs = () => {
     `,
   };
 };
+
+/* eslint-disable no-param-reassign */
+[Gallery, WithKnobs].forEach((item) => {
+  item.story = {
+    parameters: {
+      jest: ['IconButton.test.js'],
+    },
+  };
+});
