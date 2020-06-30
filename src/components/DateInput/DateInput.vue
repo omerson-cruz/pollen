@@ -113,8 +113,8 @@ const getNumberSeries = (limit) =>
 const getDaysInMonth = (month, year) => {
   switch (month) {
     case '02':
-      // If a year is defined and it's not a leap year, return 28 days
-      return year && parseInt(year, 10) % 4
+      // If a complete year is defined and it's not a leap year, return 28 days
+      return year && year.length === 4 && parseInt(year, 10) % 4
         ? getNumberSeries(28)
         : getNumberSeries(29);
     case '04':
