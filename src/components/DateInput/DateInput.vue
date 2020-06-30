@@ -185,43 +185,26 @@ export default {
       type: Boolean,
       default: false,
     },
-    /**
-     * A label to display above the field.
-     */
+    /** A label to display above the field. */
     label: {
       type: String,
       default: null,
     },
-    /**
-     * A placeholder value to display when this field is empty.
-     */
+    /** A placeholder value to display when this field is empty. */
     placeholder: {
       type: String,
       default: null,
     },
-    /**
-     * If the field is required.
-     */
+    /** If the field is required. */
     required: {
       type: Boolean,
       default: false,
     },
-    /**
-     * One of `dense`, `regular`, and `large`.
-     */
+    /** One of `dense`, `regular`, and `large` . */
     size: {
       type: String,
       default: Form.Sizes.NORMAL, // Explicitly calling out enum path for docs
       validator: (value) => Object.values(Sizes).includes(value),
-    },
-    /**
-     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
-     * `ghost-inverted` is only to be used on dark backgrounds.
-     */
-    variant: {
-      type: String,
-      default: Form.Variants.STANDARD, // Explicitly calling out enum path for docs
-      validator: (value) => Object.values(Variants).includes(value),
     },
     /**
      * Value of the input. Compatible with `v-model`. This component will try to
@@ -231,6 +214,15 @@ export default {
     value: {
       type: String,
       default: '',
+    },
+    /**
+     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
+     * `ghost-inverted` is only to be used on dark backgrounds.
+     */
+    variant: {
+      type: String,
+      default: Form.Variants.STANDARD, // Explicitly calling out enum path for docs
+      validator: (value) => Object.values(Variants).includes(value),
     },
   },
   data() {

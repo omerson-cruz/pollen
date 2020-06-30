@@ -29,14 +29,14 @@ export default {
       type: Boolean,
       default: false,
     },
-    /** The name of an icon (see BaseIcon) to prepend to the component. */
-    preIcon: {
+    /** The name of an icon (see BaseIcon) to append to the component. */
+    postIcon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
     },
-    /** The name of an icon (see BaseIcon) to append to the component. */
-    postIcon: {
+    /** The name of an icon (see BaseIcon) to prepend to the component. */
+    preIcon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),

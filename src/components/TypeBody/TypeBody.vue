@@ -21,20 +21,26 @@ import getAttributes from '../../util/getAttributes';
 
 const { Body, Weights } = Typography;
 
+/**
+ * A styled block of text.
+ */
 export default {
   props: {
+    /** The html tag to use for this component. */
     tag: {
       type: String,
       default: 'span',
     },
+    /** One of `legal`, `caption`, `small`, `text`, `medium`, or `large`. */
     variant: {
       type: String,
-      default: Body.TEXT,
+      default: Typography.Body.TEXT,
       validator: (value) => Object.values(Body).includes(value),
     },
+    /** One of `regular`, `medium`, or `strong`. */
     weight: {
       type: String,
-      default: Weights.REGULAR,
+      default: Typography.Weights.REGULAR,
       validator: (value) => Object.values(Weights).includes(value),
     },
   },

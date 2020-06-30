@@ -5,6 +5,9 @@ import '../../assets/tailwind.css';
 export default {
   title: 'TwoColumnMultiSelect',
   component: TwoColumnMultiSelect,
+  parameters: {
+    componentSubtitle: 'A multi-select checkbox group',
+  },
 };
 
 export const Default = () => ({

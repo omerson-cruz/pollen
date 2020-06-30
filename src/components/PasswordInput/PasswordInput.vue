@@ -48,43 +48,72 @@ import { Icons } from '../BaseIcon/BaseIcon.vue';
 import Button from '../../constants/Button';
 import Form from '../../constants/Form';
 
+/**
+ * A password input that extends the `TextInput` component. In addition to the
+ * props explicitly defined here, an `TextInput` props will also work (like
+ * `variant`), and any other attributes will be passed through transparently to
+ * the `input` element.
+ *
+ * Users can toggle password visibility. Optionally, a password strength
+ * indicator can be displayed, and certain validation rules can be enforced.
+ */
 export default {
   components: { IconButton, TextInput },
   inheritAttrs: false,
   props: {
+    /** If the input is disabled. */
     disabled: {
       type: Boolean,
       default: false,
     },
+    /** Any messages to display as errors on the field. */
     error: {
       type: String,
       default: null,
     },
+    /** A unique element ID. By default, one is randomly generated. */
     id: {
       type: String,
       default: shortid.generate,
     },
-    minlength: {
-      type: Number,
-      default: 8,
-    },
+    /** The maximum number of characters allowed. */
     maxlength: {
       type: Number,
       default: 128,
     },
+    /** The minimum number of characters allowed. */
+    minlength: {
+      type: Number,
+      default: 8,
+    },
+    /** If true, shows the password strength indicator. */
     showScore: {
       type: Boolean,
       default: false,
     },
+    /** One of `dense`, `regular`, and `large` . */
     size: {
       type: String,
       default: Form.Sizes.NORMAL,
       validator: (value) => Object.values(Form.Sizes).includes(value),
     },
+    /**
+     * If true, the following validation rules will be enforced:
+     *
+     * * Password must be at least as long as `props.minlength`.
+     * * Password must be no longer than `props.maxlength`.
+     * * Password may not have three of the same character in a row.
+     *
+     * Any violations of these rules will concatenat an appropriate error
+     * message with `props.error` to be displayed.
+     */
     validatePassword: {
       type: Boolean,
       default: false,
     },
+    /**
+     * Value of the input. Compatible with `v-model`.
+     */
     value: {
       type: String,
       default: '',
@@ -201,6 +230,7 @@ export default {
 .password-input--meter__ok .password-input--meter-indicator {
   @apply bg-success;
 }
+
 .password-input--meter__strong .password-input--meter-indicator {
   @apply bg-secondary-shade-1;
 }

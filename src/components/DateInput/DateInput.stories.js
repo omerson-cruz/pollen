@@ -31,11 +31,11 @@ export const Gallery = () => ({
   template: `
     <div>
       <TypeOverline tag="h1" variant="large">Date Inputs</TypeOverline>
-      <div class="flex flex-wrap -mx-8 -mt-8">
+      <div class="flex -mx-8">
         <div
           v-for="variant in variants"
           :key="variant"
-          :class="['w-56', (variant === 'ghost-inverted' ? 'm-4 p-4 bg-gray-0 text-white' : 'm-8')]"
+          :class="['px-8 py-4 w-56', { 'bg-gray-0 text-white' : variant === 'ghost-inverted' }]"
         >
           <TypeOverline tag="h2" class="mb-2" variant="large">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">

@@ -16,15 +16,20 @@ import getAttributes from '../../util/getAttributes';
 
 const { Overline } = Typography;
 
+/**
+ * A styled block of text.
+ */
 export default {
   props: {
+    /** The html tag to use for this component. */
     tag: {
       type: String,
       default: 'span',
     },
+    /** One of 'small', 'medium', or 'large'. */
     variant: {
       type: String,
-      default: Overline.SMALL,
+      default: Typography.Overline.SMALL,
       validator: (value) => Object.values(Overline).includes(value),
     },
   },
