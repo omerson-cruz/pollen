@@ -81,7 +81,7 @@ const getComponent = (iconName) =>
  */
 export default {
   props: {
-    // The name of the icon to use.
+    /** The name of the icon to use. */
     icon: {
       type: String,
       required: true,

@@ -138,7 +138,7 @@ const sanitizeInput = (field, value) => {
 };
 
 /**
- * An text-based input for entering dates. This is actually three text inputs
+ * A text-based input for entering dates. This is actually three text inputs
  * grouped together as one, but as a singular component this takes a `value`
  * prop which, if formatted as `MM/DD/YYYY`, can be parsed out to the three
  * fields. An `input` event is fired as the fields are updated that joins
