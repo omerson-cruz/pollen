@@ -21,20 +21,26 @@ import getAttributes from '../../util/getAttributes';
 
 const { Display, Weights } = Typography;
 
+/**
+ * A styled block of text.
+ */
 export default {
   props: {
+    /** The html tag to use for this component. */
     tag: {
       type: String,
       default: 'span',
     },
+    /** One of `mega`, `giga`, `tera`, or `peta`. */
     variant: {
       type: String,
-      default: Display.PETA,
+      default: Typography.Display.PETA,
       validator: (value) => Object.values(Display).includes(value),
     },
+    /** One of `regular`, or `strong`. */
     weight: {
       type: String,
-      default: Weights.STRONG,
+      default: Typography.Weights.STRONG,
       validator: (value) => [Weights.REGULAR, Weights.STRONG].includes(value),
     },
   },

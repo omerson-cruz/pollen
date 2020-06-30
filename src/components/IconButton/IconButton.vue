@@ -5,36 +5,56 @@ import getAttributes from '../../util/getAttributes';
 
 const { Sizes, Variants } = Button;
 
+/** A button component similar to `BaseButton` but just displaying an icon. */
 export default {
   functional: true,
   components: { BaseIcon },
   props: {
+    /**
+     * If true, component will display with a transparent background color,
+     * but will still retain size-appropriate padding and focus border.
+     */
     flat: {
       type: Boolean,
       default: false,
     },
+    /** The name of an icon (see BaseIcon). */
     icon: {
       type: String,
       required: true,
       validator: (value) => Object.values(Icons).includes(value),
     },
+    /** One of `small`, `medium`, `large`, or `giant`. */
     size: {
       type: String,
       default: Sizes.MEDIUM,
       validator: (value) => Object.values(Sizes).includes(value),
     },
+    /**
+     * The html tag to use for this component. `button`, `nuxt-link`, and `a`
+     * are the most common uses.
+     */
     tag: {
       type: String,
       default: 'button',
     },
+    /**
+     * The title attribute to describe what clicking this button will do. This
+     * field is optional, but for the purposes of accessiblity it is strongly
+     * recommended that you enter a value.
+     */
+    title: {
+      type: String,
+      default: '',
+    },
+    /**
+     * The color theme. Can be one of `primary`, `secondary`, `tertiary`, and
+     * `inverted`.
+     */
     variant: {
       type: String,
       default: Variants.PRIMARY,
       validator: (value) => Object.values(Variants).includes(value),
-    },
-    title: {
-      type: String,
-      default: '',
     },
   },
   render(h, { data, props, parent }) {

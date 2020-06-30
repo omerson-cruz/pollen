@@ -4,6 +4,11 @@ import '../../assets/tailwind.css';
 export default {
   title: 'RadioToggle',
   component: RadioToggle,
+  story: {
+    parameters: {
+      jest: ['RadioToggle.test.js'],
+    },
+  },
 };
 
 export const Default = () => ({
@@ -46,4 +51,13 @@ export const WithInitialValue = () => ({
     };
   },
   template: '<RadioToggle v-model="value" :options="options" />',
+});
+
+/* eslint-disable no-param-reassign */
+[Default, WithInitialValue].forEach((item) => {
+  item.story = {
+    parameters: {
+      jest: ['RadioToggle.test.js'],
+    },
+  };
 });

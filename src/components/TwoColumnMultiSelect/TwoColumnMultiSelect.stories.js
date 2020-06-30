@@ -5,6 +5,9 @@ import '../../assets/tailwind.css';
 export default {
   title: 'TwoColumnMultiSelect',
   component: TwoColumnMultiSelect,
+  parameters: {
+    componentSubtitle: 'A multi-select checkbox group',
+  },
 };
 
 export const Default = () => ({
@@ -168,4 +171,19 @@ export const WithHeadersAsSlots = () => ({
       </template>
     </TwoColumnMultiSelect />
   `,
+});
+
+/* eslint-disable no-param-reassign */
+[
+  Default,
+  WithFilter,
+  WithPrefilledFilter,
+  WithHeaderAsProps,
+  WithHeadersAsSlots,
+].forEach((item) => {
+  item.story = {
+    parameters: {
+      jest: ['TwoColumnMultiSelect.test.js'],
+    },
+  };
 });

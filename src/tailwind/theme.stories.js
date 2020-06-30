@@ -1,8 +1,12 @@
+import TypeOverline from '../components/TypeOverline/TypeOverline.vue';
 import theme from './theme';
 import '../assets/tailwind.css';
 
 export default {
   title: 'Tailwind Theme',
+  parameters: {
+    componentSubtitle: 'Internal theme values loaded in to Tailwind',
+  },
 };
 
 // Flatten color object.
@@ -19,30 +23,31 @@ const colors = Object.entries(theme.colors).reduce((obj, [key, value]) => {
 }, {});
 
 export const Colors = () => ({
+  components: { TypeOverline },
   data() {
     return { colors };
   },
   template: `
-    <div :style="{ display: 'flex', flexWrap: 'wrap' }">
+  <div>
+    <TypeOverline tag="h2" variant="large">Colors</TypeOverline>
+    <div class="flex flex-wrap -mx-2">
       <div
         v-for="(value, key) in colors" 
         :key="key" 
-        :style="{ fontSize: '12px', margin: '8px', width: '120px' }"
+        class="text-12 m-2 w-32"
       >
         <div
+          class="border border-gray-2 border-solid h-20 mb-1 w-full"
           :style="{
-            border: '1px solid gray',
-            width: '120px',
-            height: '80px',
             backgroundColor: value,
-            marginBottom: '4px'
           }"
         />
-        <div style="{fontSize: '12px'}">
+        <div>
           <b>{{ key }}</b>
           <div>{{ value.toLowerCase() }}</div>
         </div>
       </div>
     </div>
+  </div>
   `,
 });

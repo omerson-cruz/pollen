@@ -137,53 +137,92 @@ const sanitizeInput = (field, value) => {
   return finalValue;
 };
 
+/**
+ * A text-based input for entering dates. This is actually three text inputs
+ * grouped together as one, but as a singular component this takes a `value`
+ * prop which, if formatted as `MM/DD/YYYY`, can be parsed out to the three
+ * fields. An `input` event is fired as the fields are updated that joins
+ * `month`, `day`, and `year` into a single string. This component is compatible
+ * with `v-model`.
+ *
+ * Basic validation is in place to ensure that valid month and day numbers are
+ * entered (including checking for leap years and the existence of 2/29). If,
+ * for example, the date `31` is entered, but then the month entered `1` then
+ * the date value is invalid and will be cleared.
+ *
+ * When a field loses focus, theat field is formatted, e.g. typing `2` in
+ * the month field then tab will format the month to `02`. Typing `2` in the
+ * year field then tabbing out will format the year to `2002`. Auto-advancing is
+ * in place to move between fields seamlessly when you enter a value with a
+ * length of two for either the month or date.
+ */
 export default {
   components: {
     FormField,
   },
   inheritAttrs: false,
   props: {
+    /** If the field is disabled. */
     disabled: {
       type: Boolean,
       default: false,
     },
+    /** Any messages to display as errors on the field. */
     error: {
       type: String,
       default: null,
     },
+    /** A unique element ID. By default, one is randomly generated. */
     id: {
       type: String,
       default: shortid.generate,
     },
+    /**
+     * If true, this field will display in an error state. NOTE: a field is in
+     * an error state if `invalid` is `true` and/or `error` is truthy.
+     */
     invalid: {
       type: Boolean,
       default: false,
     },
+    /** A label to display above the field. */
     label: {
       type: String,
       default: null,
     },
+    /** A placeholder value to display when this field is empty. */
     placeholder: {
       type: String,
       default: null,
     },
+    /** If the field is required. */
     required: {
       type: Boolean,
       default: false,
     },
+    /** One of `dense`, `regular`, and `large` . */
     size: {
       type: String,
-      default: Sizes.NORMAL,
+      default: Form.Sizes.NORMAL, // Explicitly calling out enum path for docs
       validator: (value) => Object.values(Sizes).includes(value),
     },
-    variant: {
-      type: String,
-      default: Variants.STANDARD,
-      validator: (value) => Object.values(Variants).includes(value),
-    },
+    /**
+     * Value of the input. Compatible with `v-model`. This component will try to
+     * parse the `value` prop from a `MM/DD/YYYY` and as fields within it lose
+     * focus the final emitted value will be formatted accordingly.
+     */
     value: {
       type: String,
       default: '',
+    },
+    /**
+     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
+     * `ghost-inverted` is only to be used on dark backgrounds.
+     */
+    variant: {
+      type: String,
+      default: Form.Variants.STANDARD, // Explicitly calling out enum path for docs
+      validator: (value) => Object.values(Variants).includes(value),
     },
   },
   data() {

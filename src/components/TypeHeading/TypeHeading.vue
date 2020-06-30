@@ -21,20 +21,26 @@ import getAttributes from '../../util/getAttributes';
 
 const { Heading, Weights } = Typography;
 
+/**
+ * A styled block of text.
+ */
 export default {
   props: {
+    /** The html tag to use for this component. */
     tag: {
       type: String,
       default: 'span',
     },
+    /** One of `subtitle`, `title`, or `headline`. */
     variant: {
       type: String,
-      default: Heading.HEADLINE,
+      default: Typography.Heading.HEADLINE,
       validator: (value) => Object.values(Heading).includes(value),
     },
+    /** One of `regular`, or `strong`. */
     weight: {
       type: String,
-      default: Weights.STRONG,
+      default: Typography.Weights.STRONG,
       validator: (value) => [Weights.REGULAR, Weights.STRONG].includes(value),
     },
   },
