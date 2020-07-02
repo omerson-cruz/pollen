@@ -85,6 +85,7 @@
 
 <script>
 import isFinite from 'lodash/isFinite';
+import isString from 'lodash/isString';
 import shortid from 'shortid';
 import Form from '../../constants/Form';
 import FormField from '../internal/forms/FormField.vue';
@@ -247,18 +248,19 @@ export default {
   watch: {
     value: {
       handler(newVal) {
-        const [m = '', d = '', y = ''] = newVal.split('/');
+        const val = isString(newVal) ? newVal : '';
+        const [m = '', d = '', y = ''] = val.split('/');
         this.month = sanitizeInput(Fields.MONTH, m);
         this.day = sanitizeInput(Fields.DAY, d);
         this.year = sanitizeInput(Fields.YEAR, y);
       },
       immediate: true,
     },
-    month(newVal) {
-      this.validateDay(newVal, this.year);
+    month() {
+      this.validateDay();
     },
-    year(newVal) {
-      this.validateDay(this.month, newVal);
+    year() {
+      this.validateDay();
     },
   },
   methods: {
@@ -274,6 +276,7 @@ export default {
         if (value === newValue) return;
         e.target.value = newValue;
         this[name] = newValue;
+        this.validateDay();
         this.emitValue();
       }
 
@@ -315,11 +318,11 @@ export default {
       await this.$nextTick();
       this.$refs.month.focus();
     },
-    validateDay(month, year) {
+    validateDay() {
       if (!this.day) {
         return;
       }
-      if (getDaysInMonth(month, year).includes(this.day)) {
+      if (getDaysInMonth(this.month, this.year).includes(this.day)) {
         return;
       }
       this.day = '';

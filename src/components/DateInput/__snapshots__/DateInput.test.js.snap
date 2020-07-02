@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInput renders correctly 1`] = `
+<label
+  class="form-field date-input date-input__raised date-input__dense date-input__invalid"
+  for="test-month"
+>
+  <div
+    class="field-label field-label__raised field-label__dense field-label__invalid"
+  >
+    
+    Test
+  
+  </div>
+   
+  <div
+    class="field-container field-container__raised field-container__dense field-container__invalid"
+  >
+    <input
+      aria-label="Month"
+      class="date-input--short date-input--field"
+      id="test-month"
+      name="month"
+      pattern="[0-9]*"
+      placeholder="MM"
+      type="text"
+    />
+     
+    <span
+      class="date-input--divider"
+    >
+      /
+    </span>
+     
+    <input
+      aria-label="Day"
+      class="date-input--short date-input--field"
+      id="test-day"
+      name="day"
+      pattern="[0-9]*"
+      placeholder="DD"
+      type="text"
+    />
+     
+    <span
+      class="date-input--divider"
+    >
+      /
+    </span>
+     
+    <input
+      aria-label="Year"
+      class="date-input--long date-input--field"
+      id="test-year"
+      name="year"
+      pattern="[0-9]*"
+      placeholder="YYYY"
+      type="text"
+    />
+  </div>
+   
+  <div
+    class="field-error field-error__raised"
+    id="test-month-error"
+    role="alert"
+  >
+    
+    There was an error
+  
+  </div>
+</label>
+`;
