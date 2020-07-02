@@ -14,5 +14,6 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/components/**/*.vue'],
+  coveragePathIgnorePatterns: ['node_modules', '__mocks__', '.test.js',],
   snapshotSerializers: ['jest-serializer-vue'],
 };

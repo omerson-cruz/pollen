@@ -4,12 +4,21 @@
     "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "eslint.enable": true,
   "eslint.run": "onType",
-  "eslint.validate": ["javascript", "javascriptreact", "html", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue"
+  ],
   "files.autoSave": "off",
   "stylelint.enable": true,
+  "peacock.color": "#b95237",
+  "peacock.remoteColor": "#b95237",
   "workbench.colorCustomizations": {
     "activityBar.background": "#cd6f56",
     "activityBar.activeBackground": "#cd6f56",
@@ -27,6 +36,5 @@
     "statusBar.foreground": "#e7e7e7",
     "statusBar.border": "#b95237",
     "titleBar.border": "#b95237"
-  },
-  "peacock.color": "#b95237"
+  }
 }
