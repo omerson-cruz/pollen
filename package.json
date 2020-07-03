@@ -1,6 +1,6 @@
 {
   "name": "@bambeehr/pollen",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
   "scripts": {
@@ -24,6 +24,7 @@
     "@fortawesome/pro-light-svg-icons": "^5.13.0",
     "@fortawesome/pro-regular-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "cleave.js": "^1.6.0",
     "core-js": "^3.6.5",
     "lodash": "^4.17.15",
     "shortid": "^2.2.15",

@@ -17,7 +17,7 @@ exports[`TextareaInput renders correctly 1`] = `
     class="field-container field-container__raised field-container__dense field-container__invalid"
   >
     <textarea
-      aria-describedby="\${id}-error"
+      aria-describedby="test-error"
       class="textarea-input--field"
       id="test"
     />

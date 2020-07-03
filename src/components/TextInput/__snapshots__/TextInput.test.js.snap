@@ -40,9 +40,10 @@ exports[`TextInput renders correctly 1`] = `
     </span>
      
     <input
-      aria-describedby="\${id}-error"
+      aria-describedby="test-error"
       class="text-input--field"
       id="test"
+      value="Hello world!"
     />
      
     <svg

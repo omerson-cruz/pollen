@@ -24,14 +24,15 @@
       class="text-input--icon text-input--icon__pre"
     />
     <span v-if="prefix" class="text-input--prefix">{{ prefix }}</span>
-    <input
+    <component
+      :is="inputComponent"
       :id="id"
       ref="input"
       :value="value"
-      v-bind="$attrs"
+      v-bind="passThroughProps"
       class="text-input--field"
       :aria-invalid="invalid"
-      :aria-describedby="error ? '${id}-error' : false"
+      :aria-describedby="error ? `${id}-error` : false"
       :disabled="disabled"
       @input="handleInput"
       @focus="hasFocus = true"
@@ -59,12 +60,16 @@
 </template>
 
 <script>
+import isBoolean from 'lodash/isBoolean';
+import isObject from 'lodash/isObject';
 import shortid from 'shortid';
 import BaseIcon, { Icons, isValidIcon } from '../BaseIcon/BaseIcon.vue';
 import Button from '../../constants/Button';
 import Form from '../../constants/Form';
 import FormField from '../internal/forms/FormField.vue';
 import IconButton from '../IconButton/IconButton.vue';
+
+const CleaveInput = () => import('../internal/forms/CleaveInput');
 
 const { Sizes, Variants } = Form;
 
@@ -108,6 +113,18 @@ export default {
     /** A label to display above the field. */
     label: {
       type: String,
+      default: null,
+    },
+    /**
+     * A configuration object for masking the input to a specific format.Under
+     * the hood this uses `cleave`. See options here:
+     * https://github.com/nosir/cleave.js/blob/master/doc/options.md
+     *
+     * Additionally you can pass a `raw: false` key to emit the masked value
+     * rather than the raw value.
+     */
+    mask: {
+      type: Object,
       default: null,
     },
     /** The name of an icon (see BaseIcon) to append to the component. */
@@ -160,12 +177,33 @@ export default {
       hasFocus: false,
     };
   },
+  computed: {
+    inputComponent() {
+      return this.mask ? CleaveInput : 'input';
+    },
+    passThroughProps() {
+      if (!isObject(this.mask)) {
+        return this.$attrs;
+      }
+      const { raw, ...options } = this.mask;
+      return {
+        ...this.$attrs,
+        options,
+        raw: isBoolean(raw) ? raw : true,
+      };
+    },
+  },
   methods: {
     handleInput(e) {
-      this.$emit('input', e.target.value);
+      const value = this.inputComponent === 'input' ? e.target.value : e;
+      this.$emit('input', value);
     },
     handleReset() {
-      this.$refs.input.value = '';
+      if (this.inputComponent === 'input') {
+        this.$refs.input.value = '';
+      } else {
+        this.$refs.input.$el.value = '';
+      }
       this.$emit('input', '');
     },
   },

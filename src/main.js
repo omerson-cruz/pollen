@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import Button from '@/constants/Button';
 import Form from '@/constants/Form';
+import InputMasks from '@/constants/InputMasks';
 import Typography from '@/constants/Typography';
 
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
@@ -18,4 +19,4 @@ export { default as TypeHeading } from '@/components/TypeHeading/TypeHeading.vue
 export { default as TypeOverline } from '@/components/TypeOverline/TypeOverline.vue';
 export { default as theme } from '@/tailwind/theme';
 
-export const constants = { Button, Form, Typography };
+export const constants = { Button, Form, InputMasks, Typography };

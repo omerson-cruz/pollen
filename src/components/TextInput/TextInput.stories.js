@@ -6,6 +6,7 @@ import Form from '../../constants/Form';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import { Icons } from '../BaseIcon/BaseIcon.vue';
 import '../../assets/tailwind.css';
+import InputMasks from '../../constants/InputMasks';
 
 export default {
   title: 'Inputs/TextInput',
@@ -142,6 +143,38 @@ export const WithKnobs = () => {
           :show-reset="showReset"
           @input="handleInput"
         />
+      </div>
+    `,
+  };
+};
+
+export const WithAnInputMask = () => {
+  return {
+    components: { TextInput },
+    props: {
+      mask: {
+        default: select('Mask', InputMasks, InputMasks.PHONE),
+      },
+    },
+    data() {
+      return {
+        value: '',
+      };
+    },
+    methods: {
+      handleInput: action('input'),
+    },
+    template: `
+      <div class="p-8">
+        <TextInput
+          label="Phone number"
+          type="phone"
+          :mask="mask"
+          :show-reset="true"
+          v-model="value"
+          @input="handleInput"
+        />
+        <p>Raw value: {{ value }}</p>
       </div>
     `,
   };

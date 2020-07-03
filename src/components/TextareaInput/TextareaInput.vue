@@ -25,7 +25,7 @@
       v-bind="$attrs"
       class="textarea-input--field"
       :aria-invalid="invalid"
-      :aria-describedby="error ? '${id}-error' : false"
+      :aria-describedby="error ? `${id}-error` : false"
       :disabled="disabled"
       @input="handleInput"
       @focus="hasFocus = true"
