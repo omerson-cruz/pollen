@@ -4,7 +4,7 @@ import SwitchInput from './SwitchInput.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import '../../assets/tailwind.css';
 
-const { Sizes } = Form;
+const sizes = [Form.Sizes.DENSE, Form.Sizes.NORMAL];
 
 export default {
   title: 'Toggles/SwitchInput',
@@ -18,7 +18,7 @@ export const Gallery = () => ({
   components: { SwitchInput, TypeOverline },
   data() {
     return {
-      sizes: Object.values(Sizes),
+      sizes,
       value: true,
     };
   },
@@ -40,7 +40,7 @@ export const LabelOnTheLeft = () => ({
   components: { SwitchInput, TypeOverline },
   data() {
     return {
-      sizes: Object.values(Sizes),
+      sizes,
       value: true,
     };
   },
@@ -62,7 +62,7 @@ export const HTMLLabel = () => ({
   components: { SwitchInput, TypeOverline },
   data() {
     return {
-      sizes: Object.values(Sizes),
+      sizes,
       value: true,
     };
   },
@@ -84,7 +84,7 @@ export const WithLabelAsSlot = () => ({
   components: { BaseIcon, SwitchInput, TypeOverline },
   data() {
     return {
-      sizes: Object.values(Sizes),
+      sizes,
       value: true,
     };
   },

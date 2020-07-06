@@ -4,7 +4,7 @@ import SwitchGroup from './SwitchGroup.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import '../../assets/tailwind.css';
 
-const { Sizes, Variants } = Form;
+const { Sizes } = Form;
 const sizes = [Sizes.DENSE, Sizes.NORMAL];
 
 export default {
@@ -32,7 +32,6 @@ export const Gallery = () => ({
         },
       ],
       value: ['foo'],
-      variants: [Variants.STANDARD, Variants.RAISED],
     };
   },
   methods: {
@@ -69,7 +68,6 @@ export const LabelOnTheLeft = () => ({
         },
       ],
       value: ['foo'],
-      variants: [Variants.STANDARD, Variants.RAISED],
     };
   },
   methods: {
@@ -106,7 +104,6 @@ export const Stacked = () => ({
         },
       ],
       value: ['foo'],
-      variants: [Variants.STANDARD, Variants.RAISED],
     };
   },
   methods: {
@@ -118,7 +115,7 @@ export const Stacked = () => ({
       <TypeOverline tag="h3" class="mb-2">{{ size }}</TypeOverline>
       <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" stacked />
       <TypeOverline tag="h3" class="mb-2">{{ size }}, invalid</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" invalid stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" invalid stacked />
       <TypeOverline tag="h3" class="mb-2">{{ size }}, disabled</TypeOverline>
       <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" disabled stacked />
     </div>
@@ -143,7 +140,6 @@ export const StackedWithLabelOnTheLeft = () => ({
         },
       ],
       value: ['foo'],
-      variants: [Variants.STANDARD, Variants.RAISED],
     };
   },
   methods: {
