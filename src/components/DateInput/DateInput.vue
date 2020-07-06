@@ -343,7 +343,7 @@ export default {
 
 .date-input--short {
   @apply flex-grow;
-  width: 3ch;
+  width: 3.5ch;
 }
 
 .date-input--short::placeholder {
