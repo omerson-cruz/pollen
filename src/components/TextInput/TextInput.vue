@@ -65,11 +65,10 @@ import isObject from 'lodash/isObject';
 import shortid from 'shortid';
 import BaseIcon, { Icons, isValidIcon } from '../BaseIcon/BaseIcon.vue';
 import Button from '../../constants/Button';
+import CleaveInput from '../internal/forms/CleaveInput.vue';
 import Form from '../../constants/Form';
 import FormField from '../internal/forms/FormField.vue';
 import IconButton from '../IconButton/IconButton.vue';
-
-const CleaveInput = () => import('../internal/forms/CleaveInput');
 
 const { Sizes, Variants } = Form;
 
