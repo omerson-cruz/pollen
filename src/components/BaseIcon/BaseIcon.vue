@@ -4,7 +4,7 @@
     :class="[
       data.class,
       data.staticClass,
-      { 'base-icon__custom': $options.isCustomIcon(props.icon) },
+      { 'base-icon--custom': $options.isCustomIcon(props.icon) },
     ]"
     :icon="$options.getIcon(props.icon)"
     class="base-icon"
@@ -30,7 +30,10 @@ import {
   faTimes as close,
 } from '@fortawesome/pro-light-svg-icons';
 
-import { faLock as lock } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCheck as check,
+  faLock as lock,
+} from '@fortawesome/free-solid-svg-icons';
 
 import eyeClosed from '../../assets/icons/eye-closed.svg';
 import eyeOpen from '../../assets/icons/eye-open.svg';
@@ -38,6 +41,7 @@ import eyeOpen from '../../assets/icons/eye-open.svg';
 import getAttributes from '../../util/getAttributes';
 
 const FAIcons = Object.freeze({
+  check,
   clipboardCheck,
   close,
   folder,
@@ -74,6 +78,8 @@ const getComponent = (iconName) =>
   isCustomIcon(iconName) ? CustomIcons[iconName] : FontAwesomeIcon;
 
 /**
+ * `import { BaseIcon } from '@bambeehr/pollen';`
+ *
  * An SVG icon component pulling from Bambee's predefined icon set. Icons are
  * designed to be styled according to the contextual size and font color, e.g.
  * if you want a red, 40px icon, make sure it or its containing element is
@@ -96,7 +102,7 @@ export default {
 </script>
 
 <style>
-.base-icon__custom {
+.base-icon--custom {
   height: 1em;
   width: 1em;
 }

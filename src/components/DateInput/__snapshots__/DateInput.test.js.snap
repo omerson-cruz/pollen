@@ -2,11 +2,11 @@
 
 exports[`DateInput renders correctly 1`] = `
 <label
-  class="form-field date-input date-input__raised date-input__dense date-input__invalid"
+  class="form-field date-input date-input--raised date-input--dense date-input--invalid"
   for="test-month"
 >
   <div
-    class="field-label field-label__raised field-label__dense field-label__invalid"
+    class="field-label field-label--raised field-label--dense field-label--invalid"
   >
     
     Test
@@ -14,11 +14,11 @@ exports[`DateInput renders correctly 1`] = `
   </div>
    
   <div
-    class="field-container field-container__raised field-container__dense field-container__invalid"
+    class="field-container field-container--raised field-container--dense field-container--invalid"
   >
     <input
       aria-label="Month"
-      class="date-input--short date-input--field"
+      class="date-input__field--short date-input__field"
       id="test-month"
       name="month"
       pattern="[0-9]*"
@@ -27,14 +27,14 @@ exports[`DateInput renders correctly 1`] = `
     />
      
     <span
-      class="date-input--divider"
+      class="date-input__divider"
     >
       /
     </span>
      
     <input
       aria-label="Day"
-      class="date-input--short date-input--field"
+      class="date-input__field--short date-input__field"
       id="test-day"
       name="day"
       pattern="[0-9]*"
@@ -43,14 +43,14 @@ exports[`DateInput renders correctly 1`] = `
     />
      
     <span
-      class="date-input--divider"
+      class="date-input__divider"
     >
       /
     </span>
      
     <input
       aria-label="Year"
-      class="date-input--long date-input--field"
+      class="date-input__field--long date-input__field"
       id="test-year"
       name="year"
       pattern="[0-9]*"
@@ -60,7 +60,7 @@ exports[`DateInput renders correctly 1`] = `
   </div>
    
   <div
-    class="field-error field-error__raised"
+    class="field-error field-error--raised"
     id="test-month-error"
     role="alert"
   >

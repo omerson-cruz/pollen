@@ -3,7 +3,7 @@
     :is="props.tag"
     :class="[
       `type-display-${props.variant}`,
-      `type-display-${props.variant}__${props.weight}`,
+      `type-display-${props.variant}--${props.weight}`,
       data.class,
       data.staticClass,
     ]"
@@ -22,6 +22,8 @@ import getAttributes from '../../util/getAttributes';
 const { Display, Weights } = Typography;
 
 /**
+ * `import { TypeDisplay } from '@bambeehr/pollen';`
+ *
  * A styled block of text.
  */
 export default {
@@ -54,11 +56,11 @@ export default {
     @apply font-display-$(variant);
   }
 
-  .type-display-$(variant)__regular {
+  .type-display-$(variant)--regular {
     @apply font-normal;
   }
 
-  .type-display-$(variant)__strong {
+  .type-display-$(variant)--strong {
     @apply font-semibold;
   }
 }

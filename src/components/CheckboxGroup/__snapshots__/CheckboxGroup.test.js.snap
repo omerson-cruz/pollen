@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup renders correctly 1`] = `
+<div
+  class="toggle-group checkbox-group toggle-group--horizontal toggle-group--normal"
+>
+  <label
+    class="toggle-input checkbox-input toggle-input--normal toggle-input--standard toggle-input--label-right"
+    for="test-0"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-0"
+      name="test"
+      type="checkbox"
+    />
+     
+    <div
+      class="checkbox-indicator checkbox-indicator--normal checkbox-indicator--standard"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 1
+      </span>
+    </div>
+  </label>
+  <label
+    class="toggle-input checkbox-input toggle-input--normal toggle-input--standard toggle-input--label-right"
+    for="test-1"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-1"
+      name="test"
+      type="checkbox"
+    />
+     
+    <div
+      class="checkbox-indicator checkbox-indicator--normal checkbox-indicator--standard checkbox-indicator--checked"
+    >
+      <svg
+        aria-hidden="true"
+        class="base-icon svg-inline--fa fa-check fa-w-16"
+        data-icon="check"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class=""
+          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 2
+      </span>
+    </div>
+  </label>
+  <label
+    class="toggle-input checkbox-input toggle-input--normal toggle-input--standard toggle-input--label-right"
+    for="test-2"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-2"
+      name="test"
+      type="checkbox"
+    />
+     
+    <div
+      class="checkbox-indicator checkbox-indicator--normal checkbox-indicator--standard"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 3
+      </span>
+    </div>
+  </label>
+</div>
+`;

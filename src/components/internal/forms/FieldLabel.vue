@@ -2,11 +2,11 @@
   <div
     class="field-label"
     :class="[
-      `field-label__${props.variant}`,
-      `field-label__${props.size}`,
+      `field-label--${props.variant}`,
+      `field-label--${props.size}`,
       {
-        'field-label__disabled': props.disabled,
-        'field-label__invalid': props.invalid,
+        'field-label--disabled': props.disabled,
+        'field-label--invalid': props.invalid,
       },
     ]"
   >
@@ -44,27 +44,27 @@ export default {
 </script>
 
 <style scoped>
-.field-label__dense {
+.field-label--dense {
   @apply font-body-text mb-1;
 }
 
-.field-label__normal {
+.field-label--normal {
   @apply font-body-text mb-2;
 }
 
-.field-label__large {
+.field-label--large {
   @apply font-body-medium mb-2;
 }
 
-.field-label__ghost-inverted {
+/* .field-label--ghost-inverted {
   @apply text-white;
-}
+} */
 
-.field-label__invalid {
+.field-label--invalid {
   @apply text-error;
 }
 
-.field-label__invalid.field-label__ghost-inverted {
+/* .field-label--invalid.field-label--ghost-inverted {
   @apply text-error-light-ghost;
-}
+} */
 </style>

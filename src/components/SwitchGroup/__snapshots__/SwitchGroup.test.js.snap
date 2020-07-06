@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwitchGroup renders correctly 1`] = `
+<div
+  class="toggle-group switch-group toggle-group--horizontal toggle-group--normal"
+>
+  <label
+    class="toggle-input switch-input toggle-input--normal toggle-input--switch toggle-input--label-right"
+    for="test-0"
+    variant="standard"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-0"
+      name="test"
+      type="checkbox"
+    />
+     
+    <div
+      class="switch-indicator switch-indicator--normal"
+      variant="switch"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 1
+      </span>
+    </div>
+  </label>
+  <label
+    class="toggle-input switch-input toggle-input--normal toggle-input--switch toggle-input--label-right"
+    for="test-1"
+    variant="standard"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-1"
+      name="test"
+      type="checkbox"
+    />
+     
+    <div
+      class="switch-indicator switch-indicator--normal switch-indicator--checked"
+      variant="switch"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 2
+      </span>
+    </div>
+  </label>
+  <label
+    class="toggle-input switch-input toggle-input--normal toggle-input--switch toggle-input--label-right"
+    for="test-2"
+    variant="standard"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-2"
+      name="test"
+      type="checkbox"
+    />
+     
+    <div
+      class="switch-indicator switch-indicator--normal"
+      variant="switch"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 3
+      </span>
+    </div>
+  </label>
+</div>
+`;

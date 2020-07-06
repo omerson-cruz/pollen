@@ -17,6 +17,7 @@ import getAttributes from '../../util/getAttributes';
 const { Overline } = Typography;
 
 /**
+ * `import { TypeOverline } from '@bambeehr/pollen';`
  * A styled block of text.
  */
 export default {

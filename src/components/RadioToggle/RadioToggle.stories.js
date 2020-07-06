@@ -2,13 +2,8 @@ import RadioToggle from './RadioToggle.vue';
 import '../../assets/tailwind.css';
 
 export default {
-  title: 'RadioToggle',
+  title: 'Toggles/RadioToggle',
   component: RadioToggle,
-  story: {
-    parameters: {
-      jest: ['RadioToggle.test.js'],
-    },
-  },
 };
 
 export const Default = () => ({

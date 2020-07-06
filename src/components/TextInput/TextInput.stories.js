@@ -147,7 +147,6 @@ export const WithKnobs = () => {
     `,
   };
 };
-
 export const WithAnInputMask = () => {
   return {
     components: { TextInput },
@@ -179,3 +178,12 @@ export const WithAnInputMask = () => {
     `,
   };
 };
+
+/* eslint-disable no-param-reassign */
+[Gallery, WithKnobs, WithAnInputMask].forEach((item) => {
+  item.story = {
+    parameters: {
+      jest: ['TextInput.test.js'],
+    },
+  };
+});

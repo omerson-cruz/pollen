@@ -10,11 +10,11 @@
     :disabled="disabled"
     class="textarea-input"
     :class="[
-      `textarea-input__${variant}`,
-      `textarea-input__${size}`,
+      `textarea-input--${variant}`,
+      `textarea-input--${size}`,
       {
-        'textarea-input__invalid': invalid || error,
-        'textarea-input__disabled': disabled,
+        'textarea-input--invalid': invalid || error,
+        'textarea-input--disabled': disabled,
       },
     ]"
   >
@@ -23,7 +23,7 @@
       ref="input"
       :value="value"
       v-bind="$attrs"
-      class="textarea-input--field"
+      class="textarea-input__field"
       :aria-invalid="invalid"
       :aria-describedby="error ? `${id}-error` : false"
       :disabled="disabled"
@@ -42,6 +42,8 @@ import FormField from '../internal/forms/FormField.vue';
 const { Sizes, Variants } = Form;
 
 /**
+ * `import { TextareInput } from '@bambeehr/pollen';`
+ *
  * A styled `textarea` component for entering multiple lines of text. Attributes
  * not explicitly enumerated as prop (like `required`) will be transparently
  * passed through to the `textarea` element.
@@ -96,8 +98,7 @@ export default {
       default: '',
     },
     /**
-     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
-     * `ghost-inverted` is only to be used on dark backgrounds.
+     * One of `standard`, or `raised`.
      */
     variant: {
       type: String,
@@ -119,47 +120,47 @@ export default {
 </script>
 
 <style scoped>
-.textarea-input--field {
+.textarea-input__field {
   @apply appearance-none bg-transparent border-0 flex-grow font-sans;
   font-size: 1em;
 }
 
-.textarea-input--field::placeholder {
+.textarea-input__field::placeholder {
   @apply text-gray-4;
 }
 
-.textarea-input--field:focus {
+.textarea-input__field:focus {
   @apply outline-none;
 }
 
-.textarea-input__ghost-inverted .textarea-input--field {
+/* .textarea-input--ghost-inverted .textarea-input__field {
   @apply text-white;
-}
+} */
 
-.textarea-input__dense .textarea-input--field {
+.textarea-input--dense .textarea-input__field {
   @apply p-3;
 }
 
-.textarea-input__normal .textarea-input--field {
+.textarea-input--normal .textarea-input__field {
   @apply p-4;
 }
 
-.textarea-input__large .textarea-input--field {
+.textarea-input--large .textarea-input__field {
   @apply p-4;
 }
 
-.textarea-input__raised.textarea-input__invalid .textarea-input--field,
-.textarea-input__raised.textarea-input__invalid
-  .textarea-input--field::placeholder,
-.textarea-input__ghost.textarea-input__invalid .textarea-input--field,
-.textarea-input__ghost.textarea-input__invalid
-  .textarea-input--field::placeholder {
+/* .textarea-input--ghost.textarea-input--invalid .textarea-input__field,
+.textarea-input--ghost.textarea-input--invalid
+  .textarea-input__field::placeholder, */
+.textarea-input--raised.textarea-input--invalid .textarea-input__field,
+.textarea-input--raised.textarea-input--invalid
+  .textarea-input__field::placeholder {
   @apply text-error;
 }
 
-.textarea-input__ghost-inverted.textarea-input__invalid .textarea-input--field,
-.textarea-input__ghost-inverted.textarea-input__invalid
-  .textarea-input--field::placeholder {
+/* .textarea-input--ghost-inverted.textarea-input--invalid .textarea-input__field,
+.textarea-input--ghost-inverted.textarea-input--invalid
+  .textarea-input__field::placeholder {
   @apply text-error-light-ghost;
-}
+} */
 </style>

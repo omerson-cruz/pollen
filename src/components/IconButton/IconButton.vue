@@ -5,7 +5,11 @@ import getAttributes from '../../util/getAttributes';
 
 const { Sizes, Variants } = Button;
 
-/** A button component similar to `BaseButton` but just displaying an icon. */
+/**
+ * `import { IconButton } from @bambeehr/pollen';`
+ *
+ * A button component similar to `BaseButton` but just displaying an icon.
+ */
 export default {
   functional: true,
   components: { BaseIcon },
@@ -58,9 +62,9 @@ export default {
     },
   },
   render(h, { data, props, parent }) {
-    const icon = <BaseIcon icon={props.icon} class="icon-button--icon" />;
+    const icon = <BaseIcon icon={props.icon} class="icon-button__icon" />;
     const screenReaderText = (
-      <span class="icon-button--title">{props.title}</span>
+      <span class="icon-button__title">{props.title}</span>
     );
     const attrs = { ...getAttributes({ data, parent }) };
     if (props.title) {
@@ -75,11 +79,11 @@ export default {
           data.class,
           data.staticClass,
           'icon-button',
-          `icon-button__${props.variant}`,
-          `icon-button__${props.size}`,
+          `icon-button--${props.variant}`,
+          `icon-button--${props.size}`,
           {
-            'icon-button__flat': props.flat,
-            'icon-button__regular': !props.flat,
+            'icon-button--flat': props.flat,
+            'icon-button--regular': !props.flat,
           },
         ],
       },
@@ -110,158 +114,158 @@ export default {
   @apply cursor-not-allowed opacity-50;
 }
 
-.icon-button--title {
+.icon-button__title {
   @apply sr-only;
 }
 
 /* Size variations */
-.icon-button__small {
+.icon-button--small {
   @apply h-6 text-12 w-6;
 }
 
-.icon-button__medium {
+.icon-button--medium {
   @apply h-8 text-16 w-8;
 }
 
-.icon-button__large {
+.icon-button--large {
   @apply h-10 w-10;
   font-size: 1.25rem;
 }
 
-.icon-button__giant {
+.icon-button--giant {
   @apply h-14 w-14;
   font-size: 1.5rem;
 }
 
 /* Theme variations */
 /** Regular buttons  */
-.icon-button__regular {
+.icon-button--regular {
   @apply border-2 shadow-2;
 }
 
 /*** Regular primary buttons */
-.icon-button__regular.icon-button__primary {
+.icon-button--regular.icon-button--primary {
   @apply bg-primary text-white;
 }
 
-.icon-button__regular.icon-button__primary:focus {
+.icon-button--regular.icon-button--primary:focus {
   @apply border-primary-tint-3;
 }
 
-.icon-button__regular.icon-button__primary:active:not([disabled]) {
+.icon-button--regular.icon-button--primary:active:not([disabled]) {
   @apply bg-primary-tint-1;
 }
 
 /*** Regular secondary buttons */
-.icon-button__regular.icon-button__secondary {
+.icon-button--regular.icon-button--secondary {
   @apply bg-secondary text-white;
 }
 
-.icon-button__regular.icon-button__secondary:focus {
+.icon-button--regular.icon-button--secondary:focus {
   @apply border-secondary-tint-3;
 }
 
-.icon-button__regular.icon-button__secondary:active:not([disabled]) {
+.icon-button--regular.icon-button--secondary:active:not([disabled]) {
   @apply bg-secondary-tint-1;
 }
 
 /*** Regular tertiary buttons */
-.icon-button__regular.icon-button__tertiary {
+.icon-button--regular.icon-button--tertiary {
   @apply bg-error text-white;
 }
 
-.icon-button__regular.icon-button__tertiary:focus {
+.icon-button--regular.icon-button--tertiary:focus {
   border-color: #e35b76; /* This is a one-off color. */
 }
 
-.icon-button__regular.icon-button__tertiary:active:not([disabled]) {
+.icon-button--regular.icon-button--tertiary:active:not([disabled]) {
   background: #e32c50; /* This is a one-off color. */
 }
 
 /*** Regular primary inverted */
-.icon-button__regular.icon-button__inverted {
+.icon-button--regular.icon-button--inverted {
   @apply bg-white border border-primary text-primary;
   padding: 1px;
 }
 
-.icon-button__regular.icon-button__inverted:focus {
+.icon-button--regular.icon-button--inverted:focus {
   @apply border-2 p-0;
 }
 
-.icon-button__regular.icon-button__inverted:hover:not([disabled]) {
+.icon-button--regular.icon-button--inverted:hover:not([disabled]) {
   @apply text-primary-tint-1;
 }
 
-.icon-button__regular.icon-button__inverted:active:not([disabled]) {
+.icon-button--regular.icon-button--inverted:active:not([disabled]) {
   @apply bg-primary-tint-5 text-primary;
 }
 
 /** Flat buttons */
-.icon-button__flat {
+.icon-button--flat {
   @apply bg-transparent border;
 }
 
 /*** Flat primary buttons */
-.icon-button__flat.icon-button__primary {
+.icon-button--flat.icon-button--primary {
   @apply text-primary;
 }
 
-.icon-button__flat.icon-button__primary:focus {
+.icon-button--flat.icon-button--primary:focus {
   @apply border-primary-tint-3;
 }
 
-.icon-button__flat.icon-button__primary:hover:not([disabled]) {
+.icon-button--flat.icon-button--primary:hover:not([disabled]) {
   @apply text-primary-tint-1;
 }
 
-.icon-button__flat.icon-button__primary:active:not([disabled]) {
+.icon-button--flat.icon-button--primary:active:not([disabled]) {
   @apply text-primary-shade-1;
 }
 
 /*** Flat secondary buttons */
-.icon-button__flat.icon-button__secondary {
+.icon-button--flat.icon-button--secondary {
   @apply text-gray-0;
 }
 
-.icon-button__flat.icon-button__secondary:focus {
+.icon-button--flat.icon-button--secondary:focus {
   @apply border-gray-5;
 }
 
-.icon-button__flat.icon-button__secondary:hover:not([disabled]) {
+.icon-button--flat.icon-button--secondary:hover:not([disabled]) {
   @apply text-gray-2;
 }
 
-.icon-button__flat.icon-button__secondary:active:not([disabled]) {
+.icon-button--flat.icon-button--secondary:active:not([disabled]) {
   @apply text-black;
 }
 
 /*** Flat tertiary buttons */
-.icon-button__flat.icon-button__tertiary {
+.icon-button--flat.icon-button--tertiary {
   @apply text-error;
 }
 
-.icon-button__flat.icon-button__tertiary:focus {
+.icon-button--flat.icon-button--tertiary:focus {
   border-color: #f2dce1; /* This is a one-off color. */
 }
 
-.icon-button__flat.icon-button__tertiary:hover:not([disabled]) {
+.icon-button--flat.icon-button--tertiary:hover:not([disabled]) {
   color: #e32c50;
 }
 
-.icon-button__flat.icon-button__tertiary:active:not([disabled]) {
+.icon-button--flat.icon-button--tertiary:active:not([disabled]) {
   color: #961d35; /* This is a one-off color. */
 }
 
 /*** Flat inverted buttons */
-.icon-button__flat.icon-button__inverted {
+.icon-button--flat.icon-button--inverted {
   @apply text-white;
 }
 
-.icon-button__flat.icon-button__inverted:focus {
+.icon-button--flat.icon-button--inverted:focus {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.icon-button__flat.icon-button__inverted:hover:not([disabled]) {
+.icon-button--flat.icon-button--inverted:hover:not([disabled]) {
   @apply text-gray-5;
 }
 </style>

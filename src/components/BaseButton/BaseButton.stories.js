@@ -10,7 +10,7 @@ import '../../assets/tailwind.css';
 const { Sizes, Variants } = Button;
 
 export default {
-  title: 'BaseButton',
+  title: 'Buttons/BaseButton',
   component: BaseButton,
   parameters: {
     componentSubtitle: 'Basic button component.',

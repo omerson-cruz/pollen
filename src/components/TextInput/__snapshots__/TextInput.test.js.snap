@@ -2,11 +2,11 @@
 
 exports[`TextInput renders correctly 1`] = `
 <label
-  class="form-field text-input text-input__raised text-input__dense text-input__invalid"
+  class="form-field text-input text-input--raised text-input--dense text-input--invalid"
   for="test"
 >
   <div
-    class="field-label field-label__raised field-label__dense field-label__invalid"
+    class="field-label field-label--raised field-label--dense field-label--invalid"
   >
     
     Test
@@ -14,11 +14,11 @@ exports[`TextInput renders correctly 1`] = `
   </div>
    
   <div
-    class="field-container field-container__raised field-container__dense field-container__invalid"
+    class="field-container field-container--raised field-container--dense field-container--invalid"
   >
     <svg
       aria-hidden="true"
-      class="base-icon svg-inline--fa fa-lock fa-w-14 text-input--icon text-input--icon__pre"
+      class="base-icon svg-inline--fa fa-lock fa-w-14 text-input__icon text-input__icon--pre"
       data-icon="lock"
       data-prefix="fas"
       focusable="false"
@@ -41,14 +41,14 @@ exports[`TextInput renders correctly 1`] = `
      
     <input
       aria-describedby="test-error"
-      class="text-input--field"
+      class="text-input__field"
       id="test"
       value="Hello world!"
     />
      
     <svg
       aria-hidden="true"
-      class="base-icon svg-inline--fa fa-lock fa-w-14 text-input--icon text-input--icon__post"
+      class="base-icon svg-inline--fa fa-lock fa-w-14 text-input__icon text-input__icon--post"
       data-icon="lock"
       data-prefix="fas"
       focusable="false"
@@ -68,7 +68,7 @@ exports[`TextInput renders correctly 1`] = `
   </div>
    
   <div
-    class="field-error field-error__raised"
+    class="field-error field-error--raised"
     id="test-error"
     role="alert"
   >

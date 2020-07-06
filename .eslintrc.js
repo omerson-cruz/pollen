@@ -9,6 +9,7 @@ module.exports = {
   },
   rules: {
     'no-underscore-dangle': 'off',
+    'vue/no-v-html': 'off',
   },
   overrides: [
     {

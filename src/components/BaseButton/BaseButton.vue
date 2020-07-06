@@ -6,6 +6,8 @@ import getAttributes from '../../util/getAttributes';
 const { Sizes, Variants } = Button;
 
 /**
+ * `import { BaseButton } from '@bambeehr/pollen';`
+ *
  * `BaseButton` is the general purpose "button". While this will visually look
  * like a button, the underlying tag can be defined via a prop. This is
  * available in four named color variations, in four sizes, displaying
@@ -69,16 +71,16 @@ export default {
     const preIcon = props.preIcon ? (
       <BaseIcon
         icon={props.preIcon}
-        class="base-button--icon base-button--icon__pre"
+        class="base-button__icon base-button__icon--pre"
       />
     ) : null;
     const postIcon = props.postIcon ? (
       <BaseIcon
         icon={props.postIcon}
-        class="base-button--icon base-button--icon__post"
+        class="base-button__icon base-button__icon--post"
       />
     ) : null;
-    const wrappedChildNodes = h('div', { class: 'base-button--inner' }, [
+    const wrappedChildNodes = h('div', { class: 'base-button__inner' }, [
       preIcon,
       ...(children || []),
       postIcon,
@@ -93,13 +95,13 @@ export default {
           data.class,
           data.staticClass,
           'base-button',
-          `base-button__${props.variant}`,
-          `base-button__${props.size}`,
+          `base-button--${props.variant}`,
+          `base-button--${props.size}`,
           {
-            'base-button__flat': props.flat,
-            'base-button__regular': !props.flat,
-            'base-button__inline': !props.block || props.flat,
-            'base-button__block': props.block && !props.flat,
+            'base-button--flat': props.flat,
+            'base-button--regular': !props.flat,
+            'base-button--inline': !props.block || props.flat,
+            'base-button--block': props.block && !props.flat,
           },
         ],
       },
@@ -129,7 +131,7 @@ export default {
   @apply cursor-not-allowed opacity-50;
 }
 
-.base-button--inner {
+.base-button__inner {
   @apply flex
   font-semibold
     items-center
@@ -138,188 +140,188 @@ export default {
     w-full;
 }
 
-.base-button--icon__pre {
+.base-button__icon--pre {
   @apply mr-2;
 }
 
-.base-button--icon__post {
+.base-button__icon--post {
   @apply ml-2;
 }
 
 /* Display variations */
-.base-button__inline {
+.base-button--inline {
   @apply inline-flex;
 }
 
-.base-button__block {
+.base-button--block {
   @apply flex w-full;
 }
 
 /* Size variations */
-.base-button__small {
+.base-button--small {
   @apply h-6 text-12;
 }
-.base-button__small .base-button--inner {
+.base-button--small .base-button__inner {
   @apply px-2;
 }
 
-.base-button__medium {
+.base-button--medium {
   @apply h-8 text-14;
 }
 
-.base-button__medium .base-button--inner {
+.base-button--medium .base-button__inner {
   @apply px-4;
 }
 
-.base-button__large {
+.base-button--large {
   @apply h-10 text-16;
 }
 
-.base-button__large .base-button--inner {
+.base-button--large .base-button__inner {
   @apply px-6;
 }
 
-.base-button__giant {
+.base-button--giant {
   @apply h-14 text-18;
 }
 
-.base-button__giant .base-button--inner {
+.base-button--giant .base-button__inner {
   @apply px-8;
 }
 
 /* Theme variations */
 /** Regular buttons  */
-.base-button__regular {
+.base-button--regular {
   @apply border-2;
 }
 
-.base-button__regular:not(.base-button__inverted) {
+.base-button--regular:not(.base-button--inverted) {
   @apply shadow-2;
 }
 
 /*** Regular primary buttons */
-.base-button__regular.base-button__primary {
+.base-button--regular.base-button--primary {
   @apply bg-primary text-white;
 }
 
-.base-button__regular.base-button__primary:focus {
+.base-button--regular.base-button--primary:focus {
   @apply border-primary-tint-3;
 }
 
-.base-button__regular.base-button__primary:active:not([disabled]) {
+.base-button--regular.base-button--primary:active:not([disabled]) {
   @apply bg-primary-tint-1;
 }
 
 /*** Regular secondary buttons */
-.base-button__regular.base-button__secondary {
+.base-button--regular.base-button--secondary {
   @apply bg-secondary text-white;
 }
 
-.base-button__regular.base-button__secondary:focus {
+.base-button--regular.base-button--secondary:focus {
   @apply border-secondary-tint-3;
 }
 
-.base-button__regular.base-button__secondary:active:not([disabled]) {
+.base-button--regular.base-button--secondary:active:not([disabled]) {
   @apply bg-secondary-tint-1;
 }
 
 /*** Regular tertiary buttons */
-.base-button__regular.base-button__tertiary {
+.base-button--regular.base-button--tertiary {
   @apply bg-error text-white;
 }
 
-.base-button__regular.base-button__tertiary:focus {
+.base-button--regular.base-button--tertiary:focus {
   border-color: #e35b76; /* This is a one-off color. */
 }
 
-.base-button__regular.base-button__tertiary:active:not([disabled]) {
+.base-button--regular.base-button--tertiary:active:not([disabled]) {
   background: #e32c50; /* This is a one-off color. */
 }
 
 /*** Regular primary inverted */
-.base-button__regular.base-button__inverted {
+.base-button--regular.base-button--inverted {
   @apply bg-white border border-primary text-primary;
   padding: 1px;
 }
 
-.base-button__regular.base-button__inverted:focus {
+.base-button--regular.base-button--inverted:focus {
   @apply border-2 p-0;
 }
 
-.base-button__regular.base-button__inverted:hover:not([disabled]) {
+.base-button--regular.base-button--inverted:hover:not([disabled]) {
   @apply text-primary-tint-1;
 }
 
-.base-button__regular.base-button__inverted:active:not([disabled]) {
+.base-button--regular.base-button--inverted:active:not([disabled]) {
   @apply bg-primary-tint-5 text-primary;
 }
 
 /** Flat buttons */
-.base-button__flat {
+.base-button--flat {
   @apply bg-transparent border;
 }
 
 /*** Flat primary buttons */
-.base-button__flat.base-button__primary {
+.base-button--flat.base-button--primary {
   @apply text-primary;
 }
 
-.base-button__flat.base-button__primary:focus {
+.base-button--flat.base-button--primary:focus {
   @apply border-primary-tint-3;
 }
 
-.base-button__flat.base-button__primary:hover:not([disabled]) {
+.base-button--flat.base-button--primary:hover:not([disabled]) {
   @apply text-primary-tint-1;
 }
 
-.base-button__flat.base-button__primary:active:not([disabled]) {
+.base-button--flat.base-button--primary:active:not([disabled]) {
   @apply text-primary-shade-1;
 }
 
 /*** Flat secondary buttons */
-.base-button__flat.base-button__secondary {
+.base-button--flat.base-button--secondary {
   @apply text-gray-0;
 }
 
-.base-button__flat.base-button__secondary:focus {
+.base-button--flat.base-button--secondary:focus {
   @apply border-gray-5;
 }
 
-.base-button__flat.base-button__secondary:hover:not([disabled]) {
+.base-button--flat.base-button--secondary:hover:not([disabled]) {
   @apply text-gray-2;
 }
 
-.base-button__flat.base-button__secondary:active:not([disabled]) {
+.base-button--flat.base-button--secondary:active:not([disabled]) {
   @apply text-black;
 }
 
 /*** Flat tertiary buttons */
-.base-button__flat.base-button__tertiary {
+.base-button--flat.base-button--tertiary {
   @apply text-error;
 }
 
-.base-button__flat.base-button__tertiary:focus {
+.base-button--flat.base-button--tertiary:focus {
   border-color: #f2dce1; /* This is a one-off color. */
 }
 
-.base-button__flat.base-button__tertiary:hover:not([disabled]) {
+.base-button--flat.base-button--tertiary:hover:not([disabled]) {
   color: #e32c50;
 }
 
-.base-button__flat.base-button__tertiary:active:not([disabled]) {
+.base-button--flat.base-button--tertiary:active:not([disabled]) {
   color: #961d35; /* This is a one-off color. */
 }
 
 /*** Flat inverted buttons */
-.base-button__flat.base-button__inverted {
+.base-button--flat.base-button--inverted {
   @apply text-white;
 }
 
-.base-button__flat.base-button__inverted:focus {
+.base-button--flat.base-button--inverted:focus {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.base-button__flat.base-button__inverted:hover:not([disabled]) {
+.base-button--flat.base-button--inverted:hover:not([disabled]) {
   @apply text-gray-5;
 }
 </style>

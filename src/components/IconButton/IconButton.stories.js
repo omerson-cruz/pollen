@@ -11,7 +11,7 @@ const { Sizes, Variants } = Button;
 const iconOptions = Object.values(Icons);
 
 export default {
-  title: 'IconButton',
+  title: 'Buttons/IconButton',
   component: IconButton,
   parameters: {
     componentSubtitle: 'A clickable icon',

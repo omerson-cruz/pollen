@@ -16,7 +16,7 @@
     <IconButton
       :icon="passwordIcon"
       :title="isShowingPassword ? 'Hide password' : 'Show password'"
-      class="password-input--toggle"
+      class="password-input__toggle"
       :size="toggleSize"
       :disabled="disabled"
       variant="secondary"
@@ -25,15 +25,15 @@
     />
     <div
       v-if="showScore"
-      class="password-input--meter"
-      :class="`password-input--meter__${passwordScore.label}`"
+      class="password-input__meter"
+      :class="`password-input__meter--${passwordScore.label}`"
       :title="passwordScore.label"
       :aria-label="passwordScore.label"
     >
       <div
         v-for="n in passwordScore.value"
         :key="n"
-        class="password-input--meter-indicator"
+        class="password-input__meter-indicator"
       />
     </div>
   </TextInput>
@@ -49,8 +49,10 @@ import Button from '../../constants/Button';
 import Form from '../../constants/Form';
 
 /**
+ * `import { PasswordInput } from '@bambeehr/pollen';`
+ *
  * A password input that extends the `TextInput` component. In addition to the
- * props explicitly defined here, an `TextInput` props will also work (like
+ * props explicitly defined here, any `TextInput` props will also work (like
  * `variant`), and any other attributes will be passed through transparently to
  * the `input` element.
  *
@@ -202,36 +204,36 @@ export default {
 </script>
 
 <style scoped>
-.password-input .password-input--toggle.icon-button,
-.password-input .password-input--toggle.icon-button:hover,
-.password-input .password-input--toggle.icon-button:active {
+.password-input .password-input__toggle.icon-button,
+.password-input .password-input__toggle.icon-button:hover,
+.password-input .password-input__toggle.icon-button:active {
   @apply flex-shrink-0 -mr-1 text-gray-4;
 }
 
-.password-input--meter {
+.password-input__meter {
   @apply flex flex-col h-5 justify-end ml-2;
 }
 
-.password-input--meter-indicator {
+.password-input__meter-indicator {
   @apply flex-shrink-0 rounded-full;
   height: 3px;
   margin: 1px 0;
   width: 3px;
 }
 
-.password-input--meter__bad .password-input--meter-indicator {
+.password-input__meter--bad .password-input__meter-indicator {
   @apply bg-error;
 }
 
-.password-input--meter__weak .password-input--meter-indicator {
+.password-input__meter--weak .password-input__meter-indicator {
   @apply bg-warning;
 }
 
-.password-input--meter__ok .password-input--meter-indicator {
+.password-input__meter--ok .password-input__meter-indicator {
   @apply bg-success;
 }
 
-.password-input--meter__strong .password-input--meter-indicator {
+.password-input__meter--strong .password-input__meter-indicator {
   @apply bg-secondary-shade-1;
 }
 </style>

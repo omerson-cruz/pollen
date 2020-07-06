@@ -10,18 +10,18 @@
     :focused="hasFocus"
     class="text-input"
     :class="[
-      `text-input__${variant}`,
-      `text-input__${size}`,
+      `text-input--${variant}`,
+      `text-input--${size}`,
       {
-        'text-input__invalid': invalid || error,
-        'text-input__disabled': disabled,
+        'text-input--invalid': invalid || error,
+        'text-input--disabled': disabled,
       },
     ]"
   >
     <BaseIcon
       v-if="preIcon"
       :icon="preIcon"
-      class="text-input--icon text-input--icon__pre"
+      class="text-input__icon text-input__icon--pre"
     />
     <span v-if="prefix" class="text-input--prefix">{{ prefix }}</span>
     <component
@@ -30,7 +30,7 @@
       ref="input"
       :value="value"
       v-bind="passThroughProps"
-      class="text-input--field"
+      class="text-input__field"
       :aria-invalid="invalid"
       :aria-describedby="error ? `${id}-error` : false"
       :disabled="disabled"
@@ -41,13 +41,13 @@
     <BaseIcon
       v-if="postIcon"
       :icon="postIcon"
-      class="text-input--icon text-input--icon__post"
+      class="text-input__icon text-input__icon--post"
     />
     <IconButton
       v-if="showReset"
       :variant="$options.Button.Variants.SECONDARY"
       :size="$options.Button.Sizes.SMALL"
-      class="text-input--reset text-input--icon"
+      class="text-input__reset text-input__icon"
       type="button"
       :icon="$options.Icons.CLOSE"
       title="Clear"
@@ -73,6 +73,8 @@ import IconButton from '../IconButton/IconButton.vue';
 const { Sizes, Variants } = Form;
 
 /**
+ * `import { TextInput } from '@bambeehr/pollen';`
+ *
  * The basic text input, available in four theme variants and three sizes. Any
  * attributes are transparently passed through to the `input` element.
  */
@@ -162,8 +164,7 @@ export default {
       default: '',
     },
     /**
-     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
-     * `ghost-inverted` is only to be used on dark backgrounds.
+     * One of `standard`, or `raised`.
      */
     variant: {
       type: String,
@@ -210,108 +211,108 @@ export default {
 </script>
 
 <style scoped>
-.text-input--prefix {
+.text-input__prefix {
   @apply select-none text-gray-3;
 }
 
-.text-input--field {
+.text-input__field {
   @apply appearance-none bg-transparent border-0 flex-grow w-full;
   font-size: 1em;
 }
 
-.text-input--field::placeholder {
+.text-input__field::placeholder {
   @apply text-gray-4;
 }
 
-.text-input--field:focus {
+.text-input__field:focus {
   @apply outline-none;
 }
 
-.text-input--icon,
-.text-input--reset.icon-button {
+.text-input__icon,
+.text-input__reset.icon-button {
   @apply text-gray-4;
 }
 
-.text-input--reset {
+.text-input__reset {
   @apply -mr-2;
 }
 
-.text-input__ghost-inverted .text-input--field,
-.text-input__ghost-inverted .text-input--icon,
-.text-input__ghost-inverted .text-input--prefix {
+/* .text-input--ghost-inverted .text-input__field,
+.text-input--ghost-inverted .text-input__icon,
+.text-input--ghost-inverted .text-input__prefix {
   @apply text-white;
-}
+} */
 
-.text-input__dense .text-input--icon {
+.text-input--dense .text-input__icon {
   @apply text-14;
 }
 
-.text-input__normal .text-input--icon {
+.text-input--normal .text-input__icon {
   @apply text-16;
 }
 
-.text-input__large .text-input--icon {
+.text-input--large .text-input__icon {
   @apply text-19;
 }
 
-.text-input__dense .text-input--icon__pre {
+.text-input--dense .text-input__icon--pre {
   @apply mr-3;
 }
 
-.text-input__normal .text-input--icon__pre {
+.text-input--normal .text-input__icon--pre {
   @apply mr-4;
 }
 
-.text-input__large .text-input--icon__pre {
+.text-input--large .text-input__icon--pre {
   @apply mr-4;
 }
 
-.text-input__dense .text-input--prefix {
+.text-input--dense .text-input__prefix {
   @apply text-14;
   margin-right: 0.375rem;
 }
 
-.text-input__normal .text-input--prefix {
+.text-input--normal .text-input__prefix {
   @apply text-16;
   margin-right: 0.375rem;
 }
 
-.text-input__large .text-input--prefix {
+.text-input--large .text-input__prefix {
   @apply text-18;
   @apply mr-2;
 }
 
-.text-input__dense .text-input--reset {
+.text-input--dense .text-input__reset {
   @apply ml-2;
 }
 
-.text-input__normal .text-input--reset,
-.text-input__large .text-input--reset {
+.text-input--normal .text-input__reset,
+.text-input--large .text-input__reset {
   @apply ml-3;
 }
 
-.text-input__dense >>> .field-container {
+.text-input--dense >>> .field-container {
   @apply h-8 px-3;
 }
 
-.text-input__normal >>> .field-container {
+.text-input--normal >>> .field-container {
   @apply h-10 px-4;
 }
 
-.text-input__large >>> .field-container {
+.text-input--large >>> .field-container {
   @apply h-14 px-4;
 }
 
-.text-input__raised.text-input__invalid .text-input--field,
-.text-input__raised.text-input__invalid .text-input--field::placeholder,
-.text-input__ghost.text-input__invalid .text-input--field,
-.text-input__ghost.text-input__invalid .text-input--field::placeholder {
+/* .text-input--ghost.text-input--invalid .text-input__field,
+.text-input--ghost.text-input--invalid .text-input__field::placeholder, */
+.text-input--raised.text-input--invalid .text-input__field,
+.text-input--raised.text-input--invalid .text-input__field::placeholder {
   @apply text-error;
 }
 
-.text-input__ghost-inverted.text-input__invalid .text-input--field,
-.text-input__ghost-inverted.text-input__invalid
-  .text-input--field::placeholder {
+/* .text-input--ghost-inverted.text-input--invalid .text-input__field,
+.text-input--ghost-inverted.text-input--invalid
+  .text-input__field::placeholder {
   @apply text-error-light-ghost;
-}
+} */
 </style>

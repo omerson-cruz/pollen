@@ -10,11 +10,11 @@
     :focused="hasFocus"
     class="date-input"
     :class="[
-      `date-input__${variant}`,
-      `date-input__${size}`,
+      `date-input--${variant}`,
+      `date-input--${size}`,
       {
-        'date-input__invalid': invalid || error,
-        'date-input__disabled': disabled,
+        'date-input--invalid': invalid || error,
+        'date-input--disabled': disabled,
       },
     ]"
   >
@@ -23,7 +23,7 @@
       :id="`${id}-placeholder`"
       :placeholder="placeholder"
       :disabled="disabled"
-      class="date-input--placeholder date-input--field"
+      class="date-input__placeholder date-input__field"
       value=""
       readonly
       @focus="handlePlaceholderFocus"
@@ -35,7 +35,7 @@
         :value="month"
         :required="required"
         :disabled="disabled"
-        class="date-input--short date-input--field"
+        class="date-input__field--short date-input__field"
         type="text"
         name="month"
         placeholder="MM"
@@ -45,14 +45,14 @@
         @focus="hasFocus = true"
         @blur="handleBlur"
       />
-      <span class="date-input--divider">/</span>
+      <span class="date-input__divider">/</span>
       <input
         :id="`${id}-day`"
         ref="day"
         :value="day"
         :required="required"
         :disabled="disabled"
-        class="date-input--short date-input--field"
+        class="date-input__field--short date-input__field"
         type="text"
         name="day"
         placeholder="DD"
@@ -62,12 +62,12 @@
         @focus="hasFocus = true"
         @blur="handleBlur"
       />
-      <span class="date-input--divider">/</span>
+      <span class="date-input__divider">/</span>
       <input
         :id="`${id}-year`"
         ref="year"
         :disabled="disabled"
-        class="date-input--long date-input--field"
+        class="date-input__field--long date-input__field"
         type="text"
         :value="year"
         name="year"
@@ -139,6 +139,8 @@ const sanitizeInput = (field, value) => {
 };
 
 /**
+ * `import { DateInput } from '@bambeehr/pollen';`
+ *
  * A text-based input for entering dates. This is actually three text inputs
  * grouped together as one, but as a singular component this takes a `value`
  * prop which, if formatted as `MM/DD/YYYY`, can be parsed out to the three
@@ -217,8 +219,7 @@ export default {
       default: '',
     },
     /**
-     * One of `standard`, `raised`, `ghost`, and `ghost-inverted`.
-     * `ghost-inverted` is only to be used on dark backgrounds.
+     * One of `standard`, or `raised`.
      */
     variant: {
       type: String,
@@ -332,62 +333,62 @@ export default {
 </script>
 
 <style scoped>
-.date-input--field {
+.date-input__field {
   @apply appearance-none bg-transparent border-0 flex-grow font-sans px-1;
   font-size: 1em;
 }
 
-.date-input--placeholder {
+.date-input__placeholder {
   @apply absolute inset-0 px-3 z-10;
 }
 
-.date-input--short {
+.date-input__field--short {
   @apply flex-grow;
   width: 3.5ch;
 }
 
-.date-input--short::placeholder {
+.date-input__field--short::placeholder {
   @apply text-center;
 }
 
-.date-input--long {
+.date-input__field--long {
   @apply w-full;
   flex-grow: 2;
 }
 
-.date-input__ghost-inverted .date-input--field {
+.date-input--ghost-inverted .date-input__field {
   @apply text-white;
 }
 
-.date-input--divider,
-.date-input--field__empty,
-.date-input__ghost-inverted .date-input--field.date-input--field__empty,
-.date-input--field::placeholder {
+.date-input__divider,
+.date-input__field--empty,
+/* .date-input--ghost-inverted .date-input__field.date-input__field--empty, */
+.date-input__field::placeholder {
   @apply text-gray-4;
 }
 
-.date-input__dense >>> .field-container {
+.date-input--dense >>> .field-container {
   @apply h-8 px-2;
 }
 
-.date-input__normal >>> .field-container {
+.date-input--normal >>> .field-container {
   @apply h-10 px-3;
 }
 
-.date-input__large >>> .field-container {
+.date-input--large >>> .field-container {
   @apply h-14 px-3;
 }
 
-.date-input__raised.date-input__invalid .date-input--field,
-.date-input__raised.date-input__invalid .date-input--field::placeholder,
-.date-input__ghost.date-input__invalid .date-input--field,
-.date-input__ghost.date-input__invalid .date-input--field::placeholder {
+/* .date-input--ghost.date-input--invalid .date-input__field,
+.date-input--ghost.date-input--invalid .date-input__field::placeholder, */
+.date-input--raised.date-input--invalid .date-input__field,
+.date-input--raised.date-input--invalid .date-input__field::placeholder {
   @apply text-error;
 }
 
-.date-input__ghost-inverted.date-input__invalid .date-input--field,
-.date-input__ghost-inverted.date-input__invalid
-  .date-input--field::placeholder {
+/* .date-input--ghost-inverted.date-input--invalid .date-input__field,
+.date-input--ghost-inverted.date-input--invalid
+  .date-input__field::placeholder {
   @apply text-error-light-ghost;
-}
+} */
 </style>

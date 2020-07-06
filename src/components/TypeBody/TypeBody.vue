@@ -3,7 +3,7 @@
     :is="props.tag"
     :class="[
       `type-body-${props.variant}`,
-      `type-body-${props.variant}__${props.weight}`,
+      `type-body-${props.variant}--${props.weight}`,
       data.class,
       data.staticClass,
     ]"
@@ -22,6 +22,8 @@ import getAttributes from '../../util/getAttributes';
 const { Body, Weights } = Typography;
 
 /**
+ * `import { Typebody } from '@bambeehr/pollen';`
+ *
  * A styled block of text.
  */
 export default {
@@ -55,15 +57,15 @@ export default {
     @apply font-body-$(variant);
   }
 
-  .type-body-$(variant)__regular {
+  .type-body-$(variant)--regular {
     @apply font-normal;
   }
 
-  .type-body-$(variant)__medium {
+  .type-body-$(variant)--medium {
     @apply font-medium;
   }
 
-  .type-body-$(variant)__strong {
+  .type-body-$(variant)--strong {
     @apply font-semibold;
   }
 }

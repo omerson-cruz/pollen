@@ -71,7 +71,7 @@ Components and accompanying constants/enums can be imported using named imports.
 </template>
 
 <script>
-import { TypeBody, TypeHeading, constants } from '@bambeehr/pollen'
+import { TypeBody, TypeHeading, constants } from '@bambeehr/pollen';
 
 const { Typography } = constants;
 
@@ -110,7 +110,7 @@ Storybook will launch with hot reloading when you run `npm run dev`. When commit
 You may want to develop new components in Pollen in parallel with features in your web projects that use Pollen as a dependency. To do this, you can use npm linking.
 
 ```
-# Go to the root project folder on your system for Pollen. 
+# Go to the root project folder on your system for Pollen.
 # The path actual below depends on your set up.
 cd ~/Sites/bambee/pollen
 
@@ -144,4 +144,3 @@ npm unlink
 ```
 
 Order is important. Linking commands are the same in yarn. Just use `yarn link` in place of `npm link`.
-

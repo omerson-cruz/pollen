@@ -2,7 +2,7 @@
   <div
     :id="`${props.fieldId}-error`"
     class="field-error"
-    :class="`field-error__${props.variant}`"
+    :class="`field-error--${props.variant}`"
     role="alert"
   >
     <slot />
@@ -29,7 +29,7 @@ export default {
   @apply absolute bottom-0 font-body-small inset-x-0 pt-1 text-error transform translate-y-full;
 }
 
-.field-error__ghost-inverted {
+/* .field-error--ghost-inverted {
   @apply text-error-light-ghost;
-}
+} */
 </style>

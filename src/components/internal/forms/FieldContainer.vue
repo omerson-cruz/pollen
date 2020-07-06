@@ -2,12 +2,12 @@
   <div
     class="field-container"
     :class="[
-      `field-container__${props.variant}`,
-      `field-container__${props.size}`,
+      `field-container--${props.variant}`,
+      `field-container--${props.size}`,
       {
-        'field-container__disabled': props.disabled,
-        'field-container__invalid': props.invalid,
-        'field-container__focused': props.focused,
+        'field-container--disabled': props.disabled,
+        'field-container--invalid': props.invalid,
+        'field-container--focused': props.focused,
       },
     ]"
   >
@@ -60,82 +60,82 @@ export default {
     border-solid;
 }
 
-.field-container__standard {
+.field-container--standard {
   @apply bg-white
     border-gray-4;
 }
 
-.field-container__standard:hover:not(.field-container__disabled) {
+.field-container--standard:hover:not(.field-container--disabled) {
   @apply border-gray-3;
 }
 
-.field-container__standard.field-container__focused,
-.field-container__standard.field-container__focused:hover:not(.field-container__disabled) {
+.field-container--standard.field-container--focused,
+.field-container--standard.field-container--focused:hover:not(.field-container--disabled) {
   @apply border-primary;
 }
 
-.field-container__raised,
-.field-container__raised.field-container__focused,
-.field-container__raised.field-container__focused:hover:not(.field-container__disabled) {
+.field-container--raised,
+.field-container--raised.field-container--focused,
+.field-container--raised.field-container--focused:hover:not(.field-container--disabled) {
   @apply bg-white
     shadow-2;
 }
 
-.field-container__raised:hover:not(.field-container__disabled) {
+.field-container--raised:hover:not(.field-container--disabled) {
   @apply shadow-3;
 }
 
-.field-container__ghost,
-.field-container__ghost.field-container__focused,
-.field-container__ghost.field-container__focused:hover:not(.field-container__disabled) {
+/* .field-container--ghost,
+.field-container--ghost.field-container--focused,
+.field-container--ghost.field-container--focused:hover:not(.field-container--disabled) {
   background: rgba(0, 0, 0, 0.04);
 }
 
-.field-container__ghost:hover {
+.field-container--ghost:hover {
   background: rgba(0, 0, 0, 0.06);
 }
 
-.field-container__ghost-inverted,
-.field-container__ghost-inverted.field-container__focused,
-.field-container__ghost-inverted.field-container__focused:hover:not(.field-container__disabled) {
+.field-container--ghost-inverted,
+.field-container--ghost-inverted.field-container--focused,
+.field-container--ghost-inverted.field-container--focused:hover:not(.field-container--disabled) {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.field-container__ghost-inverted:hover:not(.field-container__disabled) {
+.field-container--ghost-inverted:hover:not(.field-container--disabled) {
   background: rgba(255, 255, 255, 0.3);
-}
+} */
 
-.field-container__dense {
+.field-container--dense {
   @apply font-body-text rounded;
 }
 
-.field-container__normal {
+.field-container--normal {
   @apply font-body-text rounded-md;
 }
 
-.field-container__large {
+.field-container--large {
   @apply font-body-medium rounded-md;
 }
 
-.field-container__disabled,
-.field-container__disabled >>> [disabled] {
+.field-container--disabled,
+.field-container--disabled >>> [disabled] {
   @apply cursor-not-allowed;
 }
 
-.field-container__disabled.field-container__standard,
-.field-container__disabled.field-container__raised {
+.field-container--disabled.field-container--standard,
+.field-container--disabled.field-container--raised {
   @apply bg-gray-7;
 }
 
-.field-container__disabled.field-container__ghost {
+/* .field-container--disabled.field-container--ghost {
   background: rgba(0, 0, 0, 0.02);
 }
 
-.field-container__disabled.field-container__ghost-inverted {
+.field-container--disabled.field-container--ghost-inverted {
   background: rgba(255, 255, 255, 0.1);
-}
+} */
 
-.field-container__standard.field-container__invalid {
+.field-container--standard.field-container--invalid {
   @apply border-error;
 }
 </style>

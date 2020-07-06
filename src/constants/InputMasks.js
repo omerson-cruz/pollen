@@ -19,6 +19,7 @@ const InputMasks = Object.freeze({
   PHONE: {
     delimiters: ['+1', ' ', '(', ')', ' ', '-'],
     blocks: [0, 0, 0, 3, 0, 3, 4],
+    numericOnly: true,
   },
 
   YEAR: {

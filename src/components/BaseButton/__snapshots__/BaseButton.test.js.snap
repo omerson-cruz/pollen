@@ -2,14 +2,14 @@
 
 exports[`BaseButton renders correctly 1`] = `
 <button
-  class="base-button base-button__primary base-button__medium base-button__regular base-button__inline"
+  class="base-button base-button--primary base-button--medium base-button--regular base-button--inline"
 >
   <div
-    class="base-button--inner"
+    class="base-button__inner"
   >
     <svg
       aria-hidden="true"
-      class="base-icon svg-inline--fa fa-lock fa-w-14 base-button--icon base-button--icon__pre"
+      class="base-icon svg-inline--fa fa-lock fa-w-14 base-button__icon base-button__icon--pre"
       data-icon="lock"
       data-prefix="fas"
       focusable="false"

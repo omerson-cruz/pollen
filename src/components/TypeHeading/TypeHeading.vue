@@ -3,7 +3,7 @@
     :is="props.tag"
     :class="[
       `type-heading-${props.variant}`,
-      `type-heading-${props.variant}__${props.weight}`,
+      `type-heading-${props.variant}--${props.weight}`,
       data.class,
       data.staticClass,
     ]"
@@ -22,6 +22,7 @@ import getAttributes from '../../util/getAttributes';
 const { Heading, Weights } = Typography;
 
 /**
+ * `import { TypeHeading } from '@bambeehr/pollen';`
  * A styled block of text.
  */
 export default {
@@ -55,20 +56,20 @@ export default {
     @apply font-heading-$(variant);
   }
 
-  .type-heading-$(variant)__regular {
+  .type-heading-$(variant)--regular {
     @apply font-normal;
   }
 
-  .type-heading-$(variant)__strong {
+  .type-heading-$(variant)--strong {
     @apply font-semibold;
   }
 }
 
-.type-heading-title__regular {
+.type-heading-title--regular {
   @apply font-heading-title;
 }
 
-.type-heading-title__strong {
+.type-heading-title--strong {
   @apply font-heading-title-special;
 }
 </style>
