@@ -34,7 +34,7 @@ exports[`TextInput renders correctly 1`] = `
     </svg>
      
     <span
-      class="text-input--prefix"
+      class="text-input__prefix"
     >
       $
     </span>
