@@ -1,3 +1,5 @@
+// TODO(jon.jandoc): For now we are disabling the ghost and ghost-inverted
+// variants.
 const Form = Object.freeze({
   Variants: {
     STANDARD: 'standard',

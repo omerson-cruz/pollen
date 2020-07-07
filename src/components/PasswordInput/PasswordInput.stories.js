@@ -5,7 +5,6 @@ import PasswordInput from './PasswordInput.vue';
 import Form from '../../constants/Form';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import { Icons } from '../BaseIcon/BaseIcon.vue';
-import '../../assets/tailwind.css';
 
 export default {
   title: 'Inputs/PasswordInput',

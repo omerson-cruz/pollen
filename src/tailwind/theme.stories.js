@@ -10,17 +10,20 @@ export default {
 };
 
 // Flatten color object.
-const colors = Object.entries(theme.colors).reduce((obj, [key, value]) => {
-  const newObj = { ...obj };
-  if (typeof value === 'string') {
-    newObj[key] = value;
-  } else if (typeof value === 'object') {
-    Object.entries(value).forEach(([subKey, subValue]) => {
-      newObj[`${key}-${subKey}`] = subValue;
-    });
-  }
-  return newObj;
-}, {});
+const colors = Object.entries(theme.default.colors).reduce(
+  (obj, [key, value]) => {
+    const newObj = { ...obj };
+    if (typeof value === 'string') {
+      newObj[key] = value;
+    } else if (typeof value === 'object') {
+      Object.entries(value).forEach(([subKey, subValue]) => {
+        newObj[`${key}-${subKey}`] = subValue;
+      });
+    }
+    return newObj;
+  },
+  {}
+);
 
 export const Colors = () => ({
   components: { TypeOverline },

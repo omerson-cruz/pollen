@@ -5,7 +5,6 @@ import TextInput from './TextInput.vue';
 import Form from '../../constants/Form';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import { Icons } from '../BaseIcon/BaseIcon.vue';
-import '../../assets/tailwind.css';
 import InputMasks from '../../constants/InputMasks';
 
 export default {

@@ -2,7 +2,6 @@ import { action } from '@storybook/addon-actions';
 import Form from '../../constants/Form';
 import RadioGroup from './RadioGroup.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
-import '../../assets/tailwind.css';
 
 const { Sizes, Variants } = Form;
 

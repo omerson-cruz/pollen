@@ -1,0 +1,1053 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseTag renders correctly 1`] = `
+<div
+  class="base-tag base-tag--inevitable base-tag--medium base-tag--filled"
+>
+  Hello world
+</div>
+`;
+
+exports[`BaseTag renders gallery correctly 1`] = `
+<div>
+  <div
+    class="flex"
+  >
+    <div
+      class="w-1/2"
+    >
+      <h2
+        class="type-overline type-overline-large mb-2"
+      >
+        Filled
+      </h2>
+       
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          geyser
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--geyser base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--geyser base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--geyser base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          tuberose
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tuberose base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tuberose base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tuberose base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          gingerrr
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gingerrr base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gingerrr base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gingerrr base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          rose
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--rose base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--rose base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--rose base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          tangerine
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tangerine base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tangerine base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tangerine base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          maroon
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--maroon base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--maroon base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--maroon base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          puce
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--puce base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--puce base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--puce base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          inevitable
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--inevitable base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--inevitable base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--inevitable base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          virginia
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--virginia base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--virginia base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--virginia base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          mosaic
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--mosaic base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--mosaic base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--mosaic base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          eastern
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--eastern base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--eastern base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--eastern base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          caribbean
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--caribbean base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--caribbean base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--caribbean base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          evergreen
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--evergreen base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--evergreen base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--evergreen base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="w-1/2"
+    >
+      <h2
+        class="type-overline type-overline-large mb-2"
+      >
+        Outline
+      </h2>
+       
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          geyser
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--geyser base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--geyser base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--geyser base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          tuberose
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tuberose base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tuberose base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tuberose base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          gingerrr
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gingerrr base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gingerrr base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gingerrr base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          rose
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--rose base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--rose base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--rose base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          tangerine
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tangerine base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tangerine base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--tangerine base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          maroon
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--maroon base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--maroon base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--maroon base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          puce
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--puce base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--puce base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--puce base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          inevitable
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--inevitable base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--inevitable base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--inevitable base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          virginia
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--virginia base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--virginia base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--virginia base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          mosaic
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--mosaic base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--mosaic base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--mosaic base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          eastern
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--eastern base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--eastern base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--eastern base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          caribbean
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--caribbean base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--caribbean base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--caribbean base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          evergreen
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--evergreen base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--evergreen base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--evergreen base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

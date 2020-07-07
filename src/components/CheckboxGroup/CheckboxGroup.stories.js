@@ -2,7 +2,6 @@ import { action } from '@storybook/addon-actions';
 import Form from '../../constants/Form';
 import CheckboxGroup from './CheckboxGroup.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
-import '../../assets/tailwind.css';
 
 const { Sizes, Variants } = Form;
 const sizes = [Sizes.DENSE, Sizes.NORMAL];
