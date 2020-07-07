@@ -4,7 +4,6 @@ import { boolean, select, text } from '@storybook/addon-knobs';
 import DateInput from './DateInput.vue';
 import Form from '../../constants/Form';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
-import '../../assets/tailwind.css';
 
 export default {
   title: 'Inputs/DateInput',

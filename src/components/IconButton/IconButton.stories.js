@@ -5,7 +5,6 @@ import IconButton from './IconButton.vue';
 import Button from '../../constants/Button';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import { Icons } from '../BaseIcon/BaseIcon.vue';
-import '../../assets/tailwind.css';
 
 const { Sizes, Variants } = Button;
 const iconOptions = Object.values(Icons);

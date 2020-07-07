@@ -1,7 +1,7 @@
 const theme = require('./src/tailwind/theme');
 const typographyPlugin = require('./src/tailwind/plugins/typography');
 
-const { inset, spacing, ...rest } = theme;
+const { inset, spacing, ...rest } = theme.default;
 
 module.exports = {
   purge: false,

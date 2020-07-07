@@ -2,7 +2,6 @@ import BaseIcon from '../BaseIcon/BaseIcon.vue';
 import Form from '../../constants/Form';
 import CheckboxInput from './CheckboxInput.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
-import '../../assets/tailwind.css';
 
 const { Sizes, Variants } = Form;
 const sizes = [Sizes.DENSE, Sizes.NORMAL];

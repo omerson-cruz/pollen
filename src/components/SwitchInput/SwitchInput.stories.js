@@ -2,7 +2,6 @@ import BaseIcon from '../BaseIcon/BaseIcon.vue';
 import Form from '../../constants/Form';
 import SwitchInput from './SwitchInput.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
-import '../../assets/tailwind.css';
 
 const sizes = [Form.Sizes.DENSE, Form.Sizes.NORMAL];
 
