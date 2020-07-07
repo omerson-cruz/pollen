@@ -23,7 +23,7 @@
       :icon="preIcon"
       class="text-input__icon text-input__icon--pre"
     />
-    <span v-if="prefix" class="text-input--prefix">{{ prefix }}</span>
+    <span v-if="prefix" class="text-input__prefix">{{ prefix }}</span>
     <component
       :is="inputComponent"
       :id="id"
@@ -212,7 +212,7 @@ export default {
 
 <style scoped>
 .text-input__prefix {
-  @apply select-none text-gray-3;
+  @apply select-none text-gray-3 whitespace-no-wrap;
 }
 
 .text-input__field {
