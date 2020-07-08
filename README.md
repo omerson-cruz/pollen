@@ -25,6 +25,14 @@ npm i
 
 ### Run Storybook with hot reloading
 
+If this is your first time running Storybook locally, you'll need to generate a test results file.
+
+```
+npm run test:generate-output
+```
+
+Then you can start developing:
+
 ```
 npm run dev
 ```
