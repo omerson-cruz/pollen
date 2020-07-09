@@ -72,7 +72,7 @@ export const HTMLLabel = () => ({
   components: { CheckboxInput, TypeOverline },
   data() {
     return {
-      sizes: Object.values(Sizes),
+      sizes,
       value: true,
       variants: [Variants.STANDARD, Variants.RAISED],
     };
@@ -98,7 +98,7 @@ export const WithLabelAsSlot = () => ({
   components: { BaseIcon, CheckboxInput, TypeOverline },
   data() {
     return {
-      sizes: Object.values(Sizes),
+      sizes,
       value: true,
       variants: [Variants.STANDARD, Variants.RAISED],
     };
