@@ -8,6 +8,14 @@ const fontSize = pixelFonts.reduce(
   {}
 );
 
+const timingDurations = {
+  '0': '0',
+  lazy: '640ms',
+  light: '440ms',
+  ridiculous: '240ms',
+  ludicrous: '160ms',
+};
+
 const extendedPalette = {
   geyser: '#CDE0DF',
   tuberose: '#F7F2DC',
@@ -40,6 +48,9 @@ module.exports.default = {
       '0px 1px 2px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.04), 0px 16px 32px rgba(0, 0, 0, 0.04), 0px 32px 64px rgba(0, 0, 0, 0.04)',
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
     outline: '0 0 0 2px rgba(72, 29, 114, 0.5)',
+    'outline-secondary': '0 0 0 2px #91E7E7',
+    'outline-tertiary': '0 0 0 2px #e35b76',
+    'outline-gray': '0 0 0 2px #C2C2C2',
     none: 'none',
   },
   colors: {
@@ -142,5 +153,13 @@ module.exports.default = {
   },
   spacing: {
     '14': '3.5rem',
+  },
+  transitionDelay: timingDurations,
+  transitionDuration: timingDurations,
+  transitionTimingFunction: {
+    linear: 'linear',
+    out: 'cubic-bezier(0, 0.55, 0.45, 1)',
+    in: 'cubic-bezier(0.55, 0, 1, 0.45)',
+    'in-out': 'cubic-bezier(0.85, 0, 0.15, 1)',
   },
 };

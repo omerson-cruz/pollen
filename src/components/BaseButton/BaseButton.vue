@@ -115,16 +115,15 @@ export default {
 .base-button {
   @apply border-transparent
     cursor-pointer
+    duration-ludicrous
+    ease-out
     items-center
     justify-center
     rounded
+    transition-all
     whitespace-no-wrap
     /* For legacy */
     border-solid;
-}
-
-.base-button:focus {
-  outline: 0;
 }
 
 .base-button[disabled] {
@@ -191,12 +190,12 @@ export default {
 
 /* Theme variations */
 /** Regular buttons  */
-.base-button--regular {
-  @apply border-2;
-}
-
 .base-button--regular:not(.base-button--inverted) {
   @apply shadow-2;
+}
+
+.base-button--regular:focus {
+  @apply outline-none;
 }
 
 /*** Regular primary buttons */
@@ -205,7 +204,7 @@ export default {
 }
 
 .base-button--regular.base-button--primary:focus {
-  @apply border-primary-tint-3;
+  @apply shadow-outline;
 }
 
 .base-button--regular.base-button--primary:active:not([disabled]) {
@@ -218,7 +217,7 @@ export default {
 }
 
 .base-button--regular.base-button--secondary:focus {
-  @apply border-secondary-tint-3;
+  @apply shadow-outline-secondary;
 }
 
 .base-button--regular.base-button--secondary:active:not([disabled]) {
@@ -231,7 +230,7 @@ export default {
 }
 
 .base-button--regular.base-button--tertiary:focus {
-  border-color: #e35b76; /* This is a one-off color. */
+  @apply shadow-outline-tertiary;
 }
 
 .base-button--regular.base-button--tertiary:active:not([disabled]) {
@@ -241,11 +240,10 @@ export default {
 /*** Regular primary inverted */
 .base-button--regular.base-button--inverted {
   @apply bg-white border border-primary text-primary;
-  padding: 1px;
 }
 
 .base-button--regular.base-button--inverted:focus {
-  @apply border-2 p-0;
+  @apply shadow-outline;
 }
 
 .base-button--regular.base-button--inverted:hover:not([disabled]) {
@@ -259,6 +257,10 @@ export default {
 /** Flat buttons */
 .base-button--flat {
   @apply bg-transparent border;
+}
+
+.base-button--flat:focus {
+  @apply outline-none;
 }
 
 /*** Flat primary buttons */

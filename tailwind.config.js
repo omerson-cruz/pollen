@@ -1,7 +1,7 @@
 const theme = require('./src/tailwind/theme');
 const typographyPlugin = require('./src/tailwind/plugins/typography');
 
-const { inset, spacing, ...rest } = theme.default;
+const { inset, spacing, transitionDuration, ...rest } = theme.default;
 
 module.exports = {
   purge: false,
@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       inset,
       spacing,
+      transitionDuration,
     },
   },
   variants: {},

@@ -34,10 +34,6 @@ export default {
     },
   },
   render(h, { data, props }) {
-    const children = [];
-    if (props.checked) {
-      children.push(<BaseIcon icon={Icons.CHECK} />);
-    }
     return h(
       'div',
       {
@@ -56,8 +52,7 @@ export default {
           },
         ],
       },
-
-      children
+      [<BaseIcon icon={Icons.CHECK} />]
     );
   },
 };
@@ -68,12 +63,15 @@ export default {
   @apply border
     border-transparent
     box-border
+    duration-75
+    ease-out
     flex
     flex-shrink-0
     items-center
     justify-center
     relative
     text-white
+    transition-all
     /* For legacy */
     border-solid;
 }
@@ -99,7 +97,15 @@ export default {
 }
 
 .checkbox-indicator >>> .base-icon {
-  @apply absolute;
+  @apply absolute
+    duration-75 
+    ease-out
+    opacity-0 
+    transition-opacity;
+}
+
+.checkbox-indicator--checked >>> .base-icon {
+  @apply opacity-100;
 }
 
 .checkbox-indicator--dense {

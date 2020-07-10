@@ -334,8 +334,18 @@ export default {
 
 <style scoped>
 .date-input__field {
-  @apply appearance-none bg-transparent border-0 flex-grow font-sans px-1;
+  @apply appearance-none
+    bg-transparent
+    border-none
+    flex-grow
+    font-sans
+    px-1
+    py-0;
   font-size: 1em;
+}
+
+.date-input__field:focus {
+  @apply outline-none;
 }
 
 .date-input__placeholder {
