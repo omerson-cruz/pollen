@@ -195,7 +195,7 @@ export default {
   @apply border-2;
 }
 
-.base-button--regular:not(.base-button--inverted) {
+.base-button--regular:not(.base-button--inverted):not([disabled]) {
   @apply shadow-2;
 }
 
