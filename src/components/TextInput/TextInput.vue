@@ -23,6 +23,7 @@
       :icon="preIcon"
       class="text-input__icon text-input__icon--pre"
     />
+    <slot name="pre-field" />
     <span v-if="prefix" class="text-input__prefix">{{ prefix }}</span>
     <component
       :is="inputComponent"
@@ -55,7 +56,7 @@
       :disabled="disabled"
       @click.prevent="handleReset"
     />
-    <slot />
+    <slot name="post-field" />
   </FormField>
 </template>
 

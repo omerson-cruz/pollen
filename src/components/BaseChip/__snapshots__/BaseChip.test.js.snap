@@ -3,7 +3,6 @@
 exports[`BaseChip renders correctly 1`] = `
 <div
   class="base-chip base-chip--medium base-chip--standard"
-  color="inevitable"
 >
   <div
     class="base-chip__inner"

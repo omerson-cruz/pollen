@@ -8,9 +8,6 @@ describe('BaseChip', () => {
       slots: {
         default: 'Hello world',
       },
-      propsData: {
-        color: 'inevitable',
-      },
     });
     expect(wrapper.element).toMatchSnapshot();
   });

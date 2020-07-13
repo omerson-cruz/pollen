@@ -32,7 +32,7 @@ exports[`TextInput renders correctly 1`] = `
         fill="currentColor"
       />
     </svg>
-     
+      
     <span
       class="text-input__prefix"
     >

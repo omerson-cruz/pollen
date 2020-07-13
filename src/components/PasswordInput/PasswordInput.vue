@@ -13,29 +13,31 @@
     v-bind="$attrs"
     @input="$emit('input', $event)"
   >
-    <IconButton
-      :icon="passwordIcon"
-      :title="isShowingPassword ? 'Hide password' : 'Show password'"
-      class="password-input__toggle"
-      :size="toggleSize"
-      :disabled="disabled"
-      variant="secondary"
-      flat
-      @click="handleToggle"
-    />
-    <div
-      v-if="showScore"
-      class="password-input__meter"
-      :class="`password-input__meter--${passwordScore.label}`"
-      :title="passwordScore.label"
-      :aria-label="passwordScore.label"
-    >
-      <div
-        v-for="n in passwordScore.value"
-        :key="n"
-        class="password-input__meter-indicator"
+    <template #post-field>
+      <IconButton
+        :icon="passwordIcon"
+        :title="isShowingPassword ? 'Hide password' : 'Show password'"
+        class="password-input__toggle"
+        :size="toggleSize"
+        :disabled="disabled"
+        variant="secondary"
+        flat
+        @click="handleToggle"
       />
-    </div>
+      <div
+        v-if="showScore"
+        class="password-input__meter"
+        :class="`password-input__meter--${passwordScore.label}`"
+        :title="passwordScore.label"
+        :aria-label="passwordScore.label"
+      >
+        <div
+          v-for="n in passwordScore.value"
+          :key="n"
+          class="password-input__meter-indicator"
+        />
+      </div>
+    </template>
   </TextInput>
 </template>
 
