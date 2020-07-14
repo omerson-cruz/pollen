@@ -1,40 +1,82 @@
 <template>
-  <TextInput
+  <FormField
     :id="id"
-    v-model="filter"
     class="select-input"
+    :class="[
+      `select-input--${variant}`,
+      `select-input--${size}`,
+      {
+        'select-input--invalid': invalid || error,
+        'select-input--disabled': disabled,
+      },
+    ]"
     v-bind="passDownProps"
-    @input="handleInput"
-    @focus="isDropdownActive = true"
+    :variant="variant"
+    :size="size"
+    :label="label"
+    :focused="hasFocus"
+    :error="error"
+    :invalid="invalid"
+    :disabled="disabled"
   >
-    <template v-if="multiple" #pre-field>selected options go here</template>
-    <template #post-field>
-      <transition>
-        <ul>
-          <li v-for="item in mappedOptions" :key="item.value">
-            <button type="button" @click="handleSelect(value)">
-              {{ label }}
-            </button>
-          </li>
-        </ul>
-      </transition>
-    </template>
-  </TextInput>
+    <VSelect
+      :options="mappedOptions"
+      :value="mappedValue"
+      :disabled="disabled"
+      :clearable="showReset"
+      :multiple="multiple"
+      v-bind="$attrs"
+      @input="handleInput"
+      @search:blue="handleBlur"
+      @search:focus="handleFocus"
+    />
+  </FormField>
 </template>
 
 <script>
-import TextInput from '../TextInput/TextInput.vue';
+import VSelect from 'vue-select';
+import shortid from 'shortid';
+import Form from '../../constants/Form';
+import FormField from '../internal/forms/FormField.vue';
 import mapOptions from '../../util/mapOptions';
 import { Icons } from '../BaseIcon/BaseIcon.vue';
+import 'vue-select/dist/vue-select.css';
+
+const { Sizes, Variants } = Form;
 
 export default {
-  components: { TextInput },
+  components: { FormField, VSelect },
   inheritAttrs: false,
   props: {
-    /** An intial filter value to set. */
-    initialFilter: {
+    /** If the field is disabled. */
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    /** Any messages to display as errors on the field. */
+    error: {
       type: String,
-      default: '',
+      default: null,
+    },
+    /** A unique element ID. By default, one is randomly generated. */
+    id: {
+      type: String,
+      default: shortid.generate,
+    },
+    /**
+     * If true, this field will display in an error state. NOTE: a field is in
+     * an error state if `invalid` is `true` and/or `error` is truthy.
+     */
+    invalid: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * A label to display above the field.
+     */
+    label: {
+      type: String,
+      default: null,
     },
     /** If true, allows for selecting multiple options. */
     multiple: {
@@ -52,6 +94,21 @@ export default {
       default: () => [],
     },
     /**
+     * If true, shows a button that when clicked resets the value of the input.
+     */
+    showReset: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * One of `dense`, `regular`, and `large`.
+     */
+    size: {
+      type: String,
+      default: Sizes.NORMAL,
+      validator: (value) => Object.values(Sizes).includes(value),
+    },
+    /**
      * The selected value. Compatible with v-model. If `multiple` is true, this
      * must be an array of string values.
      */
@@ -59,19 +116,31 @@ export default {
       type: [String, Array],
       default: '',
     },
+    /**
+     * One of `standard`, or `raised`.
+     */
+    variant: {
+      type: String,
+      default: Variants.STANDARD,
+      validator: (value) => Object.values(Variants).includes(value),
+    },
   },
   data() {
     return {
-      filter: this.initialFilter,
+      hasFocus: false,
       isDropdownActive: false,
     };
   },
   computed: {
     mappedOptions() {
-      const filterString = this.filter.toLowerCase().trim();
-      const isFilterStringInLabel = (item) =>
-        item.label.toLowerCase().includes(filterString);
-      return mapOptions(this.options).filter(isFilterStringInLabel);
+      return mapOptions(this.options);
+    },
+    mappedValue() {
+      return this.multiple
+        ? this.mappedOptions.filter(({ value }) =>
+            (this.value || []).includes(value)
+          )
+        : this.mappedOptions.find(({ value }) => value === this.value);
     },
     passDownProps() {
       return {
@@ -80,5 +149,32 @@ export default {
       };
     },
   },
+  methods: {
+    handleBlur() {
+      this.handleFocus = false;
+    },
+    handleFocus() {
+      this.hasFocus = true;
+    },
+    handleInput(e) {
+      let val = '';
+      if (this.multiple) {
+        val = e.map(({ value }) => value);
+      } else if (e && e.val) {
+        val = e.val;
+      }
+      this.$emit('input', val);
+    },
+  },
 };
 </script>
+
+<style scoped>
+.select-input >>> .v-select {
+  width: 100%;
+}
+
+.select-input >>> .vs__dropdown-toggle {
+  @apply border-none;
+}
+</style>
