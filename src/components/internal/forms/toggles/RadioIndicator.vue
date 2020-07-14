@@ -62,12 +62,15 @@ export default {
   @apply border
     border-transparent
     box-border
+    duration-75
+    ease-out
     flex
     flex-shrink-0
     items-center
     justify-center
     relative
     rounded-full
+    transition-all
     /* For legacy */
     border-solid;
 }

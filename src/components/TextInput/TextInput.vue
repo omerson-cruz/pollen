@@ -217,7 +217,7 @@ export default {
 }
 
 .text-input__field {
-  @apply appearance-none bg-transparent border-0 flex-grow w-full;
+  @apply appearance-none bg-transparent border-0 flex-grow p-0 w-full;
   font-size: 1em;
 }
 

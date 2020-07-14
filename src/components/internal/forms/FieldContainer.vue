@@ -71,7 +71,7 @@ export default {
 
 .field-container--standard.field-container--focused,
 .field-container--standard.field-container--focused:hover:not(.field-container--disabled) {
-  @apply border-primary;
+  @apply shadow-outline;
 }
 
 .field-container--raised,

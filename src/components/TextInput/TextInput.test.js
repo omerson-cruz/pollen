@@ -74,11 +74,7 @@ describe('TextInput', () => {
     expect(onInput).not.toHaveBeenCalledWith('hello world');
   });
 
-  // TODO(jon.jandoc): Skipping this test for now because lazy-loaded components
-  // are treated as `shallowMount`s so no `input` will be found in this test.
-  // This fails as-is, but passes if we change the `CleaveInput` to a normal
-  // import rather than a lazy load.
-  test.skip('masks inputs', () => {
+  test('masks inputs', () => {
     const onInput = jest.fn();
     const wrapper = mount(TextInput, {
       listeners: {
@@ -89,8 +85,8 @@ describe('TextInput', () => {
       },
     });
     const input = wrapper.find('input');
-    input.setValue('5555555555');
-    expect(onInput).toHaveBeenCalledWith('5555555555');
-    expect(wrapper.find('input').element.value).toBe('+1 (555) 555-5555');
+    input.setValue('1234567890');
+    expect(onInput).toHaveBeenCalledWith('1234567890');
+    expect(wrapper.find('input').element.value).toBe('(123) 456-7890');
   });
 });

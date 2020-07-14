@@ -128,8 +128,8 @@ export default {
 
 .radio-toggle__container {
   @apply cursor-pointer
-    duration-100
-    ease-linear
+    duration-0
+    ease-out
     font-overline-small
     px-5 
     py-1
@@ -143,7 +143,7 @@ export default {
 }
 
 .radio-toggle__container.active {
-  @apply text-white;
+  @apply duration-light text-white;
 }
 
 .radio-toggle.focused {
@@ -157,8 +157,8 @@ export default {
 .radio-toggle__indicator {
   @apply absolute 
     bg-primary 
-    duration-100
-    ease-in
+    duration-light
+    ease-out
     rounded-full 
     transition-all
     z-0;

@@ -146,6 +146,7 @@ export const WithKnobs = () => {
     `,
   };
 };
+
 export const WithAnInputMask = () => {
   return {
     components: { TextInput },

@@ -54,7 +54,7 @@ export default {
 .switch-indicator {
   @apply bg-gray-4
     box-border
-    duration-75
+    duration-light
     ease-out
     flex-shrink-0
     inline-flex
@@ -83,8 +83,8 @@ export default {
 .switch-indicator::after {
   @apply bg-white 
     block 
-    duration-75 
-    ease-in-out 
+    duration-light 
+    ease-out
     rounded-full 
     shadow-1 
     transition-transform;

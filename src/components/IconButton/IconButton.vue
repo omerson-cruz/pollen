@@ -140,7 +140,7 @@ export default {
 /* Theme variations */
 /** Regular buttons  */
 .icon-button--regular {
-  @apply border-2 shadow-2;
+  @apply shadow-2;
 }
 
 /*** Regular primary buttons */
@@ -149,7 +149,7 @@ export default {
 }
 
 .icon-button--regular.icon-button--primary:focus {
-  @apply border-primary-tint-3;
+  @apply shadow-outline;
 }
 
 .icon-button--regular.icon-button--primary:active:not([disabled]) {
@@ -162,7 +162,7 @@ export default {
 }
 
 .icon-button--regular.icon-button--secondary:focus {
-  @apply border-secondary-tint-3;
+  @apply shadow-outline-secondary;
 }
 
 .icon-button--regular.icon-button--secondary:active:not([disabled]) {
@@ -175,7 +175,7 @@ export default {
 }
 
 .icon-button--regular.icon-button--tertiary:focus {
-  border-color: #e35b76; /* This is a one-off color. */
+  @apply shadow-outline-tertiary;
 }
 
 .icon-button--regular.icon-button--tertiary:active:not([disabled]) {
@@ -185,11 +185,10 @@ export default {
 /*** Regular primary inverted */
 .icon-button--regular.icon-button--inverted {
   @apply bg-white border border-primary text-primary;
-  padding: 1px;
 }
 
 .icon-button--regular.icon-button--inverted:focus {
-  @apply border-2 p-0;
+  @apply shadow-outline;
 }
 
 .icon-button--regular.icon-button--inverted:hover:not([disabled]) {
