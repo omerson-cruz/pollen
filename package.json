@@ -27,6 +27,7 @@
     "cleave.js": "^1.6.0",
     "core-js": "^3.6.5",
     "lodash": "^4.17.15",
+    "postcss-nested": "^4.2.3",
     "shortid": "^2.2.15",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.11",

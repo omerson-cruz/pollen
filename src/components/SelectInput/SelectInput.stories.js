@@ -1,5 +1,11 @@
-import BaseIcon from '../BaseIcon/BaseIcon.vue';
+import capitalize from 'lodash/capitalize';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+import Form from '../../constants/Form';
 import SelectInput from './SelectInput.vue';
+import TypeOverline from '../TypeOverline/TypeOverline.vue';
+
+const { Sizes, Variants } = Form;
 
 export default {
   title: 'SelectInput',
@@ -30,6 +36,79 @@ const options = [
   },
 ];
 
+export const Gallery = () => ({
+  components: { SelectInput, TypeOverline },
+  data() {
+    return {
+      options,
+      value: '',
+      multiValue: [],
+      sizes: Sizes,
+      variants: Variants,
+    };
+  },
+  methods: {
+    capitalize,
+    handleInput: action('input'),
+  },
+  template: `
+  <div>
+    <TypeOverline tag="h1" variant="large">Select Inputs</TypeOverline>
+    <div class="flex -mx-8">
+      <div
+        v-for="variant in variants"
+        :key="variant"
+        :class="['px-8 py-4 w-5/12']"
+      >
+        <TypeOverline tag="h2" class="mb-2" variant="large">{{ variant }}</TypeOverline>
+        <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
+          <TypeOverline tag="h3" class="mb-2">{{ size }}</TypeOverline>
+          <SelectInput
+            v-model="value"
+            :options="options"
+            :variant="variant"
+            :size="size"
+            :placeholder="capitalize(size)"
+            @input="handleInput"
+          />
+          <TypeOverline tag="h3" class="mb-2">{{ size }}, Multiple</TypeOverline>
+          <SelectInput
+            v-model="multiValue"
+            :options="options"
+            :variant="variant"
+            :size="size"
+            :placeholder="capitalize(size)"
+            :value="capitalize(size)"
+            multiple
+            @input="handleInput"
+          />
+          <TypeOverline tag="h3" class="mb-2">{{ size }}, Invalid</TypeOverline>
+          <SelectInput
+            v-model="value"
+            :options="options"
+            :variant="variant"
+            :size="size"
+            :placeholder="capitalize(size)"
+            invalid
+            @input="handleInput"
+          />            
+          <TypeOverline tag="h3" class="mb-2">{{ size }}, Disabled</TypeOverline>
+          <SelectInput
+            v-model="value"
+            :options="options"
+            :variant="variant"
+            :size="size"
+            :placeholder="capitalize(size)"
+            disabled
+            @input="handleInput"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  `,
+});
+
 export const Default = () => ({
   components: { SelectInput },
   data() {
@@ -39,7 +118,10 @@ export const Default = () => ({
     };
   },
   template: `
-    <SelectInput v-model="value" :options="options" />
+    <div>
+      <p>Value: {{ value }}</p>
+      <SelectInput v-model="value" :options="options" />
+    </div>
   `,
 });
 
@@ -52,7 +134,10 @@ export const MultiSelect = () => ({
     };
   },
   template: `
-    <SelectInput v-model="value" :options="options" multiple />
+    <div>
+      <p>Value: {{ value }}</p>
+      <SelectInput v-model="value" :options="options" multiple />
+    </div>
   `,
 });
 

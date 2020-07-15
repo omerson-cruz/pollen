@@ -10,7 +10,6 @@
         'select-input--disabled': disabled,
       },
     ]"
-    v-bind="passDownProps"
     :variant="variant"
     :size="size"
     :label="label"
@@ -20,32 +19,52 @@
     :disabled="disabled"
   >
     <VSelect
-      :options="mappedOptions"
-      :value="mappedValue"
-      :disabled="disabled"
-      :clearable="showReset"
-      :multiple="multiple"
-      v-bind="$attrs"
+      v-bind="passDownProps"
       @input="handleInput"
-      @search:blue="handleBlur"
+      @search:blur="handleBlur"
       @search:focus="handleFocus"
-    />
+    >
+      <template #selected-option-container="{ deselect, option }">
+        <BaseChip
+          v-if="multiple"
+          class="select-input__selected"
+          :variant="$options.ChipVariants.FILLED"
+          show-reset
+          @reset="deselect(option)"
+        >
+          {{ option.label }}
+        </BaseChip>
+        <div v-else class="select-input__selected">
+          {{ option.label }}
+        </div>
+      </template>
+    </VSelect>
   </FormField>
 </template>
 
 <script>
 import VSelect from 'vue-select';
 import shortid from 'shortid';
+import BaseChip, { Variants as ChipVariants } from '../BaseChip/BaseChip.vue';
+import BaseIcon, { Icons } from '../BaseIcon/BaseIcon.vue';
 import Form from '../../constants/Form';
 import FormField from '../internal/forms/FormField.vue';
 import mapOptions from '../../util/mapOptions';
-import { Icons } from '../BaseIcon/BaseIcon.vue';
+
 import 'vue-select/dist/vue-select.css';
 
-const { Sizes, Variants } = Form;
+const components = {
+  Deselect: {
+    render: (h) => h(BaseIcon, { props: { icon: Icons.CLOSE } }),
+  },
+  OpenIndicator: {
+    render: (h) => h(BaseIcon, { props: { icon: Icons.CARET_DOWN } }),
+  },
+};
 
 export default {
-  components: { FormField, VSelect },
+  ChipVariants,
+  components: { BaseChip, FormField, VSelect },
   inheritAttrs: false,
   props: {
     /** If the field is disabled. */
@@ -105,8 +124,8 @@ export default {
      */
     size: {
       type: String,
-      default: Sizes.NORMAL,
-      validator: (value) => Object.values(Sizes).includes(value),
+      default: Form.Sizes.NORMAL,
+      validator: (value) => Object.values(Form.Sizes).includes(value),
     },
     /**
      * The selected value. Compatible with v-model. If `multiple` is true, this
@@ -114,22 +133,19 @@ export default {
      */
     value: {
       type: [String, Array],
-      default: '',
+      default: null,
     },
     /**
      * One of `standard`, or `raised`.
      */
     variant: {
       type: String,
-      default: Variants.STANDARD,
-      validator: (value) => Object.values(Variants).includes(value),
+      default: Form.Variants.STANDARD,
+      validator: (value) => Object.values(Form.Variants).includes(value),
     },
   },
   data() {
-    return {
-      hasFocus: false,
-      isDropdownActive: false,
-    };
+    return { hasFocus: false };
   },
   computed: {
     mappedOptions() {
@@ -137,21 +153,26 @@ export default {
     },
     mappedValue() {
       return this.multiple
-        ? this.mappedOptions.filter(({ value }) =>
-            (this.value || []).includes(value)
+        ? (this.value || []).map((val) =>
+            this.mappedOptions.find(({ value }) => value === val)
           )
         : this.mappedOptions.find(({ value }) => value === this.value);
     },
     passDownProps() {
       return {
         ...this.$attrs,
-        postIcon: this.isDropdownActive ? Icons.CARET_UP : Icons.CARET_DOWN,
+        clearable: this.showReset,
+        components,
+        disabled: this.disabled,
+        multiple: this.multiple,
+        options: this.mappedOptions,
+        value: this.mappedValue,
       };
     },
   },
   methods: {
     handleBlur() {
-      this.handleFocus = false;
+      this.hasFocus = false;
     },
     handleFocus() {
       this.hasFocus = true;
@@ -160,8 +181,8 @@ export default {
       let val = '';
       if (this.multiple) {
         val = e.map(({ value }) => value);
-      } else if (e && e.val) {
-        val = e.val;
+      } else if (e && e.value) {
+        val = e.value;
       }
       this.$emit('input', val);
     },
@@ -170,11 +191,84 @@ export default {
 </script>
 
 <style scoped>
-.select-input >>> .v-select {
-  width: 100%;
-}
+.select-input {
+  >>> {
+    .v-select {
+      width: 100%;
+    }
 
-.select-input >>> .vs__dropdown-toggle {
-  @apply border-none;
+    .vs__dropdown-toggle {
+      @apply border-none items-center py-0;
+    }
+
+    .vs__search {
+      @apply m-0 p-0;
+    }
+
+    .vs__actions {
+      @apply p-0 text-gray-3;
+    }
+
+    .vs__clear {
+      @apply border
+      border-transparent
+      border-solid
+      box-border
+      h-6
+      flex
+      items-center
+      justify-center
+      outline-none
+      rounded-full
+      text-gray-3
+      w-6;
+
+      &:focus {
+        @apply border-gray-5;
+      }
+    }
+
+    .vs__open-indicator {
+      @apply text-23;
+    }
+
+    ::placeholder {
+      @apply text-gray-4;
+    }
+  }
+
+  &--dense >>> {
+    .field-container {
+      min-height: 2rem;
+    }
+
+    .vs__dropdown-toggle {
+      @apply px-3;
+    }
+  }
+
+  &--normal >>> {
+    .field-container {
+      min-height: 2.5rem;
+    }
+
+    .vs__dropdown-toggle {
+      @apply px-4;
+    }
+  }
+
+  &--large >>> {
+    .field-container {
+      min-height: 3.5rem;
+    }
+
+    .vs__dropdown-toggle {
+      @apply px-4;
+    }
+  }
+
+  &__selected {
+    @apply mr-1;
+  }
 }
 </style>
