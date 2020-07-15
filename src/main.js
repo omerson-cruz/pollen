@@ -16,6 +16,7 @@ export { default as PasswordInput } from '@/components/PasswordInput/PasswordInp
 export { default as RadioGroup } from '@/components/RadioGroup/RadioGroup.vue';
 export { default as RadioInput } from '@/components/RadioInput/RadioInput.vue';
 export { default as RadioToggle } from '@/components/RadioToggle/RadioToggle.vue';
+export { default as SelectInput } from '@/components/SelectInput/SelectInput.vue';
 export { default as SwitchGroup } from '@/components/SwitchGroup/SwitchGroup.vue';
 export { default as SwitchInput } from '@/components/SwitchInput/SwitchInput.vue';
 export { default as TextInput } from '@/components/TextInput/TextInput.vue';

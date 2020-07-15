@@ -190,14 +190,17 @@ export default {
 
 /* Theme variations */
 /** Regular buttons  */
-.base-button--regular:not(.base-button--inverted) {
-  @apply shadow-2;
+.base-button--regular {
+  @apply border-2;
 }
 
 .base-button--regular:focus {
   @apply outline-none;
 }
 
+.base-button--regular:not(.base-button--inverted):not([disabled]) {
+  @apply shadow-2;
+}
 /*** Regular primary buttons */
 .base-button--regular.base-button--primary {
   @apply bg-primary text-white;

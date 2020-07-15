@@ -111,7 +111,7 @@ export default {
 }
 
 .icon-button[disabled] {
-  @apply cursor-not-allowed opacity-50;
+  @apply cursor-not-allowed opacity-50 shadow-none;
 }
 
 .icon-button__title {

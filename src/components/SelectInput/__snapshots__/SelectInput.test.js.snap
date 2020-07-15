@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectInput renders correctly 1`] = `
+<label
+  class="form-field select-input select-input--standard select-input--normal"
+  for="test"
+>
+  <div
+    class="field-label field-label--standard field-label--normal"
+  >
+    
+    test
+  
+  </div>
+   
+  <div
+    class="field-container field-container--standard field-container--normal"
+  >
+    <div
+      class="v-select vs--single vs--searchable"
+      dir="auto"
+    >
+       
+      <div
+        aria-expanded="false"
+        aria-label="Search for option"
+        aria-owns="vs1__listbox"
+        class="vs__dropdown-toggle"
+        id="vs1__combobox"
+        role="combobox"
+      >
+        <div
+          class="vs__selected-options"
+        >
+          <div
+            class="select-input__selected"
+          >
+            
+        Test
+      
+          </div>
+           
+          <input
+            aria-autocomplete="list"
+            aria-controls="vs1__listbox"
+            aria-labelledby="vs1__combobox"
+            autocomplete="off"
+            class="vs__search"
+            type="search"
+          />
+        </div>
+         
+        <div
+          class="vs__actions"
+        >
+          <button
+            aria-label="Clear Selected"
+            class="vs__clear"
+            title="Clear Selected"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="base-icon svg-inline--fa fa-times fa-w-10"
+              data-icon="times"
+              data-prefix="fal"
+              focusable="false"
+              role="img"
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class=""
+                d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+           
+          <test-file-stub
+            class="base-icon base-icon--custom vs__open-indicator"
+            role="presentation"
+          />
+           
+          <div
+            class="vs__spinner"
+            style="display: none;"
+          >
+            Loading...
+          </div>
+        </div>
+      </div>
+       
+      <transition-stub
+        name="vs__fade"
+      >
+        <ul
+          id="vs1__listbox"
+          role="listbox"
+          style="display: none; visibility: hidden;"
+        />
+      </transition-stub>
+       
+    </div>
+  </div>
+   
+  <!---->
+</label>
+`;

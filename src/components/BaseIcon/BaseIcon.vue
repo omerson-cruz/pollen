@@ -35,6 +35,7 @@ import {
   faLock as lock,
 } from '@fortawesome/free-solid-svg-icons';
 
+import caretDown from '../../assets/icons/caret-down.svg';
 import eyeClosed from '../../assets/icons/eye-closed.svg';
 import eyeOpen from '../../assets/icons/eye-open.svg';
 
@@ -55,6 +56,7 @@ Object.values(FAIcons).forEach((icon) => {
 });
 
 const CustomIcons = Object.freeze({
+  caretDown,
   eyeClosed,
   eyeOpen,
 });
