@@ -191,84 +191,74 @@ export default {
 </script>
 
 <style scoped>
-.select-input {
-  >>> {
-    .v-select {
-      width: 100%;
-    }
+.select-input >>> .v-select {
+  width: 100%;
+}
 
-    .vs__dropdown-toggle {
-      @apply border-none items-center py-0;
-    }
+.select-input >>> .vs__dropdown-toggle {
+  @apply border-none items-center py-0;
+}
 
-    .vs__search {
-      @apply m-0 p-0;
-    }
+.select-input >>> .vs__search {
+  @apply m-0 p-0;
+}
 
-    .vs__actions {
-      @apply p-0 text-gray-3;
-    }
+.select-input >>> .vs__actions {
+  @apply p-0 text-gray-3;
+}
 
-    .vs__clear {
-      @apply border
-      border-transparent
-      border-solid
-      box-border
-      h-6
-      flex
-      items-center
-      justify-center
-      outline-none
-      rounded-full
-      text-gray-3
-      w-6;
+.select-input >>> .vs__clear {
+  @apply border
+    border-transparent
+    border-solid
+    box-border
+    h-6
+    flex
+    items-center
+    justify-center
+    outline-none
+    rounded-full
+    text-gray-3
+    w-6;
+}
 
-      &:focus {
-        @apply border-gray-5;
-      }
-    }
+.select-input >>> .vs__clear:focus {
+  @apply border-gray-5;
+}
 
-    .vs__open-indicator {
-      @apply text-23;
-    }
+.select-input >>> .vs__open-indicator {
+  @apply text-23;
+}
 
-    ::placeholder {
-      @apply text-gray-4;
-    }
-  }
+.select-input >>> ::placeholder {
+  @apply text-gray-4;
+}
 
-  &--dense >>> {
-    .field-container {
-      min-height: 2rem;
-    }
+.select-input--dense >>> .field-container {
+  min-height: 2rem;
+}
 
-    .vs__dropdown-toggle {
-      @apply px-3;
-    }
-  }
+.select-input--dense >>> .vs__dropdown-toggle {
+  @apply px-3;
+}
 
-  &--normal >>> {
-    .field-container {
-      min-height: 2.5rem;
-    }
+.select-input--normal >>> .field-container {
+  min-height: 2.5rem;
+}
 
-    .vs__dropdown-toggle {
-      @apply px-4;
-    }
-  }
+.select-input--normal >>> .vs__dropdown-toggle {
+  @apply px-4;
+}
 
-  &--large >>> {
-    .field-container {
-      min-height: 3.5rem;
-    }
+.select-input--large >>> .field-container {
+  min-height: 3.5rem;
+}
 
-    .vs__dropdown-toggle {
-      @apply px-4;
-    }
-  }
+.select-input--large >>> .vs__dropdown-toggle {
+  @apply px-4;
+}
 
-  &__selected {
-    @apply mr-1;
-  }
+.select-input__selected {
+  @apply mr-1;
 }
 </style>
