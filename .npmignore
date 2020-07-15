@@ -10,6 +10,7 @@
 babel.config.js
 jest.config.js
 postcss.config.js
+tailwind.config.js
 vue.config.js 
 
 npm-debug.log*
