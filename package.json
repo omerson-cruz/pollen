@@ -1,5 +1,5 @@
 {
-  "name": "@bambeehr/pollen",
+  "name": "@bambee/pollen",
   "version": "0.6.1",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
