@@ -5,6 +5,7 @@ const { inset, spacing, transitionDuration, ...rest } = theme.default;
 
 module.exports = {
   purge: false,
+  important: true,
   theme: {
     ...rest,
     extend: {
