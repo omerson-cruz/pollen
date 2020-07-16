@@ -21,7 +21,7 @@ import Form from '../../constants/Form';
 import ToggleGroup from '../internal/forms/toggles/ToggleGroup.vue';
 
 /**
- * `import { CheckboxGroup } from '@bambeehr/pollen';`
+ * `import { CheckboxGroup } from '@bambee/pollen';`
  *
  * A component for selecting multiple options from a group of `options`.
  */

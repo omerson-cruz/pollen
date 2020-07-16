@@ -54,7 +54,7 @@ npm run lint
 To use Pollen in your project, install it.
 
 ```
-npm i @bambeehr/pollen
+npm i @bambee/pollen
 ```
 
 Components and accompanying constants/enums can be imported using named imports.
@@ -79,7 +79,7 @@ Components and accompanying constants/enums can be imported using named imports.
 </template>
 
 <script>
-import { TypeBody, TypeHeading, constants } from '@bambeehr/pollen';
+import { TypeBody, TypeHeading, constants } from '@bambee/pollen';
 
 const { Typography } = constants;
 
@@ -129,7 +129,7 @@ npm link
 cd ~/Sites/bambee/honey
 
 # Link the Pollen dependency to your local version.
-npm link @bambeehr/pollen
+npm link @bambee/pollen
 ```
 
 To undo this:
@@ -139,7 +139,7 @@ To undo this:
 cd ~/Sites/bambee/honey
 
 # Remove the link to Pollen.
-npm unlink --nosave @bambeehr/pollen
+npm unlink --nosave @bambee/pollen
 
 # Reinstall the remote version of Pollen.
 npm i

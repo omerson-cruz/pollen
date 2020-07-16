@@ -22,7 +22,7 @@ import Form from '../../constants/Form';
 import ToggleInput from '../internal/forms/toggles/ToggleInput.vue';
 
 /**
- * `import { SwitchInput } from '@bambeehr/pollen';`
+ * `import { SwitchInput } from '@bambee/pollen';`
  *
  * A single checkbox input that presents as an on/off switch. This is compatible
  * with v-model, including using the `true-value` and `false-value` props.

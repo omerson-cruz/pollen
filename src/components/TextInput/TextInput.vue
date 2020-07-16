@@ -73,7 +73,7 @@ import IconButton from '../IconButton/IconButton.vue';
 const { Sizes, Variants } = Form;
 
 /**
- * `import { TextInput } from '@bambeehr/pollen';`
+ * `import { TextInput } from '@bambee/pollen';`
  *
  * The basic text input, available in four theme variants and three sizes. Any
  * attributes are transparently passed through to the `input` element.

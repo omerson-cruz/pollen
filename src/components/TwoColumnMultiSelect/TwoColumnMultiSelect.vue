@@ -42,7 +42,7 @@ import MultiSelectItem from '../internal/TwoColumnMultiSelect/MultiSelectItem.vu
 import TextInput from '../TextInput/TextInput.vue';
 
 /**
- * `import { TwoColumnMultiSelect } from '@bambeehr/pollen';`
+ * `import { TwoColumnMultiSelect } from '@bambee/pollen';`
  *
  * A UI component that is essentially a multi-select checkbox group. Unselected
  * items will display in the left column. Selected items will display in the

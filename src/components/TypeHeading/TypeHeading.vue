@@ -22,7 +22,7 @@ import getAttributes from '../../util/getAttributes';
 const { Heading, Weights } = Typography;
 
 /**
- * `import { TypeHeading } from '@bambeehr/pollen';`
+ * `import { TypeHeading } from '@bambee/pollen';`
  * A styled block of text.
  */
 export default {

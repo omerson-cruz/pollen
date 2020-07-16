@@ -23,7 +23,7 @@ import Form from '../../constants/Form';
 import ToggleInput from '../internal/forms/toggles/ToggleInput.vue';
 
 /**
- * `import { RadioInput } from @bambeehr/pollen';`
+ * `import { RadioInput } from @bambee/pollen';`
  *
  * A single radio input. Generally, however, radio inputs should appear in sets
  * grouped by matching `name` attributess so that users can select one option

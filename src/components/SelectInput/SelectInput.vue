@@ -63,7 +63,7 @@ const components = {
 };
 
 /**
- * `import { SelectInput } from '@bambeehr/pollen';`
+ * `import { SelectInput } from '@bambee/pollen';`
  *
  * A select input that allows for multiple selections. Based around the
  * vue-select component (https://vue-select.org/).

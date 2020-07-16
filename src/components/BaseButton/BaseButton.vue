@@ -6,7 +6,7 @@ import getAttributes from '../../util/getAttributes';
 const { Sizes, Variants } = Button;
 
 /**
- * `import { BaseButton } from '@bambeehr/pollen';`
+ * `import { BaseButton } from '@bambee/pollen';`
  *
  * `BaseButton` is the general purpose "button". While this will visually look
  * like a button, the underlying tag can be defined via a prop. This is

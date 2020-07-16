@@ -49,7 +49,7 @@ import Button from '../../constants/Button';
 import Form from '../../constants/Form';
 
 /**
- * `import { PasswordInput } from '@bambeehr/pollen';`
+ * `import { PasswordInput } from '@bambee/pollen';`
  *
  * A password input that extends the `TextInput` component. In addition to the
  * props explicitly defined here, any `TextInput` props will also work (like

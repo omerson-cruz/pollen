@@ -22,7 +22,7 @@ import getAttributes from '../../util/getAttributes';
 const { Display, Weights } = Typography;
 
 /**
- * `import { TypeDisplay } from '@bambeehr/pollen';`
+ * `import { TypeDisplay } from '@bambee/pollen';`
  *
  * A styled block of text.
  */

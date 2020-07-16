@@ -21,7 +21,7 @@ import Form from '../../constants/Form';
 import ToggleGroup from '../internal/forms/toggles/ToggleGroup.vue';
 
 /**
- * `import { RadioGroup } from '@bambeehr/pollen';`
+ * `import { RadioGroup } from '@bambee/pollen';`
  *
  * A component for selecting a single `value` from a group `options`. The
  * individual `RadioInput` component is available for more complex uses where,

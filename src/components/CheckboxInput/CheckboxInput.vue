@@ -22,7 +22,7 @@ import Form from '../../constants/Form';
 import ToggleInput from '../internal/forms/toggles/ToggleInput.vue';
 
 /**
- * `import { CheckboxInput } from '@bambeehr/pollen';`
+ * `import { CheckboxInput } from '@bambee/pollen';`
  *
  * A single checkbox input. This is compatible with v-model, including using the
  * `true-value` and `false-value` props.

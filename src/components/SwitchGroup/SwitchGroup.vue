@@ -20,7 +20,7 @@ import Form from '../../constants/Form';
 import ToggleGroup from '../internal/forms/toggles/ToggleGroup.vue';
 
 /**
- * `import { SwitchGroup } from '@bambeehr/pollen';`
+ * `import { SwitchGroup } from '@bambee/pollen';`
  *
  * A component for selecting multiple options from a group of `options`.
  */

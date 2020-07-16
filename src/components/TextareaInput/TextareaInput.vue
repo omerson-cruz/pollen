@@ -42,7 +42,7 @@ import FormField from '../internal/forms/FormField.vue';
 const { Sizes, Variants } = Form;
 
 /**
- * `import { TextareInput } from '@bambeehr/pollen';`
+ * `import { TextareInput } from '@bambee/pollen';`
  *
  * A styled `textarea` component for entering multiple lines of text. Attributes
  * not explicitly enumerated as prop (like `required`) will be transparently

@@ -80,7 +80,7 @@ const getComponent = (iconName) =>
   isCustomIcon(iconName) ? CustomIcons[iconName] : FontAwesomeIcon;
 
 /**
- * `import { BaseIcon } from '@bambeehr/pollen';`
+ * `import { BaseIcon } from '@bambee/pollen';`
  *
  * An SVG icon component pulling from Bambee's predefined icon set. Icons are
  * designed to be styled according to the contextual size and font color, e.g.

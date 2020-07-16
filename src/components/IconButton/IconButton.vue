@@ -6,7 +6,7 @@ import getAttributes from '../../util/getAttributes';
 const { Sizes, Variants } = Button;
 
 /**
- * `import { IconButton } from @bambeehr/pollen';`
+ * `import { IconButton } from @bambee/pollen';`
  *
  * A button component similar to `BaseButton` but just displaying an icon.
  */

@@ -39,7 +39,7 @@ import shortid from 'shortid';
 import mapOptions from '../../util/mapOptions';
 
 /**
- * `import { RadioToggle } from @bambeehr/pollen';`
+ * `import { RadioToggle } from @bambee/pollen';`
  *
  * This is essentially a radio input group where users can select one `value`
  * from a number of pre-defined `options`.

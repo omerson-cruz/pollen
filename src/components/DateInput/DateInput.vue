@@ -139,7 +139,7 @@ const sanitizeInput = (field, value) => {
 };
 
 /**
- * `import { DateInput } from '@bambeehr/pollen';`
+ * `import { DateInput } from '@bambee/pollen';`
  *
  * A text-based input for entering dates. This is actually three text inputs
  * grouped together as one, but as a singular component this takes a `value`
