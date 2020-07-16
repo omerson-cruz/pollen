@@ -151,6 +151,14 @@ module.exports.default = {
     '90': '.9',
     '100': '1',
   },
+  screens: {
+    xs: '30rem', // xs: '480px',
+    sm: '40rem', // sm: '640px',
+    md: '48rem', // md: '768px',
+    lg: '64rem', // lg: '1024px',
+    xl: '80rem', // xl: '1280px',
+    '2xl': '90rem', // '2xl': '1440px',
+  },
   spacing: {
     '14': '3.5rem',
   },

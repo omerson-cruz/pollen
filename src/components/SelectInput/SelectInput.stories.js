@@ -58,7 +58,7 @@ export const Gallery = () => ({
       <div
         v-for="variant in variants"
         :key="variant"
-        :class="['px-8 py-4 w-5/12']"
+        class="px-8 py-4 w-5/12"
       >
         <TypeOverline tag="h2" class="mb-2" variant="large">{{ variant }}</TypeOverline>
         <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">

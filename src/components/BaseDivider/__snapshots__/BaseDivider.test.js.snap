@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseDivider renders correctly 1`] = `
+<div
+  class="flex"
+>
+  <div
+    class="mr-16 w-64"
+  >
+    <h1
+      class="type-overline type-overline-large"
+    >
+      Horizontal
+    </h1>
+     
+    <h2
+      class="type-overline type-overline-small mb-4"
+    >
+      Solid
+    </h2>
+     
+    <div
+      class="base-divider base-divider--solid base-divider--horizontal"
+      role="separator"
+    >
+      <!---->
+    </div>
+     
+    <h2
+      class="type-overline type-overline-small mt-8 mb-4"
+    >
+      Dashed
+    </h2>
+     
+    <div
+      class="base-divider base-divider--dashed base-divider--horizontal"
+      role="separator"
+    >
+      <!---->
+    </div>
+     
+    <h2
+      class="type-overline type-overline-small mt-8 mb-4"
+    >
+      Solid + Label
+    </h2>
+     
+    <div
+      class="base-divider base-divider--solid base-divider--horizontal"
+      role="separator"
+    >
+      <div
+        class="base-divider__label"
+      >
+        or
+      </div>
+    </div>
+     
+    <h2
+      class="type-overline type-overline-small mt-8 mb-4"
+    >
+      Dashed + Label
+    </h2>
+     
+    <div
+      class="base-divider base-divider--dashed base-divider--horizontal"
+      role="separator"
+    >
+      <div
+        class="base-divider__label"
+      >
+        or
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="w-64"
+  >
+    <h1
+      class="type-overline type-overline-large"
+    >
+      Vertical
+    </h1>
+     
+    <div
+      class="flex items-end"
+    >
+      <div
+        class="flex-grow w-1/4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-4"
+        >
+          Solid
+        </h2>
+         
+        <div
+          class="base-divider base-divider--solid base-divider--vertical h-56"
+          role="separator"
+        >
+          <!---->
+        </div>
+      </div>
+       
+      <div
+        class="flex-grow w-1/4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-4"
+        >
+          Dashed
+        </h2>
+         
+        <div
+          class="base-divider base-divider--dashed base-divider--vertical h-56"
+          role="separator"
+        >
+          <!---->
+        </div>
+      </div>
+       
+      <div
+        class="flex-grow w-1/4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-4"
+        >
+          Solid + Label
+        </h2>
+         
+        <div
+          class="base-divider base-divider--solid base-divider--vertical h-56"
+          role="separator"
+        >
+          <div
+            class="base-divider__label"
+          >
+            or
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="flex-grow w-1/4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-4"
+        >
+          Dashed + Label
+        </h2>
+         
+        <div
+          class="base-divider base-divider--dashed base-divider--vertical h-56"
+          role="separator"
+        >
+          <div
+            class="base-divider__label"
+          >
+            or
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
