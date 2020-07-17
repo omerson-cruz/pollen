@@ -13,7 +13,12 @@ module.exports = {
     '.*\\.(vue)$': 'vue-jest',
   },
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/components/**/*.vue'],
-  coveragePathIgnorePatterns: ['node_modules', '__mocks__', '.test.js',],
+  collectCoverageFrom: ['<rootDir>/src/{components,util}/**/*.{vue,js}'],
+  coveragePathIgnorePatterns: [
+    'node_modules',
+    '__mocks__',
+    '.test.js',
+    '.stories.js',
+  ],
   snapshotSerializers: ['jest-serializer-vue'],
 };
