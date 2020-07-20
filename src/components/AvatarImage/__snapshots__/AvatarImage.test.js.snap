@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarImage renders correctly 1`] = `
+<div
+  class="avatar-image avatar-image--rounded"
+  style="background-image: url(https://cdn.filestackcontent.com/resize=width:40,height:40/enCa5BTVeIsLHcgkdpAc); font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
+>
+  <!---->
+</div>
+`;

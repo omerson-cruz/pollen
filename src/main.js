@@ -4,6 +4,7 @@ import Form from '@/constants/Form';
 import InputMasks from '@/constants/InputMasks';
 import Typography from '@/constants/Typography';
 
+export { default as AvatarImage } from '@/components/AvatarImage/AvatarImage.vue';
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
 export { default as BaseChip } from '@/components/BaseChip/BaseChip.vue';
 export { default as BaseIcon } from '@/components/BaseIcon/BaseIcon.vue';
@@ -26,5 +27,6 @@ export { default as TypeBody } from '@/components/TypeBody/TypeBody.vue';
 export { default as TypeDisplay } from '@/components/TypeDisplay/TypeDisplay.vue';
 export { default as TypeHeading } from '@/components/TypeHeading/TypeHeading.vue';
 export { default as TypeOverline } from '@/components/TypeOverline/TypeOverline.vue';
+export { default as UserAvatar } from '@/components/UserAvatar/UserAvatar.vue';
 
 export const constants = { Button, Form, InputMasks, Typography };
