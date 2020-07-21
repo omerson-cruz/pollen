@@ -1,10 +1,13 @@
 # This workflow will run tests and review code coverage using node when a pull request is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
-name: Node.js Package
+name: Run tests and upload code coverage.
 
 on:
   pull_request:
+    branches:
+      - master
+  push:
     branches:
       - master
 
@@ -16,13 +19,16 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
         env:
           FONTAWESOME_NPM_AUTH_TOKEN: ${{secrets.FONTAWESOME_NPM_AUTH_TOKEN}}
-      - run: npm test
+      - name: Run tests
+        run: npm test
         env:
           FONTAWESOME_NPM_AUTH_TOKEN: ${{secrets.FONTAWESOME_NPM_AUTH_TOKEN}}
-      - uses: codecov/codecov-action@v1
+      - name: Upload code coverage report
+        uses: codecov/codecov-action@v1
         if: ${{ always() }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
