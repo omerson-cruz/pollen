@@ -4,6 +4,15 @@ exports[`RadioToggle renders correctly 1`] = `
 <div
   class="radio-toggle"
 >
+   
+  <!---->
+</div>
+`;
+
+exports[`RadioToggle renders options correctly 1`] = `
+<div
+  class="radio-toggle"
+>
   <label
     class="radio-toggle__container"
     for="test-0"

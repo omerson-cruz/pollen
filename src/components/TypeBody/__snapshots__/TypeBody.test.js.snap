@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeBody renders correctly 1`] = `
+<span
+  class="type-body type-body-text type-body-text--regular"
+>
+  Hello world!
+</span>
+`;

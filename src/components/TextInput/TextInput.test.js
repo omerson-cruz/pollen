@@ -49,7 +49,7 @@ describe('TextInput', () => {
     expect(inputEl.disabled).toBe(true);
   });
 
-  test('emits an input event event', () => {
+  test('emits an input event', () => {
     const onInput = jest.fn();
     const wrapper = mount(TextInput, {
       listeners: {
@@ -58,6 +58,21 @@ describe('TextInput', () => {
     });
     wrapper.find('input').setValue('hello world');
     expect(onInput).toHaveBeenCalledWith('hello world');
+  });
+
+  test('emits an empty input event when the reset button has been pressed', () => {
+    const onInput = jest.fn();
+    const wrapper = mount(TextInput, {
+      propsData: {
+        showReset: true,
+      },
+      listeners: {
+        input: onInput,
+      },
+    });
+    wrapper.find('input').setValue('hello world');
+    wrapper.find('.text-input__reset').trigger('click');
+    expect(onInput).toHaveBeenLastCalledWith('');
   });
 
   test('does not emit an input event when disabled', () => {

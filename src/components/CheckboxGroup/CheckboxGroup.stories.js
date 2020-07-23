@@ -94,7 +94,7 @@ export const LabelOnTheLeft = () => ({
   `,
 });
 
-export const Stacked = () => ({
+export const Vertical = () => ({
   components: { CheckboxGroup, TypeOverline },
   data() {
     return {
@@ -123,18 +123,18 @@ export const Stacked = () => ({
       <TypeOverline tag="h2" variant="large" class="mb-2">{{ variant }}</TypeOverline>
       <div v-for="size in sizes" :key="variant + '-' + size">
         <TypeOverline tag="h3" class="mb-2">{{ size }}</TypeOverline>
-        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" stacked />
+        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" vertical />
         <TypeOverline tag="h3" class="mb-2">{{ size }}, invalid</TypeOverline>
-        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" invalid stacked />
+        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" invalid vertical />
         <TypeOverline tag="h3" class="mb-2">{{ size }}, disabled</TypeOverline>
-        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" disabled stacked />
+        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" disabled vertical />
       </div>
     </div>
   </div>
   `,
 });
 
-export const StackedWithLabelOnTheLeft = () => ({
+export const VerticalWithLabelOnTheLeft = () => ({
   components: { CheckboxGroup, TypeOverline },
   data() {
     return {
@@ -163,11 +163,11 @@ export const StackedWithLabelOnTheLeft = () => ({
       <TypeOverline tag="h2" variant="large" class="mb-2">{{ variant }}</TypeOverline>
       <div v-for="size in sizes" :key="variant + '-' + size">
         <TypeOverline tag="h3" class="mb-2">{{ size }}</TypeOverline>
-        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" label-position="left" stacked />
+        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" label-position="left" vertical />
         <TypeOverline tag="h3" class="mb-2">{{ size }}, invalid</TypeOverline>
-        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" label-position="left" invalid stacked />
+        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" label-position="left" invalid vertical />
         <TypeOverline tag="h3" class="mb-2">{{ size }}, disabled</TypeOverline>
-        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" label-position="left" disabled stacked />
+        <CheckboxGroup v-model="value" @input="handleInput" :variant="variant" :size="size" :options="options" label-position="left" disabled vertical />
       </div>
     </div>
   </div>
@@ -175,7 +175,7 @@ export const StackedWithLabelOnTheLeft = () => ({
 });
 
 /* eslint-disable no-param-reassign */
-[Gallery, LabelOnTheLeft, Stacked, StackedWithLabelOnTheLeft].forEach(
+[Gallery, LabelOnTheLeft, Vertical, VerticalWithLabelOnTheLeft].forEach(
   (item) => {
     item.story = {
       parameters: {

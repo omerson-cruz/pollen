@@ -3,6 +3,12 @@
 exports[`CheckboxGroup renders correctly 1`] = `
 <div
   class="toggle-group checkbox-group toggle-group--horizontal toggle-group--normal"
+/>
+`;
+
+exports[`CheckboxGroup renders options correctly 1`] = `
+<div
+  class="toggle-group checkbox-group toggle-group--horizontal toggle-group--normal"
 >
   <label
     class="toggle-input checkbox-input toggle-input--normal toggle-input--standard toggle-input--label-right"

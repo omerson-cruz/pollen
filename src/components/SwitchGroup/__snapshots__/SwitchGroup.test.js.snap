@@ -3,6 +3,12 @@
 exports[`SwitchGroup renders correctly 1`] = `
 <div
   class="toggle-group switch-group toggle-group--horizontal toggle-group--normal"
+/>
+`;
+
+exports[`SwitchGroup renders options correctly 1`] = `
+<div
+  class="toggle-group switch-group toggle-group--horizontal toggle-group--normal"
 >
   <label
     class="toggle-input switch-input toggle-input--normal toggle-input--switch toggle-input--label-right"

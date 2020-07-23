@@ -17,6 +17,26 @@ describe('RadioGroup', () => {
   test('renders correctly', () => {
     const wrapper = mount(RadioGroup, {
       propsData: {
+        name: 'test',
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
+  test('renders options correctly', () => {
+    const wrapper = mount(RadioGroup, {
+      propsData: {
+        options,
+        value: 'foo',
+        name: 'test',
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
+  test('renders options correctly', () => {
+    const wrapper = mount(RadioGroup, {
+      propsData: {
         options,
         value: 'foo',
         name: 'test',

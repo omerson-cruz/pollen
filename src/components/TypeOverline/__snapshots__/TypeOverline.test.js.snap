@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeOverline renders correctly 1`] = `
+<span
+  class="type-overline type-overline-small"
+>
+  Hello world!
+</span>
+`;

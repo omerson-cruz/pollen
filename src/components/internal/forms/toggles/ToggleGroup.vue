@@ -2,7 +2,7 @@
   <div
     class="toggle-group"
     :class="[
-      stacked ? 'toggle-group--vertical' : 'toggle-group--horizontal',
+      vertical ? 'toggle-group--vertical' : 'toggle-group--horizontal',
       `toggle-group--${size}`,
     ]"
   >
@@ -88,7 +88,7 @@ export default {
         [Form.Sizes.DENSE, Form.Sizes.NORMAL].includes(value),
     },
     /** If true, displays radio options vertically. */
-    stacked: {
+    vertical: {
       type: Boolean,
       default: false,
     },

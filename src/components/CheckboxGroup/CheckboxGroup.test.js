@@ -17,6 +17,15 @@ describe('CheckboxGroup', () => {
   test('renders correctly', () => {
     const wrapper = mount(CheckboxGroup, {
       propsData: {
+        name: 'test',
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
+  test('renders options correctly', () => {
+    const wrapper = mount(CheckboxGroup, {
+      propsData: {
         options,
         value: ['foo'],
         name: 'test',

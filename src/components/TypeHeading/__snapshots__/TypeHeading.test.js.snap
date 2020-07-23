@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeHeading renders correctly 1`] = `
+<span
+  class="type-heading type-heading-headline type-heading-headline--strong"
+>
+  Hello world!
+</span>
+`;

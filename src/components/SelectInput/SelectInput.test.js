@@ -1,5 +1,10 @@
-import { mount } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 import SelectInput from './SelectInput.vue';
+
+const localVue = createLocalVue();
+localVue.component('TestFileStub', {
+  template: '<div />',
+});
 
 const options = [
   'Option 1',
@@ -25,6 +30,7 @@ const options = [
 describe('SelectInput', () => {
   test('renders correctly', () => {
     const wrapper = mount(SelectInput, {
+      localVue,
       propsData: {
         options,
         value: 'test',

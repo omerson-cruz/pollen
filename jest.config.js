@@ -19,6 +19,7 @@ module.exports = {
     '__mocks__',
     '.test.js',
     '.stories.js',
+    'components/internal',
   ],
   snapshotSerializers: ['jest-serializer-vue'],
 };

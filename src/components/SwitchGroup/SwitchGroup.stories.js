@@ -86,7 +86,7 @@ export const LabelOnTheLeft = () => ({
   `,
 });
 
-export const Stacked = () => ({
+export const Vertical = () => ({
   components: { SwitchGroup, TypeOverline },
   data() {
     return {
@@ -112,17 +112,17 @@ export const Stacked = () => ({
   <div>
     <div v-for="size in sizes" :key="size">
       <TypeOverline tag="h3" class="mb-2">{{ size }}</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" vertical />
       <TypeOverline tag="h3" class="mb-2">{{ size }}, invalid</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" invalid stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" invalid vertical />
       <TypeOverline tag="h3" class="mb-2">{{ size }}, disabled</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" disabled stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" disabled vertical />
     </div>
   </div>
   `,
 });
 
-export const StackedWithLabelOnTheLeft = () => ({
+export const VerticalWithLabelOnTheLeft = () => ({
   components: { SwitchGroup, TypeOverline },
   data() {
     return {
@@ -148,18 +148,18 @@ export const StackedWithLabelOnTheLeft = () => ({
   <div>
     <div v-for="size in sizes" :key="size">
       <TypeOverline tag="h3" class="mb-2">{{ size }}</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" label-position="left" stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" label-position="left" vertical />
       <TypeOverline tag="h3" class="mb-2">{{ size }}, invalid</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" label-position="left" invalid stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" label-position="left" invalid vertical />
       <TypeOverline tag="h3" class="mb-2">{{ size }}, disabled</TypeOverline>
-      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" label-position="left" disabled stacked />
+      <SwitchGroup v-model="value" @input="handleInput" :size="size" :options="options" label-position="left" disabled vertical />
     </div>
   </div>
   `,
 });
 
 /* eslint-disable no-param-reassign */
-[Gallery, LabelOnTheLeft, Stacked, StackedWithLabelOnTheLeft].forEach(
+[Gallery, LabelOnTheLeft, Vertical, VerticalWithLabelOnTheLeft].forEach(
   (item) => {
     item.story = {
       parameters: {

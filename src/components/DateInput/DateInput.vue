@@ -42,7 +42,6 @@
         pattern="[0-9]*"
         aria-label="Month"
         @input="handleInput"
-        @focus="hasFocus = true"
         @blur="handleBlur"
       />
       <span class="date-input__divider">/</span>
@@ -59,7 +58,6 @@
         pattern="[0-9]*"
         aria-label="Day"
         @input="handleInput"
-        @focus="hasFocus = true"
         @blur="handleBlur"
       />
       <span class="date-input__divider">/</span>
@@ -75,7 +73,6 @@
         pattern="[0-9]*"
         aria-label="Year"
         :required="required"
-        @focus="hasFocus = true"
         @blur="handleBlur"
         @input="handleInput"
       />
@@ -264,9 +261,18 @@ export default {
       this.validateDay();
     },
   },
+  created() {
+    document.addEventListener('focusin', this.focusChanged);
+  },
+  beforeDestroy() {
+    document.removeEventListener('focusin', this.focusChanged);
+  },
   methods: {
     emitValue() {
       this.$emit('input', [this.month, this.day, this.year].join('/'));
+    },
+    focusChanged(e) {
+      this.hasFocus = Object.values(this.$refs).includes(e.target);
     },
     handleBlur(e) {
       // Format entered value
@@ -280,14 +286,6 @@ export default {
         this.validateDay();
         this.emitValue();
       }
-
-      // Check if this component still has focus. setTimeout is necessary
-      // because immediately on blur, focus is set to the body element before
-      // focus is moved to the next element.
-      setTimeout(() => {
-        const activeEl = document.activeElement;
-        this.hasFocus = Object.values(this.$refs).includes(activeEl);
-      }, 0);
     },
     handleInput(e) {
       const { name, value } = e.target;

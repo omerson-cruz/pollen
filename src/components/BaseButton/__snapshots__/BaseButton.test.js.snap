@@ -2,7 +2,7 @@
 
 exports[`BaseButton renders correctly 1`] = `
 <button
-  class="base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+  class="base-button base-button--primary base-button--medium base-button--flat base-button--inline"
 >
   <div
     class="base-button__inner"

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeDisplay renders correctly 1`] = `
+<span
+  class="type-display type-display-peta type-display-peta--strong"
+>
+  Hello world!
+</span>
+`;

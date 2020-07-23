@@ -3,6 +3,91 @@
 exports[`RadioGroup renders correctly 1`] = `
 <div
   class="toggle-group radio-group toggle-group--horizontal toggle-group--normal"
+/>
+`;
+
+exports[`RadioGroup renders options correctly 1`] = `
+<div
+  class="toggle-group radio-group toggle-group--horizontal toggle-group--normal"
+>
+  <label
+    class="toggle-input radio-input toggle-input--normal toggle-input--standard toggle-input--label-right"
+    for="test-0"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-0"
+      name="test"
+      type="radio"
+      value="Option 1"
+    />
+     
+    <div
+      class="radio-indicator radio-indicator--normal radio-indicator--standard"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 1
+      </span>
+    </div>
+  </label>
+  <label
+    class="toggle-input radio-input toggle-input--normal toggle-input--standard toggle-input--label-right"
+    for="test-1"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-1"
+      name="test"
+      type="radio"
+      value="foo"
+    />
+     
+    <div
+      class="radio-indicator radio-indicator--normal radio-indicator--standard radio-indicator--checked"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 2
+      </span>
+    </div>
+  </label>
+  <label
+    class="toggle-input radio-input toggle-input--normal toggle-input--standard toggle-input--label-right"
+    for="test-2"
+  >
+    <input
+      class="toggle-input__input"
+      id="test-2"
+      name="test"
+      type="radio"
+      value="bar"
+    />
+     
+    <div
+      class="radio-indicator radio-indicator--normal radio-indicator--standard"
+    />
+     
+    <div
+      class="toggle-input__label"
+    >
+      <span>
+        Option 3
+      </span>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`RadioGroup renders options correctly 2`] = `
+<div
+  class="toggle-group radio-group toggle-group--horizontal toggle-group--normal"
 >
   <label
     class="toggle-input radio-input toggle-input--normal toggle-input--standard toggle-input--label-right"

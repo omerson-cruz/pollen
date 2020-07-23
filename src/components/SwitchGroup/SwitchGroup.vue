@@ -8,7 +8,7 @@
     :name="name"
     :required="required"
     :size="size"
-    :stacked="stacked"
+    :vertical="vertical"
     :value="value"
     type="switch"
     @input="$emit('input', $event)"
@@ -76,7 +76,7 @@ export default {
         [Form.Sizes.DENSE, Form.Sizes.NORMAL].includes(value),
     },
     /** If true, displays radio options vertically. */
-    stacked: {
+    vertical: {
       type: Boolean,
       default: false,
     },

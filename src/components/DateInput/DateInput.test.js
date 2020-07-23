@@ -19,7 +19,51 @@ describe('DateInput', () => {
     expect(wrapper.element).toMatchSnapshot();
   });
 
-  test('emits an input event, auto formats on blur, and verifies leap year', () => {
+  test('hides the placeholder and changes focus to the month element when placeholder is focused', async () => {
+    const elem = document.createElement('div');
+    if (document.body) {
+      document.body.appendChild(elem);
+    }
+    const wrapper = mount(DateInput, {
+      propsData: {
+        placeholder: 'Date of birth',
+      },
+      attachTo: elem,
+    });
+    await wrapper.find('.date-input__placeholder').trigger('focus');
+    const monthInput = wrapper.find('input[name="month"]').element;
+    expect(monthInput).toBe(document.activeElement);
+    wrapper.destroy();
+  });
+
+  test('only allows valid days depending on month', () => {
+    const Component = {
+      components: { DateInput },
+      data() {
+        return {
+          value: null,
+        };
+      },
+      template: `
+        <div>
+          <DateInput v-model="value" />
+        </div>
+      `,
+    };
+    const wrapper = mount(Component);
+    const monthInput = wrapper.find('input[name="month"]');
+    monthInput.setValue('04');
+    const dayInput = wrapper.find('input[name="day"]');
+    dayInput.setValue('31');
+    expect(wrapper.vm.value).toBe('04/3/');
+    dayInput.setValue('30');
+    expect(wrapper.vm.value).toBe('04/30/');
+    monthInput.setValue('');
+    dayInput.setValue('31');
+    expect(wrapper.vm.value).toBe('/31/');
+  });
+
+  test('emits an input event, auto formats on blur, and verifies leap year', async () => {
     const onInput = jest.fn();
     const Component = {
       components: { DateInput },
@@ -39,8 +83,13 @@ describe('DateInput', () => {
     };
     const wrapper = mount(Component);
     const monthInput = wrapper.find('input[name="month"]');
+    monthInput.setValue('13');
+    expect(onInput).toHaveBeenLastCalledWith('1//');
+    monthInput.setValue('1');
+    expect(onInput).toHaveBeenLastCalledWith('1//');
+    monthInput.setValue('01');
+    expect(onInput).toHaveBeenLastCalledWith('01//');
     monthInput.setValue('2');
-    expect(onInput).toHaveBeenLastCalledWith('2//');
     monthInput.trigger('blur');
     expect(onInput).toHaveBeenLastCalledWith('02//');
 

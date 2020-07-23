@@ -199,11 +199,11 @@ export default {
       this.$emit('input', value);
     },
     handleReset() {
-      if (this.inputComponent === 'input') {
-        this.$refs.input.value = '';
-      } else {
-        this.$refs.input.$el.value = '';
-      }
+      const inputEl =
+        this.inputComponent === 'input'
+          ? this.$refs.input
+          : this.$refs.input.$el;
+      inputEl.value = '';
       this.$emit('input', '');
     },
   },

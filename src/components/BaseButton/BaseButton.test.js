@@ -12,6 +12,8 @@ describe('BaseButton', () => {
       },
       propsData: {
         preIcon: testIcon,
+        block: true,
+        flat: true,
       },
     });
     expect(wrapper.element).toMatchSnapshot();
@@ -41,9 +43,6 @@ describe('BaseButton', () => {
 
   test('renders the component as a link when prop `tag` is `a`', () => {
     const wrapper = mount(BaseButton, {
-      slots: {
-        default: 'Hello world',
-      },
       propsData: {
         tag: 'a',
       },

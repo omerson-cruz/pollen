@@ -17,6 +17,15 @@ describe('SwitchGroup', () => {
   test('renders correctly', () => {
     const wrapper = mount(SwitchGroup, {
       propsData: {
+        name: 'test',
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
+  test('renders options correctly', () => {
+    const wrapper = mount(SwitchGroup, {
+      propsData: {
         options,
         value: ['foo'],
         name: 'test',

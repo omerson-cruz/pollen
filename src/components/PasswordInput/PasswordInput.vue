@@ -192,12 +192,10 @@ export default {
     },
   },
   methods: {
-    handleToggle(e) {
+    async handleToggle() {
       this.isShowingPassword = !this.isShowingPassword;
-      e.target.blur();
-      setTimeout(() => {
-        document.getElementById(this.id).focus();
-      }, 0);
+      await this.$nextTick();
+      document.getElementById(this.id).focus();
     },
   },
 };
