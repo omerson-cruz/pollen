@@ -1,15 +1,9 @@
-import { createLocalVue, mount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import PasswordInput from './PasswordInput.vue';
-
-const localVue = createLocalVue();
-localVue.component('TestFileStub', {
-  template: '<div />',
-});
 
 describe('PasswordInput', () => {
   test('renders correctly', () => {
     const wrapper = mount(PasswordInput, {
-      localVue,
       propsData: {
         id: 'test',
       },
@@ -22,7 +16,6 @@ describe('PasswordInput', () => {
       document.body.appendChild(elem);
     }
     const wrapper = mount(PasswordInput, {
-      localVue,
       attachTo: elem,
       propsData: {
         id: 'test',

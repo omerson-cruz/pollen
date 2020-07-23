@@ -77,7 +77,7 @@ exports[`SelectInput renders correctly 1`] = `
             </svg>
           </button>
            
-          <div
+          <svg
             class="base-icon base-icon--custom vs__open-indicator"
             role="presentation"
           />
