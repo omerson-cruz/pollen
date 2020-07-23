@@ -37,10 +37,10 @@ export default {
 
 <style scoped>
 .annular-throbber {
-  @apply bg-cover;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(60);
+  background-size: auto 100%;
 }
 
 @keyframes moveSm {
