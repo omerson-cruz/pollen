@@ -4,6 +4,7 @@ import Form from '@/constants/Form';
 import InputMasks from '@/constants/InputMasks';
 import Typography from '@/constants/Typography';
 
+export { default as AnnularThrobber } from '@/components/AnnularThrobber/AnnularThrobber.vue';
 export { default as AvatarImage } from '@/components/AvatarImage/AvatarImage.vue';
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
 export { default as BaseChip } from '@/components/BaseChip/BaseChip.vue';
