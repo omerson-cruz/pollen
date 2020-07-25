@@ -2,9 +2,54 @@
 
 exports[`AlertBar renders correctly 1`] = `
 <div
-  class="alert-bar alert-bar--undefined alert-bar--undefined"
-  role="alert"
-/>
+  class="alert-bar alert-bar--primary alert-bar--normal"
+  role="alertdialog"
+>
+  <div
+    class="alert-bar__content"
+  >
+    <!---->
+     
+    <div
+      class="alert-bar__message"
+    >
+      
+    </div>
+     
+    <div
+      class="alert-bar__actions"
+    >
+      <button
+        class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+        title="Close"
+      >
+        <svg
+          aria-hidden="true"
+          class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+          data-icon="times"
+          data-prefix="fal"
+          focusable="false"
+          role="img"
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class=""
+            d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="icon-button__title"
+        >
+          Close
+        </span>
+      </button>
+    </div>
+  </div>
+   
+  <!---->
+</div>
 `;
 
 exports[`AlertBar renders gallery correctly 1`] = `
@@ -20,6 +65,450 @@ exports[`AlertBar renders gallery correctly 1`] = `
       dense
     </h1>
      
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        primary
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--primary alert-bar--dense"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--small icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        secondary
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--secondary alert-bar--dense"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--small icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        error
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--error alert-bar--dense"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--small icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        warning
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--warning alert-bar--dense"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--small icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        error-inverted
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--error-inverted alert-bar--dense"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--small icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        warning-inverted
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--warning-inverted alert-bar--dense"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--small icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
   </div>
   <div
     class="px-8 w-1/4"
@@ -30,6 +519,450 @@ exports[`AlertBar renders gallery correctly 1`] = `
       normal
     </h1>
      
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        primary
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--primary alert-bar--normal"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        secondary
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--secondary alert-bar--normal"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        error
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--error alert-bar--normal"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        warning
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--warning alert-bar--normal"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        error-inverted
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--error-inverted alert-bar--normal"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        warning-inverted
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--warning-inverted alert-bar--normal"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
   </div>
   <div
     class="px-8 w-1/4"
@@ -40,49 +973,450 @@ exports[`AlertBar renders gallery correctly 1`] = `
       large
     </h1>
      
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        primary
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--primary alert-bar--large"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        secondary
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--secondary alert-bar--large"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        error
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--error alert-bar--large"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        warning
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--warning alert-bar--large"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        error-inverted
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--error-inverted alert-bar--large"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+    <div
+      class="mb-4"
+    >
+      <h2
+        class="type-overline type-overline-small mb-2"
+      >
+        warning-inverted
+      </h2>
+       
+      <div
+        class="alert-bar alert-bar--warning-inverted alert-bar--large"
+        role="alertdialog"
+      >
+        <div
+          class="alert-bar__content"
+        >
+          <svg
+            aria-hidden="true"
+            class="base-icon svg-inline--fa fa-exclamation-triangle fa-w-18 alert-bar__icon"
+            data-icon="exclamation-triangle"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              fill="currentColor"
+            />
+          </svg>
+           
+          <div
+            class="alert-bar__message"
+          >
+            Lorem ipsum dolor sit omet
+          </div>
+           
+          <div
+            class="alert-bar__actions"
+          >
+            <button
+              class="alert-bar__close alert-bar__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+              title="Close"
+            >
+              <svg
+                aria-hidden="true"
+                class="base-icon svg-inline--fa fa-times fa-w-10 icon-button__icon"
+                data-icon="times"
+                data-prefix="fal"
+                focusable="false"
+                role="img"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class=""
+                  d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="icon-button__title"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </div>
+         
+        <!---->
+      </div>
+    </div>
   </div>
 </div>
-`;
-
-exports[`LoadingSprite renders correctly 1`] = `
-<!--function (el) {
-      var obj;
-
-      var args = [], len = arguments.length - 1;
-      while ( len-- &gt; 0 ) args[ len ] = arguments[ len + 1 ];
-      if (shouldNotBeStubbed(el, stubs, modifiedComponents)) {
-        return originalCreateElement.apply(void 0, [ el ].concat( args ))
-      }
-
-      if (isConstructor(el) || isComponentOptions(el)) {
-        if (stubAllComponents) {
-          var stub = createStubFromComponent(el, el.name || 'anonymous', _Vue);
-          return originalCreateElement.apply(void 0, [ stub ].concat( args ))
-        }
-        var Constructor = shouldExtend(el) ? extend(el, _Vue) : el;
-
-        return originalCreateElement.apply(void 0, [ Constructor ].concat( args ))
-      }
-
-      if (typeof el === 'string') {
-        var original = resolveComponent(el, originalComponents);
-
-        if (!original) {
-          return originalCreateElement.apply(void 0, [ el ].concat( args ))
-        }
-
-        if (isDynamicComponent(original)) {
-          return originalCreateElement.apply(void 0, [ el ].concat( args ))
-        }
-
-        var stub$1 = createStubIfNeeded(stubAllComponents, original, _Vue, el);
-
-        if (stub$1) {
-          Object.assign(vm.$options.components, ( obj = {}, obj[el] = stub$1, obj ));
-          modifiedComponents.add(el);
-        }
-      }
-
-      return originalCreateElement.apply(void 0, [ el ].concat( args ))
-    }-->
 `;
