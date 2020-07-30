@@ -72,7 +72,6 @@ export const NoIcon = () => ({
   template: `
   <AlertBar
     message="Lorem ipsum dolor sit omet"
-    :size="size"
   />
   `,
 });
@@ -83,7 +82,6 @@ export const NoActions = () => ({
   <AlertBar
     icon="alertTriangle"
     message="Lorem ipsum dolor sit omet"
-    :size="size"
     :showActions="false"
   />
   `,
@@ -95,7 +93,6 @@ export const WithActionAsSlot = () => ({
   <AlertBar
     icon="alertTriangle"
     message="Lorem ipsum dolor sit omet"
-    :size="size"
   >
     <template #actions>
       <BaseButton flat @click="$emit('confirm')">Ok, got it</BaseButton>
