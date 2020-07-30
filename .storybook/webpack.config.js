@@ -26,11 +26,7 @@ module.exports = ({ config, mode }) => {
 
   config.module.rules.push({
     test: /\.svg$/,
-    use: [
-      {
-        loader: 'vue-svg-loader',
-      },
-    ],
+    use: ['babel-loader', 'vue-svg-loader'],
     include: path.resolve('./src/assets/icons'),
   });
 
