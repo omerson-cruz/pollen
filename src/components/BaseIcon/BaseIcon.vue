@@ -32,8 +32,10 @@ import {
 
 import {
   faCheck as check,
+  faExclamation as alert,
   faExclamationTriangle as alertTriangle,
   faLock as lock,
+  faQuestion as question,
 } from '@fortawesome/free-solid-svg-icons';
 
 import caretDown from '../../assets/icons/caret-down.svg';
@@ -43,14 +45,16 @@ import eyeOpen from '../../assets/icons/eye-open.svg';
 import getAttributes from '../../util/getAttributes';
 
 const FAIcons = Object.freeze({
+  alert,
   alertTriangle,
   check,
   clipboardCheck,
   close,
   folder,
   lock,
-  search,
   plus,
+  question,
+  search,
 });
 
 Object.values(FAIcons).forEach((icon) => {

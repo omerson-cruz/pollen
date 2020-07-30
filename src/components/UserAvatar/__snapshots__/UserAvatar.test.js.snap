@@ -2,11 +2,11 @@
 
 exports[`UserAvatar renders correctly 1`] = `
 <div
-  class="user-avatar user-avatar--horizontal"
+  class="user-avatar user-avatar--medium user-avatar--horizontal"
 >
   <div
     class="avatar-image avatar-image--rounded"
-    style="background-image: url(https://cdn.filestackcontent.com/resize=width:40,height:40/enCa5BTVeIsLHcgkdpAc); font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
+    style="background-image: url(https://cdn.filestackcontent.com/resize=width:32,height:32/enCa5BTVeIsLHcgkdpAc); font-size: 0.875rem; height: 2rem; width: 2rem;"
   >
     <!---->
   </div>
@@ -24,6 +24,253 @@ exports[`UserAvatar renders correctly 1`] = `
       class="user-avatar__title"
     >
       HR Manager
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UserAvatar renders gallery correctly 1`] = `
+<div
+  class="flex"
+>
+  <div
+    class="mr-12"
+  >
+    <h1
+      class="type-overline type-overline-large"
+    >
+      
+        horizontal
+      
+    </h1>
+     
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        small
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--small user-avatar--horizontal"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:24,height:24/enCa5BTVeIsLHcgkdpAc); font-size: 0.625rem; height: 1.5rem; width: 1.5rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        medium
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--medium user-avatar--horizontal"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:32,height:32/enCa5BTVeIsLHcgkdpAc); font-size: 0.875rem; height: 2rem; width: 2rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        large
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--large user-avatar--horizontal"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:40,height:40/enCa5BTVeIsLHcgkdpAc); font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mr-12"
+  >
+    <h1
+      class="type-overline type-overline-large"
+    >
+      
+        vertical
+      
+    </h1>
+     
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        small
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--small user-avatar--vertical"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:48,height:48/enCa5BTVeIsLHcgkdpAc); font-size: 1.3125rem; height: 3rem; width: 3rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        medium
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--medium user-avatar--vertical"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:64,height:64/enCa5BTVeIsLHcgkdpAc); font-size: 1.75rem; height: 4rem; width: 4rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        large
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--large user-avatar--vertical"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:104,height:104/enCa5BTVeIsLHcgkdpAc); font-size: 2.8125rem; height: 6.5rem; width: 6.5rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

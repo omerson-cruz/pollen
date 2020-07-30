@@ -26,6 +26,84 @@ exports[`BaseTag renders gallery correctly 1`] = `
         <h3
           class="type-overline type-overline-small mb-2"
         >
+          black
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--black base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--black base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--black base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          gray
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gray base-tag--small base-tag--filled"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gray base-tag--medium base-tag--filled"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gray base-tag--large base-tag--filled"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
           geyser
         </h3>
          
@@ -540,6 +618,84 @@ exports[`BaseTag renders gallery correctly 1`] = `
         Outline
       </h2>
        
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          black
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--black base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--black base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--black base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          class="type-overline type-overline-small mb-2"
+        >
+          gray
+        </h3>
+         
+        <div
+          class="flex items-end mb-2"
+        >
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gray base-tag--small base-tag--outline"
+            >
+              small
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gray base-tag--medium base-tag--outline"
+            >
+              medium
+            </div>
+          </div>
+          <div
+            class="mr-8"
+          >
+            <div
+              class="base-tag base-tag--gray base-tag--large base-tag--outline"
+            >
+              large
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <h3
           class="type-overline type-overline-small mb-2"

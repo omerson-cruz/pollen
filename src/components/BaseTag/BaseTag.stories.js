@@ -11,12 +11,14 @@ export default {
   },
 };
 
+const colors = ['black', 'gray', ...Object.keys(extendedPalette)];
+
 export const Gallery = () => ({
   components: { BaseTag, TypeOverline },
   data() {
     return {
       sizes: Sizes,
-      colors: Object.keys(extendedPalette),
+      colors,
     };
   },
   template: `
@@ -50,7 +52,6 @@ export const Gallery = () => ({
 });
 
 export const WithKnobs = () => {
-  const colors = Object.keys(extendedPalette);
   return {
     components: { BaseTag },
     props: {
