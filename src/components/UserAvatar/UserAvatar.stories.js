@@ -1,5 +1,6 @@
 import { boolean, text } from '@storybook/addon-knobs';
-import UserAvatar from './UserAvatar.vue';
+import TypeOverline from '../TypeOverline/TypeOverline.vue';
+import UserAvatar, { Sizes } from './UserAvatar.vue';
 
 export default {
   title: 'UserAvatar',
@@ -10,6 +11,27 @@ export default {
 };
 
 const image = 'https://cdn.filestackcontent.com/enCa5BTVeIsLHcgkdpAc';
+const sizes = Object.values(Sizes);
+
+export const Gallery = () => ({
+  components: { TypeOverline, UserAvatar },
+  data() {
+    return { image, sizes };
+  },
+  template: `
+  <div class="flex">
+    <div v-for="vertical in [false, true]" :key="vertical ? 'vertical': 'horizontal'" class="mr-12">
+      <TypeOverline tag="h1" variant="large">
+        {{ vertical ? 'vertical': 'horizontal' }}
+      </TypeOverline>
+      <div v-for="size in sizes" :key="size" class="my-4">
+        <TypeOverline tag="h2">{{ size }}</TypeOverline>
+        <UserAvatar :image="image" name="Xavier Oaxaca" title="HR Manager" :size="size" :vertical="vertical" />
+      </div>
+    </div>
+  </div>
+  `,
+});
 
 export const Default = () => ({
   components: { UserAvatar },
