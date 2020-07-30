@@ -13,4 +13,15 @@ describe('AlertBar', () => {
     const wrapper = mount(gallery);
     expect(wrapper.element).toMatchSnapshot();
   });
+
+  test('emits a `close` event', () => {
+    const onClose = jest.fn();
+    const wrapper = mount(AlertBar, {
+      listeners: {
+        close: onClose,
+      },
+    });
+    wrapper.find('.alert-bar__close').trigger('click');
+    expect(onClose).toHaveBeenCalled();
+  });
 });

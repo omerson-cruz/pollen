@@ -21,8 +21,8 @@ export const Gallery = () => ({
     };
   },
   template: `
-  <div class="flex -mx-8">
-    <div v-for="size in sizes" :key="size" class="px-8 w-1/4">
+  <div>
+    <div v-for="size in sizes" :key="size" class="mb-8">
       <TypeOverline tag="h1" variant="large" class="mb-4">{{ size }}</TypeOverline>
       <div v-for="variant in variants" :key="variant" class="mb-4">
         <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>

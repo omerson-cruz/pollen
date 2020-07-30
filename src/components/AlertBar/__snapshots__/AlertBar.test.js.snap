@@ -53,11 +53,9 @@ exports[`AlertBar renders correctly 1`] = `
 `;
 
 exports[`AlertBar renders gallery correctly 1`] = `
-<div
-  class="flex -mx-8"
->
+<div>
   <div
-    class="px-8 w-1/4"
+    class="mb-8"
   >
     <h1
       class="type-overline type-overline-large mb-4"
@@ -511,7 +509,7 @@ exports[`AlertBar renders gallery correctly 1`] = `
     </div>
   </div>
   <div
-    class="px-8 w-1/4"
+    class="mb-8"
   >
     <h1
       class="type-overline type-overline-large mb-4"
@@ -965,7 +963,7 @@ exports[`AlertBar renders gallery correctly 1`] = `
     </div>
   </div>
   <div
-    class="px-8 w-1/4"
+    class="mb-8"
   >
     <h1
       class="type-overline type-overline-large mb-4"
