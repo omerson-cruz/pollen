@@ -1,9 +1,11 @@
 /* eslint-disable import/prefer-default-export */
+import Alert from '@/constants/Alert';
 import Button from '@/constants/Button';
 import Form from '@/constants/Form';
 import InputMasks from '@/constants/InputMasks';
 import Typography from '@/constants/Typography';
 
+export { default as AlertBar } from '@/components/AlertBar/AlertBar.vue';
 export { default as AnnularThrobber } from '@/components/AnnularThrobber/AnnularThrobber.vue';
 export { default as AvatarImage } from '@/components/AvatarImage/AvatarImage.vue';
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
@@ -30,4 +32,4 @@ export { default as TypeHeading } from '@/components/TypeHeading/TypeHeading.vue
 export { default as TypeOverline } from '@/components/TypeOverline/TypeOverline.vue';
 export { default as UserAvatar } from '@/components/UserAvatar/UserAvatar.vue';
 
-export const constants = { Button, Form, InputMasks, Typography };
+export const constants = { Alert, Button, Form, InputMasks, Typography };
