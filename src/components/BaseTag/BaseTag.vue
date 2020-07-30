@@ -20,14 +20,14 @@ export const Sizes = Object.freeze({
   LARGE: 'large',
 });
 
-const colors = Object.keys(extendedPalette);
+const colors = ['black', 'gray', ...Object.keys(extendedPalette)];
 
 export default {
   props: {
     /**
-     * One of the extend color palette names: `geyser`, `tuberose`, `gingerrr`,
-     * `rose`, `tangerine`, `maroon`, `puce`, `inevitable`, `virginia`,
-     * `mosaic`, `eastern`, `caribbean`, or `evergreen`.
+     * One of the extend color palette names: `black`, `gray`, `geyser`,
+     * `tuberose`, `gingerrr`, `rose`, `tangerine`, `maroon`, `puce`,
+     * `inevitable`, `virginia`, `mosaic`, `eastern`, `caribbean`, or `evergreen`.
      */
     color: {
       type: String,
@@ -92,6 +92,22 @@ export default {
 
 .base-tag--outline {
   @apply bg-transparent;
+}
+
+.base-tag--filled.base-tag--black {
+  @apply bg-gray-0;
+}
+
+.base-tag--outline.base-tag--black {
+  @apply border-gray-0 text-gray-0;
+}
+
+.base-tag--filled.base-tag--gray {
+  @apply bg-gray-4;
+}
+
+.base-tag--outline.base-tag--gray {
+  @apply border-gray-4 text-gray-4;
 }
 
 @each $color in geyser, tuberose, gingerrr, rose, tangerine, maroon, puce,
