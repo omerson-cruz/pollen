@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import UserAvatar from './UserAvatar.vue';
+import { Gallery } from './UserAvatar.stories';
 
 describe('UserAvatar', () => {
   test('renders correctly', () => {
@@ -10,6 +11,12 @@ describe('UserAvatar', () => {
         title: 'HR Manager',
       },
     });
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
+  test('renders gallery correctly', () => {
+    const gallery = Gallery();
+    const wrapper = mount(gallery);
     expect(wrapper.element).toMatchSnapshot();
   });
 
