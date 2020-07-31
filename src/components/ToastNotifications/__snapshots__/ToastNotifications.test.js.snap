@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToastNotifications renders an action 1`] = `<!---->`;
+
+exports[`ToastNotifications renders correctly 1`] = `
+<div>
+  <button
+    class="base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+    type="button"
+  >
+    <div
+      class="base-button__inner"
+    >
+      <svg
+        aria-hidden="true"
+        class="base-icon svg-inline--fa fa-plus fa-w-12 base-button__icon base-button__icon--pre"
+        data-icon="plus"
+        data-prefix="fal"
+        focusable="false"
+        role="img"
+        viewBox="0 0 384 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class=""
+          d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"
+          fill="currentColor"
+        />
+      </svg>
+      Add a notification
+    </div>
+  </button>
+   
+  <!---->
+</div>
+`;

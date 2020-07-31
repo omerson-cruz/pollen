@@ -55,22 +55,27 @@ export default {
   getAttributes,
   getStyles,
   props: {
+    /** If true, adds a border around the image. */
     border: {
       type: Boolean,
       default: false,
     },
+    /** The url of the image to display. */
     image: {
       type: String,
       default: null,
     },
+    /** A fallback pair of initials to display if no image is supplied. */
     initials: {
       type: String,
       default: null,
     },
+    /** The height/width of the avatar in pixels. */
     size: {
       type: Number,
       default: 40,
     },
+    /** If true, displays the image as a square. */
     square: {
       type: Boolean,
       default: false,

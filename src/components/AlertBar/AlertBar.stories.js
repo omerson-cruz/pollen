@@ -50,7 +50,7 @@ export const WithDescription = () => ({
   `,
 });
 
-export const WithMessageAndDescriptionAsASlots = () => ({
+export const WithMessageAndDescriptionAsSlots = () => ({
   components: { AlertBar },
   template: `
   <AlertBar

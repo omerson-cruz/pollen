@@ -14,6 +14,7 @@
           <IconButton
             v-bind="actionProps"
             class="alert-bar__close"
+            title="Close"
             @click="$emit('close')"
           />
         </slot>
@@ -33,33 +34,53 @@ import BaseIcon, { Icons, isValidIcon } from '../BaseIcon/BaseIcon.vue';
 import Button from '../../constants/Button';
 import IconButton from '../IconButton/IconButton.vue';
 
+/**
+ * A component for displaying alert messages as a block level element inline
+ * with the layout.
+ */
 export default {
-  Button,
-  Icons,
   components: { BaseIcon, IconButton },
   props: {
+    /**
+     * A longer form message that displays below the main alert message. This
+     * can be passed in as a prop or in the `#description` named slot.
+     */
     description: {
       type: String,
       default: null,
     },
+    /** An icon to prepend to the alert message. */
     icon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
     },
+    /**
+     * The primary alert message. This can be passed in as a prop, or as the
+     * default slot.
+     */
     message: {
       type: String,
       default: null,
     },
+    /**
+     * If true, displays by default an `x` button that emits a `close` event.
+     * This button can be overridden by using the `#actions` named slot.
+     */
     showActions: {
       type: Boolean,
       default: true,
     },
+    /** One of `dense`, `normal`, and `large`. */
     size: {
       type: String,
       default: Alert.Sizes.NORMAL,
       validator: (value) => Object.values(Alert.Sizes).includes(value),
     },
+    /**
+     * One of `primary`, `secondary`, `error`, `warning`, `error-inverted`, or
+     * `warning-inverted`.
+     */
     variant: {
       type: String,
       default: Alert.Variants.PRIMARY,
@@ -85,15 +106,15 @@ export default {
 
 <style scoped>
 .alert-bar--dense {
-  @apply font-body-text font-medium px-4 py-3;
+  @apply font-body-text font-medium px-4 py-3 rounded;
 }
 
 .alert-bar--normal {
-  @apply font-body-medium font-medium p-4;
+  @apply font-body-medium font-medium p-4 rounded-md;
 }
 
 .alert-bar--large {
-  @apply font-body-medium font-bold p-6;
+  @apply font-body-medium font-bold p-6 rounded-md;
 }
 
 .alert-bar--primary {
