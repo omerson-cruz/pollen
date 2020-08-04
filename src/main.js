@@ -5,6 +5,7 @@ import Form from '@/constants/Form';
 import InputMasks from '@/constants/InputMasks';
 import Notification from '@/constants/Notification';
 import Typography from '@/constants/Typography';
+import theme from '@/tailwind/theme';
 
 export { default as AlertBar } from '@/components/AlertBar/AlertBar.vue';
 export { default as AnnularThrobber } from '@/components/AnnularThrobber/AnnularThrobber.vue';
@@ -42,4 +43,5 @@ export const constants = {
   InputMasks,
   Notification,
   Typography,
+  theme,
 };
