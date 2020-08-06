@@ -32,9 +32,12 @@ import {
 
 import {
   faCheck as check,
+  faCloudUploadAlt as upload,
   faExclamation as alert,
   faExclamationTriangle as alertTriangle,
   faLock as lock,
+  faPen as pen,
+  faPrint as print,
   faQuestion as question,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -52,9 +55,12 @@ const FAIcons = Object.freeze({
   close,
   folder,
   lock,
+  pen,
   plus,
+  print,
   question,
   search,
+  upload,
 });
 
 Object.values(FAIcons).forEach((icon) => {

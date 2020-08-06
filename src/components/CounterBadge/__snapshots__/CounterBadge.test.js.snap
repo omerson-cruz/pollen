@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterBadge renders correctly 1`] = `
+<div
+  class="counter-badge counter-badge--medium counter-badge--primary"
+>
+  
+  8
+
+</div>
+`;
+
+exports[`CounterBadge renders gallery correctly 1`] = `
+<div>
+  <div
+    class="mb-8"
+  >
+    <h1
+      class="type-overline type-overline-large mb-2"
+    >
+      primary
+    </h1>
+     
+    <div
+      class="flex"
+    >
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          small
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--small counter-badge--primary"
+        >
+          
+  8
+
+        </div>
+      </div>
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          medium
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--medium counter-badge--primary"
+        >
+          
+  8
+
+        </div>
+      </div>
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          large
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--large counter-badge--primary"
+        >
+          
+  8
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-8"
+  >
+    <h1
+      class="type-overline type-overline-large mb-2"
+    >
+      secondary
+    </h1>
+     
+    <div
+      class="flex"
+    >
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          small
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--small counter-badge--secondary"
+        >
+          
+  8
+
+        </div>
+      </div>
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          medium
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--medium counter-badge--secondary"
+        >
+          
+  8
+
+        </div>
+      </div>
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          large
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--large counter-badge--secondary"
+        >
+          
+  8
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-8"
+  >
+    <h1
+      class="type-overline type-overline-large mb-2"
+    >
+      tertiary
+    </h1>
+     
+    <div
+      class="flex"
+    >
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          small
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--small counter-badge--tertiary"
+        >
+          
+  8
+
+        </div>
+      </div>
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          medium
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--medium counter-badge--tertiary"
+        >
+          
+  8
+
+        </div>
+      </div>
+      <div
+        class="mr-4"
+      >
+        <h2
+          class="type-overline type-overline-small mb-2"
+        >
+          large
+        </h2>
+         
+        <div
+          class="counter-badge counter-badge--large counter-badge--tertiary"
+        >
+          
+  8
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
