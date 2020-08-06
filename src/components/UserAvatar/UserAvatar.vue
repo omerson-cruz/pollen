@@ -22,6 +22,7 @@ import AvatarImage from '../AvatarImage/AvatarImage.vue';
 import getNameInitials from '../../util/getNameInitials';
 
 export const Sizes = Object.freeze({
+  TINY: 'tiny',
   SMALL: 'small',
   MEDIUM: 'medium',
   LARGE: 'large',
@@ -64,10 +65,12 @@ export default {
   computed: {
     avatarSize() {
       switch (this.size) {
-        case Sizes.LARGE:
-          return this.vertical ? 104 : 40;
+        case Sizes.TINY:
+          return this.vertical ? 48 : 16;
         case Sizes.SMALL:
           return this.vertical ? 48 : 24;
+        case Sizes.LARGE:
+          return this.vertical ? 104 : 40;
         case Sizes.MEDIUM:
         default:
           return this.vertical ? 64 : 32;
@@ -124,6 +127,7 @@ export default {
   @apply mt-1;
 }
 
+.user-avatar--vertical.user-avatar--tiny .user-avatar__name,
 .user-avatar--vertical.user-avatar--small .user-avatar__name {
   @apply font-body-text;
 }
@@ -139,5 +143,10 @@ export default {
 
 .user-avatar--vertical.user-avatar--large .user-avatar__name {
   @apply font-heading-title;
+}
+
+.user-avatar--tiny.user-avatar--horizontal .user-avatar__name,
+.user-avatar--tiny.user-avatar--horizontal .user-avatar__title {
+  @apply font-body-legal;
 }
 </style>

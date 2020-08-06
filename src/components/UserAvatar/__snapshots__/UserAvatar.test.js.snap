@@ -50,6 +50,42 @@ exports[`UserAvatar renders gallery correctly 1`] = `
       <h2
         class="type-overline type-overline-small"
       >
+        tiny
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--tiny user-avatar--horizontal"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:16,height:16/enCa5BTVeIsLHcgkdpAc); font-size: 0.4375rem; height: 1rem; width: 1rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
         small
       </h2>
        
@@ -164,6 +200,42 @@ exports[`UserAvatar renders gallery correctly 1`] = `
       
     </h1>
      
+    <div
+      class="my-4"
+    >
+      <h2
+        class="type-overline type-overline-small"
+      >
+        tiny
+      </h2>
+       
+      <div
+        class="user-avatar user-avatar--tiny user-avatar--vertical"
+      >
+        <div
+          class="avatar-image avatar-image--rounded"
+          style="background-image: url(https://cdn.filestackcontent.com/resize=width:48,height:48/enCa5BTVeIsLHcgkdpAc); font-size: 1.3125rem; height: 3rem; width: 3rem;"
+        >
+          <!---->
+        </div>
+         
+        <div
+          class="user-avatar__details"
+        >
+          <div
+            class="user-avatar__name"
+          >
+            Xavier Oaxaca
+          </div>
+           
+          <div
+            class="user-avatar__title"
+          >
+            HR Manager
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="my-4"
     >
