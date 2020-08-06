@@ -1,4 +1,4 @@
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 import UserAvatar, { Sizes } from './UserAvatar.vue';
 
@@ -71,6 +71,9 @@ export const WithKnobs = () => {
       name: {
         default: text('Name', 'Xavier Oaxaca'),
       },
+      size: {
+        default: select('Size', sizes, Sizes.MEDIUM),
+      },
       title: {
         default: text('Title', 'HR Manager'),
       },
@@ -82,6 +85,7 @@ export const WithKnobs = () => {
       <UserAvatar
         :image="image"
         :name="name"
+        :size="size"
         :title="title"
         :vertical="vertical"
       />
