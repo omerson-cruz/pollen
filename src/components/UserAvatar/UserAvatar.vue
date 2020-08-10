@@ -147,6 +147,6 @@ export default {
 
 .user-avatar--tiny.user-avatar--horizontal .user-avatar__name,
 .user-avatar--tiny.user-avatar--horizontal .user-avatar__title {
-  @apply font-body-legal;
+  @apply font-body-caption;
 }
 </style>

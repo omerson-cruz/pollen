@@ -60,7 +60,7 @@ export const Gallery = () => ({
           <div>
             <BaseButton :variant="variant" flat disabled @click="handleClick(variant, size)">Medium - Disabled</BaseButton>
           </div>
-        </div>      
+        </div>
       </div>
     </div>
   `,
@@ -86,7 +86,7 @@ export const WithKnobs = () => {
     components: { BaseButton },
     props: {
       text: {
-        default: text('Text', 'Submit'),
+        default: text('Label', 'Submit'),
       },
       preIcon: {
         default: select('Pre-Icon', iconOptions),
@@ -115,9 +115,8 @@ export const WithKnobs = () => {
         :size="size"
         :block="block"
         :flat="flat"
-      >
-        {{ text }}
-      </BaseButton>
+        :label="label"
+      />
     `,
   };
 };

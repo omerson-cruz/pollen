@@ -31,6 +31,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * By default, BaseButton relies on a child slot for the label, but a string
+     * can also be passed in if desired.
+     */
+    label: {
+      type: String,
+      default: '',
+    },
     /** The name of an icon (see BaseIcon) to append to the component. */
     postIcon: {
       type: String,
@@ -82,7 +90,7 @@ export default {
     ) : null;
     const wrappedChildNodes = h('div', { class: 'base-button__inner' }, [
       preIcon,
-      ...(children || []),
+      ...(children || [props.label]),
       postIcon,
     ]);
 

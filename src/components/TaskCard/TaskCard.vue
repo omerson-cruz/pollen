@@ -1,0 +1,158 @@
+<template>
+  <article class="task-card">
+    <header class="task-card__header">
+      <div v-if="icon || !!$slots['header-icon']" class="task-card__icon">
+        <slot name="header-icon">
+          <FancyIcon v-if="icon" :icon="icon" />
+        </slot>
+      </div>
+      <div>
+        <slot name="header-content">
+          <component :is="titleTag" class="task-card__title">
+            {{ title }}
+            <CounterBadge
+              v-if="count !== null"
+              :value="count"
+              class="align-middle"
+            />
+          </component>
+          <div v-if="description" class="task-card__description">
+            {{ description }}
+          </div>
+        </slot>
+      </div>
+    </header>
+    <div
+      v-if="!!$slots['primary-action'] || primaryAction"
+      class="task-card__primary-action"
+    >
+      <slot name="primary-action">
+        <BaseButton
+          v-if="primaryAction"
+          v-bind="primaryAction"
+          type="button"
+          @click="primaryAction.handler"
+        />
+      </slot>
+    </div>
+    <div class="task-card__items">
+      <slot name="item-list">
+        <TaskCardItem
+          v-for="item in items"
+          :key="item.id || item.title"
+          v-bind="item"
+        />
+      </slot>
+    </div>
+  </article>
+</template>
+
+<script>
+import BaseButton from '../BaseButton/BaseButton.vue';
+import CounterBadge from '../CounterBadge/CounterBadge.vue';
+import FancyIcon, { isValidIcon } from '../FancyIcon/FancyIcon.vue';
+import TaskCardItem from './TaskCardItem.vue';
+
+export default {
+  components: { BaseButton, CounterBadge, FancyIcon, TaskCardItem },
+  props: {
+    count: {
+      type: Number,
+      default: null,
+    },
+    description: {
+      type: String,
+      default: null,
+    },
+    icon: {
+      type: String,
+      default: null,
+      validator: (value) => !value || isValidIcon(value),
+    },
+    items: {
+      type: Array,
+      default: () => [],
+    },
+    primaryAction: {
+      type: Object,
+      default: null,
+    },
+    title: {
+      type: String,
+      default: null,
+    },
+    titleTag: {
+      type: String,
+      default: 'h2',
+    },
+  },
+};
+</script>
+
+<style scoped>
+.task-card {
+  @apply bg-white flex flex-col flex-wrap max-w-5xl shadow-1 w-full;
+}
+
+.task-card__header {
+  @apply flex items-center px-6 py-3;
+}
+
+.task-card__icon {
+  @apply flex-shrink-0 mr-6 text-40;
+}
+
+.task-card__title {
+  @apply font-heading-subtitle font-semibold;
+}
+
+.task-card__description {
+  @apply font-body-small;
+}
+
+.task-card-item + .task-card-item {
+  @apply border-gray-5 border-b-0 border-l-0 border-r-0 border-t border-solid;
+}
+
+.task-card__items {
+  @apply border-b-0 border-gray-5 border-l-0 border-r-0 border-solid border-t py-4 w-full;
+}
+
+.task-card__primary-action {
+  @apply flex-shrink-0 ml-auto mr-6 mb-6 order-last self-center;
+}
+
+.task-card__primary-action ~ .task-card__items {
+  @apply border-b mb-4;
+}
+
+@media screen and (min-width: 768px) {
+  .task-card {
+    @apply flex-row rounded-md;
+  }
+
+  .task-card__header {
+    @apply py-5;
+  }
+
+  .task-card__title {
+    @apply font-heading-title m-0;
+  }
+
+  .task-card__description {
+    @apply font-body-caption;
+  }
+
+  .task-card-item + .task-card-item {
+    @apply border-0;
+  }
+
+  .task-card__primary-action {
+    @apply mb-0 order-none;
+  }
+
+  .task-card__primary-action ~ .task-card__items {
+    @apply border-b-0 mb-0;
+  }
+}
+</style>

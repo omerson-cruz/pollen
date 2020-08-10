@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FancyIcon renders gallery correctly 1`] = `
+<div
+  class="flex flex-wrap"
+>
+  <div
+    class="text-center m-3"
+  >
+    <div
+      style="font-size: 72px;"
+    >
+      <svg
+        class="fancy-icon"
+      />
+    </div>
+     
+    <div
+      class="font-body-small mt-2"
+    >
+      clipboard
+    </div>
+  </div>
+  <div
+    class="text-center m-3"
+  >
+    <div
+      style="font-size: 72px;"
+    >
+      <svg
+        class="fancy-icon"
+      />
+    </div>
+     
+    <div
+      class="font-body-small mt-2"
+    >
+      signTablet
+    </div>
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-const pixelFonts = [10, 12, 13, 14, 16, 17, 18, 19, 23, 28, 33, 40];
+const pixelFonts = [10, 12, 13, 14, 16, 17, 18, 19, 23, 28, 33, 40, 72];
 
 const fontSize = pixelFonts.reduce(
   (obj, val) => ({
