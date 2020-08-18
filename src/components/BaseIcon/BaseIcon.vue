@@ -51,6 +51,7 @@ import {
   faQuestion as question,
   faSignOutAlt as signOut,
   faUsers as users,
+  faTrash as trash,
   faWrench as wrench,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -81,6 +82,7 @@ const FAIcons = Object.freeze({
   search,
   signOut,
   tachometer,
+  trash,
   upload,
   users,
   wrench,
@@ -97,7 +99,7 @@ const CustomIcons = Object.freeze({
 });
 
 export const Icons = Object.freeze(
-  [...Object.keys(FAIcons), ...Object.keys(CustomIcons)].reduce(
+  [...Object.keys(FAIcons), ...Object.keys(CustomIcons)].sort().reduce(
     (obj, val) => ({
       ...obj,
       [snakeCase(val).toUpperCase()]: val,

@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalDialog renders correctly 1`] = `
+<div
+  class="modal-dialog"
+>
+  <div
+    tabindex="-1"
+  />
+   
+  <div
+    tabindex="-1"
+  />
+   
+  <div
+    data-lock=""
+  >
+    <div
+      class="modal-window modal-window--regular"
+    >
+      <div
+        class="modal-header modal-header--transparent"
+      >
+        Heading goes here
+      </div>
+       
+      <div
+        class="modal-dialog__body"
+      >
+        Content goes here
+      </div>
+       
+      <div
+        class="modal-actions modal-actions--justify"
+      >
+        <button
+          class="modal-actions__action modal-actions__action--primary modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+          type="button"
+        >
+          <div
+            class="base-button__inner"
+          >
+            Accept
+          </div>
+        </button>
+         
+        <button
+          class="modal-actions__action modal-actions__action--secondary modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
+          type="button"
+        >
+          <div
+            class="base-button__inner"
+          >
+            Skip
+          </div>
+        </button>
+         
+        <button
+          class="modal-actions__action modal-actions__action--tertiary modal-actions__action modal-actions__action--tertiary base-button base-button--tertiary base-button--medium base-button--flat base-button--inline"
+          type="button"
+        >
+          <div
+            class="base-button__inner"
+          >
+            <svg
+              aria-hidden="true"
+              class="base-icon svg-inline--fa fa-trash fa-w-14 base-button__icon base-button__icon--pre"
+              data-icon="trash"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class=""
+                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                fill="currentColor"
+              />
+            </svg>
+            Delete
+          </div>
+        </button>
+      </div>
+       
+      <div
+        class="modal-subfooter"
+      >
+        Subfooter goes here
+      </div>
+    </div>
+     
+    <button
+      class="modal-close modal-close--light"
+      title="Close"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="base-icon svg-inline--fa fa-times fa-w-10"
+        data-icon="times"
+        data-prefix="fal"
+        focusable="false"
+        role="img"
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class=""
+          d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+          fill="currentColor"
+        />
+      </svg>
+      <div
+        aria-hidden="true"
+        class="modal-close__visible-label"
+      >
+        Esc
+      </div>
+      <div
+        class="modal-close__accessible-label"
+      >
+        Click or press escape to close
+      </div>
+    </button>
+     
+    <div
+      class="modal-overlay modal-overlay--primary"
+    />
+  </div>
+   
+  <div
+    tabindex="-1"
+  />
+</div>
+`;
