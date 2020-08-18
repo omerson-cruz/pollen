@@ -3,6 +3,7 @@ import Alert from '@/constants/Alert';
 import Button from '@/constants/Button';
 import Form from '@/constants/Form';
 import InputMasks from '@/constants/InputMasks';
+import Modal from '@/constants/Modal';
 import Notification from '@/constants/Notification';
 import Typography from '@/constants/Typography';
 import theme from '@/tailwind/theme';
@@ -19,6 +20,7 @@ export { default as CheckboxInput } from '@/components/CheckboxInput/CheckboxInp
 export { default as DateInput } from '@/components/DateInput/DateInput.vue';
 export { default as FancyIcon } from '@/components/FancyIcon/FancyIcon.vue';
 export { default as IconButton } from '@/components/IconButton/IconButton.vue';
+export { default as ModalDialog } from '@/components/ModalDialog/ModalDialog.vue';
 export { default as PasswordInput } from '@/components/PasswordInput/PasswordInput.vue';
 export { default as RadioGroup } from '@/components/RadioGroup/RadioGroup.vue';
 export { default as RadioInput } from '@/components/RadioInput/RadioInput.vue';
@@ -43,6 +45,7 @@ export const constants = {
   Button,
   Form,
   InputMasks,
+  Modal,
   Notification,
   Typography,
   theme,
