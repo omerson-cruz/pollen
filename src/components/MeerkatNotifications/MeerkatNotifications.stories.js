@@ -1,17 +1,17 @@
 import { select } from '@storybook/addon-knobs';
 import BaseButton from '../BaseButton/BaseButton.vue';
 import Notification from '../../constants/Notification';
-import ToastNotifications from './ToastNotifications.vue';
+import MeerkatNotifications from './MeerkatNotifications.vue';
 
 const { Positions, Variants } = Notification;
 
 export default {
-  title: 'ToastNotifications',
-  component: ToastNotifications,
+  title: 'MeerkatNotifications',
+  component: MeerkatNotifications,
 };
 
 export const Default = () => ({
-  components: { BaseButton, ToastNotifications },
+  components: { BaseButton, MeerkatNotifications },
   props: {
     position: {
       default: select(
@@ -76,6 +76,6 @@ export const Default = () => ({
   template: `
     <div>
       <BaseButton type="button" pre-icon="plus" @click="add">Add a notification</BaseButton>
-      <ToastNotifications :notifications="notifications" :position="position" @close="remove" />
+      <MeerkatNotifications :notifications="notifications" :position="position" @close="remove" />
     </div>`,
 });

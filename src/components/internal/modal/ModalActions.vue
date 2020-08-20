@@ -5,7 +5,7 @@
       class="modal-actions__action modal-actions__action--primary"
       v-bind="getProps(primaryAction)"
       @click="
-        () => (primaryAction.handler ? primaryAciton.handler() : () => {})
+        () => (primaryAction.handler ? primaryAction.handler() : () => {})
       "
     />
     <BaseButton

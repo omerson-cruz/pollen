@@ -85,7 +85,7 @@ export const WithKnobs = () => {
   return {
     components: { BaseButton },
     props: {
-      text: {
+      label: {
         default: text('Label', 'Submit'),
       },
       preIcon: {

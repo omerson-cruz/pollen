@@ -29,11 +29,15 @@ export default {
       type: String,
       default: Sizes.MEDIUM,
     },
+    /**
+     * A number to display. Large numbers (over 1,000) will be displayed
+     * abbreviated, i.e. 1,123 will show as 1.1K
+     */
     value: {
       type: Number,
       default: 0,
     },
-    /** One of `primary`,  `secondary`, and `tertiary`. */
+    /** One of `primary`, `secondary`, and `tertiary`. */
     variant: {
       type: String,
       default: Variants.PRIMARY,

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LooseGrid renders auto width correctly 1`] = `
+<div
+  class="loose-grid loose-grid--auto"
+/>
+`;
+
+exports[`LooseGrid renders full-bleed width correctly 1`] = `
+<div
+  class="loose-grid loose-grid--full-bleed"
+/>
+`;
+
+exports[`LooseGrid renders narrow width correctly 1`] = `
+<div
+  class="loose-grid loose-grid--narrow"
+/>
+`;
+
+exports[`LooseGrid renders wide width correctly 1`] = `
+<div
+  class="loose-grid loose-grid--wide"
+/>
+`;

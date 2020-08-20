@@ -53,34 +53,62 @@ import CounterBadge from '../CounterBadge/CounterBadge.vue';
 import FancyIcon, { isValidIcon } from '../FancyIcon/FancyIcon.vue';
 import TaskCardItem from './TaskCardItem.vue';
 
+/**
+ * import { TaskCard } from '@bambee/pollen';
+ *
+ * A card component for displaying a list of action items. This is designed to
+ * largely be a layout component. Any heavy logic lifting should be done by a
+ * wrapping component. See Storybook for examples.
+ */
 export default {
   components: { BaseButton, CounterBadge, FancyIcon, TaskCardItem },
   props: {
+    /** The number of tasks within the card. */
     count: {
       type: Number,
       default: null,
     },
+    /** A top-line description of the card's content. */
     description: {
       type: String,
       default: null,
     },
+    /** An optional `FancyIcon` to display at the top of the card. */
     icon: {
       type: String,
       default: null,
       validator: (value) => !value || isValidIcon(value),
     },
+    /**
+     * An array of object items to display in the card. These items should have
+     * a `title` string, a `description` string, an array of `actions` objects
+     * that have a `label` string and `handler` function, and finally an
+     * optional `attribution` object that has at least an `image` url or a
+     * `name` string.
+     */
     items: {
       type: Array,
       default: () => [],
     },
+    /**
+     * An object with at least a `handler` function. The object will be spread
+     * on to a `BaseButton` component.
+     */
     primaryAction: {
       type: Object,
       default: null,
     },
+    /**
+     * The top-line title to display.
+     */
     title: {
       type: String,
       default: null,
     },
+    /**
+     * The HTML tag for the title of the task card, for better structuring a
+     * page's semantics.
+     */
     titleTag: {
       type: String,
       default: 'h2',

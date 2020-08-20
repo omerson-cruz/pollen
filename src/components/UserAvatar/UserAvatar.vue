@@ -45,7 +45,7 @@ export default {
       type: String,
       default: null,
     },
-    /** The size of the component. One of `small`, `medium`, and `large`. */
+    /** One of `tiny`, `small`, `medium`, and `large`. */
     size: {
       type: String,
       default: Sizes.MEDIUM,

@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToastNotification renders correctly 1`] = `
+exports[`MeerkatNotification renders correctly 1`] = `
 <div
-  class="toast-notification toast-notification--default"
+  class="meerkat-notification meerkat-notification--default"
   role="alertdialog"
 >
   <div
-    class="toast-notification__content"
+    class="meerkat-notification__content"
   >
     <!---->
      
     <div
-      class="toast-notification__message"
+      class="meerkat-notification__message"
     >
       
     </div>
      
     <div
-      class="toast-notification__actions"
+      class="meerkat-notification__actions"
     >
       <button
-        class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+        class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
         title="Close"
       >
         <svg
@@ -50,7 +50,7 @@ exports[`ToastNotification renders correctly 1`] = `
 </div>
 `;
 
-exports[`ToastNotification renders gallery correctly 1`] = `
+exports[`MeerkatNotification renders gallery correctly 1`] = `
 <div
   style="width: 400px;"
 >
@@ -64,25 +64,25 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </h2>
      
     <div
-      class="toast-notification mb-2 toast-notification--default"
+      class="meerkat-notification mb-2 meerkat-notification--default"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <!---->
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Lorem ipsum dolor sit omet
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -112,25 +112,25 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--default"
+      class="meerkat-notification mb-2 meerkat-notification--default"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <!---->
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -160,17 +160,17 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--default toast-notification--with-avatar"
+      class="meerkat-notification mb-2 meerkat-notification--default meerkat-notification--with-avatar"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <div
-          class="toast-notification__avatar-container"
+          class="meerkat-notification__avatar-container"
         >
           <div
-            class="avatar-image avatar-image--rounded toast-notification__avatar"
+            class="avatar-image avatar-image--rounded meerkat-notification__avatar"
             style="background-image: url(https://cdn.filestackcontent.com/resize=width:40,height:40/enCa5BTVeIsLHcgkdpAc); font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
           >
             <!---->
@@ -178,16 +178,16 @@ exports[`ToastNotification renders gallery correctly 1`] = `
         </div>
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Lorem ipsum dolor sit omet
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -217,17 +217,17 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--default toast-notification--with-avatar"
+      class="meerkat-notification mb-2 meerkat-notification--default meerkat-notification--with-avatar"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <div
-          class="toast-notification__avatar-container"
+          class="meerkat-notification__avatar-container"
         >
           <div
-            class="avatar-image avatar-image--rounded toast-notification__avatar"
+            class="avatar-image avatar-image--rounded meerkat-notification__avatar"
             style="font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
           >
             <div
@@ -241,16 +241,16 @@ exports[`ToastNotification renders gallery correctly 1`] = `
         </div>
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -289,25 +289,25 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </h2>
      
     <div
-      class="toast-notification mb-2 toast-notification--seconary"
+      class="meerkat-notification mb-2 meerkat-notification--seconary"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <!---->
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Lorem ipsum dolor sit omet
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -337,25 +337,25 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--seconary"
+      class="meerkat-notification mb-2 meerkat-notification--seconary"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <!---->
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -385,17 +385,17 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--seconary toast-notification--with-avatar"
+      class="meerkat-notification mb-2 meerkat-notification--seconary meerkat-notification--with-avatar"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <div
-          class="toast-notification__avatar-container"
+          class="meerkat-notification__avatar-container"
         >
           <div
-            class="avatar-image avatar-image--rounded toast-notification__avatar"
+            class="avatar-image avatar-image--rounded meerkat-notification__avatar"
             style="background-image: url(https://cdn.filestackcontent.com/resize=width:40,height:40/enCa5BTVeIsLHcgkdpAc); font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
           >
             <!---->
@@ -403,16 +403,16 @@ exports[`ToastNotification renders gallery correctly 1`] = `
         </div>
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Lorem ipsum dolor sit omet
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -442,17 +442,17 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--seconary toast-notification--with-avatar"
+      class="meerkat-notification mb-2 meerkat-notification--seconary meerkat-notification--with-avatar"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <div
-          class="toast-notification__avatar-container"
+          class="meerkat-notification__avatar-container"
         >
           <div
-            class="avatar-image avatar-image--rounded toast-notification__avatar"
+            class="avatar-image avatar-image--rounded meerkat-notification__avatar"
             style="font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
           >
             <div
@@ -466,16 +466,16 @@ exports[`ToastNotification renders gallery correctly 1`] = `
         </div>
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -514,25 +514,25 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </h2>
      
     <div
-      class="toast-notification mb-2 toast-notification--error"
+      class="meerkat-notification mb-2 meerkat-notification--error"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <!---->
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Lorem ipsum dolor sit omet
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -562,25 +562,25 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--error"
+      class="meerkat-notification mb-2 meerkat-notification--error"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <!---->
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -610,17 +610,17 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--error toast-notification--with-avatar"
+      class="meerkat-notification mb-2 meerkat-notification--error meerkat-notification--with-avatar"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <div
-          class="toast-notification__avatar-container"
+          class="meerkat-notification__avatar-container"
         >
           <div
-            class="avatar-image avatar-image--rounded toast-notification__avatar"
+            class="avatar-image avatar-image--rounded meerkat-notification__avatar"
             style="background-image: url(https://cdn.filestackcontent.com/resize=width:40,height:40/enCa5BTVeIsLHcgkdpAc); font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
           >
             <!---->
@@ -628,16 +628,16 @@ exports[`ToastNotification renders gallery correctly 1`] = `
         </div>
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Lorem ipsum dolor sit omet
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -667,17 +667,17 @@ exports[`ToastNotification renders gallery correctly 1`] = `
     </div>
      
     <div
-      class="toast-notification mb-2 toast-notification--error toast-notification--with-avatar"
+      class="meerkat-notification mb-2 meerkat-notification--error meerkat-notification--with-avatar"
       role="alertdialog"
     >
       <div
-        class="toast-notification__content"
+        class="meerkat-notification__content"
       >
         <div
-          class="toast-notification__avatar-container"
+          class="meerkat-notification__avatar-container"
         >
           <div
-            class="avatar-image avatar-image--rounded toast-notification__avatar"
+            class="avatar-image avatar-image--rounded meerkat-notification__avatar"
             style="font-size: 1.0625rem; height: 2.5rem; width: 2.5rem;"
           >
             <div
@@ -691,16 +691,16 @@ exports[`ToastNotification renders gallery correctly 1`] = `
         </div>
          
         <div
-          class="toast-notification__message"
+          class="meerkat-notification__message"
         >
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
          
         <div
-          class="toast-notification__actions"
+          class="meerkat-notification__actions"
         >
           <button
-            class="toast-notification__close toast-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg

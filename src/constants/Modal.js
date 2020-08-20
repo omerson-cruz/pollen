@@ -4,6 +4,11 @@ const Modal = Object.freeze({
     JUSTIFY: 'justify',
     RIGHT: 'right',
   },
+  Alerts: {
+    SUCCESS: 'success',
+    WARNING: 'warning',
+    ERROR: 'error',
+  },
   Headers: {
     TRANSPARENT: 'transparent',
     PRIMARY: 'primary',

@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .field-container {
-  @apply border
+  @apply border-2
     border-transparent
     flex 
     items-center 
@@ -62,7 +62,7 @@ export default {
 
 .field-container--standard {
   @apply bg-white
-    border-gray-4;
+    border-gray-5;
 }
 
 .field-container--standard:hover:not(.field-container--disabled) {

@@ -33,6 +33,14 @@ import ModalOverlay from '../internal/modal/ModalOverlay.vue';
 import ModalSubfooter from '../internal/modal/ModalSubfooter.vue';
 import ModalWindow from '../internal/modal/ModalWindow.vue';
 
+/**
+ * import { ModalDialog } from '@bambee/pollen';
+ *
+ * A modal dialog layout component. You'll likely want to use something like
+ * vue-portals to properly place this component within the larger page layout.
+ * It's also up to the parent component's statefulness to determine visibility
+ * via a `v-if` conditional.
+ */
 export default {
   components: {
     FocusLock,
@@ -44,26 +52,46 @@ export default {
     ModalWindow,
   },
   props: {
+    /**
+     * Alignment of the action buttons. One of `center`, `right`, and `justify`.
+     */
     actionAlignment: {
       type: String,
       default: Modal.ActionAlignments.CENTER,
       validator: (value) =>
         Object.values(Modal.ActionAlignments).includes(value),
     },
+    /**
+     * An object with optional `primary`, `secondary`, and `tertiary` keys.
+     * These each should have at the very least a `label` string and `handler`
+     * function. Any additional values will be spread on to an underlying
+     * `BaseButton`.
+     */
     actions: {
       type: Object,
       default: null,
     },
+    /**
+     * The header style. One of `transparent`, `primary`, `secondary`,
+     * `warning`, `error`, `primary-ornate`, `warning-ornate`, or `error-ornate`
+     */
     header: {
       type: String,
       default: Modal.Headers.TRANSPARENT,
       validator: (value) => Object.values(Modal.Headers).includes(value),
     },
+    /**
+     * The background overlay style. One of `primary`, `dark`, or `light`.
+     */
     overlay: {
       type: String,
       default: Modal.Overlays.PRIMARY,
       validator: (value) => Object.values(Modal.Overlays).includes(value),
     },
+    /**
+     * The overlay width. One of `tiny`, `small`, `regular`, `medium`, `large,
+     * or `giant`.
+     */
     size: {
       type: String,
       default: Modal.Sizes.REGULAR,

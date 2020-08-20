@@ -9,6 +9,7 @@ import Typography from '@/constants/Typography';
 import theme from '@/tailwind/theme';
 
 export { default as AlertBar } from '@/components/AlertBar/AlertBar.vue';
+export { default as AlertModal } from '@/components/AlertModal/AlertModal.vue';
 export { default as AnnularThrobber } from '@/components/AnnularThrobber/AnnularThrobber.vue';
 export { default as AvatarImage } from '@/components/AvatarImage/AvatarImage.vue';
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
@@ -20,6 +21,9 @@ export { default as CheckboxInput } from '@/components/CheckboxInput/CheckboxInp
 export { default as DateInput } from '@/components/DateInput/DateInput.vue';
 export { default as FancyIcon } from '@/components/FancyIcon/FancyIcon.vue';
 export { default as IconButton } from '@/components/IconButton/IconButton.vue';
+export { default as LooseGrid } from '@/components/LooseGrid/LooseGrid.vue';
+export { default as MeerkatNotification } from '@/components/MeerkatNotification/MeerkatNotification.vue';
+export { default as MeerkatNotifications } from '@/components/MeerkatNotifications/MeerkatNotifications.vue';
 export { default as ModalDialog } from '@/components/ModalDialog/ModalDialog.vue';
 export { default as PasswordInput } from '@/components/PasswordInput/PasswordInput.vue';
 export { default as RadioGroup } from '@/components/RadioGroup/RadioGroup.vue';
@@ -31,8 +35,7 @@ export { default as SwitchInput } from '@/components/SwitchInput/SwitchInput.vue
 export { default as TaskCard } from '@/components/TaskCard/TaskCard.vue';
 export { default as TextInput } from '@/components/TextInput/TextInput.vue';
 export { default as TextareaInput } from '@/components/TextareaInput/TextareaInput.vue';
-export { default as ToastNotification } from '@/components/ToastNotification/ToastNotification.vue';
-export { default as ToastNotifications } from '@/components/ToastNotifications/ToastNotifications.vue';
+export { default as TightGrid } from '@/components/TightGrid/TightGrid.vue';
 export { default as TwoColumnMultiSelect } from '@/components/TwoColumnMultiSelect/TwoColumnMultiSelect.vue';
 export { default as TypeBody } from '@/components/TypeBody/TypeBody.vue';
 export { default as TypeDisplay } from '@/components/TypeDisplay/TypeDisplay.vue';

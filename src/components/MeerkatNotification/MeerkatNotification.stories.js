@@ -1,18 +1,18 @@
 import { boolean, select, text } from '@storybook/addon-knobs';
 import Notification from '../../constants/Notification';
-import ToastNotification from './ToastNotification.vue';
+import MeerkatNotification from './MeerkatNotification.vue';
 import BaseButton from '../BaseButton/BaseButton.vue';
 import TypeOverline from '../TypeOverline/TypeOverline.vue';
 
 const { Variants } = Notification;
 
 export default {
-  title: 'ToastNotification',
-  component: ToastNotification,
+  title: 'MeerkatNotification',
+  component: MeerkatNotification,
 };
 
 export const Gallery = () => ({
-  components: { ToastNotification, TypeOverline },
+  components: { MeerkatNotification, TypeOverline },
   data() {
     return {
       variants: Object.values(Variants),
@@ -22,23 +22,23 @@ export const Gallery = () => ({
   <div style="width: 400px">
     <div v-for="variant in variants" :key="variant" class="mb-4">
       <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
-      <ToastNotification
+      <MeerkatNotification
         message="Lorem ipsum dolor sit omet"
         class="mb-2"
         :variant="variant"
       />
-      <ToastNotification
+      <MeerkatNotification
         message="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         class="mb-2"
         :variant="variant"
       />
-      <ToastNotification
+      <MeerkatNotification
         message="Lorem ipsum dolor sit omet"
         class="mb-2"
         image="https://cdn.filestackcontent.com/enCa5BTVeIsLHcgkdpAc"
         :variant="variant"
       />
-      <ToastNotification
+      <MeerkatNotification
       message="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         class="mb-2"
         initials="XO"
@@ -50,20 +50,20 @@ export const Gallery = () => ({
 });
 
 export const WithMessageAsASlot = () => ({
-  components: { ToastNotification },
+  components: { MeerkatNotification },
   template: `
-  <ToastNotification
+  <MeerkatNotification
     image="https://cdn.filestackcontent.com/enCa5BTVeIsLHcgkdpAc"
   >
     Ut <a href="#" class="text-white">enim ad minim</a> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </ToastNotification>
+  </MeerkatNotification>
   `,
 });
 
 export const NoActions = () => ({
-  components: { ToastNotification },
+  components: { MeerkatNotification },
   template: `
-  <ToastNotification
+  <MeerkatNotification
     message="Lorem ipsum dolor sit omet"
     :showActions="false"
   />
@@ -71,9 +71,9 @@ export const NoActions = () => ({
 });
 
 export const WithActionAsSlot = () => ({
-  components: { ToastNotification, BaseButton },
+  components: { MeerkatNotification, BaseButton },
   template: `
-  <ToastNotification
+  <MeerkatNotification
     image="https://cdn.filestackcontent.com/enCa5BTVeIsLHcgkdpAc"
     message="Lorem ipsum dolor sit omet"
   >
@@ -81,12 +81,12 @@ export const WithActionAsSlot = () => ({
       <BaseButton flat variant="inverted" size="small" @click="$emit('confirm')">Confirm</BaseButton>
       <BaseButton flat variant="inverted" size="small" @click="$emit('cancel')">Undo</BaseButton>
     </template>
-  </ToastNotification>
+  </MeerkatNotification>
   `,
 });
 
 export const WithKnobs = () => ({
-  components: { ToastNotification },
+  components: { MeerkatNotification },
   props: {
     image: {
       default: text(
@@ -108,7 +108,7 @@ export const WithKnobs = () => ({
     },
   },
   template: `
-  <ToastNotification
+  <MeerkatNotification
     :image="image"
     :initials="initials"
     :message="message"

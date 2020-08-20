@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToastNotifications renders an action 1`] = `<!---->`;
-
-exports[`ToastNotifications renders correctly 1`] = `
+exports[`MeerkatNotifications renders correctly 1`] = `
 <div>
   <button
     class="base-button base-button--primary base-button--medium base-button--regular base-button--inline"

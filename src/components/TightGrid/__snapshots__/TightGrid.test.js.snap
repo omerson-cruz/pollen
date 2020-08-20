@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TightGrid renders auto width correctly 1`] = `
+<div
+  class="tight-grid tight-grid--auto"
+/>
+`;
+
+exports[`TightGrid renders full-bleed width correctly 1`] = `
+<div
+  class="tight-grid tight-grid--full-bleed"
+/>
+`;
+
+exports[`TightGrid renders narrow width correctly 1`] = `
+<div
+  class="tight-grid tight-grid--narrow"
+/>
+`;
+
+exports[`TightGrid renders wide width correctly 1`] = `
+<div
+  class="tight-grid tight-grid--wide"
+/>
+`;

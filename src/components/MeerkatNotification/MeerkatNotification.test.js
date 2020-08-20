@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
-import ToastNotification from './ToastNotification.vue';
-import { Gallery } from './ToastNotification.stories';
+import MeerkatNotification from './MeerkatNotification.vue';
+import { Gallery } from './MeerkatNotification.stories';
 
-describe('ToastNotification', () => {
+describe('MeerkatNotification', () => {
   test('renders correctly', () => {
-    const wrapper = mount(ToastNotification);
+    const wrapper = mount(MeerkatNotification);
     expect(wrapper.element).toMatchSnapshot();
   });
 
@@ -16,12 +16,12 @@ describe('ToastNotification', () => {
 
   test('emits a `close` event', () => {
     const onClose = jest.fn();
-    const wrapper = mount(ToastNotification, {
+    const wrapper = mount(MeerkatNotification, {
       listeners: {
         close: onClose,
       },
     });
-    wrapper.find('.toast-notification__close').trigger('click');
+    wrapper.find('.meerkat-notification__close').trigger('click');
     expect(onClose).toHaveBeenCalled();
   });
 });

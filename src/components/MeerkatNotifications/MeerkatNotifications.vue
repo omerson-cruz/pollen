@@ -2,12 +2,12 @@
   <transition-group
     v-if="notifications.length"
     tag="div"
-    class="toast-notifications"
-    :class="`toast-notifications--${position}`"
-    name="toast"
+    class="meerkat-notifications"
+    :class="`meerkat-notifications--${position}`"
+    name="meerkat"
     @before-leave="beforeLeave"
   >
-    <ToastNotification
+    <MeerkatNotification
       v-for="{ message, actions = [], id, ...rest } in notifications"
       :key="id"
       v-bind="rest"
@@ -26,7 +26,7 @@
           {{ label }}
         </BaseButton>
       </template>
-    </ToastNotification>
+    </MeerkatNotification>
   </transition-group>
 </template>
 
@@ -34,21 +34,21 @@
 import BaseButton from '../BaseButton/BaseButton.vue';
 import Button from '../../constants/Button';
 import Notification from '../../constants/Notification';
-import ToastNotification from '../ToastNotification/ToastNotification.vue';
+import MeerkatNotification from '../MeerkatNotification/MeerkatNotification.vue';
 
 /**
- * A container for displaying `ToastNotification` components. This can be
+ * A container for displaying `MeerkatNotification` components. This can be
  * displayed on the top or bottom, in the center or right corner using the
  * `position` prop. It accepts a `notifications` array of objects. These objects
  * should have at the very least a `message` string and a unique `id` string or
  * number. Optionally, the notification object can have an array of `actions`
  * that have a string `label` and a `handler` function that is executed on
  * click. Any other attributes on the notification object will be transparently
- * passed through to the `ToastNotification` child.
+ * passed through to the `MeerkatNotification` child.
  */
 export default {
   Button,
-  components: { BaseButton, ToastNotification },
+  components: { BaseButton, MeerkatNotification },
   props: {
     /**
      * An array of notification objects. Should include at least a `message` and
@@ -77,65 +77,65 @@ export default {
 </script>
 
 <style scoped>
-.toast-notifications {
+.meerkat-notifications {
   @apply box-border fixed flex -my-2 p-4;
   max-width: 100vw;
   width: 25rem;
 }
 
-.toast-notifications .toast-notification {
+.meerkat-notifications .meerkat-notification {
   @apply duration-lazy my-2 transition-all;
 }
 
-.toast-notifications--top-center,
-.toast-notifications--top-right {
+.meerkat-notifications--top-center,
+.meerkat-notifications--top-right {
   @apply flex-col-reverse top-0;
 }
 
-.toast-notifications--bottom-center,
-.toast-notifications--bottom-right {
+.meerkat-notifications--bottom-center,
+.meerkat-notifications--bottom-right {
   @apply bottom-0 flex-col;
 }
 
-.toast-notifications--top-center,
-.toast-notifications--bottom-center {
+.meerkat-notifications--top-center,
+.meerkat-notifications--bottom-center {
   @apply left-1/2 transform -translate-x-1/2;
 }
 
-.toast-notifications--top-right,
-.toast-notifications--bottom-right {
+.meerkat-notifications--top-right,
+.meerkat-notifications--bottom-right {
   @apply right-0;
 }
 
-.toast-enter,
-.toast-leave-to {
+.meerkat-enter,
+.meerkat-leave-to {
   opacity: 0;
 }
 
-.toast-notifications--bottom-center .toast-enter,
-.toast-notifications--bottom-right .toast-enter,
-.toast-notifications--bottom-center .toast-leave-to,
-.toast-notifications--bottom-right .toast-leave-to {
+.meerkat-notifications--bottom-center .meerkat-enter,
+.meerkat-notifications--bottom-right .meerkat-enter,
+.meerkat-notifications--bottom-center .meerkat-leave-to,
+.meerkat-notifications--bottom-right .meerkat-leave-to {
   transform: translateY(100%);
 }
 
-.toast-notifications--top-center .toast-enter,
-.toast-notifications--top-right .toast-enter,
-.toast-notifications--top-center .toast-leave-to,
-.toast-notifications--top-right .toast-leave-to {
+.meerkat-notifications--top-center .meerkat-enter,
+.meerkat-notifications--top-right .meerkat-enter,
+.meerkat-notifications--top-center .meerkat-leave-to,
+.meerkat-notifications--top-right .meerkat-leave-to {
   transform: translateY(-100%);
 }
 
-.toast-enter-active,
-.toast-leave-active {
+.meerkat-enter-active,
+.meerkat-leave-active {
   z-index: -1;
 }
 
-.toast-enter-active {
+.meerkat-enter-active {
   @apply ease-out;
 }
 
-.toast-leave-active {
+.meerkat-leave-active {
   @apply absolute ease-in;
   width: calc(100% - 2rem);
 }
