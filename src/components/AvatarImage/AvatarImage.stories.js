@@ -42,6 +42,9 @@ export const WithKnobs = () => {
       initials: {
         default: text('Initials', 'XO'),
       },
+      name: {
+        default: text('Name', ''),
+      },
       size: {
         default: number('Size', 40),
       },
@@ -54,6 +57,7 @@ export const WithKnobs = () => {
         :border="border"
         :image="image"
         :initials="initials"
+        :name="name"
         :size="size"
         :square="square"
       />

@@ -13,8 +13,11 @@
     v-bind="$options.getAttributes({ data, parent })"
     v-on="listeners"
   >
-    <div v-if="props.initials && !props.image" class="avatar-image__initials">
-      {{ props.initials }}
+    <div
+      v-if="(props.initials || props.name) && !props.image"
+      class="avatar-image__initials"
+    >
+      {{ props.name ? $options.getNameInitials(props.name) : props.initials }}
     </div>
   </div>
 </template>
@@ -22,6 +25,7 @@
 <script>
 import DEFAULT_USER_IMAGE from '../../assets/defaultUserImage';
 import getAttributes from '../../util/getAttributes';
+import getNameInitials from '../../util/getNameInitials';
 import resizeFilestackImage from '../../util/resizeFilestackImage';
 
 const pxToRem = (val) => `${parseInt(val, 10) / 16}rem`;
@@ -53,6 +57,7 @@ const getStyles = (props) => {
  */
 export default {
   getAttributes,
+  getNameInitials,
   getStyles,
   props: {
     /** If true, adds a border around the image. */
@@ -67,6 +72,11 @@ export default {
     },
     /** A fallback pair of initials to display if no image is supplied. */
     initials: {
+      type: String,
+      default: null,
+    },
+    /** A full name that will be displayed as initials. */
+    name: {
       type: String,
       default: null,
     },

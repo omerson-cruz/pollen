@@ -9,7 +9,7 @@
       },
     ]"
   >
-    <AvatarImage :image="image" :initials="initials" :size="avatarSize" />
+    <AvatarImage :image="image" :name="name" :size="avatarSize" />
     <div v-if="name || title" class="user-avatar__details">
       <div v-if="name" class="user-avatar__name">{{ name }}</div>
       <div v-if="title" class="user-avatar__title">{{ title }}</div>
@@ -19,7 +19,6 @@
 
 <script>
 import AvatarImage from '../AvatarImage/AvatarImage.vue';
-import getNameInitials from '../../util/getNameInitials';
 
 export const Sizes = Object.freeze({
   TINY: 'tiny',
@@ -75,9 +74,6 @@ export default {
         default:
           return this.vertical ? 64 : 32;
       }
-    },
-    initials() {
-      return getNameInitials(this.name);
     },
   },
 };
