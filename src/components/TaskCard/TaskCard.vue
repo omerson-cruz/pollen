@@ -35,7 +35,7 @@
         />
       </slot>
     </div>
-    <div class="task-card__items">
+    <div v-if="!!$slots['item-list'] || items.length" class="task-card__items">
       <slot name="item-list">
         <TaskCardItem
           v-for="item in items"

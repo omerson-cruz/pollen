@@ -25,9 +25,7 @@ exports[`TaskCard renders default correctly 1`] = `
    
   <!---->
    
-  <div
-    class="task-card__items"
-  />
+  <!---->
 </article>
 `;
 
