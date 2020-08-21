@@ -31,14 +31,14 @@ import resizeFilestackImage from '../../util/resizeFilestackImage';
 const pxToRem = (val) => `${parseInt(val, 10) / 16}rem`;
 
 const getStyles = (props) => {
-  const { size, image, initials } = props;
+  const { size, image, initials, name } = props;
   let backgroundImage = null;
   if (image) {
     backgroundImage = `url(${resizeFilestackImage(image, {
       width: size,
       height: size,
     })})`;
-  } else if (!initials) {
+  } else if (!(initials || name)) {
     backgroundImage = `url(${DEFAULT_USER_IMAGE})`;
   }
   return {
