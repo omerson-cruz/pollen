@@ -14,6 +14,7 @@ export { default as AnnularThrobber } from '@/components/AnnularThrobber/Annular
 export { default as AvatarImage } from '@/components/AvatarImage/AvatarImage.vue';
 export { default as BaseButton } from '@/components/BaseButton/BaseButton.vue';
 export { default as BaseChip } from '@/components/BaseChip/BaseChip.vue';
+export { default as BaseDivider } from '@/components/BaseDivider/BaseDivider.vue';
 export { default as BaseIcon } from '@/components/BaseIcon/BaseIcon.vue';
 export { default as BaseTag } from '@/components/BaseTag/BaseTag.vue';
 export { default as CheckboxGroup } from '@/components/CheckboxGroup/CheckboxGroup.vue';
