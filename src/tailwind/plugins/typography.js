@@ -5,7 +5,7 @@ module.exports = plugin(({ addUtilities, config }) => {
     '.font-body-legal': {
       fontSize: config('theme.fontSize.10'),
       letterSpacing: config('theme.letterSpacing.wide'),
-      lineHeight: 1.2,
+      lineHeight: 1.4,
     },
     '.font-body-caption': {
       fontSize: config('theme.fontSize.12'),
