@@ -74,7 +74,7 @@ export default {
 
 @media screen and (min-width: 769px) {
   .modal-close__visible-label {
-    @apply block font-overline-small mt-1;
+    @apply block font-overline-small;
   }
 }
 </style>
