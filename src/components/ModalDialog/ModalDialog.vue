@@ -1,6 +1,6 @@
 <template>
   <FocusLock class="modal-dialog" :disabled="true">
-    <ModalWindow :size="size">
+    <ModalWindow :size="size" :full-bleed="fullBleed">
       <ModalHeader v-if="!!$slots.header" :variant="header">
         <slot name="header" />
       </ModalHeader>
@@ -70,6 +70,11 @@ export default {
     actions: {
       type: Object,
       default: null,
+    },
+    /** If true, removes the padding within the modal window. */
+    fullBleed: {
+      type: Boolean,
+      default: false,
     },
     /**
      * The header style. One of `transparent`, `primary`, `secondary`,

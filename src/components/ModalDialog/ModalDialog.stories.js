@@ -22,6 +22,9 @@ export const Default = () => ({
         Modal.ActionAlignments.CENTER
       ),
     },
+    fullBleed: {
+      default: boolean('Full Bleed', false),
+    },
     header: {
       default: select(
         'Header',
@@ -74,6 +77,7 @@ export const Default = () => ({
       v-if="isModalOpen"
       :action-alignment="actionAlignment"
       :actions="actions"
+      :full-bleed="fullBleed"
       :header="header"
       :overlay="overlay"
       :size="size"

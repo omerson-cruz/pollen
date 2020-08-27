@@ -1,5 +1,11 @@
 <template functional>
-  <div class="modal-window" :class="`modal-window--${props.size}`">
+  <div
+    class="modal-window"
+    :class="[
+      `modal-window--${props.size}`,
+      { 'modal-window--full-bleed': props.fullBleed },
+    ]"
+  >
     <slot />
   </div>
 </template>
@@ -9,6 +15,10 @@ import Modal from '../../../constants/Modal';
 
 export default {
   props: {
+    fullBleed: {
+      type: Boolean,
+      default: false,
+    },
     size: {
       type: String,
       default: Modal.Sizes.REGULAR,
@@ -22,7 +32,8 @@ export default {
 .modal-window {
   @apply bg-white 
     box-border 
-    overflow-auto 
+    overflow-y-auto 
+    overflow-x-hidden
     p-6 
     top-0 
     w-full;
@@ -130,5 +141,17 @@ export default {
     max-height: calc(100vh - 13rem);
     top: 6.5rem;
   }
+}
+
+.modal-window.modal-window--full-bleed {
+  @apply p-0;
+}
+
+.modal-window.modal-window--full-bleed >>> .modal-header {
+  @apply mt-0 mx-0;
+}
+
+.modal-window.modal-window--full-bleed >>> .modal-subfooter {
+  @apply mb-0 mx-0;
 }
 </style>
