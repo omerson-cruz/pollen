@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FancyCard renders correctly 1`] = `
+<article
+  class="base-card fancy-card"
+>
+  <header
+    class="base-card__header"
+  >
+    <div
+      aria-hidden=""
+      class="fancy-card__strip"
+    >
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(205, 224, 223);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(247, 242, 220);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(255, 170, 0);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(226, 89, 89);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(191, 66, 40);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(104, 0, 33);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(126, 36, 92);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(72, 29, 114);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(0, 40, 85);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(0, 104, 128);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(25, 145, 169);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(22, 167, 167);"
+      />
+      <div
+        class="fancy-card__strip-tile"
+        style="background: rgb(0, 72, 81);"
+      />
+    </div>
+  </header>
+   
+  <section
+    class="base-card__content"
+  >
+     Hello world
+  </section>
+   
+  <footer
+    class="base-card__footer"
+  >
+    This is the footer
+  </footer>
+</article>
+`;

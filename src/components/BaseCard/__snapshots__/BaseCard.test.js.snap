@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseCard renders correctly 1`] = `
+<article
+  class="base-card"
+>
+  <header
+    class="base-card__header"
+  >
+    This is the header
+  </header>
+   
+  <section
+    class="base-card__content"
+  >
+    Hello world
+  </section>
+   
+  <footer
+    class="base-card__footer"
+  >
+    This is the footer
+  </footer>
+</article>
+`;
