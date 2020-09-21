@@ -10,11 +10,7 @@
         <slot name="header-content">
           <component :is="titleTag" class="task-card__title">
             {{ title }}
-            <CounterBadge
-              v-if="count !== null"
-              :value="count"
-              class="align-middle"
-            />
+            <CounterBadge v-if="count !== null" :value="count" />
           </component>
           <div v-if="description" class="task-card__description">
             {{ description }}
@@ -152,6 +148,10 @@ export default {
 
 .task-card__primary-action ~ .task-card__items {
   @apply border-b mb-4;
+}
+
+.task-card .counter-badge {
+  @apply align-middle;
 }
 
 @media screen and (min-width: 768px) {
