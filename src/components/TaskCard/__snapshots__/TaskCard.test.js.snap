@@ -55,7 +55,7 @@ exports[`TaskCard renders signature example correctly 1`] = `
           Documents Awaiting Signature
           
           <div
-            class="counter-badge align-middle counter-badge--medium counter-badge--primary"
+            class="counter-badge counter-badge--medium counter-badge--primary"
           >
             
   4
@@ -140,7 +140,7 @@ exports[`TaskCard renders signature example correctly 2`] = `
           Employment Notices
           
           <div
-            class="counter-badge align-middle counter-badge--medium counter-badge--primary"
+            class="counter-badge counter-badge--medium counter-badge--primary"
           >
             
   5
