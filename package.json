@@ -1,6 +1,6 @@
 {
   "name": "@bambee/pollen",
-  "version": "0.16.3",
+  "version": "0.17.0",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
   "scripts": {
@@ -28,6 +28,7 @@
     "@fortawesome/pro-regular-svg-icons": "^5.14.0",
     "@fortawesome/pro-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@popperjs/core": "^2.4.4",
     "cleave.js": "^1.6.0",
     "lodash": "^4.17.15",
     "shortid": "^2.2.15",
@@ -46,6 +47,7 @@
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/vue": "^5.3.19",
+    "@testing-library/jest-dom": "^5.11.4",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",

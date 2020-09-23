@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import Alert from '@/constants/Alert';
 import Button from '@/constants/Button';
 import Form from '@/constants/Form';
@@ -39,6 +38,7 @@ export { default as TaskCard } from '@/components/TaskCard/TaskCard.vue';
 export { default as TextInput } from '@/components/TextInput/TextInput.vue';
 export { default as TextareaInput } from '@/components/TextareaInput/TextareaInput.vue';
 export { default as TightGrid } from '@/components/TightGrid/TightGrid.vue';
+export { default as ToolTip } from '@/components/ToolTip/ToolTip.vue';
 export { default as TwoColumnMultiSelect } from '@/components/TwoColumnMultiSelect/TwoColumnMultiSelect.vue';
 export { default as TypeBody } from '@/components/TypeBody/TypeBody.vue';
 export { default as TypeDisplay } from '@/components/TypeDisplay/TypeDisplay.vue';

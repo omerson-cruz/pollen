@@ -34,6 +34,7 @@ import {
   faClipboardCheck as clipboardCheck,
   faPlus as plus,
   faTimes as close,
+  faGift as gift,
 } from '@fortawesome/pro-light-svg-icons';
 
 import {
@@ -54,10 +55,12 @@ import {
   faPhoneAlt as phone,
   faPrint as print,
   faQuestion as question,
+  faQuestionCircle as questionCircle,
   faSignOutAlt as signOut,
   faUsers as users,
   faTrash as trash,
   faWrench as wrench,
+  faGift as giftSolid,
 } from '@fortawesome/free-solid-svg-icons';
 
 import caretDown from '../../assets/icons/caret-down.svg';
@@ -83,12 +86,15 @@ const FAIcons = Object.freeze({
   cogs,
   ear,
   folder,
+  gift,
+  giftSolid,
   lock,
   pen,
   phone,
   plus,
   print,
   question,
+  questionCircle,
   search,
   signOut,
   tachometer,

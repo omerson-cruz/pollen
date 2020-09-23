@@ -23,4 +23,5 @@ module.exports = {
     'components/internal',
   ],
   snapshotSerializers: ['jest-serializer-vue'],
+  setupFilesAfterEnv: ['./jest.setup.js'],
 };
