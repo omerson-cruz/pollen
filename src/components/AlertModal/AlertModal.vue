@@ -129,4 +129,18 @@ export default {
 .alert-modal--error >>> .modal-actions__action--primary {
   @apply bg-error;
 }
+
+.alert-modal--success
+  >>> .modal-actions__action--primary:active:not([disabled]) {
+  @apply bg-success;
+}
+
+.alert-modal--warning
+  >>> .modal-actions__action--primary:active:not([disabled]) {
+  @apply bg-gingerrr;
+}
+
+.alert-modal--error >>> .modal-actions__action--primary:active:not([disabled]) {
+  background: #e32c50; /* This is a one-off color. */
+}
 </style>

@@ -39,6 +39,7 @@ export default {
     border 
     border-solid 
     border-transparent 
+    cursor-pointer
     p-2 
     rounded-md 
     text-23;

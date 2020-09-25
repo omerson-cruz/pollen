@@ -19,6 +19,7 @@ export { default as BaseIcon } from '@/components/BaseIcon/BaseIcon.vue';
 export { default as BaseTag } from '@/components/BaseTag/BaseTag.vue';
 export { default as CheckboxGroup } from '@/components/CheckboxGroup/CheckboxGroup.vue';
 export { default as CheckboxInput } from '@/components/CheckboxInput/CheckboxInput.vue';
+export { default as CounterBadge } from '@/components/CounterBadge/CounterBadge.vue';
 export { default as DateInput } from '@/components/DateInput/DateInput.vue';
 export { default as FancyCard } from '@/components/FancyCard/FancyCard.vue';
 export { default as FancyIcon } from '@/components/FancyIcon/FancyIcon.vue';
