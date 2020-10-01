@@ -1,5 +1,8 @@
 <template>
   <div class="task-card-item">
+    <div v-if="progressIcon" class="task-card-item__status">
+      <ProgressIcon v-bind="progressIcon" />
+    </div>
     <div class="task-card-item__content">
       <div class="task-card-item__title">
         {{ title }}
@@ -32,12 +35,19 @@
 <script>
 import BaseButton from '../BaseButton/BaseButton.vue';
 import Button from '../../constants/Button';
+import ProgressIcon from '../ProgressIcon/ProgressIcon.vue';
 import UserAvatar, { Sizes } from '../UserAvatar/UserAvatar.vue';
+
+export const TaskStatuses = Object.freeze({
+  COMPLETE: 'complete',
+  INCOMPLETE: 'incomplete',
+  DISABLED: 'disabled',
+});
 
 export default {
   Button,
   Sizes,
-  components: { BaseButton, UserAvatar },
+  components: { BaseButton, ProgressIcon, UserAvatar },
   props: {
     actions: {
       type: Array,
@@ -51,9 +61,25 @@ export default {
       type: String,
       default: null,
     },
+    status: {
+      type: String,
+      default: null,
+      validator: (value) =>
+        !value || Object.values(TaskStatuses).includes(value),
+    },
     title: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    progressIcon() {
+      return this.status
+        ? {
+            complete: this.status === TaskStatuses.COMPLETE,
+            disabled: this.status === TaskStatuses.DISABLED,
+          }
+        : null;
     },
   },
 };
@@ -62,6 +88,10 @@ export default {
 <style scoped>
 .task-card-item {
   @apply flex flex-col mx-6 py-3;
+}
+
+.task-card-item__status {
+  @apply flex-shrink-0 mr-4;
 }
 
 .task-card-item__content {
@@ -84,8 +114,12 @@ export default {
   @apply ml-2;
 }
 
-.task-card-item__action.base-button--flat[disabled] {
+.task-card-item__action.base-button--flat.base-button--secondary[disabled] {
   @apply opacity-100 px-0 text-secondary;
+}
+
+.task-card-item__action.base-button--flat.base-button--tertiary[disabled] {
+  @apply opacity-100 px-0 text-warning;
 }
 
 .task-card-item__action.base-button--flat[disabled] >>> .base-button__inner {

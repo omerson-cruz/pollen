@@ -31,6 +31,7 @@ import {
 } from '@fortawesome/pro-regular-svg-icons';
 
 import {
+  faCircle as circle,
   faClipboardCheck as clipboardCheck,
   faPlus as plus,
   faTimes as close,
@@ -80,6 +81,7 @@ const FAIcons = Object.freeze({
   calendar,
   check,
   checkCircle,
+  circle,
   clipboardCheck,
   clock,
   close,

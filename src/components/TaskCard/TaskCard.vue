@@ -78,9 +78,11 @@ export default {
     /**
      * An array of object items to display in the card. These items should have
      * a `title` string, a `description` string, an array of `actions` objects
-     * that have a `label` string and `handler` function, and finally an
-     * optional `attribution` object that has at least an `image` url or a
-     * `name` string.
+     * that have a `label` string and `handler` function. Optionally, items can
+     * have `attribution` object that has at least an `image` url or a
+     * `name` string. Optinally, items can also have a `status` string that is
+     * one of `complete`, `incomplete`, or `disabled` to display a progress
+     * icon next to the item.
      */
     items: {
       type: Array,
@@ -127,7 +129,7 @@ export default {
 }
 
 .task-card__title {
-  @apply font-heading-subtitle font-semibold;
+  @apply font-heading-subtitle font-semibold m-0;
 }
 
 .task-card__description {
@@ -164,7 +166,7 @@ export default {
   }
 
   .task-card__title {
-    @apply font-heading-title m-0;
+    @apply font-heading-title;
   }
 
   .task-card__description {

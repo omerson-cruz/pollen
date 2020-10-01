@@ -3,6 +3,7 @@ import TaskCard from './TaskCard.vue';
 import {
   DocumentsAwaitingSignature,
   EmploymentNotices,
+  AccountSetup,
 } from './TaskCard.stories';
 
 describe('TaskCard', () => {
@@ -17,6 +18,11 @@ describe('TaskCard', () => {
   });
   test('renders signature example correctly', () => {
     const example = EmploymentNotices();
+    const wrapper = mount(example);
+    expect(wrapper.element).toMatchSnapshot();
+  });
+  test('renders setup example correctly', () => {
+    const example = AccountSetup();
     const wrapper = mount(example);
     expect(wrapper.element).toMatchSnapshot();
   });

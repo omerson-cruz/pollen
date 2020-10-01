@@ -29,6 +29,7 @@ export { default as MeerkatNotification } from '@/components/MeerkatNotification
 export { default as MeerkatNotifications } from '@/components/MeerkatNotifications/MeerkatNotifications.vue';
 export { default as ModalDialog } from '@/components/ModalDialog/ModalDialog.vue';
 export { default as PasswordInput } from '@/components/PasswordInput/PasswordInput.vue';
+export { default as ProgressIcon } from '@/components/ProgressIcon/ProgressIcon.vue';
 export { default as RadioGroup } from '@/components/RadioGroup/RadioGroup.vue';
 export { default as RadioInput } from '@/components/RadioInput/RadioInput.vue';
 export { default as RadioToggle } from '@/components/RadioToggle/RadioToggle.vue';

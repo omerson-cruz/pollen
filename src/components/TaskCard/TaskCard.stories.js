@@ -234,3 +234,153 @@ export const EmploymentNotices = () => ({
     </div>
   `,
 });
+
+export const AccountSetup = () => ({
+  components: { TaskCard },
+  data() {
+    return {
+      items: [
+        {
+          title: 'Company Information',
+          status: 'complete',
+          actions: [
+            {
+              flat: true,
+              label: 'Edit',
+              handler: () => {
+                console.log('clicked edit');
+              },
+            },
+          ],
+        },
+        {
+          title: 'Add staff',
+          status: 'incomplete',
+          actions: [
+            {
+              label: 'Begin',
+              handler: () => {
+                console.log('clicked Begin');
+              },
+            },
+          ],
+        },
+        {
+          title: 'Insurance information',
+          status: 'disabled',
+          actions: [
+            {
+              disabled: true,
+              label: 'Begin',
+              handler: () => {
+                console.log('clicked Begin');
+              },
+            },
+          ],
+        },
+        {
+          title: 'Schedule Your HR Audit Call',
+          status: 'disabled',
+          actions: [
+            {
+              label: 'Schedule',
+              handler: () => {
+                console.log('clicked Schedule');
+              },
+            },
+          ],
+        },
+      ],
+    };
+  },
+  template: `
+    <div class="bg-gray-6 flex items-center justify-center w-full min-h-screen">
+      <TaskCard
+        title="Account Setup"
+        description="Getting set up with Bambee is easy and takes just a few minutes"
+        icon="puzzlePeople"
+        :items="items"
+      />
+    </div>
+  `,
+});
+
+export const DocumentsAwaitingApproval = () => ({
+  components: { TaskCard },
+  data() {
+    return {
+      items: [
+        {
+          title: 'Offer Letter',
+          description: '4 Days Ago',
+          actions: [
+            {
+              label: 'Review Document',
+              handler: () => {
+                console.log('clicked Review Document');
+              },
+            },
+          ],
+        },
+        {
+          title: 'Discrimination, Harassment, and Retaliation Prevention',
+          description: '4 Days Ago',
+          actions: [
+            {
+              label: 'Review Document',
+              handler: () => {
+                console.log('clicked Review Document');
+              },
+            },
+          ],
+        },
+        {
+          title: 'User of Communications and Computer Systems',
+          actions: [
+            {
+              flat: true,
+              disabled: true,
+              label: 'Approved',
+              preIcon: 'check',
+              variant: 'secondary',
+            },
+          ],
+        },
+        {
+          title: 'W4 2020',
+          description: '4 Days Ago',
+          actions: [
+            {
+              flat: true,
+              disabled: true,
+              label: 'Approved',
+              preIcon: 'check',
+              variant: 'secondary',
+            },
+          ],
+        },
+        {
+          title: 'Non-Harassment',
+          description: '4 Days Ago',
+          actions: [
+            {
+              flat: true,
+              disabled: true,
+              label: 'Changes Requested',
+              variant: 'tertiary',
+            },
+          ],
+        },
+      ],
+    };
+  },
+  template: `
+    <div class="bg-gray-6 flex items-center justify-center w-full min-h-screen">
+      <TaskCard
+        title="Documents Awaiting Approval"
+        icon="clipboardCheck"
+        :items="items"
+      />
+    </div>
+  `,
+});

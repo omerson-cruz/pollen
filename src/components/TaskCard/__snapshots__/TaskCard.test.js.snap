@@ -29,6 +29,58 @@ exports[`TaskCard renders default correctly 1`] = `
 </article>
 `;
 
+exports[`TaskCard renders setup example correctly 1`] = `
+<div
+  class="bg-gray-6 flex items-center justify-center w-full min-h-screen"
+>
+  <article
+    class="task-card"
+  >
+    <header
+      class="task-card__header"
+    >
+      <div
+        class="task-card__icon"
+      >
+        <svg
+          class="fancy-icon"
+        />
+      </div>
+       
+      <div>
+        <h2
+          class="task-card__title"
+        >
+          
+          Account Setup
+          
+          <!---->
+        </h2>
+         
+        <div
+          class="task-card__description"
+        >
+          
+          Getting set up with Bambee is easy and takes just a few minutes
+        
+        </div>
+      </div>
+    </header>
+     
+    <!---->
+     
+    <div
+      class="task-card__items"
+    >
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+    </div>
+  </article>
+</div>
+`;
+
 exports[`TaskCard renders signature example correctly 1`] = `
 <div
   class="bg-gray-6 flex items-center justify-center w-full min-h-screen"
