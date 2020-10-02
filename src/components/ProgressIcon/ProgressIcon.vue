@@ -9,7 +9,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    /** If true, icon is greyed out. If false, icon is in primary color.*/
+    /** If true, icon is greyed out. If false, icon is in primary color. */
     disabled: {
       type: Boolean,
       default: false,
