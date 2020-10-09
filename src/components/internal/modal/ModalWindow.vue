@@ -1,10 +1,14 @@
 <template functional>
   <div
+    :id="props.id"
     class="modal-window"
     :class="[
       `modal-window--${props.size}`,
       { 'modal-window--full-bleed': props.fullBleed },
     ]"
+    role="dialog"
+    :aria-labelledby="`${props.id}-header`"
+    :aria-describedby="`${props.id}-body`"
   >
     <slot />
   </div>
@@ -15,6 +19,10 @@ import Modal from '../../../constants/Modal';
 
 export default {
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     fullBleed: {
       type: Boolean,
       default: false,

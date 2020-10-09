@@ -1,10 +1,14 @@
 <template>
   <FocusLock class="modal-dialog" :disabled="true">
-    <ModalWindow :size="size" :full-bleed="fullBleed">
-      <ModalHeader v-if="!!$slots.header" :variant="header">
+    <ModalWindow :id="id" :size="size" :full-bleed="fullBleed">
+      <ModalHeader
+        v-if="!!$slots.header"
+        :id="`${id}-header`"
+        :variant="header"
+      >
         <slot name="header" />
       </ModalHeader>
-      <div class="modal-dialog__body">
+      <div :id="`${id}-body`" class="modal-dialog__body">
         <slot />
       </div>
       <ModalActions
@@ -19,12 +23,13 @@
       </ModalSubfooter>
     </ModalWindow>
     <ModalClose :variant="overlay" @click="close" />
-    <ModalOverlay :variant="overlay" />
+    <ModalOverlay :variant="overlay" @click="handleOverlayClick" />
   </FocusLock>
 </template>
 
 <script>
 import FocusLock from 'vue-focus-lock';
+import shortid from 'shortid';
 import Modal from '../../constants/Modal';
 import ModalActions from '../internal/modal/ModalActions.vue';
 import ModalClose from '../internal/modal/ModalClose.vue';
@@ -85,6 +90,11 @@ export default {
       default: Modal.Headers.TRANSPARENT,
       validator: (value) => Object.values(Modal.Headers).includes(value),
     },
+    /** A unique element ID. By default, one is randomly generated. */
+    id: {
+      type: String,
+      default: shortid.generate,
+    },
     /**
      * The background overlay style. One of `primary`, `dark`, or `light`.
      */
@@ -92,6 +102,11 @@ export default {
       type: String,
       default: Modal.Overlays.PRIMARY,
       validator: (value) => Object.values(Modal.Overlays).includes(value),
+    },
+    /** If true, emits `close` event when the background overlay is clicked. */
+    overlayClose: {
+      type: Boolean,
+      default: true,
     },
     /**
      * The overlay width. One of `tiny`, `small`, `regular`, `medium`, `large,
@@ -119,6 +134,12 @@ export default {
      */
     handleKeyup(e) {
       if (e.keyCode !== 27) {
+        return;
+      }
+      this.close();
+    },
+    handleOverlayClick() {
+      if (!this.overlayClose) {
         return;
       }
       this.close();

@@ -10,6 +10,7 @@ describe('ModalDialog', () => {
         subfooter: 'Subfooter goes here',
       },
       propsData: {
+        id: 'test',
         actions: {
           primary: {
             label: 'Accept',
@@ -42,5 +43,19 @@ describe('ModalDialog', () => {
     wrapper.destroy();
     wrapper.trigger('keyup.esc');
     expect(wrapper.emitted().close.length).toBe(1);
+  });
+
+  test('emits a close event when the overlay is clicked', () => {
+    const wrapper = mount(ModalDialog);
+    wrapper.find('.modal-overlay').trigger('click');
+    expect(wrapper.emitted().close.length).toBe(1);
+  });
+
+  test('does not emit a close event when the overlay is clicked if `closeOnOverlayClick` is false', () => {
+    const wrapper = mount(ModalDialog, {
+      propsData: { overlayClose: false },
+    });
+    wrapper.find('.modal-overlay').trigger('click');
+    expect(wrapper.emitted().close).toBeFalsy();
   });
 });

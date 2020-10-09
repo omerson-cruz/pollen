@@ -1,5 +1,6 @@
 <template>
   <ModalDialog
+    :id="id"
     class="alert-modal"
     :class="`alert-modal--${variant}`"
     :actions="actions"
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+import shortid from 'shortid';
 import BaseIcon, { Icons } from '../BaseIcon/BaseIcon.vue';
 import ModalDialog from '../ModalDialog/ModalDialog.vue';
 import Modal from '../../constants/Modal';
@@ -43,6 +45,11 @@ export default {
     confirmLabel: {
       type: String,
       default: 'Continue',
+    },
+    /** A unique element ID. By default, one is randomly generated. */
+    id: {
+      type: String,
+      default: shortid.generate,
     },
     /** Message to display. This can also be defined by the `default` slot. */
     message: {

@@ -10,7 +10,7 @@ describe('AlertModal', () => {
           default: 'Content goes here',
           header: 'Heading goes here',
         },
-        propsData: { variant },
+        propsData: { id: 'test', variant },
       });
       expect(wrapper.element).toMatchSnapshot();
     });

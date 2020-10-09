@@ -16,10 +16,15 @@ exports[`AlertModal renders error variant correctly 1`] = `
     data-lock=""
   >
     <div
+      aria-describedby="test-body"
+      aria-labelledby="test-header"
       class="modal-window modal-window--small"
+      id="test"
+      role="dialog"
     >
       <div
         class="modal-header modal-header--transparent"
+        id="test-header"
       >
         <svg
           aria-hidden="true"
@@ -42,6 +47,7 @@ exports[`AlertModal renders error variant correctly 1`] = `
        
       <div
         class="modal-dialog__body"
+        id="test-body"
       >
          Content goes here
       </div>
@@ -138,10 +144,15 @@ exports[`AlertModal renders success variant correctly 1`] = `
     data-lock=""
   >
     <div
+      aria-describedby="test-body"
+      aria-labelledby="test-header"
       class="modal-window modal-window--small"
+      id="test"
+      role="dialog"
     >
       <div
         class="modal-header modal-header--transparent"
+        id="test-header"
       >
         <svg
           aria-hidden="true"
@@ -164,6 +175,7 @@ exports[`AlertModal renders success variant correctly 1`] = `
        
       <div
         class="modal-dialog__body"
+        id="test-body"
       >
          Content goes here
       </div>
@@ -260,10 +272,15 @@ exports[`AlertModal renders warning variant correctly 1`] = `
     data-lock=""
   >
     <div
+      aria-describedby="test-body"
+      aria-labelledby="test-header"
       class="modal-window modal-window--small"
+      id="test"
+      role="dialog"
     >
       <div
         class="modal-header modal-header--transparent"
+        id="test-header"
       >
         <svg
           aria-hidden="true"
@@ -286,6 +303,7 @@ exports[`AlertModal renders warning variant correctly 1`] = `
        
       <div
         class="modal-dialog__body"
+        id="test-body"
       >
          Content goes here
       </div>

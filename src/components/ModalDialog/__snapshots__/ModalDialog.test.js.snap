@@ -16,16 +16,22 @@ exports[`ModalDialog renders correctly 1`] = `
     data-lock=""
   >
     <div
+      aria-describedby="test-body"
+      aria-labelledby="test-header"
       class="modal-window modal-window--regular"
+      id="test"
+      role="dialog"
     >
       <div
         class="modal-header modal-header--transparent"
+        id="test-header"
       >
         Heading goes here
       </div>
        
       <div
         class="modal-dialog__body"
+        id="test-body"
       >
         Content goes here
       </div>

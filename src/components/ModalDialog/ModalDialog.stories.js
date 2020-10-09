@@ -39,6 +39,9 @@ export const Default = () => ({
         Modal.Overlays.PRIMARY
       ),
     },
+    overlayClose: {
+      default: boolean('Close on overlay click', true),
+    },
     size: {
       default: select('Size', Object.values(Modal.Sizes), Modal.Sizes.REGULAR),
     },
@@ -80,6 +83,7 @@ export const Default = () => ({
       :full-bleed="fullBleed"
       :header="header"
       :overlay="overlay"
+      :overlay-close="overlayClose"
       :size="size"
       @close="isModalOpen = false">
       <template #header>
