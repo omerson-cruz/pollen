@@ -68,13 +68,13 @@ export const WithContentAsSlots = () => ({
   <div>
     <TabSet :options="options">
       <template v-slot:Foo>
-        <div :key="item" class="bg-gray-5 p-8">Hello from Foo</div>
+        <div class="bg-gray-5 p-8">Hello from Foo</div>
       </template>
       <template v-slot:Bar>
-        <div :key="item" class="bg-primary p-8 text-white">Hello from Foo</div>
+        <div class="bg-primary p-8 text-white">Hello from Foo</div>
       </template>
       <template v-slot:['Hello World']>
-        <div :key="item" class="bg-success p-8 text-white">Hello from Hello world</div>
+        <div class="bg-success p-8 text-white">Hello from Hello world</div>
       </template>
     </Tabset>
     <p class="mt-4">
