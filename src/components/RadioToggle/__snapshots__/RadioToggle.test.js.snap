@@ -68,6 +68,8 @@ exports[`RadioToggle renders options correctly 1`] = `
     </span>
   </label>
    
-  <!---->
+  <div
+    class="radio-toggle__indicator"
+  />
 </div>
 `;

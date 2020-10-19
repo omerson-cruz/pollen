@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabSet renders correctly 1`] = `
+<div
+  class="tab-set"
+  id="test"
+>
+  <div
+    class="tab-controls"
+  >
+    <ul
+      class="tab-controls__tabs"
+      role="tablist"
+    >
+      <li
+        class="tab-controls__tab tab-controls__tab--active"
+      >
+        <a
+          aria-controls="test-foo-panel"
+          aria-selected="true"
+          class="tab-controls__link"
+          href="#test-foo-panel"
+          id="test-foo-tab"
+          role="tab"
+        >
+          Foo
+        </a>
+      </li>
+      <li
+        class="tab-controls__tab"
+      >
+        <a
+          aria-controls="test-bar-panel"
+          class="tab-controls__link"
+          href="#test-bar-panel"
+          id="test-bar-tab"
+          role="tab"
+        >
+          Bar
+        </a>
+      </li>
+    </ul>
+     
+    <div
+      class="tab-controls__indicator"
+      role="presentation"
+    />
+  </div>
+   
+  <div
+    class="tab-panel tab-panel--active"
+    id="test-foo-panel"
+    role="tabpanel"
+  >
+    <div
+      class="tab-set__simple-content"
+    >
+      This is the simplest way to display content.
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    class="tab-panel"
+    hidden="hidden"
+    id="test-bar-panel"
+    role="tabpanel"
+  >
+    <div
+      class="tab-set__simple-content"
+    >
+      Pass Tabset an array of objects with a \`label\` and \`content\` key.
+    </div>
+  </div>
+</div>
+`;

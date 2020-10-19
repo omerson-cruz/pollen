@@ -57,4 +57,43 @@ describe('RadioToggle', () => {
     await inputs.at(2).trigger('click');
     expect(wrapper.emitted().input).toEqual([['foo'], ['Option 1'], ['bar']]);
   });
+
+  test('triggers position update when value changes', async () => {
+    const wrapper = mount(RadioToggle, {
+      propsData: {
+        options,
+        value: 'foo',
+      },
+    });
+    const mockPositionIndicator = jest.fn();
+    wrapper.vm.positionIndicator = mockPositionIndicator;
+    wrapper.setProps({ value: 'bar' });
+    await wrapper.vm.$nextTick();
+    expect(mockPositionIndicator).toBeCalled();
+  });
+
+  test('updates bgStyle correctly', () => {
+    const expectedStyle = {
+      left: '10px',
+      height: '10px',
+      width: '10px',
+    };
+    const wrapper = mount(RadioToggle, {
+      propsData: {
+        options,
+        value: 'foo',
+      },
+    });
+    wrapper.vm.$refs = {
+      foo: [
+        {
+          offsetLeft: 10,
+          offsetHeight: 10,
+          offsetWidth: 10,
+        },
+      ],
+    };
+    wrapper.vm.positionIndicator();
+    expect(wrapper.vm.bgStyle).toEqual(expectedStyle);
+  });
 });

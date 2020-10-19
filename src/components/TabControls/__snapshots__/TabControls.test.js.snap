@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabControls renders correctly 1`] = `
+<div
+  class="tab-controls"
+>
+  <ul
+    class="tab-controls__tabs"
+    role="tablist"
+  >
+    <li
+      class="tab-controls__tab"
+    >
+      <a
+        aria-controls="test-option-1-panel"
+        class="tab-controls__link"
+        href="#test-option-1-panel"
+        id="test-option-1-tab"
+        role="tab"
+      >
+        Option 1
+      </a>
+    </li>
+    <li
+      class="tab-controls__tab"
+    >
+      <a
+        aria-controls="test-foo-panel"
+        class="tab-controls__link"
+        href="#test-foo-panel"
+        id="test-foo-tab"
+        role="tab"
+      >
+        Option 2
+      </a>
+    </li>
+    <li
+      class="tab-controls__tab"
+    >
+      <a
+        aria-controls="test-bar-panel"
+        class="tab-controls__link"
+        href="#test-bar-panel"
+        id="test-bar-tab"
+        role="tab"
+      >
+        Option 3
+      </a>
+    </li>
+  </ul>
+   
+  <div
+    class="tab-controls__indicator"
+    role="presentation"
+  />
+</div>
+`;

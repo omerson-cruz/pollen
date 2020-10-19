@@ -16,8 +16,8 @@ const mapOptions = (options) =>
     const { label, value, ...rest } = item;
 
     return {
-      label,
-      value,
+      label: label || value,
+      value: value || label,
       ...rest,
     };
   });

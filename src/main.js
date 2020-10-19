@@ -20,6 +20,7 @@ export { default as BaseTag } from '@/components/BaseTag/BaseTag.vue';
 export { default as CheckboxGroup } from '@/components/CheckboxGroup/CheckboxGroup.vue';
 export { default as CheckboxInput } from '@/components/CheckboxInput/CheckboxInput.vue';
 export { default as CounterBadge } from '@/components/CounterBadge/CounterBadge.vue';
+export { default as CountersignIcon } from '@/components/CountersignIcon/CountersignIcon.vue';
 export { default as DateInput } from '@/components/DateInput/DateInput.vue';
 export { default as FancyCard } from '@/components/FancyCard/FancyCard.vue';
 export { default as FancyIcon } from '@/components/FancyIcon/FancyIcon.vue';
@@ -36,6 +37,8 @@ export { default as RadioToggle } from '@/components/RadioToggle/RadioToggle.vue
 export { default as SelectInput } from '@/components/SelectInput/SelectInput.vue';
 export { default as SwitchGroup } from '@/components/SwitchGroup/SwitchGroup.vue';
 export { default as SwitchInput } from '@/components/SwitchInput/SwitchInput.vue';
+export { default as TabControls } from '@/components/TabControls/TabControls.vue';
+export { default as TabSet } from '@/components/TabSet/TabSet.vue';
 export { default as TaskCard } from '@/components/TaskCard/TaskCard.vue';
 export { default as TextInput } from '@/components/TextInput/TextInput.vue';
 export { default as TextareaInput } from '@/components/TextareaInput/TextareaInput.vue';

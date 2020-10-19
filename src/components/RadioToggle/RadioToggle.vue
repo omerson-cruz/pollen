@@ -26,11 +26,7 @@
       />
       <span class="radio-toggle__label" v-html="item.label" />
     </label>
-    <div
-      v-if="haveRefsMounted && value"
-      class="radio-toggle__indicator"
-      :style="bgStyle"
-    />
+    <div v-if="value" class="radio-toggle__indicator" :style="bgStyle" />
   </div>
 </template>
 
@@ -74,7 +70,7 @@ export default {
 
   data() {
     return {
-      haveRefsMounted: false,
+      bgStyle: {},
       isFocused: false,
     };
   },
@@ -83,32 +79,32 @@ export default {
     mappedOptions() {
       return mapOptions(this.options);
     },
-
-    bgStyle() {
-      const activeLabel = this.$refs[this.value]
-        ? this.$refs[this.value][0]
-        : null;
-      if (!activeLabel) {
-        return {};
-      }
-
-      return {
-        left: `${activeLabel.offsetLeft}px`,
-        height: `${activeLabel.offsetHeight}px`,
-        width: `${activeLabel.offsetWidth}px`,
-      };
+  },
+  watch: {
+    value() {
+      this.positionIndicator();
     },
   },
-
   mounted() {
-    this.$nextTick(() => {
-      this.haveRefsMounted = true;
-    });
+    this.positionIndicator();
   },
-
   methods: {
     handleInput(e) {
       this.$emit('input', e.target.value);
+    },
+    positionIndicator() {
+      const activeLabel = this.$refs[this.value]
+        ? this.$refs[this.value][0]
+        : null;
+      let newStyle = {};
+      if (activeLabel) {
+        newStyle = {
+          left: `${activeLabel.offsetLeft}px`,
+          height: `${activeLabel.offsetHeight}px`,
+          width: `${activeLabel.offsetWidth}px`,
+        };
+      }
+      this.bgStyle = newStyle;
     },
   },
 };
