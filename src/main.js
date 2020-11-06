@@ -16,6 +16,7 @@ export { default as BaseCard } from '@/components/BaseCard/BaseCard.vue';
 export { default as BaseChip } from '@/components/BaseChip/BaseChip.vue';
 export { default as BaseDivider } from '@/components/BaseDivider/BaseDivider.vue';
 export { default as BaseIcon } from '@/components/BaseIcon/BaseIcon.vue';
+export { default as BaseSurvey } from '@/components/BaseSurvey/BaseSurvey.vue';
 export { default as BaseTag } from '@/components/BaseTag/BaseTag.vue';
 export { default as CheckboxGroup } from '@/components/CheckboxGroup/CheckboxGroup.vue';
 export { default as CheckboxInput } from '@/components/CheckboxInput/CheckboxInput.vue';
