@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseSurvey renders correctly 1`] = `
+<div class="base-survey sv_main sv_default_css">
+  <form onsubmit="return false;">
+    <div class="sv_custom_header"></div>
+    <div class="sv_container">
+      <!---->
+      <!---->
+      <div class="sv_body">
+        <!---->
+        <!---->
+        <!---->
+        <div class="sv_p_root" id="sp_100">
+          <!---->
+          <!---->
+          <div class="sv_row">
+            <div class="sv-vue-row-additional-div">
+              <div class="sv_q sv_qstn" id="sq_100" aria-labelledby="sq_100_ariaTitle" name="hasPosters" style="flex-basis: 100.000000%; flex-grow: 1; flex-shrink: 1; width: 100.000000%; min-width: 300px; max-width: initial; display: inline-block;">
+                <div class="">
+                  <h5 aria-label="Do you have up-to-date (current year) Federal, State, and Local labor notices posted in your break rooms?" id="sq_100_ariaTitle" class="sv_q_title">
+                    <!----> <span class="sv_q_num" style="position: static;">1.</span>
+                    <!----> <span style="position: static;"><span style="position: static;">Do you have up-to-date (current year) Federal, State, and Local labor notices posted in your break rooms?</span></span> <span class="sv_q_required_text">*</span></h5>
+                  <div class="sv_q_description"><span style="position: static;"><span style="position: static;"></span></span></div>
+                </div>
+                <div class="">
+                  <div role="alert" id="sq_100_errors" class="sv_q_erbox sv_qstn_error_top" style="display: none;"></div>
+                  <div class="sv_qcbc sv_qbln"><label class="sv-boolean sv-boolean--indeterminate"><input type="checkbox" name="hasPosters" id="sq_100i" aria-required="true" aria-label="Do you have up-to-date (current year) Federal, State, and Local labor notices posted in your break rooms?" class="sv-visuallyhidden" value=""> <span class="sv-boolean__label  ">No</span>
+                      <div class="sv-boolean__switch"><span class="sv-boolean__slider"></span></div> <span class="sv-boolean__label  ">Yes</span>
+                    </label></div>
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <!---->
+        </div>
+        <!---->
+        <div class="sv_progress">
+          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="sv_progress_bar" style="width: 17%;"><span class="undefined sv-hidden">Page 1 of 6</span></div> <span class="undefined undefined">Page 1 of 6</span>
+        </div>
+        <div class="sv_nav"><input type="button" value="Previous" class=" sv_prev_btn" style="display: none;"> <input type="button" value="Next" class=" sv_next_btn">
+          <!----> <input type="button" value="Complete" class=" sv_complete_btn" style="display: none;"></div>
+      </div>
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+    </div>
+  </form>
+</div>
+`;

@@ -1,0 +1,94 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "hasPosters",
+          "title": "Do you have up-to-date (current year) Federal, State, and Local labor notices posted in your break rooms?",
+          "isRequired": true
+        },
+        {
+          "type": "boolean",
+          "name": "orderPosters",
+          "visibleIf": "{hasPosters} = false",
+          "title": "Would  you like us to order posters for your location?",
+          "hideNumber": true
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "hasRemoteWorkers",
+          "title": "Do you have any remote workers?",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "comment",
+          "name": "hiringPaperwork",
+          "title": "When hiring a new employee, what paperwork do you provide during the onboarding process?",
+          "description": "Leave blank if none is provided."
+        }
+      ]
+    },
+    {
+      "name": "page4",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "hasOnboardingPolicies",
+          "title": "Are there any policies that your employees receive at the beginning of employment or during?",
+          "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "onboardingPolicies",
+          "visibleIf": "{hasOnboardingPolicies} = true",
+          "title": "Please list the policies you currently provide.",
+          "hideNumber": true,
+          "requiredIf": "{hasOnboardingPolicies} = true"
+        }
+      ]
+    },
+    {
+      "name": "page5",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "hasSeparateFiles",
+          "title": "Do you maintain separate files for medical, personnel, and I-9s?",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "page6",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "hasPtoPolicy",
+          "title": "Does your company have a defined paid or unpaid time off policy?",
+          "isRequired": true
+        },
+        {
+          "type": "boolean",
+          "name": "wantsPtoPolicy",
+          "visibleIf": "{hasPtoPolicy} = true",
+          "title": "That’s great! We want to let you know we can provide a compliant replacement policy for you. Are you interested in starting that process? ",
+          "hideNumber": true
+        }
+      ]
+    }
+  ],
+  "showCompletedPage": false,
+  "showProgressBar": "bottom"
+}
