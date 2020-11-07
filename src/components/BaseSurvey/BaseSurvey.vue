@@ -11,27 +11,6 @@ import 'survey-vue/survey.css';
 
 const { theme } = resolveConfig(tailwindConfig);
 
-const defaultThemeColors = SurveyVue.StylesManager.ThemeColors.default;
-defaultThemeColors['$border-color'] = theme.colors.gray['5'];
-defaultThemeColors['$body-container-background-color'] = theme.colors.gray['7'];
-defaultThemeColors['$disable-color'] = theme.colors.black;
-defaultThemeColors['$disabled-label-color'] = theme.colors.gray['3'];
-defaultThemeColors['$disabled-switch-color'] = 'rgba(72, 29, 115, 0.5)';
-defaultThemeColors['$disabled-slider-color'] = theme.colors.white;
-defaultThemeColors['$error-background-color'] = theme.colors['error-light'];
-defaultThemeColors['$error-color'] = theme.colors.error;
-defaultThemeColors['$inputs-background-color'] = theme.colors.white;
-defaultThemeColors['$main-color'] = theme.colors.primary;
-defaultThemeColors['$main-hover-color'] = theme.colors['primary-tint']['1'];
-defaultThemeColors['$slider-color'] = theme.colors.white;
-defaultThemeColors['$text-color'] = theme.colors.black;
-SurveyVue.StylesManager.applyTheme();
-
-// Other possible theme values to be declared:
-// $header-background-color: "#e7e7e7"
-// $header-color: "#6d7072"
-// $progress-text-color: "#9d9d9d"
-
 const SurveyComponent = SurveyVue.Survey;
 
 export const mergeDefaultValues = (baseJson, defaultValues) => {
@@ -79,6 +58,28 @@ export default {
     this.model.onComplete.add((sender) => {
       this.$emit('complete', sender.data);
     });
+
+    const defaultThemeColors = SurveyVue.StylesManager.ThemeColors.default;
+    defaultThemeColors['$border-color'] = theme.colors.gray['5'];
+    defaultThemeColors['$body-container-background-color'] =
+      theme.colors.gray['7'];
+    defaultThemeColors['$disable-color'] = theme.colors.black;
+    defaultThemeColors['$disabled-label-color'] = theme.colors.gray['3'];
+    defaultThemeColors['$disabled-switch-color'] = 'rgba(72, 29, 115, 0.5)';
+    defaultThemeColors['$disabled-slider-color'] = theme.colors.white;
+    defaultThemeColors['$error-background-color'] = theme.colors['error-light'];
+    defaultThemeColors['$error-color'] = theme.colors.error;
+    defaultThemeColors['$inputs-background-color'] = theme.colors.white;
+    defaultThemeColors['$main-color'] = theme.colors.primary;
+    defaultThemeColors['$main-hover-color'] = theme.colors['primary-tint']['1'];
+    defaultThemeColors['$slider-color'] = theme.colors.white;
+    defaultThemeColors['$text-color'] = theme.colors.black;
+    SurveyVue.StylesManager.applyTheme();
+
+    // Other possible theme values to be declared:
+    // $header-background-color: "#e7e7e7"
+    // $header-color: "#6d7072"
+    // $progress-text-color: "#9d9d9d"
   },
 };
 </script>
