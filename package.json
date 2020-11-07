@@ -1,6 +1,6 @@
 {
   "name": "@bambee/pollen",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
   "scripts": {
