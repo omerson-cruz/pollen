@@ -89,6 +89,10 @@ export default {
   @apply font-body-text;
 }
 
+.base-survey.sv_main .sv_body {
+  @apply border-none;
+}
+
 .base-survey.sv_main input[type='button'],
 .base-survey.sv_main button {
   @apply duration-ludicrous
