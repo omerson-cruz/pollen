@@ -86,11 +86,11 @@ export default {
 
 <style>
 .base-survey.sv_main {
-  @apply font-body-text;
+  @apply font-body-text font-sans;
 }
 
 .base-survey.sv_main .sv_body {
-  @apply border-none;
+  @apply border-none p-0;
 }
 
 .base-survey.sv_main input[type='button'],
