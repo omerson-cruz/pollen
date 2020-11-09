@@ -86,7 +86,7 @@ export default {
 
 <style>
 .base-survey.sv_main {
-  @apply font-body-text font-sans;
+  @apply font-body-medium font-sans;
 }
 
 .base-survey.sv_main .sv_body {
