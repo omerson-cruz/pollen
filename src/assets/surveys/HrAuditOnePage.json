@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "name": "remoteWorkers",
+      "name": "page1",
       "elements": [
         {
           "type": "boolean",
@@ -18,12 +18,7 @@
           "hideNumber": true,
           "isRequired": true,
           "requiredIf": "{hasRemoteWorkers} = true"
-        }
-      ]
-    },
-    {
-      "name": "pto",
-      "elements": [
+        },
         {
           "type": "radiogroup",
           "name": "hasPtoPolicy",
@@ -43,12 +38,7 @@
               "text": "I'm not sure"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "posters",
-      "elements": [
+        },
         {
           "type": "radiogroup",
           "name": "hasPosters",
@@ -68,12 +58,7 @@
               "text": "I'm not sure"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "payroll",
-      "elements": [
+        },
         {
           "type": "boolean",
           "name": "hasPayrollSolution",
@@ -97,12 +82,7 @@
           "title": "How much do you pay per month for your payroll provider?",
           "hideNumber": true,
           "isRequired": true
-        }
-      ]
-    },
-    {
-      "name": "bambeePayroll",
-      "elements": [
+        },
         {
           "type": "radiogroup",
           "name": "payrollInterest",
@@ -113,12 +93,7 @@
             "Somewhat interested",
             "Not interested"
           ]
-        }
-      ]
-    },
-    {
-      "name": "401k",
-      "elements": [
+        },
         {
           "type": "boolean",
           "name": "offers401k",
@@ -133,12 +108,7 @@
           "title": "Do you plan to offer your employees access to a 401k plan in the next year?",
           "hideNumber": true,
           "isRequired": true
-        }
-      ]
-    },
-    {
-      "name": "401kAdditional",
-      "elements": [
+        },
         {
           "type": "boolean",
           "name": "bambee401k",
@@ -164,12 +134,7 @@
               "text": "Whichever is cheaper"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "witholding",
-      "elements": [
+        },
         {
           "type": "radiogroup",
           "name": "providesW4",
@@ -209,12 +174,7 @@
               "text": "I'm not sure"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "policies",
-      "elements": [
+        },
         {
           "type": "boolean",
           "name": "hasOnboardingPolicies",
@@ -249,12 +209,7 @@
               "text": "I'm not sure"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "benefits",
-      "elements": [
+        },
         {
           "type": "boolean",
           "name": "offersBenefits",
@@ -268,12 +223,7 @@
           "visibleIf": "{offersBenefits} = true",
           "title": "Where do you get your benefits from?",
           "isRequired": true
-        }
-      ]
-    },
-    {
-      "name": "recruitment",
-      "elements": [
+        },
         {
           "type": "comment",
           "name": "recruitmentManagement",
@@ -287,6 +237,5 @@
         }
       ]
     }
-  ],
-  "showProgressBar": "bottom"
+  ]
 }

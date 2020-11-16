@@ -80,6 +80,26 @@ export default {
     // $header-background-color: "#e7e7e7"
     // $header-color: "#6d7072"
     // $progress-text-color: "#9d9d9d"
+
+    // Advance to the most recently completed page on the survey.
+    const initialValueKeys = Object.keys(this.initialValues);
+    if (
+      initialValueKeys.length &&
+      this.survey.pages.length > 1 &&
+      !this.model.isCurrentPageHasErrors
+    ) {
+      let lastCompletedPageName;
+      this.survey.pages.forEach((page) => {
+        if (
+          page.elements.some((element) =>
+            initialValueKeys.includes(element.name)
+          )
+        ) {
+          lastCompletedPageName = page.name;
+        }
+      });
+      this.model.currentPage = lastCompletedPageName;
+    }
   },
 };
 </script>
@@ -153,5 +173,39 @@ export default {
 
 .base-survey.sv_main .sv_container .sv_body .sv_p_root .sv_q {
   @apply px-6 py-4;
+}
+
+.base-survey.sv_main input[type='radio'] {
+  @apply sr-only;
+}
+
+.base-survey.sv_main .sv_q_radiogroup_label .circle {
+  @apply align-middle
+    border
+    border-gray-4
+    border-solid
+    box-border
+    h-6 
+    inline-flex 
+    items-center 
+    justify-center 
+    mr-4 
+    relative 
+    rounded-full 
+    w-6;
+}
+
+.base-survey.sv_main .sv_q_radiogroup_label .circle svg {
+  @apply hidden;
+}
+
+.base-survey.sv_main .checked .sv_q_radiogroup_label .circle {
+  @apply border-2 border-primary;
+}
+
+.base-survey.sv_main .checked .sv_q_radiogroup_label .circle::before {
+  @apply absolute bg-primary block h-0 rounded-full w-1/2;
+  content: '';
+  padding-top: 50%;
 }
 </style>
