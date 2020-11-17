@@ -1,5 +1,5 @@
 <template>
-  <FocusLock class="modal-dialog" :disabled="true">
+  <FocusLock class="modal-dialog">
     <ModalWindow :id="id" :size="size" :full-bleed="fullBleed">
       <ModalHeader
         v-if="!!$slots.header"
