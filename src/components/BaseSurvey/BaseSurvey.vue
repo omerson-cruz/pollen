@@ -50,13 +50,13 @@ export default {
     },
   },
   watch: {
-    surveyData(newValue) {
-      this.$emit('input', newValue);
+    surveyData() {
+      this.$emit('input', this.model);
     },
   },
   created() {
     this.model.onComplete.add((sender) => {
-      this.$emit('complete', sender.data);
+      this.$emit('complete', sender);
     });
 
     const defaultThemeColors = SurveyVue.StylesManager.ThemeColors.default;

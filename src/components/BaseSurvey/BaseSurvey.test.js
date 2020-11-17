@@ -23,7 +23,9 @@ describe('BaseSurvey', () => {
     const wrapper = mount(BaseSurvey, { propsData: { survey } });
     await wrapper.find('input[name="hasRemoteWorkers"]').trigger('click');
     await wrapper.vm.$nextTick();
-    expect(wrapper.emitted().input[0]).toEqual([{ hasRemoteWorkers: true }]);
+    expect(wrapper.emitted().input[0][0].data).toEqual({
+      hasRemoteWorkers: true,
+    });
   });
   // TODO(jon.jandoc): Need to add test coverage for the complete event.
 
