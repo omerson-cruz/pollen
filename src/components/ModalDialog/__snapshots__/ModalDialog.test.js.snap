@@ -5,11 +5,11 @@ exports[`ModalDialog renders correctly 1`] = `
   class="modal-dialog"
 >
   <div
-    tabindex="-1"
+    tabindex="0"
   />
    
   <div
-    tabindex="-1"
+    tabindex="1"
   />
    
   <div
@@ -136,7 +136,7 @@ exports[`ModalDialog renders correctly 1`] = `
   </div>
    
   <div
-    tabindex="-1"
+    tabindex="0"
   />
 </div>
 `;
