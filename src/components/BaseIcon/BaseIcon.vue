@@ -39,6 +39,8 @@ import {
 } from '@fortawesome/pro-light-svg-icons';
 
 import {
+  faArrowLeft as arrowLeft,
+  faArrowRight as arrowRight,
   faBan as ban,
   faBell as bell,
   faBuilding as building,
@@ -75,6 +77,8 @@ const FAIcons = Object.freeze({
   alertCircle,
   alertTriangle,
   analytics,
+  arrowLeft,
+  arrowRight,
   ban,
   bell,
   building,
