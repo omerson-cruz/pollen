@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HamburgerButton renders correctly when closed 1`] = `
+<button
+  class="hamburger-button hamburger-button--closed"
+  title="Menu"
+>
+  <span
+    class="sr-only"
+  >
+    Menu
+  </span>
+</button>
+`;
+
+exports[`HamburgerButton renders correctly when open 1`] = `
+<button
+  class="hamburger-button hamburger-button--open"
+  title="Menu"
+>
+  <span
+    class="sr-only"
+  >
+    Menu
+  </span>
+</button>
+`;

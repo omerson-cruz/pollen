@@ -101,7 +101,7 @@ export default {
           return Icons.ALERT_CIRCLE;
         case Modal.Alerts.SUCCESS:
         default:
-          return Icons.CHECK_CIRCLE;
+          return Icons.CHECK_CIRCLE_SOLID;
       }
     },
   },

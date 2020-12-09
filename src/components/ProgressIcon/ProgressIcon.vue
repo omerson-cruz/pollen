@@ -18,7 +18,7 @@ export default {
   render(h, { data, props }) {
     return (
       <BaseIcon
-        icon={props.complete ? Icons.CHECK_CIRCLE : Icons.CIRCLE}
+        icon={props.complete ? Icons.CHECK_CIRCLE_SOLID : Icons.CIRCLE}
         class={`progress-icon progress-icon--${
           props.complete ? 'complete' : 'incomplete'
         }${props.disabled ? ' progress-icon--disabled' : ''}`}

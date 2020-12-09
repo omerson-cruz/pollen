@@ -1,6 +1,6 @@
 {
   "name": "@bambee/pollen",
-  "version": "0.21.2",
+  "version": "0.22.0",
   "main": "./dist/pollen.common.js",
   "repository": "git://github.com/bambeehr/pollen.git",
   "scripts": {
@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/pro-light-svg-icons": "^5.14.0",
     "@fortawesome/pro-regular-svg-icons": "^5.14.0",
     "@fortawesome/pro-solid-svg-icons": "^5.14.0",

@@ -21,50 +21,65 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
   faAnalytics as analytics,
+  faBallotCheck as ballotCheckSolid,
+  faClipboardCheck as clipboardCheckSolid,
+  faCreditCard as creditCardSolid,
   faEar as ear,
-  faTachometerFast as tachometer,
-} from '@fortawesome/pro-solid-svg-icons';
-
-import {
-  faFolder as folder,
-  faSearch as search,
-} from '@fortawesome/pro-regular-svg-icons';
-
-import {
-  faCircle as circle,
-  faClipboardCheck as clipboardCheck,
-  faPlus as plus,
-  faTimes as close,
-  faGift as gift,
-} from '@fortawesome/pro-light-svg-icons';
-
-import {
+  faTachometer as tachometerSolid,
+  faUser as userSolid,
   faArrowLeft as arrowLeft,
   faArrowRight as arrowRight,
   faBan as ban,
   faBell as bell,
   faBuilding as building,
+  faCabinetFiling as cabinetFilingSolid,
   faCalendar as calendar,
   faCheck as check,
-  faCheckCircle as checkCircle,
+  faCheckCircle as checkCircleSolid,
   faClock as clock,
   faCloudUploadAlt as upload,
-  faCogs as cogs,
+  faCogs as cogsSolid,
   faExclamation as alert,
   faExclamationCircle as alertCircle,
   faExclamationTriangle as alertTriangle,
+  faGift as giftSolid,
   faLock as lock,
   faPen as pen,
   faPhoneAlt as phone,
   faPrint as print,
   faQuestion as question,
   faQuestionCircle as questionCircle,
-  faSignOutAlt as signOut,
-  faUsers as users,
+  faSignOutAlt as signOutSolid,
+  faUmbrella as umbrellaSolid,
+  faUsers as usersSolid,
   faTrash as trash,
+  faVirus as virusSolid,
   faWrench as wrench,
-  faGift as giftSolid,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/pro-solid-svg-icons';
+
+import {
+  faCheckCircle as checkCircle,
+  faFolder as folder,
+  faSearch as search,
+} from '@fortawesome/pro-regular-svg-icons';
+
+import {
+  faBallotCheck as ballotCheck,
+  faCabinetFiling as cabinetFiling,
+  faCircle as circle,
+  faClipboardCheck as clipboardCheck,
+  faCogs as cogs,
+  faCreditCard as creditCard,
+  faGift as gift,
+  faPlus as plus,
+  faSignOutAlt as signOut,
+  faTimes as close,
+  faTachometer as tachometer,
+  faUmbrella as umbrella,
+  faUser as user,
+  faUsers as users,
+  faVirus as virus,
+} from '@fortawesome/pro-light-svg-icons';
 
 import caretDown from '../../assets/icons/caret-down.svg';
 import eyeClosed from '../../assets/icons/eye-closed.svg';
@@ -79,17 +94,26 @@ const FAIcons = Object.freeze({
   analytics,
   arrowLeft,
   arrowRight,
+  ballotCheck,
+  ballotCheckSolid,
   ban,
   bell,
   building,
+  cabinetFiling,
+  cabinetFilingSolid,
   calendar,
   check,
   checkCircle,
+  checkCircleSolid,
   circle,
   clipboardCheck,
+  clipboardCheckSolid,
   clock,
   close,
   cogs,
+  cogsSolid,
+  creditCard,
+  creditCardSolid,
   ear,
   folder,
   gift,
@@ -103,10 +127,19 @@ const FAIcons = Object.freeze({
   questionCircle,
   search,
   signOut,
+  signOutSolid,
   tachometer,
+  tachometerSolid,
   trash,
+  umbrella,
+  umbrellaSolid,
   upload,
+  user,
+  userSolid,
   users,
+  usersSolid,
+  virus,
+  virusSolid,
   wrench,
 });
 
