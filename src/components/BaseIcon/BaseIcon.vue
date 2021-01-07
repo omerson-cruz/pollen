@@ -20,7 +20,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
-  faAnalytics as analytics,
+  faAnalytics as analyticsSolid,
   faBallotCheck as ballotCheckSolid,
   faClipboardCheck as clipboardCheckSolid,
   faCreditCard as creditCardSolid,
@@ -65,6 +65,7 @@ import {
 } from '@fortawesome/pro-regular-svg-icons';
 
 import {
+  faAnalytics as analytics,
   faBallotCheck as ballotCheck,
   faCabinetFiling as cabinetFiling,
   faCircle as circle,
@@ -94,6 +95,7 @@ const FAIcons = Object.freeze({
   alertCircle,
   alertTriangle,
   analytics,
+  analyticsSolid,
   arrowLeft,
   arrowRight,
   ballotCheck,
