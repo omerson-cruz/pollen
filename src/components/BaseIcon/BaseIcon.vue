@@ -71,7 +71,7 @@ import {
   faCircle as circle,
   faClipboardCheck as clipboardCheck,
   faCogs as cogs,
-  faCommen as commentSmile,
+  faComment as commentSmile,
   faCreditCard as creditCard,
   faGift as gift,
   faPlus as plus,
