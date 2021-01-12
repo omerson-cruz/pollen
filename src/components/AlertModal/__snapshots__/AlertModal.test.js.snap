@@ -56,7 +56,7 @@ exports[`AlertModal renders error variant correctly 1`] = `
         class="modal-actions modal-actions--center"
       >
         <button
-          class="modal-actions__action modal-actions__action--primary modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+          class="modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
           type="button"
         >
           <div
@@ -67,7 +67,7 @@ exports[`AlertModal renders error variant correctly 1`] = `
         </button>
          
         <button
-          class="modal-actions__action modal-actions__action--secondary modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
+          class="modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
           type="button"
         >
           <div
@@ -184,7 +184,7 @@ exports[`AlertModal renders success variant correctly 1`] = `
         class="modal-actions modal-actions--center"
       >
         <button
-          class="modal-actions__action modal-actions__action--primary modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+          class="modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
           type="button"
         >
           <div
@@ -195,7 +195,7 @@ exports[`AlertModal renders success variant correctly 1`] = `
         </button>
          
         <button
-          class="modal-actions__action modal-actions__action--secondary modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
+          class="modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
           type="button"
         >
           <div
@@ -312,7 +312,7 @@ exports[`AlertModal renders warning variant correctly 1`] = `
         class="modal-actions modal-actions--center"
       >
         <button
-          class="modal-actions__action modal-actions__action--primary modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+          class="modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
           type="button"
         >
           <div
@@ -323,7 +323,7 @@ exports[`AlertModal renders warning variant correctly 1`] = `
         </button>
          
         <button
-          class="modal-actions__action modal-actions__action--secondary modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
+          class="modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
           type="button"
         >
           <div

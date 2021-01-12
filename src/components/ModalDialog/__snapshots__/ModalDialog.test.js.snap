@@ -40,7 +40,7 @@ exports[`ModalDialog renders correctly 1`] = `
         class="modal-actions modal-actions--justify"
       >
         <button
-          class="modal-actions__action modal-actions__action--primary modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
+          class="modal-actions__action modal-actions__action--primary base-button base-button--primary base-button--medium base-button--regular base-button--inline"
           type="button"
         >
           <div
@@ -51,7 +51,7 @@ exports[`ModalDialog renders correctly 1`] = `
         </button>
          
         <button
-          class="modal-actions__action modal-actions__action--secondary modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
+          class="modal-actions__action modal-actions__action--secondary base-button base-button--secondary base-button--medium base-button--flat base-button--inline"
           type="button"
         >
           <div
@@ -62,7 +62,7 @@ exports[`ModalDialog renders correctly 1`] = `
         </button>
          
         <button
-          class="modal-actions__action modal-actions__action--tertiary modal-actions__action modal-actions__action--tertiary base-button base-button--tertiary base-button--medium base-button--flat base-button--inline"
+          class="modal-actions__action modal-actions__action--tertiary base-button base-button--tertiary base-button--medium base-button--flat base-button--inline"
           type="button"
         >
           <div

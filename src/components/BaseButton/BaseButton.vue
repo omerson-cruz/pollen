@@ -101,7 +101,6 @@ export default {
         attrs: { ...getAttributes({ data, parent }) },
         class: [
           data.class,
-          data.staticClass,
           'base-button',
           `base-button--${props.variant}`,
           `base-button--${props.size}`,
