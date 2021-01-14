@@ -801,6 +801,32 @@ exports[`Gallery renders gallery correctly 1`] = `
     style="display: flex; margin: 12px; text-align: center;"
   >
     <svg
+      aria-hidden="true"
+      class="base-icon svg-inline--fa fa-ellipsis-v fa-w-2"
+      data-icon="ellipsis-v"
+      data-prefix="fal"
+      focusable="false"
+      role="img"
+      viewBox="0 0 64 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class=""
+        d="M32 224c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM0 136c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32zm0 240c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32z"
+        fill="currentColor"
+      />
+    </svg>
+     
+    <div
+      style="font-size: 12px; margin-left: 8px;"
+    >
+      ellipsisV
+    </div>
+  </div>
+  <div
+    style="display: flex; margin: 12px; text-align: center;"
+  >
+    <svg
       class="base-icon base-icon--custom"
     />
      
