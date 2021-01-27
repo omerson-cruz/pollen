@@ -214,7 +214,7 @@
         {
           "type": "boolean",
           "name": "hasDoneSexualHarassmentTraining",
-          "title": "Has your team done sexual harassment training?",
+          "title": "Has your team completed sexual harassment training?",
           "isRequired": true
         },
         {
