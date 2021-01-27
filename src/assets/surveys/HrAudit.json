@@ -222,11 +222,11 @@
           "name": "lastSexualHarassmentTrainingDate",
           "visible": false,
           "visibleIf": "{hasDoneSexualHarassmentTraining} = true",
-          "title": "What was the date of your team's last sexual harassment training?",
+          "title": "What was the month and year of your team's last sexual harassment training?",
           "hideNumber": true,
           "isRequired": true,
           "requiredIf": "{hasDoneSexualHarassmentTraining} = true",
-          "inputType": "date"
+          "inputType": "month"
         }
       ]
     }
