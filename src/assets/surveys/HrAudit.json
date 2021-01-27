@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "name": "page1",
+      "name": "remoteWorkers",
       "elements": [
         {
           "type": "boolean",
@@ -16,8 +16,14 @@
           "visibleIf": "{hasRemoteWorkers} = true",
           "title": "What cities and states do they live in?",
           "hideNumber": true,
+          "isRequired": true,
           "requiredIf": "{hasRemoteWorkers} = true"
-        },
+        }
+      ]
+    },
+    {
+      "name": "pto",
+      "elements": [
         {
           "type": "radiogroup",
           "name": "hasPtoPolicy",
@@ -37,7 +43,12 @@
               "text": "I'm not sure"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "posters",
+      "elements": [
         {
           "type": "radiogroup",
           "name": "hasPosters",
@@ -57,7 +68,41 @@
               "text": "I'm not sure"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "payroll",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "hasPayrollSolution",
+          "title": "Do you currently use a payroll solution? ",
+          "isRequired": true
         },
+        {
+          "type": "comment",
+          "name": "payrollProvider",
+          "visible": false,
+          "visibleIf": "{hasPayrollSolution} = true",
+          "title": "What system do you currently use for payroll?",
+          "hideNumber": true,
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "payrollCost",
+          "visible": false,
+          "visibleIf": "{hasPayrollSolution} = true",
+          "title": "How much do you pay per month for your payroll provider?",
+          "hideNumber": true,
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "bambeePayroll",
+      "elements": [
         {
           "type": "radiogroup",
           "name": "payrollInterest",
@@ -68,7 +113,12 @@
             "Somewhat interested",
             "Not interested"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "401k",
+      "elements": [
         {
           "type": "boolean",
           "name": "offers401k",
@@ -83,7 +133,12 @@
           "title": "Do you plan to offer your employees access to a 401k plan in the next year?",
           "hideNumber": true,
           "isRequired": true
-        },
+        }
+      ]
+    },
+    {
+      "name": "401kAdditional",
+      "elements": [
         {
           "type": "boolean",
           "name": "bambee401k",
@@ -109,7 +164,12 @@
               "text": "Whichever is cheaper"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "witholding",
+      "elements": [
         {
           "type": "radiogroup",
           "name": "providesW4",
@@ -133,7 +193,7 @@
         {
           "type": "radiogroup",
           "name": "providesStateWitholdForms",
-          "title": "When hiring a new employee, do you provide any state specific tax withholding forms during the onboarding process?",
+          "title": "When hiring a new employee, do you provide any state specific tax withhold forms during the onboarding process?",
           "isRequired": true,
           "choices": [
             {
@@ -149,27 +209,12 @@
               "text": "I'm not sure"
             }
           ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "providesI9Verification",
-          "title": "When hiring a new employee, do you provide the I-9 Employment Verification form during the onboarding process?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            },
-            {
-              "value": "unsure",
-              "text": "I'm not sure"
-            }
-          ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "policies",
+      "elements": [
         {
           "type": "boolean",
           "name": "hasOnboardingPolicies",
@@ -204,7 +249,12 @@
               "text": "I'm not sure"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "benefits",
+      "elements": [
         {
           "type": "boolean",
           "name": "offersBenefits",
@@ -212,24 +262,31 @@
           "isRequired": true
         },
         {
-          "type": "boolean",
-          "name": "hasDoneSexualHarassmentTraining",
-          "title": "Has your team completed sexual harassment training?",
+          "type": "comment",
+          "name": "benefitsProvider",
+          "visible": false,
+          "visibleIf": "{offersBenefits} = true",
+          "title": "Where do you get your benefits from?",
+          "isRequired": true
+        }
+      ]
+    },
+    {
+      "name": "recruitment",
+      "elements": [
+        {
+          "type": "comment",
+          "name": "recruitmentManagement",
+          "title": "How do you manage recruitment today?",
           "isRequired": true
         },
         {
-          "type": "text",
-          "name": "lastSexualHarassmentTrainingDate",
-          "visible": false,
-          "visibleIf": "{hasDoneSexualHarassmentTraining} = true",
-          "title": "What was the month and year of your team's last sexual harassment training?",
-          "hideNumber": true,
-          "isRequired": true,
-          "requiredIf": "{hasDoneSexualHarassmentTraining} = true",
-          "inputType": "month"
+          "type": "comment",
+          "name": "applicationTrackingSystem",
+          "title": "If you use an application tracking system, which one do you use?"
         }
       ]
     }
   ],
-  "showCompletedPage": false
+  "showProgressBar": "bottom"
 }
