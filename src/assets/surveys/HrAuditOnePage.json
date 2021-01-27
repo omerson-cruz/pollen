@@ -208,8 +208,28 @@
         {
           "type": "boolean",
           "name": "offersBenefits",
-          "title": "Do you currently offer employee benefits?",
+          "title": "Do you offer employee health benefits?",
           "isRequired": true
+        },
+        {
+          "type": "comment",
+          "name": "benefitsProvider",
+          "visible": false,
+          "visibleIf": "{offersBenefits} = true",
+          "title": "Where do you get your benefits from?",
+          "hideNumber": true,
+          "requiredIf": "{offersBenefits} = true"
+        },
+        {
+          "type": "radiogroup",
+          "name": "benefitsInterest",
+          "title": "If Bambee were to offer a benefits solution, how interested would you be in using it?",
+          "isRequired": true,
+          "choices": [
+            "Very interested",
+            "Somewhat interested",
+            "Not interested"
+          ]
         },
         {
           "type": "boolean",
