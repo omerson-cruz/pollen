@@ -13,7 +13,7 @@
       :tabset-id="id"
       :value="value"
     >
-      <slot :name="value">
+      <slot :name="value" :activeTab="activeTab">
         <div class="tab-set__simple-content">{{ content }}</div>
       </slot>
     </TabPanel>
@@ -54,6 +54,11 @@ export default {
   computed: {
     mappedOptions() {
       return mapOptions(this.options);
+    },
+  },
+  watch: {
+    activeTab(newValue) {
+      this.$emit('tab-change', newValue);
     },
   },
   created() {

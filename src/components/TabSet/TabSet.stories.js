@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import CounterBadge from '../CounterBadge/CounterBadge.vue';
 import TabSet from './TabSet.vue';
 
@@ -23,7 +24,10 @@ export const Default = () => ({
       ],
     };
   },
-  template: `<TabSet :options="options" />`,
+  methods: {
+    handleTabChange: action('tab-change'),
+  },
+  template: `<TabSet :options="options" @tab-change="handleTabChange" />`,
 });
 
 export const WithContentAsDynamicSlots = () => ({
@@ -42,11 +46,14 @@ export const WithContentAsDynamicSlots = () => ({
       ],
     };
   },
+  methods: {
+    handleTabChange: action('tab-change'),
+  },
   template: `
   <div>
-    <TabSet :options="options">
-      <template v-for="{ label, value } in options" v-slot:[value]>
-        <div :key="value" class="bg-gray-5 p-8">Hello from {{ label }}</div>
+    <TabSet :options="options" @tab-change="handleTabChange">
+      <template v-for="{ label, value } in options" v-slot:[value]="{ activeTab }">
+        <div :key="value" class="bg-gray-5 p-8">Hello from {{ activeTab }}</div>
       </template>
     </Tabset>
     <p class="mt-4">
