@@ -119,7 +119,7 @@ export default {
     inline-flex
     p-1 
     relative
-    rounded-full;
+    rounded-md;
 }
 
 .radio-toggle__container {
@@ -130,7 +130,7 @@ export default {
     px-5 
     py-1
     relative 
-    rounded-full
+    rounded-md
     select-none
     text-center 
     transition-all
@@ -155,7 +155,8 @@ export default {
     bg-primary 
     duration-light
     ease-out
-    rounded-full 
+    rounded 
+    shadow-2
     transition-all
     z-0;
 }

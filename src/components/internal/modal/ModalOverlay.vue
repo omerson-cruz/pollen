@@ -32,7 +32,8 @@ export default {
   backdrop-filter: blur(0.5rem);
 }
 .modal-overlay--light {
-  @apply bg-white opacity-90;
+  @apply opacity-90;
   backdrop-filter: blur(0.75rem);
+  background-color: #f1f3f2; /* This is a one-off */
 }
 </style>
