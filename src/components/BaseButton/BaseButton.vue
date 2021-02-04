@@ -264,6 +264,23 @@ export default {
   @apply bg-primary-tint-5 text-primary;
 }
 
+/*** Regular primary white */
+.base-button--regular.base-button--white {
+  @apply bg-white border border-white text-primary;
+}
+
+.base-button--regular.base-button--white:focus {
+  @apply shadow-outline;
+}
+
+.base-button--regular.base-button--white:hover:not([disabled]) {
+  @apply text-primary-tint-1;
+}
+
+.base-button--regular.base-button--white:active:not([disabled]) {
+  @apply bg-primary-tint-5 text-primary;
+}
+
 /** Flat buttons */
 .base-button--flat {
   @apply bg-transparent border;
