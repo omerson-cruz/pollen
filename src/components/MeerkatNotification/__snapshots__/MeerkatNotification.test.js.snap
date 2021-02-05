@@ -20,7 +20,7 @@ exports[`MeerkatNotification renders correctly 1`] = `
       class="meerkat-notification__actions"
     >
       <button
-        class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+        class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
         title="Close"
       >
         <svg
@@ -82,7 +82,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -130,7 +130,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -187,7 +187,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -250,7 +250,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -307,7 +307,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -355,7 +355,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -412,7 +412,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -475,7 +475,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -532,7 +532,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -580,7 +580,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -637,7 +637,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg
@@ -700,7 +700,7 @@ exports[`MeerkatNotification renders gallery correctly 1`] = `
           class="meerkat-notification__actions"
         >
           <button
-            class="meerkat-notification__close meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
+            class="meerkat-notification__close icon-button icon-button--inverted icon-button--medium icon-button--flat"
             title="Close"
           >
             <svg

@@ -2,10 +2,10 @@
 
 exports[`Gallery renders gallery correctly 1`] = `
 <div
-  class="flex flex-wrap"
+  class="tight-grid tight-grid--auto"
 >
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -25,13 +25,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       alert
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -51,13 +51,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       alertCircle
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -77,13 +77,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       alertTriangle
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -103,13 +103,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       analytics
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -129,13 +129,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       analyticsSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -155,13 +155,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       arrowLeft
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -181,13 +181,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       arrowRight
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -207,13 +207,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       ballotCheck
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -233,13 +233,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       ballotCheckSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -259,13 +259,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       ban
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -285,13 +285,39 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       bell
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
+  >
+    <svg
+      aria-hidden="true"
+      class="base-icon svg-inline--fa fa-briefcase fa-w-16"
+      data-icon="briefcase"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class=""
+        d="M320 336c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h416c25.6 0 48-22.4 48-48V288H320v48zm144-208h-80V80c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h512v-80c0-25.6-22.4-48-48-48zm-144 0H192V96h128v32z"
+        fill="currentColor"
+      />
+    </svg>
+     
+    <div
+      class="text-12 ml-2"
+    >
+      briefcaseSolid
+    </div>
+  </div>
+  <div
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -311,13 +337,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       building
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -337,13 +363,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       cabinetFiling
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -363,13 +389,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       cabinetFilingSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -389,26 +415,26 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       calendar
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       class="base-icon base-icon--custom"
     />
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       caretDown
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -428,13 +454,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       check
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -454,13 +480,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       checkCircle
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -480,13 +506,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       checkCircleSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -506,13 +532,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       circle
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -532,13 +558,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       clipboardCheck
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -558,13 +584,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       clipboardCheckSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -584,13 +610,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       clock
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -610,13 +636,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       close
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -636,13 +662,39 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       closeCircle
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
+  >
+    <svg
+      aria-hidden="true"
+      class="base-icon svg-inline--fa fa-times-hexagon fa-w-18"
+      data-icon="times-hexagon"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 576 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class=""
+        d="M553.5 231.8c8.7 14.9 8.7 33.4 0 48.4l-112 192c-8.6 14.7-24.4 23.8-41.5 23.8H176c-17.1 0-32.9-9.1-41.5-23.8l-112-192c-8.7-14.9-8.7-33.4 0-48.4l112-192C143.1 25.1 158.9 16 176 16h224c17.1 0 32.9 9.1 41.5 23.8l112 192zM409.6 338c4.7-4.7 4.7-12.3 0-17l-65-65 65.1-65.1c4.7-4.7 4.7-12.3 0-17L370 134.4c-4.7-4.7-12.3-4.7-17 0l-65 65-65.1-65.1c-4.7-4.7-12.3-4.7-17 0L166.4 174c-4.7 4.7-4.7 12.3 0 17l65.1 65.1-65.1 65.1c-4.7 4.7-4.7 12.3 0 17l39.6 39.6c4.7 4.7 12.3 4.7 17 0l65.1-65.1 65.1 65.1c4.7 4.7 12.3 4.7 17 0l39.4-39.8z"
+        fill="currentColor"
+      />
+    </svg>
+     
+    <div
+      class="text-12 ml-2"
+    >
+      closeHexagonSolid
+    </div>
+  </div>
+  <div
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -662,13 +714,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       cogs
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -688,13 +740,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       cogsSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -714,13 +766,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       comment
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -740,13 +792,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       commentSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -766,13 +818,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       creditCard
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -792,13 +844,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       creditCardSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -818,13 +870,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       ear
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -844,39 +896,39 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       ellipsisV
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       class="base-icon base-icon--custom"
     />
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       eyeClosed
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       class="base-icon base-icon--custom"
     />
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       eyeOpen
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -896,13 +948,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       folder
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -922,13 +974,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       gift
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -948,13 +1000,39 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       giftSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
+  >
+    <svg
+      aria-hidden="true"
+      class="base-icon svg-inline--fa fa-id-card-alt fa-w-18"
+      data-icon="id-card-alt"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 576 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class=""
+        d="M528 64H384v96H192V64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM288 224c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm93.3 224H194.7c-10.4 0-18.8-10-15.6-19.8 8.3-25.6 32.4-44.2 60.9-44.2h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.8-5.2 19.8-15.6 19.8zM352 32c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v96h128V32z"
+        fill="currentColor"
+      />
+    </svg>
+     
+    <div
+      class="text-12 ml-2"
+    >
+      idCardSolid
+    </div>
+  </div>
+  <div
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -974,13 +1052,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       lightbulb
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1000,13 +1078,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       lightbulbSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1026,13 +1104,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       lock
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1052,13 +1130,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       pen
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1078,13 +1156,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       phone
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1104,13 +1182,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       plus
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1130,13 +1208,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       print
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1156,13 +1234,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       question
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1182,13 +1260,39 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       questionCircle
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
+  >
+    <svg
+      aria-hidden="true"
+      class="base-icon svg-inline--fa fa-question-square fa-w-14"
+      data-icon="question-square"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class=""
+        d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 430c-25.365 0-46-20.636-46-46 0-25.365 20.635-46 46-46s46 20.635 46 46c0 25.364-20.635 46-46 46zm40-131.333V300c0 6.627-5.373 12-12 12h-56c-6.627 0-12-5.373-12-12v-4c0-41.059 31.128-57.472 54.652-70.66 20.171-11.309 32.534-19 32.534-33.976 0-19.81-25.269-32.958-45.698-32.958-27.19 0-39.438 13.139-57.303 35.797-4.045 5.13-11.46 6.069-16.665 2.122l-34.699-26.31c-5.068-3.843-6.251-10.972-2.715-16.258C141.4 112.957 176.158 90 230.655 90c56.366 0 116.531 43.998 116.531 102 0 77.02-83.186 78.205-83.186 106.667z"
+        fill="currentColor"
+      />
+    </svg>
+     
+    <div
+      class="text-12 ml-2"
+    >
+      questionSquareSolid
+    </div>
+  </div>
+  <div
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1208,13 +1312,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       search
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1234,13 +1338,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       signOut
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1260,13 +1364,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       signOutSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1286,13 +1390,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       tachometer
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1312,13 +1416,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       tachometerSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1338,13 +1442,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       trash
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1364,13 +1468,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       umbrella
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1390,13 +1494,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       umbrellaSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1416,13 +1520,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       upload
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1442,13 +1546,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       user
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1468,13 +1572,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       userSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1494,13 +1598,39 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       users
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
+  >
+    <svg
+      aria-hidden="true"
+      class="base-icon svg-inline--fa fa-users-class fa-w-20"
+      data-icon="users-class"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 640 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class=""
+        d="M256 288c0 35.35 28.66 64 64 64 35.35 0 64-28.65 64-64s-28.65-64-64-64c-35.34 0-64 28.65-64 64zm224 0c0 35.35 28.66 64 64 64 35.35 0 64-28.65 64-64s-28.65-64-64-64c-35.34 0-64 28.65-64 64zM96 352c35.35 0 64-28.65 64-64s-28.65-64-64-64c-35.34 0-64 28.65-64 64s28.66 64 64 64zm480 32h-64c-35.34 0-64 28.65-64 64v32c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32v-32c0-35.35-28.66-64-64-64zm-224 0h-64c-35.34 0-64 28.65-64 64v32c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32v-32c0-35.35-28.66-64-64-64zm-224 0H64c-35.34 0-64 28.65-64 64v32c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32v-32c0-35.35-28.66-64-64-64zM96 64h448v128c24.68 0 46.98 9.62 64 24.97V49.59C608 22.25 586.47 0 560 0H80C53.53 0 32 22.25 32 49.59v167.38C49.02 201.62 71.33 192 96 192V64z"
+        fill="currentColor"
+      />
+    </svg>
+     
+    <div
+      class="text-12 ml-2"
+    >
+      usersClassSolid
+    </div>
+  </div>
+  <div
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1520,13 +1650,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       usersSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1546,13 +1676,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       virus
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1572,13 +1702,13 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       virusSolid
     </div>
   </div>
   <div
-    style="display: flex; margin: 12px; text-align: center;"
+    class="flex items-center col-span-6 sm:col-span-4 md:col-span-2"
   >
     <svg
       aria-hidden="true"
@@ -1598,7 +1728,7 @@ exports[`Gallery renders gallery correctly 1`] = `
     </svg>
      
     <div
-      style="font-size: 12px; margin-left: 8px;"
+      class="text-12 ml-2"
     >
       wrench
     </div>
