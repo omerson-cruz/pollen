@@ -73,15 +73,15 @@ export const GradientColor = () => ({
     <TypeOverline tag="h2" variant="large">Gradient Background</TypeOverline>
     <div class="flex flex-wrap -mx-2">
       <div
-        v-for="(value, key) in gradientColor"
-        :key="key"
         class="text-12 m-2 w-32"
       >
         <div
-          class="border border-gray-2 border-solid h-40 mb-1 w-full bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-purple-gradient bg-gradient-purple"
+          class="border border-gray-2 border-solid h-40 mb-1 w-full
+          bg-gradient-to-br from-primary-tint-1 to-primary-shade-1
+          "
         />
         <div>
-          <b>{{ value }}</b>
+          <b>Purple Gradient</b>
         </div>
       </div>
     </div>

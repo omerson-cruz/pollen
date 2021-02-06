@@ -101,7 +101,7 @@ export default {
     justify-center
     p-0
     rounded
-    whitespace-no-wrap
+    whitespace-nowrap
     /* For legacy */
     border-solid;
 }

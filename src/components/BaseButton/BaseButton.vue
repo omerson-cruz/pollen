@@ -128,7 +128,7 @@ export default {
     justify-center
     rounded
     transition-all
-    whitespace-no-wrap
+    whitespace-nowrap
     /* For legacy */
     border-solid;
 }
@@ -206,8 +206,9 @@ export default {
 }
 
 .base-button--regular:not(.base-button--inverted):not([disabled]) {
-  @apply shadow-2;
+  @apply shadow-2 shadow-none;
 }
+
 /*** Regular primary buttons */
 .base-button--regular.base-button--primary {
   @apply bg-primary text-white;
@@ -267,10 +268,6 @@ export default {
 /*** Regular primary white */
 .base-button--regular.base-button--white {
   @apply bg-white border border-white text-primary;
-}
-
-.base-button--regular.base-button--white:focus {
-  @apply shadow-outline;
 }
 
 .base-button--regular.base-button--white:hover:not([disabled]) {

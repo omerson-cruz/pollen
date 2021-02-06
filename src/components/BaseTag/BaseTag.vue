@@ -55,7 +55,7 @@ export default {
     box-border
     inline-flex
     items-center
-    whitespace-no-wrap
+    whitespace-nowrap
     /* For legacy */
     border-solid;
 }

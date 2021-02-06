@@ -212,7 +212,7 @@ export default {
 
 <style scoped>
 .text-input__prefix {
-  @apply select-none text-gray-3 whitespace-no-wrap;
+  @apply select-none text-gray-3 whitespace-nowrap;
 }
 
 .text-input__field {

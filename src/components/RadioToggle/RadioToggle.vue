@@ -113,11 +113,11 @@ export default {
 <style scoped>
 .radio-toggle {
   @apply bg-gray-7
-    border 
+    border
     border-gray-5
     border-solid
     inline-flex
-    p-1 
+    p-1
     relative
     rounded-full;
 }
@@ -127,14 +127,14 @@ export default {
     duration-0
     ease-out
     font-overline-small
-    px-5 
+    px-5
     py-1
-    relative 
+    relative
     rounded-full
     select-none
-    text-center 
+    text-center
     transition-all
-    whitespace-no-wrap
+    whitespace-nowrap
     z-10;
 }
 
@@ -151,11 +151,11 @@ export default {
 }
 
 .radio-toggle__indicator {
-  @apply absolute 
-    bg-primary 
+  @apply absolute
+    bg-primary
     duration-light
     ease-out
-    rounded-full 
+    rounded-full
     transition-all
     z-0;
 }
