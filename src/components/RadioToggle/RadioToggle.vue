@@ -119,7 +119,7 @@ export default {
     inline-flex
     p-1
     relative
-    rounded-full;
+    rounded-md;
 }
 
 .radio-toggle__container {

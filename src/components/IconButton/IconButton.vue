@@ -77,7 +77,6 @@ export default {
         attrs,
         class: [
           data.class,
-          data.staticClass,
           'icon-button',
           `icon-button--${props.variant}`,
           `icon-button--${props.size}`,

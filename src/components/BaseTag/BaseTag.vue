@@ -68,18 +68,15 @@ export default {
 }
 
 .base-tag--small {
-  @apply h-4 px-2;
-  border-radius: 3px;
+  @apply h-4 px-3;
 }
 
 .base-tag--medium {
-  @apply h-6 px-3;
-  border-radius: 4px;
+  @apply h-6 px-4;
 }
 
 .base-tag--large {
-  @apply h-8 px-4;
-  border-radius: 5px;
+  @apply h-8 px-5;
 }
 
 .base-tag--filled {

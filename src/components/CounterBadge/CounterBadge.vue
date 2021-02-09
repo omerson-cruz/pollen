@@ -9,12 +9,9 @@
 
 <script>
 import abbreviateNumber from '../../util/abbreviateNumber';
+import { SMALL, MEDIUM, LARGE } from '../../constants/Sizes';
 
-export const Sizes = Object.freeze({
-  SMALL: 'small',
-  MEDIUM: 'medium',
-  LARGE: 'large',
-});
+export const Sizes = Object.freeze({ SMALL, MEDIUM, LARGE });
 
 export const Variants = Object.freeze({
   PRIMARY: 'primary',

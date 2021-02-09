@@ -20,7 +20,7 @@ export default {
         title="Close"
         {...data}
       >
-        <BaseIcon icon={Icons.CLOSE} />
+        <BaseIcon icon={Icons.CLOSE_CIRCLE} />
         <div class="modal-close__visible-label" aria-hidden>
           Esc
         </div>

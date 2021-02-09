@@ -1,4 +1,5 @@
 import BaseIcon, { Icons } from './BaseIcon.vue';
+import TightGrid from '../TightGrid/TightGrid.vue';
 
 export default {
   title: 'BaseIcon',
@@ -9,18 +10,18 @@ export default {
 };
 
 export const Gallery = () => ({
-  components: { BaseIcon },
+  components: { BaseIcon, TightGrid },
   data() {
     return {
       icons: Object.values(Icons),
     };
   },
   template: `
-    <div class="flex flex-wrap">
-      <div v-for="icon in icons" :key="icon" :style="{ display: 'flex', margin: '12px', textAlign: 'center' }">
+    <TightGrid>
+      <div v-for="icon in icons" :key="icon" class="flex items-center col-span-6 sm:col-span-4 md:col-span-2">
         <BaseIcon :icon="icon" />
-        <div :style="{ fontSize: '12px', marginLeft: '8px' }">{{ icon }}</div>
+        <div class="text-12 ml-2">{{ icon }}</div>
       </div>
-    </div>
+    </TightGrid>
   `,
 });

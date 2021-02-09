@@ -26,6 +26,7 @@ export { default as DateInput } from '@/components/DateInput/DateInput.vue';
 export { default as FancyCard } from '@/components/FancyCard/FancyCard.vue';
 export { default as FancyIcon } from '@/components/FancyIcon/FancyIcon.vue';
 export { default as HamburgerButton } from '@/components/HamburgerButton/HamburgerButton.vue';
+export { default as HighlightedIcon } from '@/components/HighlightedIcon/HighlightedIcon.vue';
 export { default as IconButton } from '@/components/IconButton/IconButton.vue';
 export { default as LooseGrid } from '@/components/LooseGrid/LooseGrid.vue';
 export { default as MeerkatNotification } from '@/components/MeerkatNotification/MeerkatNotification.vue';
