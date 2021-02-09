@@ -139,7 +139,7 @@ export default {
 
 /* Theme variations */
 /** Regular buttons  */
-.icon-button--regular {
+.icon-button--regular:not(.icon-button--white) {
   @apply shadow-2;
 }
 
@@ -196,6 +196,19 @@ export default {
 }
 
 .icon-button--regular.icon-button--inverted:active:not([disabled]) {
+  @apply bg-primary-tint-5 text-primary;
+}
+
+/*** Regular primary white */
+.icon-button--regular.icon-button--white {
+  @apply bg-white border text-primary;
+}
+
+.icon-button--regular.icon-button--white:hover:not([disabled]) {
+  @apply text-primary-tint-1;
+}
+
+.icon-button--regular.icon-button--white:active:not([disabled]) {
   @apply bg-primary-tint-5 text-primary;
 }
 
@@ -265,6 +278,15 @@ export default {
 }
 
 .icon-button--flat.icon-button--inverted:hover:not([disabled]) {
+  @apply text-gray-5;
+}
+
+/*** Flat inverted buttons */
+.icon-button--flat.icon-button--white {
+  @apply text-white;
+}
+
+.icon-button--flat.icon-button--white:hover:not([disabled]) {
   @apply text-gray-5;
 }
 </style>

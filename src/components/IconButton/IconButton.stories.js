@@ -51,9 +51,9 @@ export const Gallery = () => ({
       <TypeOverline tag="h1" variant="large">Flat buttons</TypeOverline>
       <div class="flex flex-wrap -mx-8 -my-8">
         <div
-          v-for="variant in variants" 
+          v-for="variant in variants"
           :key="'flat' + variant"
-          :class="variant === 'inverted' ? 'bg-gray-0 m-4 p-4 text-white w-48' : 'm-8 w-56'"
+          :class="variant === 'inverted' || variant === 'white'? 'bg-gray-0 m-4 p-4 text-white w-48' : 'm-8 w-56'"
         >
           <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'flat-regular-' + variant + '-' + size" class="mb-2">
@@ -62,7 +62,7 @@ export const Gallery = () => ({
           <div>
             <IconButton :variant="variant" :icon="icon" flat disabled />
           </div>
-        </div>      
+        </div>
       </div>
     </div>
   `,
@@ -100,8 +100,59 @@ export const WithKnobs = () => {
   };
 };
 
+export const WithGradient = () => ({
+  components: { IconButton, TypeOverline },
+  props: {
+    icon: {
+      default: select('Icon', iconOptions, Icons.LOCK),
+    },
+  },
+  data() {
+    return {
+      sizes: Sizes,
+      variants: ['white'],
+    };
+  },
+  methods: {
+    capitalize,
+    handleClick: action('click'),
+  },
+  template: `
+    <div>
+      <TypeOverline tag="h1" variant="large">Icon Button with Gradient Background</TypeOverline>
+      <div class="flex mx-8">
+        <div v-for="variant in variants" :key="variant" class="m-8 w-56 bg-purple-gradient p-5">
+        <TypeOverline tag="h2" class="mb-2 text-info-light">{{ variant }}</TypeOverline>
+          <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
+            <IconButton :variant="variant" :size="size" :icon="icon" @click="handleClick" />
+          </div>
+          <div class="mb-2">
+            <IconButton :variant="variant" :icon="icon" disabled />
+          </div>
+        </div>
+      </div>
+      <TypeOverline tag="h1" variant="large">Flat buttons</TypeOverline>
+      <div class="flex flex-wrap mx-8 my-8">
+        <div
+          v-for="variant in variants"
+          :key="'flat' + variant"
+          class="bg-purple-gradient m-4 p-4 text-white w-48"
+        >
+          <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
+          <div v-for= "size in sizes" :key="'flat-regular-' + variant + '-' + size" class="mb-2">
+            <IconButton :variant="variant" :size="size" :icon="icon" flat @click="handleClick" />
+          </div>
+          <div>
+            <IconButton :variant="variant" :icon="icon" flat disabled />
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+});
+
 /* eslint-disable no-param-reassign */
-[Gallery, WithKnobs].forEach((item) => {
+[Gallery, WithKnobs, WithGradient].forEach((item) => {
   item.story = {
     parameters: {
       jest: ['IconButton.test.js'],

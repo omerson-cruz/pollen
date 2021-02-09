@@ -205,8 +205,8 @@ export default {
   @apply outline-none;
 }
 
-.base-button--regular:not(.base-button--inverted):not([disabled]) {
-  @apply shadow-2 shadow-none;
+.base-button--regular:not(.base-button--inverted):not(.base-button--white):not([disabled]) {
+  @apply shadow-2;
 }
 
 /*** Regular primary buttons */
@@ -267,7 +267,7 @@ export default {
 
 /*** Regular primary white */
 .base-button--regular.base-button--white {
-  @apply bg-white border border-white text-primary;
+  @apply bg-white border text-primary;
 }
 
 .base-button--regular.base-button--white:hover:not([disabled]) {
@@ -348,6 +348,15 @@ export default {
 }
 
 .base-button--flat.base-button--inverted:hover:not([disabled]) {
+  @apply text-gray-5;
+}
+
+/*** Flat white buttons */
+.base-button--flat.base-button--white {
+  @apply text-white;
+}
+
+.base-button--flat.base-button--white:hover:not([disabled]) {
   @apply text-gray-5;
 }
 </style>

@@ -76,9 +76,7 @@ export const GradientColor = () => ({
         class="text-12 m-2 w-32"
       >
         <div
-          class="border border-gray-2 border-solid h-40 mb-1 w-full
-          bg-gradient-to-br from-primary-tint-1 to-primary-shade-1
-          "
+          class="border border-gray-2 border-solid h-40 mb-1 w-full bg-purple-gradient"
         />
         <div>
           <b>Purple Gradient</b>

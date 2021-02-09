@@ -49,9 +49,9 @@ export const Gallery = () => ({
       <TypeOverline tag="h1" variant="large">Flat buttons</TypeOverline>
       <div class="flex flex-wrap -mx-8 -my-8">
         <div
-          v-for="variant in variants" 
+          v-for="variant in variants"
           :key="'flat' + variant"
-          :class="variant === 'inverted' ? 'bg-gray-0 m-4 p-4 text-white w-48' : 'm-8 w-56'"
+          :class="variant === 'white' || variant === 'inverted'? 'bg-gray-0 m-4 p-4 text-white w-48' : 'm-8 w-56'"
         >
           <TypeOverline tag="h2" class="mb-2">{{ variant }}</TypeOverline>
           <div v-for= "size in sizes" :key="'flat-regular-' + variant + '-' + size" class="mb-2">
@@ -121,11 +121,68 @@ export const WithKnobs = () => {
   };
 };
 
-/* eslint-disable no-param-reassign */
-[Gallery, WithPreIcon, WithPostIcon, WithKnobs].forEach((item) => {
-  item.story = {
-    parameters: {
-      jest: ['BaseButton.test.js'],
-    },
-  };
+export const WithGradient = () => ({
+  components: { BaseButton, TypeOverline },
+  data() {
+    return {
+      sizes: Sizes,
+      variants: ['white '],
+    };
+  },
+  methods: {
+    capitalize,
+    handleClick: action('click'),
+  },
+
+  template: `
+  <div>
+  <TypeOverline tag="h1" variant="large">Regular buttons</TypeOverline>
+  <div class="flex ">
+    <div
+      v-for="variant in variants"
+      :key="variant"
+      class="m-8 w-56 bg-purple-gradient p-5"
+  >
+    <TypeOverline tag="h2" class="mb-2 text-info-light">{{ variant }}</TypeOverline>
+      <div v-for= "size in sizes" :key="'regular-' + variant + '-' + size" class="mb-2">
+        <BaseButton :variant="variant" :size="size" @click="handleClick">{{ capitalize(size) }}</BaseButton>
+      </div>
+      <TypeOverline tag="h2" class="mb-2 mt-4 text-info-light">{{ variant }} - Block</TypeOverline>
+      <div v-for= "size in sizes" :key="'block-' + variant + '-' + size" class="mb-2">
+        <BaseButton :variant="variant" :size="size" block @click="handleClick">{{ capitalize(size) }}</BaseButton>
+      </div>
+      <div>
+        <BaseButton :variant="variant" block disabled @click="handleClick">Medium - Disabled</BaseButton>
+      </div>
+    </div>
+  </div>
+  <TypeOverline tag="h1" variant="large">Flat buttons</TypeOverline>
+  <div class="flex flex-wrap mx-8 my-8">
+    <div
+      v-for="variant in variants"
+      :key="'flat' + variant"
+      class="bg-purple-gradient"
+    >
+      <TypeOverline tag="h2" class="mb-2 text-white">{{ variant }}</TypeOverline>
+      <div v-for= "size in sizes" :key="'flat-regular-' + variant + '-' + size" class="mb-2">
+        <BaseButton :variant="variant" :size="size" flat @click="handleClick(variant, size)">{{ capitalize(size) }}</BaseButton>
+      </div>
+      <div>
+        <BaseButton :variant="variant" flat disabled @click="handleClick(variant, size)">Medium - Disabled</BaseButton>
+      </div>
+    </div>
+  </div>
+</div>
+  `,
 });
+
+/* eslint-disable no-param-reassign */
+[Gallery, WithPreIcon, WithPostIcon, WithKnobs, WithGradient].forEach(
+  (item) => {
+    item.story = {
+      parameters: {
+        jest: ['BaseButton.test.js'],
+      },
+    };
+  }
+);
